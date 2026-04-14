@@ -397,15 +397,14 @@ function App() {
                 <h1 className="font-script text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
                   Simplify to Glorify
                 </h1>
-                <div className="py-4 border-l-2 border-slate-blue pl-6 my-6">
+                <div className="py-4 border-l-2 border-slate-blue pl-6 my-8">
+                 <p className="font-display text-xl lg:text-2xl text-slate-blue">
+                   Practical Peace for Overwhelmed Hearts
+                  </p>                  
                   <p className="font-body text-lg lg:text-xl text-charcoal italic leading-relaxed">
-                    "Come to Me, all who are weary and burdened, and I will give you rest."
-                  </p>
-                  <p className="text-sm text-muted-slate mt-2">— Matthew 11:28</p>
-                </div>
-                <p className="font-display text-xl lg:text-2xl text-slate-blue">
-                  Practical Peace for Overwhelmed Hearts
-                </p>
+                    "Come to Me, all who are weary and burdened, and I will give you rest.— Matthew 11:28"
+                  </div>
+               
                 <p className="text-muted-slate text-lg max-w-md leading-relaxed">
                   Grace-filled journals, scripture cards, and prayers for women in hard seasons.
                 </p>
@@ -451,10 +450,14 @@ function App() {
               </h2>
               <div className="space-y-4 text-charcoal text-lg leading-relaxed">
                 <p>
-                  Simplify to Glorify was born from a simple belief: you don't have to perform your faith to be loved by God.
+                  Simplify to Glorify began in the quiet, ordinary moments of hard seasons—when faith felt heavy, words felt distant, and life felt overwhelming. Not every day allows for long devotionals or perfect routines. Sometimes you just need something simple. Something honest. Something that meets you where you are.
+                  These journals and cards were created for those moments.
+                  Each piece is designed to help you slow down, breathe, and return to what is true—without pressure, without performance, and without needing to have everything figured out.
+                  Because God is not waiting for you to get it right.
+                  He meets you right here.
                 </p>
                 <p>
-                  We create gentle, Scripture-centered tools for grief, anxiety, caregiving, and everyday overwhelm—so you can breathe, reflect, and reconnect.
+                  I create gentle, Scripture-centered tools for grief, anxiety, caregiving, and everyday overwhelm—so you can breathe, reflect, and reconnect.
                 </p>
               </div>
               <div className="mt-8 p-6 bg-ivory rounded-2xl card-shadow border-l-4 border-sage">
