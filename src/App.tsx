@@ -23,7 +23,7 @@ const journals = [
     id: 1,
     title: 'Caregiving: A 30-Day Journey',
     topic: 'Caregiving',
-    description: 'For the days when you\'re running on empty. Short reflections, honest prayers, and space to breathe.',
+    description: 'For the days when you\'re running on empty. Short reflections, gentle prompts, and space to breathe.',
     price: 24.99,
     image: '/images/topic-caregiving.jpg',
     bundleNote: 'Part of the Caregiving Bundle',
@@ -32,9 +32,9 @@ const journals = [
   },
   {
     id: 2,
-    title: 'Grief: When Words Fail',
+    title: 'Our Baby: A Remembrance Journal',
     topic: 'Grief',
-    description: 'A tender companion for loss. Scripture that sits with you without rushing you toward anything.',
+    description: 'A tender companion for loss. Scripture that comforts with you without rushing you toward anything.',
     price: 24.99,
     image: '/images/topic-grief.jpg',
     bundleNote: 'Part of the Grief Bundle',
@@ -45,7 +45,7 @@ const journals = [
     id: 3,
     title: 'Anxiety: Finding Stillness',
     topic: 'Anxiety',
-    description: 'For anxious hearts seeking peace. Daily reminders that you don't have to do anything other than just "be".',
+    description: 'For anxious hearts seeking peace. Reassurance that you don't have to do anything other than just "be".',
     price: 24.99,
     image: '/images/topic-anxiety.jpg',
     bundleNote: 'Part of the Anxiety Bundle',
@@ -103,7 +103,7 @@ const articles = [
     id: 4,
     title: 'Grief and Faith: Holding Both',
     category: 'Grief',
-    excerpt: 'You can love God deeply and still grieve deeply. These are not contradictions.',
+    excerpt: 'You can love God deeply and still grieve deeply. Holding both truths is okay.',
     content: 'Full article content here...'
   },
   {
