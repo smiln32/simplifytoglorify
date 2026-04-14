@@ -34,7 +34,7 @@ const journals = [
     id: 2,
     title: 'Grief: When Words Fail',
     topic: 'Grief',
-    description: 'A tender companion for loss. Scripture that sits with you in the darkness without rushing toward joy.',
+    description: 'A tender companion for loss. Scripture that sits with you without rushing you toward anything.',
     price: 24.99,
     image: '/images/topic-grief.jpg',
     bundleNote: 'Part of the Grief Bundle',
@@ -45,7 +45,7 @@ const journals = [
     id: 3,
     title: 'Anxiety: Finding Stillness',
     topic: 'Anxiety',
-    description: 'For anxious hearts seeking peace. Daily reminders that you don\'t have to perform calm to be loved.',
+    description: 'For anxious hearts seeking peace. Daily reminders that you don't have to do anything other than just "be".',
     price: 24.99,
     image: '/images/topic-anxiety.jpg',
     bundleNote: 'Part of the Anxiety Bundle',
@@ -56,7 +56,7 @@ const journals = [
     id: 4,
     title: 'Depression: Light in the Shadows',
     topic: 'Depression',
-    description: 'Gentle truth for heavy days. You are not failing God—you are human, and He meets you here.',
+    description: 'Gentle truth for heavy days. You don't have to do anything, but if you do, God is there with you.',
     price: 24.99,
     image: '/images/topic-depression.jpg',
     bundleNote: 'Part of the Depression Bundle',
@@ -67,7 +67,7 @@ const journals = [
     id: 5,
     title: 'Peace: A Quiet Heart',
     topic: 'Peace',
-    description: 'Cultivating inner stillness through Scripture. For women seeking rest in a restless world.',
+    description: 'Cultivating inner stillness through Scripture. For women seeking rest in a chaotic world.',
     price: 24.99,
     image: '/images/topic-peace.jpg',
     bundleNote: 'Part of the Peace Bundle',
@@ -82,21 +82,21 @@ const articles = [
     id: 1,
     title: 'How to Start Journaling: A Beginner\'s Guide',
     category: 'Journaling',
-    excerpt: 'You don\'t need perfect handwriting or profound thoughts. You just need a willingness to show up.',
+    excerpt: 'You don't need perfect handwriting or profound thoughts. You just need a willingness to show up.',
     content: 'Full article content here...'
   },
   {
     id: 2,
     title: 'How Journaling Helps Process Emotions',
     category: 'Journaling',
-    excerpt: 'Writing creates distance between you and your feelings, allowing you to see them more clearly.',
+    excerpt: 'Writing creates understanding between you and your feelings, allowing you to see them more clearly.',
     content: 'Full article content here...'
   },
   {
     id: 3,
     title: 'Scripture for Caregivers: You Are Seen',
     category: 'Caregiving',
-    excerpt: 'God sees the 3am wake-ups, the invisible labor, the love that costs everything.',
+    excerpt: 'God sees the 3am wake-ups, the heart you put into everything and the weariness that sometimes seeps in.',
     content: 'Full article content here...'
   },
   {
@@ -128,19 +128,19 @@ const blogPosts = [
     id: 1,
     title: 'Welcome to Simplify to Glorify',
     date: 'April 15, 2026',
-    excerpt: 'After years of walking through my own hard seasons, I\'m finally sharing what God has taught me...'
+    excerpt: 'After years of walking through my own hard seasons, I'm sharing what God has taught me...'
   },
   {
     id: 2,
     title: 'Behind the Scenes: Creating the Caregiving Journal',
     date: 'April 10, 2026',
-    excerpt: 'Every verse was chosen from my own 3am moments at my mother\'s bedside...'
+    excerpt: 'Every verse was chosen from my own experience helping my mom care for my dad who had Alzheimer's...'
   },
   {
     id: 3,
     title: 'New Product Launch: Scripture Cards',
     date: 'April 5, 2026',
-    excerpt: 'I\'m so excited to share these printable cards with you. Each one is a reminder you can hold...'
+    excerpt: 'I'm so happy to share these printable cards with you. Each one is a reminder of God's love that you can hold...'
   }
 ];
 
