@@ -14,6 +14,12 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
 import { Toaster } from '@/components/ui/sonner';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+
+// Inside your Routes component:
+<Route path="/blog" element={<Blog />} />
+<Route path="/blog/:slug" element={<BlogPost />} />
 
 gsap.registerPlugin(ScrollTrigger);
 
