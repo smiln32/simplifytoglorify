@@ -1,9 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts } from './data/blogPosts';
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const post = blogPosts.find(p => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
@@ -26,10 +26,9 @@ export default function BlogPost() {
   return (
     <article style={{
       minHeight: '100vh',
-      backgroundColor: '#f3f1ec', // ivory
+      backgroundColor: '#f3f1ec',
       fontFamily: "'Cormorant Garamond', 'Georgia', serif",
     }}>
-      {/* Hero Section */}
       <div style={{
         backgroundColor: '#ffffff',
         padding: '140px 20px 60px',
@@ -58,7 +57,7 @@ export default function BlogPost() {
           </div>
           <h1 style={{
             fontSize: 'clamp(2rem, 5vw, 3rem)',
-            color: '#4a5568', // slate blue
+            color: '#4a5568',
             fontWeight: 400,
             lineHeight: 1.2,
             marginBottom: '24px',
@@ -77,8 +76,6 @@ export default function BlogPost() {
           </p>
         </div>
       </div>
-
-      {/* Content */}
       <div style={{
         maxWidth: '700px',
         margin: '0 auto',
@@ -97,7 +94,6 @@ export default function BlogPost() {
             }}
           />
         )}
-        
         <div
           style={{
             fontSize: '1.2rem',
@@ -106,8 +102,6 @@ export default function BlogPost() {
           }}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
-
-        {/* Back Link */}
         <div style={{
           marginTop: '80px',
           paddingTop: '40px',
