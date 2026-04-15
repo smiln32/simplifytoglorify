@@ -290,7 +290,7 @@ function App() {
               <button onClick={() => scrollToSection(topicsRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Topics</button>
               <button onClick={() => scrollToSection(articlesRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Articles</button>
               <button onClick={() => scrollToSection(blogRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Blog</button>
-             <Link to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Journal</Link>
+             <RouterLink to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Journal</RouterLink>
               <button onClick={() => scrollToSection(contactRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Contact</button>
               
               {/* Admin Tools Dialog */}
