@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
