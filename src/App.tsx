@@ -15,12 +15,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
 import { Toaster } from '@/components/ui/sonner';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-
-// Inside your Routes component:
-<Route path="/blog" element={<Blog />} />
-<Route path="/blog/:slug" element={<BlogPost />} />
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +46,7 @@ const journals = [
     id: 3,
     title: 'Anxiety: Finding Stillness',
     topic: 'Anxiety',
-    description: 'For anxious hearts seeking peace. Reassurance that you don't have to do anything other than just "be".',
+    description: 'For anxious hearts seeking peace. Reassurance that you don\'t have to do anything other than just "be".',
     price: 24.99,
     image: '/images/topic-anxiety.jpg',
     bundleNote: 'Part of the Anxiety Bundle',
@@ -63,7 +57,7 @@ const journals = [
     id: 4,
     title: 'Depression: Light in the Shadows',
     topic: 'Depression',
-    description: 'Gentle truth for heavy days. You don't have to do anything, but if you do, God is there with you.',
+    description: 'Gentle truth for heavy days. You don\'t have to do anything, but if you do, God is there with you.',
     price: 24.99,
     image: '/images/topic-depression.jpg',
     bundleNote: 'Part of the Depression Bundle',
@@ -89,7 +83,7 @@ const articles = [
     id: 1,
     title: 'How to Start Journaling: A Beginner\'s Guide',
     category: 'Journaling',
-    excerpt: 'You don't need perfect handwriting or profound thoughts. You just need a willingness to show up.',
+    excerpt: 'You don\'t need perfect handwriting or profound thoughts. You just need a willingness to show up.',
     content: 'Full article content here...'
   },
   {
@@ -135,19 +129,19 @@ const blogPosts = [
     id: 1,
     title: 'Welcome to Simplify to Glorify',
     date: 'April 15, 2026',
-    excerpt: 'After years of walking through my own hard seasons, I'm sharing what God has taught me...'
+    excerpt: 'After years of walking through my own hard seasons, I\'m sharing what God has taught me...'
   },
   {
     id: 2,
     title: 'Behind the Scenes: Creating the Caregiving Journal',
     date: 'April 10, 2026',
-    excerpt: 'Every verse was chosen from my own experience helping my mom care for my dad who had Alzheimer's...'
+    excerpt: 'Every verse was chosen from my own experience helping my mom care for my dad who had Alzheimer\'s...'
   },
   {
     id: 3,
     title: 'New Product Launch: Scripture Cards',
     date: 'April 5, 2026',
-    excerpt: 'I'm so happy to share these printable cards with you. Each one is a reminder of God's love that you can hold...'
+    excerpt: 'I\'m so happy to share these printable cards with you. Each one is a reminder of God\'s love that you can hold...'
   }
 ];
 
@@ -290,7 +284,7 @@ function App() {
               <button onClick={() => scrollToSection(topicsRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Topics</button>
               <button onClick={() => scrollToSection(articlesRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Articles</button>
               <button onClick={() => scrollToSection(blogRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Blog</button>
-             <RouterLink to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Journal</RouterLink>
+              <RouterLink to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Journal</RouterLink>
               <button onClick={() => scrollToSection(contactRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Contact</button>
               
               {/* Admin Tools Dialog */}
@@ -406,15 +400,16 @@ function App() {
                   Simplify to Glorify
                 </h1>
                 <div className="py-4 border-l-2 border-slate-blue pl-6 my-8">
-                 <p className="font-display text-xl lg:text-2xl text-slate-blue">
-                   Practical Peace for Overwhelmed Hearts
+                  <p className="font-display text-xl lg:text-2xl text-slate-blue">
+                    Practical Peace for Overwhelmed Hearts
                   </p>                  
                   <p className="font-body text-lg lg:text-xl text-charcoal italic leading-relaxed">
                     "Come to Me, all who are weary and burdened, and I will give you rest.— Matthew 11:28"
-                  </div>
+                  </p>
+                </div>
                
                 <p className="text-muted-slate text-lg max-w-md leading-relaxed">
-                  Grace-filled journals, scripture cards, prayer cards, devotionals, <br>mini-guides and more for women experiencing challenging seasons.
+                  Grace-filled journals, scripture cards, prayer cards, devotionals, <br />mini-guides and more for women experiencing challenging seasons.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button 
