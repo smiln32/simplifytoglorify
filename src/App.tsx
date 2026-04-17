@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
@@ -18,6 +17,65 @@ import { Toaster } from '@/components/ui/sonner';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Product data - 5 initial journals
+const journals = [
+  {
+    id: 1,
+    title: 'Caregiving: A 30-Day Journey',
+    topic: 'Caregiving',
+    description: 'For the days when you\'re running on empty. Short reflections, honest prayers, and space to breathe.',
+    price: 24.99,
+    image: '/images/topic-caregiving.jpg',
+    bundleNote: 'Part of the Caregiving Bundle',
+    verses: 30,
+    format: 'Digital PDF'
+  },
+  {
+    id: 2,
+    title: 'Grief: When Words Fail',
+    topic: 'Grief',
+    description: 'A tender companion for loss. Scripture that sits with you in the darkness without rushing toward joy.',
+    price: 24.99,
+    image: '/images/topic-grief.jpg',
+    bundleNote: 'Part of the Grief Bundle',
+    verses: 30,
+    format: 'Digital PDF'
+  },
+  {
+    id: 3,
+    title: 'Anxiety: Finding Stillness',
+    topic: 'Anxiety',
+    description: 'For anxious hearts seeking peace. Daily reminders that you don\'t have to perform calm to be loved.',
+    price: 24.99,
+    image: '/images/topic-anxiety.jpg',
+    bundleNote: 'Part of the Anxiety Bundle',
+    verses: 30,
+    format: 'Digital PDF'
+  },
+  {
+    id: 4,
+    title: 'Depression: Light in the Shadows',
+    topic: 'Depression',
+    description: 'Gentle truth for heavy days. You are not failing God—you are human, and He meets you here.',
+    price: 24.99,
+    image: '/images/topic-depression.jpg',
+    bundleNote: 'Part of the Depression Bundle',
+    verses: 30,
+    format: 'Digital PDF'
+  },
+  {
+    id: 5,
+    title: 'Peace: A Quiet Heart',
+    topic: 'Peace',
+    description: 'Cultivating inner stillness through Scripture. For women seeking rest in a restless world.',
+    price: 24.99,
+    image: '/images/topic-peace.jpg',
+    bundleNote: 'Part of the Peace Bundle',
+    verses: 30,
+    format: 'Digital PDF'
+  }
+];
+
 // Articles data
 const articles = [
   {
@@ -31,21 +89,21 @@ const articles = [
     id: 2,
     title: 'How Journaling Helps Process Emotions',
     category: 'Journaling',
-    excerpt: 'Writing creates understanding between you and your feelings, allowing you to see them more clearly.',
+    excerpt: 'Writing creates distance between you and your feelings, allowing you to see them more clearly.',
     content: 'Full article content here...'
   },
   {
     id: 3,
     title: 'Scripture for Caregivers: You Are Seen',
     category: 'Caregiving',
-    excerpt: 'God sees the 3am wake-ups, the heart you put into everything and the weariness that sometimes seeps in.',
+    excerpt: 'God sees the 3am wake-ups, the invisible labor, the love that costs everything.',
     content: 'Full article content here...'
   },
   {
     id: 4,
     title: 'Grief and Faith: Holding Both',
     category: 'Grief',
-    excerpt: 'You can love God deeply and still grieve deeply. Holding both truths is okay.',
+    excerpt: 'You can love God deeply and still grieve deeply. These are not contradictions.',
     content: 'Full article content here...'
   },
   {
@@ -70,19 +128,19 @@ const blogPosts = [
     id: 1,
     title: 'Welcome to Simplify to Glorify',
     date: 'April 15, 2026',
-    excerpt: 'After years of walking through my own hard seasons, I\'m sharing what God has taught me...'
+    excerpt: 'After years of walking through my own hard seasons, I\'m finally sharing what God has taught me...'
   },
   {
     id: 2,
     title: 'Behind the Scenes: Creating the Caregiving Journal',
     date: 'April 10, 2026',
-    excerpt: 'Every verse was chosen from my own experience helping my mom care for my dad who had Alzheimer\'s...'
+    excerpt: 'Every verse was chosen from my own 3am moments at my mother\'s bedside...'
   },
   {
     id: 3,
     title: 'New Product Launch: Scripture Cards',
     date: 'April 5, 2026',
-    excerpt: 'I\'m so happy to share these printable cards with you. Each one is a reminder of God\'s love that you can hold...'
+    excerpt: 'I\'m so excited to share these printable cards with you. Each one is a reminder you can hold...'
   }
 ];
 
@@ -225,7 +283,6 @@ function App() {
               <button onClick={() => scrollToSection(topicsRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Topics</button>
               <button onClick={() => scrollToSection(articlesRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Articles</button>
               <button onClick={() => scrollToSection(blogRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Blog</button>
-              <RouterLink to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Journal</RouterLink>
               <button onClick={() => scrollToSection(contactRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Contact</button>
               
               {/* Admin Tools Dialog */}
@@ -340,17 +397,17 @@ function App() {
                 <h1 className="font-script text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
                   Simplify to Glorify
                 </h1>
-                <div className="py-4 border-l-2 border-slate-blue pl-6 my-8">
-                  <p className="font-display text-xl lg:text-2xl text-slate-blue">
-                    Practical Peace for Overwhelmed Hearts
-                  </p>                  
+                <div className="py-4 border-l-2 border-slate-blue pl-6 my-6">
                   <p className="font-body text-lg lg:text-xl text-charcoal italic leading-relaxed">
-                    "Come to Me, all who are weary and burdened, and I will give you rest.— Matthew 11:28"
+                    "Come to Me, all who are weary and burdened, and I will give you rest."
                   </p>
+                  <p className="text-sm text-muted-slate mt-2">— Matthew 11:28</p>
                 </div>
-               
+                <p className="font-display text-xl lg:text-2xl text-slate-blue">
+                  Practical Peace for Overwhelmed Hearts
+                </p>
                 <p className="text-muted-slate text-lg max-w-md leading-relaxed">
-                  Grace-filled journals, scripture cards, prayer cards, devotionals, <br />mini-guides and more for women experiencing challenging seasons.
+                  Grace-filled journals, scripture cards, and prayers for women in hard seasons.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button 
@@ -388,20 +445,16 @@ function App() {
               />
             </div>
             <div>
-              <p className="text-label text-slate-blue mb-4">My Story</p>
+              <p className="text-label text-slate-blue mb-4">Our Story</p>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6">
                 Made for women<br />in hard seasons.
               </h2>
               <div className="space-y-4 text-charcoal text-lg leading-relaxed">
                 <p>
-                  Simplify to Glorify began in the quiet, ordinary moments of hard seasons—when faith took effort, words seemed distant, and life felt overwhelming. Not every day allows for long devotionals or perfect routines. Sometimes you just need something simple. Something honest. Something that meets you where you are.
-                  These journals and cards were created for those moments.
-                  Each piece is designed to help you slow down, breathe, and return to what is true without pressure, without performance, and without needing to have everything figured out.
-                  Because God is not waiting for you to get it right.
-                  He meets you right where you are.  I know.  I have experienced it.
+                  Simplify to Glorify was born from a simple belief: you don't have to perform your faith to be loved by God.
                 </p>
                 <p>
-                  I create gentle, Scripture-centered tools for grief, anxiety, caregiving, depression, peace and everyday overwhelm so you can breathe, reflect, and reconnect.
+                  We create gentle, Scripture-centered tools for grief, anxiety, caregiving, and everyday overwhelm—so you can breathe, reflect, and reconnect.
                 </p>
               </div>
               <div className="mt-8 p-6 bg-ivory rounded-2xl card-shadow border-l-4 border-sage">
