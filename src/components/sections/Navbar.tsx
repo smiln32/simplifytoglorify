@@ -124,7 +124,7 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
                     </Button>
                     {shortUrls.length > 0 && (
                       <div className="space-y-2 mt-4">
-                        <h4 clasName="font-display text-lg text-charcoal">Your Short URLs:</h4>
+                        <h4 className="font-display text-lg text-charcoal">Your Short URLs:</h4>
                         {shortUrls.map((url, idx) => (
                           <div key={idx} className="flex items-center justify-between p-3 bg-white rounded-lg text-sm">
                             <span className="font-medium text-slate-blue">{url.short}</span>
