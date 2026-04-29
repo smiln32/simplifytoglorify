@@ -53,11 +53,9 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             <button onClick={() => nav(refs.aboutRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">About</button>
-            <button onClick={() => nav(refs.collectionRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">The Collection</button>
             <button onClick={() => nav(refs.topicsRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Topics</button>
             <button onClick={() => nav(refs.articlesRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Articles</button>
             <button onClick={() => nav(refs.blogRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Blog</button>
-            <RouterLink to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Journal</RouterLink>
             <button onClick={() => nav(refs.contactRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Contact</button>
 
             {/* Admin Tools */}
@@ -126,12 +124,12 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
                     </Button>
                     {shortUrls.length > 0 && (
                       <div className="space-y-2 mt-4">
-                        <h4 className="font-display text-lg text-charcoal">Your Short URLs:</h4>
+                        <h4 clasName="font-display text-lg text-charcoal">Your Short URLs:</h4>
                         {shortUrls.map((url, idx) => (
                           <div key={idx} className="flex items-center justify-between p-3 bg-white rounded-lg text-sm">
                             <span className="font-medium text-slate-blue">{url.short}</span>
                             <span className="text-muted-slate truncate max-w-[200px]">{url.target}</span>
-                          </div>
+                           </div>
                         ))}
                       </div>
                     )}
@@ -151,7 +149,6 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
             <SheetContent side="right" className="bg-ivory w-full sm:w-80">
               <div className="flex flex-col gap-6 mt-8">
                 <button onClick={() => nav(refs.aboutRef)} className="text-lg font-display text-charcoal">About</button>
-                <button onClick={() => nav(refs.collectionRef)} className="text-lg font-display text-charcoal">The Collection</button>
                 <button onClick={() => nav(refs.topicsRef)} className="text-lg font-display text-charcoal">Topics</button>
                 <button onClick={() => nav(refs.articlesRef)} className="text-lg font-display text-charcoal">Articles</button>
                 <button onClick={() => nav(refs.blogRef)} className="text-lg font-display text-charcoal">Blog</button>
