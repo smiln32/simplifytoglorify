@@ -22,12 +22,12 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 <p className="font-display text-xl lg:text-2xl text-slate-blue">
                   Practical Peace for Overwhelmed Hearts
                 </p>
-                <p className="font-body text-lg lg:text-xl text-charcoal italic leading-relaxed">
+                <p className="font-body text-lg lg:text-xl text-charcoal italic leading-relaxed mt-6">
                   "Come to Me, all who are weary and burdened, and I will give you rest.— Matthew 11:28"
                 </p>
               </div>
               <p className="text-muted-slate text-lg max-w-md leading-relaxed">
-                Grace-filled journals, scripture cards, prayer cards, devotionals, <br />mini-guides and more for women experiencing challenging seasons.
+                Grace-filled journals, scripture cards, prayer cards, devotionals, mini-guides and more for women experiencing challenging seasons.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
@@ -43,7 +43,7 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
           <div className="order-1 lg:order-2">
             <div className="hero-image relative">
               <img
-                src="/images/hero-morning.jpg"
+                src="/images/hero-morning.png"
                 alt="Woman journaling by window"
                 className="w-full h-[400px] lg:h-[600px] object-cover rounded-[28px] card-shadow"
               />
