@@ -1,0 +1,42 @@
+=== Link & Route Verification ===
+Run: Fri May  1 17:58:38 CDT 2026
+
+=== Topic bundle names (lowercased = anchor targets) ===
+  name: string;
+  { name: 'Caregiving', image: '/images/topic-caregiving.jpg', description: 'For those giving care' },
+  { name: 'Grief',      image: '/images/topic-grief.jpg',      description: 'For those who mourn' },
+  { name: 'Anxiety',   image: '/images/topic-anxiety.jpg',    description: 'For anxious hearts' },
+  { name: 'Depression', image: '/images/topic-depression.jpg', description: 'For heavy days' },
+  { name: 'Peace',       image: '/images/topic-peace.jpg',       description: 'For restless souls' },
+  { name: 'Prayer',     image: '/images/topic-prayer.jpg',     description: 'For learning to pray' },
+  { name: 'Uncertainty', image: '/images/topic-uncertainty.jpg', description: 'For unclear seasons' },
+  { name: 'Gratitude',  image: '/images/topic-gratitude.jpg',  description: 'For thankful hearts' }
+
+=== Product section IDs ===
+                id={topic.slug}
+
+=== Topic slugs ===
+  { name: 'Caregiving',  slug: 'caregiving' },
+  { name: 'Grief',       slug: 'grief' },
+  { name: 'Anxiety',     slug: 'anxiety' },
+  { name: 'Depression',  slug: 'depression' },
+  { name: 'Peace',       slug: 'peace' },
+  { name: 'Prayer',      slug: 'prayer' },
+  { name: 'Uncertainty', slug: 'uncertainty' },
+  { name: 'Gratitude',   slug: 'gratitude' },
+
+=== Article slugs in data ===
+  slug: string;
+    slug: 'how-to-start-journaling',
+    slug: 'how-journaling-helps-process-emotions',
+    slug: 'scripture-for-caregivers',
+    slug: 'grief-and-faith-holding-both',
+    slug: 'anxiety-doesnt-mean-you-lack-faith',
+    slug: 'breath-prayers-for-anxious-moments',
+
+=== Routes ===
+        <Route path="/" element={<App />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/articles/:slug" element={<ArticlePage />} />

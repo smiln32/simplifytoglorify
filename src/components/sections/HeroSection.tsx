@@ -10,14 +10,14 @@ interface HeroSectionProps {
 
 export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: HeroSectionProps) {
   return (
-    <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-20">
+    <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center bg-blush">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 lg:py-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
             <div className="hero-text space-y-6">
-              <h1 className="font-script text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
+              <p className="font-script italic text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
                 Simplify to Glorify
-              </h1>
+              </p>
               <div className="py-4 border-l-2 border-slate-blue pl-6 my-8">
                 <p className="font-display text-xl lg:text-2xl text-slate-blue">
                   Practical Peace for Overwhelmed Hearts
@@ -43,8 +43,8 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
           <div className="order-1 lg:order-2">
             <div className="hero-image relative">
               <img
-                src="/images/hero-morning.png"
-                alt="Woman journaling by window"
+                src="/images/hero_morning.png"
+                alt="Journaling space with Bible, journal and coffee"
                 className="w-full h-[400px] lg:h-[600px] object-cover rounded-[28px] card-shadow"
               />
             </div>

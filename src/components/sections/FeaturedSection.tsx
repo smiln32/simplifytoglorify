@@ -9,7 +9,7 @@ interface FeaturedSectionProps {
 
 export default function FeaturedSection({ sectionRef }: FeaturedSectionProps) {
   return (
-    <section ref={sectionRef} className="featured-section py-20 lg:py-32 bg-blush/50">
+    <section ref={sectionRef} className="featured-section py-10 lg:py-16 bg-blush scroll-mt-16 lg:scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 lg:order-1">

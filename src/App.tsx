@@ -6,10 +6,8 @@ import Navbar from '@/components/sections/Navbar';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import FeaturedSection from '@/components/sections/FeaturedSection';
-import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import TopicsSection from '@/components/sections/TopicsSection';
 import ArticlesSection from '@/components/sections/ArticlesSection';
-import BlogSection from '@/components/sections/BlogSection';
 import FreeResourceSection from '@/components/sections/FreeResourceSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/sections/Footer';
@@ -22,22 +20,17 @@ function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const collectionRef = useRef<HTMLDivElement>(null);
   const featuredRef = useRef<HTMLDivElement>(null);
-  const howItWorksRef = useRef<HTMLDivElement>(null);
   const topicsRef = useRef<HTMLDivElement>(null);
   const articlesRef = useRef<HTMLDivElement>(null);
-  const blogRef = useRef<HTMLDivElement>(null);
   const freeResourceRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
-
   const refs: SectionRefs = {
     heroRef,
     aboutRef,
     collectionRef,
     featuredRef,
-    howItWorksRef,
     topicsRef,
     articlesRef,
-    blogRef,
     freeResourceRef,
     contactRef,
   };
@@ -62,10 +55,8 @@ function App() {
       const sections = [
         '.about-section',
         '.featured-section',
-        '.how-it-works-section',
         '.topics-section',
         '.articles-section',
-        '.blog-section',
         '.free-resource-section',
         '.contact-section',
       ];
@@ -100,11 +91,9 @@ function App() {
       <HeroSection sectionRef={heroRef} aboutRef={aboutRef} scrollToSection={scrollToSection} />
       <AboutSection sectionRef={aboutRef} />
       <FeaturedSection sectionRef={featuredRef} />
-      <HowItWorksSection sectionRef={howItWorksRef} />
       <TopicsSection sectionRef={topicsRef} />
       <ArticlesSection sectionRef={articlesRef} />
-      <BlogSection sectionRef={blogRef} />
-      <FreeResourceSection sectionRef={freeResourceRef} />
+<FreeResourceSection sectionRef={freeResourceRef} />
       <ContactSection sectionRef={contactRef} />
       <Footer />
     </div>
