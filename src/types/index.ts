@@ -5,7 +5,6 @@ export type SectionRef = RefObject<HTMLElement | null>;
 export type SectionRefs = {
   heroRef: SectionRef;
   aboutRef: SectionRef;
-  collectionRef: SectionRef;
   featuredRef: SectionRef;
   topicsRef: SectionRef;
   articlesRef: SectionRef;

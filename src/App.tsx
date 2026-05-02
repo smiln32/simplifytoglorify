@@ -18,7 +18,6 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-  const collectionRef = useRef<HTMLDivElement>(null);
   const featuredRef = useRef<HTMLDivElement>(null);
   const topicsRef = useRef<HTMLDivElement>(null);
   const articlesRef = useRef<HTMLDivElement>(null);
@@ -27,7 +26,6 @@ function App() {
   const refs: SectionRefs = {
     heroRef,
     aboutRef,
-    collectionRef,
     featuredRef,
     topicsRef,
     articlesRef,
