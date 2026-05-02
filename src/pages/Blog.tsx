@@ -51,7 +51,7 @@ export default function Blog() {
               >
                 <Link to={`/blog/${post.slug}`} className="block no-underline text-inherit">
                   {post.image && (
-                    <div className="h-[280px] overflow-hidden bg-sage-green/30">
+                    <div className="h-[280px] overflow-hidden bg-sage/30">
                       <img
                         src={post.image}
                         alt={post.title}
@@ -71,7 +71,7 @@ export default function Blog() {
                     </h2>
                     <p className="text-base text-charcoal/70 leading-relaxed mb-5">{post.excerpt}</p>
                     <span
-                      className="inline-flex items-center text-sm font-medium text-sage-green font-body transition-all duration-300"
+                      className="inline-flex items-center text-sm font-medium text-sage font-body transition-all duration-300"
                       style={{ gap: hoveredId === post.id ? '12px' : '8px' }}
                     >
                       Read more

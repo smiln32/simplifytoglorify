@@ -13,7 +13,7 @@ export default function ArticlePage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontFamily: "'Cormorant Garamond', serif",
+        fontFamily: "'Playfair Display', serif",
       }}>
         <div style={{ textAlign: 'center' }}>
           <h1>Article not found</h1>
@@ -27,7 +27,7 @@ export default function ArticlePage() {
     <article style={{
       minHeight: '100vh',
       backgroundColor: '#f3f1ec',
-      fontFamily: "'Cormorant Garamond', 'Georgia', serif",
+      fontFamily: "'Playfair Display', 'Georgia', serif",
     }}>
       <div style={{
         backgroundColor: '#ffffff',
@@ -43,7 +43,7 @@ export default function ArticlePage() {
             marginBottom: '24px',
             fontSize: '0.9rem',
             color: '#718096',
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Lora', serif",
           }}>
             <span>{article.category}</span>
           </div>
@@ -88,7 +88,7 @@ export default function ArticlePage() {
               color: '#4a5568',
               textDecoration: 'none',
               fontSize: '1rem',
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Lora', serif",
               transition: 'color 0.3s ease',
             }}
             onMouseEnter={(e) => e.currentTarget.style.color = '#b2c6b1'}
