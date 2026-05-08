@@ -27,7 +27,7 @@ export default function ArticlePage() {
     <article style={{
       minHeight: '100vh',
       backgroundColor: '#f3f1ec',
-      fontFamily: "'Playfair Display', 'Georgia', serif",
+      fontFamily: "'Lora', Georgia, serif",
     }}>
       <div style={{
         backgroundColor: '#ffffff',

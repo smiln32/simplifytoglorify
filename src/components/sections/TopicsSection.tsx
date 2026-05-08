@@ -31,7 +31,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
                 <img
                   src={topic.image}
                   alt={topic.name}
-                  className="w-full h-36 lg:h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-36 lg:h-44 object-cover transition-transform duration-500 group-hover:scale-105${topic.imageClass ? ` ${topic.imageClass}` : ''}`}
                 />
               </div>
               <p className="font-display text-base text-charcoal text-center mt-3 group-hover:text-slate-blue transition-colors">

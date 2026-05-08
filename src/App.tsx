@@ -5,7 +5,6 @@ import { Toaster } from '@/components/ui/sonner';
 import Navbar from '@/components/sections/Navbar';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
-import FeaturedSection from '@/components/sections/FeaturedSection';
 import TopicsSection from '@/components/sections/TopicsSection';
 import ArticlesSection from '@/components/sections/ArticlesSection';
 import FreeResourceSection from '@/components/sections/FreeResourceSection';
@@ -18,7 +17,6 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-  const featuredRef = useRef<HTMLDivElement>(null);
   const topicsRef = useRef<HTMLDivElement>(null);
   const articlesRef = useRef<HTMLDivElement>(null);
   const freeResourceRef = useRef<HTMLDivElement>(null);
@@ -26,7 +24,6 @@ function App() {
   const refs: SectionRefs = {
     heroRef,
     aboutRef,
-    featuredRef,
     topicsRef,
     articlesRef,
     freeResourceRef,
@@ -52,7 +49,6 @@ function App() {
 
       const sections = [
         '.about-section',
-        '.featured-section',
         '.topics-section',
         '.articles-section',
         '.free-resource-section',
@@ -88,7 +84,6 @@ function App() {
       <Navbar refs={refs} scrollToSection={scrollToSection} />
       <HeroSection sectionRef={heroRef} aboutRef={aboutRef} scrollToSection={scrollToSection} />
       <AboutSection sectionRef={aboutRef} />
-      <FeaturedSection sectionRef={featuredRef} />
       <TopicsSection sectionRef={topicsRef} />
       <ArticlesSection sectionRef={articlesRef} />
 <FreeResourceSection sectionRef={freeResourceRef} />
