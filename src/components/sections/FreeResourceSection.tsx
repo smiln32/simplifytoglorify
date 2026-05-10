@@ -36,11 +36,14 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
     <section ref={sectionRef} className="free-resource-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div>
-            <img
-              src="/images/free-resource.jpg"
-              alt="Free Resource"
-              className="w-full h-[400px] lg:h-[500px] object-cover rounded-[28px] card-shadow"
+          <div className="flex justify-center items-center h-full">
+            <iframe
+              src="scripture_of_the_day_widget.html"
+              width={300}
+              height={400}
+              className="rounded-[28px] card-shadow"
+              title="Scripture of the Day"
+              allowTransparency={true}
             />
           </div>
           <div>

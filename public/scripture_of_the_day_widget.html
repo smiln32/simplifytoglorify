@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripture of the Day</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .scripture-card {
+      background: linear-gradient(135deg, #b2c6b1 0%, #a4b9c4 100%);
+      height: 100%;
+      border-radius: 0;
+      padding: 2rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .leaf-decoration {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      width: 90px;
+      height: 140px;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .reference {
+      font-size: 16px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 2.7rem;
+      margin-top: 1rem;
+    }
+
+    .divider-line {
+      width: 200px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.5);
+      margin: 0 auto 2.7rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heart-dot {
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .scripture-text {
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+      color: white;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: white;
+      padding: 0.65rem 1.3rem;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 0;
+      font-family: 'Lora', Georgia, serif;
+      transition: all 0.25s ease;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    button:active {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .counter {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .scripture-card {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .reference {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .scripture-text {
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      button {
+        padding: 0.55rem 1rem;
+        font-size: 11px;
+      }
+
+      .leaf-decoration {
+        width: 70px;
+        height: 110px;
+        top: 1.5rem;
+        left: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="scripture-card">
+      <svg class="leaf-decoration" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="rgba(255, 255, 255, 0.5)" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Main stem -->
+          <path d="M 50 5 Q 48 40 50 85 Q 52 120 50 145" stroke-width="1"/>
+
+          <!-- Upper left leaves -->
+          <path d="M 50 20 Q 35 18 25 25"/>
+          <path d="M 50 20 Q 40 15 32 18"/>
+          <path d="M 50 20 Q 45 10 38 12"/>
+
+          <!-- Upper right leaves -->
+          <path d="M 50 20 Q 65 18 75 25"/>
+          <path d="M 50 20 Q 60 15 68 18"/>
+          <path d="M 50 20 Q 55 10 62 12"/>
+
+          <!-- Middle left leaves -->
+          <path d="M 50 50 Q 32 48 20 58"/>
+          <path d="M 50 50 Q 38 45 28 50"/>
+          <path d="M 50 50 Q 42 42 35 45"/>
+
+          <!-- Middle right leaves -->
+          <path d="M 50 50 Q 68 48 80 58"/>
+          <path d="M 50 50 Q 62 45 72 50"/>
+          <path d="M 50 50 Q 58 42 65 45"/>
+
+          <!-- Lower left leaves -->
+          <path d="M 50 80 Q 32 80 18 92"/>
+          <path d="M 50 80 Q 38 77 25 85"/>
+
+          <!-- Lower right leaves -->
+          <path d="M 50 80 Q 68 80 82 92"/>
+          <path d="M 50 80 Q 62 77 75 85"/>
+        </g>
+      </svg>
+
+      <div class="content-wrapper">
+        <div>
+          <div class="reference" id="reference">Psalm 145:10</div>
+          <div class="divider-line">
+            <div class="heart-dot"></div>
+          </div>
+          <div class="scripture-text" id="scripture">All Your works will give thanks to You, LORD, and Your godly ones will bless You.</div>
+        </div>
+
+        <div>
+          <div class="controls">
+            <button onclick="previousScripture()">← Previous</button>
+            <button onclick="nextScripture()">Next →</button>
+          </div>
+          <div class="counter" id="counter">1 / 70</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scriptures = [
+      { reference: "Psalm 145:10", text: "All Your works will give thanks to You, LORD, and Your godly ones will bless You." },
+      { reference: "Romans 8:28", text: "And we know that God causes all things to work together for good to those who love God, to those who are called according to His purpose." },
+      { reference: "Psalm 103:2", text: "Bless the LORD, my soul, and do not forget any of His benefits." },
+      { reference: "Ephesians 1:3", text: "Blessed be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly places in Christ." },
+      { reference: "James 1:5", text: "But if any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him." },
+      { reference: "Matthew 6:33-34", text: "But seek first His kingdom and His righteousness, and all these things will be provided to you. So do not worry about tomorrow; for tomorrow will worry about itself. Each day has enough trouble of its own." },
+      { reference: "Jude 1:20-21", text: "But you, beloved, building yourselves up on your most holy faith, praying in the Holy Spirit, keep yourselves in the love of God, looking forward to the mercy of our Lord Jesus Christ to eternal life." },
+      { reference: "Jeremiah 33:3", text: "Call to Me and I will answer you, and I will tell you great and mighty things, which you do not know." },
+      { reference: "Psalm 50:15", text: "Call upon Me on the day of trouble; I will rescue you, and you will honor Me." },
+      { reference: "Psalm 55:22", text: "Cast your burden upon the LORD and He will sustain you; He will never allow the righteous to be shaken." },
+      { reference: "Psalm 118:1", text: "Give thanks to the LORD, for He is good; for His mercy is everlasting." },
+      { reference: "Colossians 4:2", text: "Devote yourselves to prayer, keeping alert in it with an attitude of thanksgiving." },
+      { reference: "Luke 12:32", text: "Do not be afraid, little flock, because your Father has chosen to give you the kingdom." },
+      { reference: "Matthew 6:6", text: "But when you pray, go into your inner room, close your door and pray to your Father who is in secret; and your Father who sees what is done in secret will reward you." },
+      { reference: "Philippians 4:6-7", text: "Do not be anxious about anything, but in everything by prayer and pleading with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all comprehension, will guard your hearts and minds in Christ Jesus." },
+      { reference: "Isaiah 41:10", text: "Do not fear, for I am with you; Do not be afraid, for I am your God. I will strengthen you, I will also help you, I will also uphold you with My righteous right hand." },
+      { reference: "Psalm 100:4", text: "Enter His gates with thanksgiving, and His courtyards with praise. Give thanks to Him, bless His name." },
+      { reference: "Psalm 23:4", text: "Even though I walk through the valley of the shadow of death, I fear no evil, for You are with me; Your rod and Your staff, they comfort me." },
+      { reference: "Philippians 4:8-9", text: "Finally, brothers and sisters, whatever is true, whatever is honorable, whatever is right, whatever is pure, whatever is lovely, whatever is commendable, if there is any excellence and if anything worthy of praise, think about these things. As for the things you have learned and received and heard and seen in me, practice these things, and the God of peace will be with you." },
+      { reference: "2 Corinthians 4:15", text: "For all things are for your sakes, so that grace, having spread to more and more people, will cause thanksgiving to overflow to the glory of God." },
+      { reference: "1 Timothy 4:4", text: "For everything created by God is good, and nothing is to be rejected if it is received with gratitude;" },
+      { reference: "Colossians 1:9", text: "For this reason we also, since the day we heard of it, have not ceased praying for you and asking that you may be filled with the knowledge of His will in all spiritual wisdom and understanding." },
+      { reference: "Psalm 136:26", text: "Give thanks to the God of heaven, for His faithfulness is everlasting." },
+      { reference: "Psalm 5:3", text: "In the morning, Lord, You will hear my voice; in the morning I will present my prayer to You and be on the watch." },
+      { reference: "Proverbs 3:5-6", text: "Trust in the LORD with all your heart And do not lean on your own understanding. In all your ways acknowledge Him, And He will make your paths straight." },
+      { reference: "1 Chronicles 16:34", text: "Give thanks to the LORD, for He is good, for His faithfulness is everlasting." },
+      { reference: "Psalm 136:4", text: "To Him who alone does great wonders, for His faithfulness is everlasting." },
+      { reference: "Colossians 1:12", text: "giving thanks to the Father, who has qualified us to share in the inheritance of the saints in light." },
+      { reference: "Psalm 46:1-3", text: "God is our refuge and strength, A very ready help in trouble. Therefore we will not fear, though the earth shakes And the mountains slip into the heart of the sea; Though its waters roar and foam, Though the mountains quake at its swelling pride." },
+      { reference: "Psalm 63:1", text: "God, You are my God; I shall be watching for You; my soul thirsts for You, my flesh yearns for You, in a dry and exhausted land where there is no water." },
+      { reference: "Joshua 1:9", text: "Have I not commanded you? Be strong and courageous! Do not be terrified nor dismayed, for the LORD your God is with you wherever you go." },
+      { reference: "1 Peter 5:7", text: "having cast all your anxiety on Him, because He cares about you." },
+      { reference: "2 Corinthians 9:11", text: "You will be enriched in everything for all generosity, which through us is producing thanksgiving to God." },
+      { reference: "Psalm 61:1-3", text: "Hear my cry, God; Give Your attention to my prayer. From the end of the earth I call to You when my heart is faint; Lead me to the rock that is higher than I. For You have been a refuge for me, A tower of strength against the enemy." },
+      { reference: "Psalm 17:6", text: "I have called upon You, for You will answer me, God; incline Your ear to me, hear my speech." },
+      { reference: "Psalm 34:4", text: "I sought the LORD and He answered me, And rescued me from all my fears." },
+      { reference: "Psalm 62:8", text: "Trust in Him at all times, you people; pour out your hearts before Him; God is a refuge for us." },
+      { reference: "Psalm 9:1", text: "I will give thanks to the LORD with all my heart; I will tell of all Your wonders." },
+      { reference: "Psalm 121:1-2", text: "I will raise my eyes to the mountains; From where will my help come? My help comes from the LORD, Who made heaven and earth." },
+      { reference: "1 Thessalonians 5:18", text: "In everything give thanks; for this is the will of God for you in Christ Jesus." },
+      { reference: "Psalm 18:6", text: "In my distress I called upon the Lord, and cried to my God for help; He heard my voice from His temple, and my cry for help before Him came into His ears." },
+      { reference: "Romans 8:26", text: "In the same way the Spirit also helps our weakness; for we do not know what to pray for as we should, but the Spirit Himself intercedes for us with groanings too deep for words." },
+      { reference: "Luke 11:1", text: "It happened that while Jesus was praying in a certain place, after He had finished, one of His disciples said to Him, \"Lord, teach us to pray just as John also taught his disciples.\"" },
+      { reference: "Psalm 92:1", text: "It is good to give thanks to the LORD and to sing praises to Your name, Most High;" },
+      { reference: "Matthew 26:41", text: "Keep watching and praying, so that you do not come into temptation; the spirit is willing, but the flesh is weak." },
+      { reference: "Colossians 3:15", text: "Let the peace of Christ, to which you were indeed called in one body, rule in your hearts; and be thankful." },
+      { reference: "James 5:16", text: "Therefore, confess your sins to one another, and pray for one another so that you may be healed. A prayer of a righteous person, when it is brought about, can accomplish much." },
+      { reference: "Psalm 95:2-3", text: "Let us come before His presence with thanksgiving; let us shout joyfully to Him with songs." },
+      { reference: "Psalm 86:6-7", text: "Listen, Lord, to my prayer; and give Your attention to the sound of my pleading! On the day of my trouble I will call upon You, for You will answer me." },
+      { reference: "Hebrews 13:5-6", text: "Make sure that your character is free from the love of money, being content with what you have; for He Himself has said, I WILL NEVER DESERT YOU, NOR WILL I EVER ABANDON YOU, so that we confidently say, THE LORD IS MY HELPER, I WILL NOT BE AFRAID." },
+      { reference: "Psalm 141:2", text: "May my prayer be counted as incense before You; the raising of my hands as the evening offering." },
+      { reference: "Romans 15:13", text: "Now may the God of hope fill you with all joy and peace in believing, so that you will abound in hope by the power of the Holy Spirit." },
+      { reference: "Luke 17:15", text: "Now one of them, when he saw that he had been healed, turned back, glorifying God with a loud voice," },
+      { reference: "John 14:27", text: "Peace I leave you, My peace I give you; not as the world gives, do I give to you. Do not let your hearts be troubled, nor fearful." },
+      { reference: "1 Thessalonians 5:16-18", text: "Rejoice always, pray without ceasing, in everything give thanks; for this is the will of God for you in Christ Jesus." },
+      { reference: "Romans 12:12", text: "Rejoicing in hope, persevering in tribulation, devoted to prayer." },
+      { reference: "Psalm 37:7", text: "Rest in the Lord and wait patiently for Him; do not get upset because of one who is successful in his way." },
+      { reference: "Revelation 7:12", text: "saying, Amen, blessing, glory, wisdom, thanksgiving, honor, power, and might belong to our God forever and ever. Amen." },
+      { reference: "Psalm 139:23-24", text: "Search me, God, and know my heart; Put me to the test and know my anxious thoughts; And see if there is any hurtful way in me, And lead me in the everlasting way." },
+      { reference: "Ephesians 3:16-17", text: "that He would grant you, according to the riches of His glory, to be strengthened with power through His Spirit in the inner self, so that Christ may dwell in your hearts through faith." },
+      { reference: "Psalm 30:12", text: "That my soul may sing praise to You and not be silent. LORD my God, I will give thanks to You forever." },
+      { reference: "Hebrews 4:16", text: "Therefore let's approach the throne of grace with confidence, so that we may receive mercy and find grace for help at the time of our need." },
+      { reference: "Psalm 94:19", text: "When my anxious thoughts multiply within me, Your comfort delights my soul." },
+      { reference: "Psalm 28:7", text: "The LORD is my strength and my shield; my heart trusts in Him, and I am helped; therefore my heart exults, and with my song I shall thank Him." },
+      { reference: "Ephesians 6:18", text: "With every prayer and request, pray at all times in the Spirit, and with this in view, be alert with all perseverance and every request for all the saints." },
+      { reference: "Zephaniah 3:17", text: "The LORD your God is in your midst, A victorious warrior. He will rejoice over you with joy, He will quiet you in His love, He will rejoice over you with shouts of joy." },
+      { reference: "Isaiah 26:3", text: "The steadfast of mind You will keep in perfect peace, Because he trusts in You." },
+      { reference: "1 John 4:18", text: "There is no fear in love, but perfect love drives out fear, because fear involves punishment, and the one who fears is not perfected in love." },
+      { reference: "Psalm 145:18", text: "The Lord is near to all who call on Him, to all who call on Him in truth." },
+      { reference: "Hebrews 12:28", text: "Therefore, since we receive a kingdom which cannot be shaken, let us show gratitude, by which we may offer to God an acceptable service with reverence and awe." },
+      { reference: "1 John 5:14-15", text: "This is the confidence which we have before Him, that, if we ask anything according to His will, He hears us. And if we know that He hears us in whatever we ask, we know that we have the requests which we have asked from Him." },
+      { reference: "Psalm 118:24", text: "This is the day which the LORD has made; let us rejoice and be glad in it." },
+      { reference: "Hebrews 13:15", text: "Through Him then, let us continually offer up a sacrifice of praise to God, that is, the fruit of lips praising His name." },
+      { reference: "Psalm 37:3-5", text: "Trust in the LORD and do good; Live in the land and cultivate faithfulness. Delight yourself in the LORD; And He will give you the desires of your heart. Commit your way to the LORD, Trust also in Him, and He will do it." },
+      { reference: "Colossians 3:17", text: "Whatever you do in word or deed, do everything in the name of the Lord Jesus, giving thanks through Him to God the Father." },
+      { reference: "Psalm 56:3-4", text: "When I am afraid, I will put my trust in You. In God, whose word I praise, In God I have put my trust; I shall not be afraid. What can mere mortals do to me?" }
+    ];
+
+    let currentIndex = 0;
+
+    function updateDisplay() {
+      const current = scriptures[currentIndex];
+      document.getElementById('reference').textContent = current.reference;
+      document.getElementById('scripture').textContent = current.text;
+      document.getElementById('counter').textContent = (currentIndex + 1) + ' / ' + scriptures.length;
+    }
+
+    function nextScripture() {
+      currentIndex = (currentIndex + 1) % scriptures.length;
+      updateDisplay();
+    }
+
+    function previousScripture() {
+      currentIndex = (currentIndex - 1 + scriptures.length) % scriptures.length;
+      updateDisplay();
+    }
+
+    // Initialize
+    updateDisplay();
+  </script>
+
+</body>
+</html>

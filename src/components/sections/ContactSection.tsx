@@ -46,7 +46,15 @@ export default function ContactSection({ sectionRef }: ContactSectionProps) {
             <p className="text-charcoal text-lg leading-relaxed mb-8">
               Questions, ideas, or just want to say hello? I read every message.
             </p>
-          
+            <div className="mt-6">
+              <iframe
+                src="scripture_of_the_day_widget.html"
+                width="500"
+                height="750"
+                className="rounded-2xl max-w-full"
+                title="Scripture of the Day"
+              />
+            </div>
           </div>
 
           <div className="bg-white p-8 lg:p-12 rounded-[28px] card-shadow">
