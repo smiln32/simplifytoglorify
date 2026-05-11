@@ -45,7 +45,7 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
               <img
                 src="/images/journaling-at-home.jpg"
                 alt="Journaling space with Bible, journal and coffee"
-                className="w-full h-[400px] lg:h-[600px] object-cover rounded-[28px] card-shadow"
+                className="w-full h-[400px] lg:h-[500px] object-cover rounded-[28px] card-shadow"
               />
             </div>
           </div>

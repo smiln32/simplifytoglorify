@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const topics = [
   { name: 'Caregiving',  slug: 'caregiving' },
@@ -52,6 +53,7 @@ export default function Products() {
 
       <main className="pt-32 lg:pt-36 pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="mb-6"><Breadcrumbs /></div>
 
           {/* Page header */}
           <div className="text-center max-w-2xl mx-auto mb-16">

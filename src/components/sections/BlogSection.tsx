@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { blogPosts } from '@/data/blogPosts';
+import { blogPostMeta as blogPosts } from '@/data/blogPosts/index';
 import type { SectionRef } from '@/types';
 
 interface BlogSectionProps {

@@ -8,10 +8,10 @@ export interface TopicBundle {
 export const topicBundles: TopicBundle[] = [
   { name: 'Caregiving', image: '/images/topic-caregiving.jpg', description: 'For those giving care', imageClass: 'saturate-[55%] brightness-[1.05]' },
   { name: 'Grief', image: '/images/topic-grief.jpg', description: 'For those who mourn' },
-  { name: 'Anxiety', image: '/images/topic-anxiety.jpg', description: 'For anxious hearts' },
-  { name: 'Depression', image: '/images/topic-depression.jpg', description: 'For heavy days' },
-  { name: 'Peace', image: '/images/woman-peace.jpg', description: 'For restless souls' },
+  { name: 'Anxiety', image: '/images/topic-anxiety1.jpg', description: 'For anxious hearts' },
+  { name: 'Depression', image: '/images/topic_depression.jpg', description: 'For heavy days' },
+  { name: 'Peace', image: '/images/topic_peace.jpg', description: 'For restless souls' },
   { name: 'Prayer', image: '/images/topic-prayer.jpg', description: 'For learning to pray' },
-  { name: 'Uncertainty', image: '/images/topic-uncertainty-v1.jpg', description: 'For unclear seasons', imageClass: 'saturate-[55%] brightness-[1.05]' },
+  { name: 'Uncertainty', image: '/images/topic_uncertainty.jpg', description: 'For unclear seasons', imageClass: 'saturate-[55%] brightness-[1.05]' },
   { name: 'Gratitude', image: '/images/topic-gratitude.jpg', description: 'For thankful hearts' },
 ];

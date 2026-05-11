@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { articles } from '@/data/articles';
+import { articleMeta as articles } from '@/data/articles/index';
 import type { SectionRef } from '@/types';
 
 interface ArticlesSectionProps {

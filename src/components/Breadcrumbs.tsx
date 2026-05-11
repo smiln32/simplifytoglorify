@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
+import { blogPostMeta as blogPosts } from '../data/blogPosts/index';
+import { articleMeta as articles } from '../data/articles/index';
 import { Home, ChevronRight } from 'lucide-react';
 
 interface BreadcrumbItem {
@@ -17,6 +18,11 @@ export default function Breadcrumbs() {
     return post ? post.title : slug;
   };
 
+  const getArticleTitle = (slug: string): string => {
+    const article = articles.find((a) => a.slug === slug);
+    return article ? article.title : slug;
+  };
+
   const buildItems = (): BreadcrumbItem[] => {
     const items: BreadcrumbItem[] = [
       { label: 'Home', path: '/', isLast: pathSegments.length === 0 }
@@ -26,14 +32,19 @@ export default function Breadcrumbs() {
       return items;
     }
 
-    // First segment is "blog"
     if (pathSegments[0] === 'blog') {
       items.push({ label: 'Journal', path: '/blog', isLast: pathSegments.length === 1 });
-
-      // Second segment is a post slug
       if (pathSegments.length === 2) {
         const postTitle = getPostTitle(pathSegments[1]);
         items.push({ label: postTitle, path: location.pathname, isLast: true });
+      }
+    } else if (pathSegments[0] === 'products') {
+      items.push({ label: 'Shop', path: '/products', isLast: true });
+    } else if (pathSegments[0] === 'articles') {
+      items.push({ label: 'Articles', path: '/#articles', isLast: pathSegments.length === 1 });
+      if (pathSegments.length === 2) {
+        const articleTitle = getArticleTitle(pathSegments[1]);
+        items.push({ label: articleTitle, path: location.pathname, isLast: true });
       }
     }
 
