@@ -6,6 +6,7 @@ const article: Article = {
   title: 'Journaling Helps Us Think, Pray and Heal',
   category: 'Journaling',
   excerpt: "Journaling can become something much deeper than recording events — a quiet place where the mind slows down, the heart softens, and faith has room to breathe.",
+  image: '/images/journaling_helps_the_mind.png',
   content: `
 <p>Journaling is often seen as a simple way to remember the events of a day, but it can become something much deeper. It can be a quiet place where the mind slows down, the heart softens, and faith has room to breathe.</p>
 

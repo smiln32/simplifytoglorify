@@ -9,7 +9,7 @@ const post: BlogPost = {
   readTime: '6 min read',
   category: 'Encouragement',
   tags: ['grace', 'rest', 'weariness'],
-  image: '/images/blog/grace.jpg',
+  image: '/images/grace_for_the_weary.png',
   content: `
     <p style="margin-bottom: 1.5em;">I want to speak to the weary ones today. The ones who feel they should have it all together by now. The ones who are tired in a way that sleep doesn't fix.</p>
 

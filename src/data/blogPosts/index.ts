@@ -12,7 +12,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Reflection',
     tags: ['peace', 'trust', 'stillness'],
-    image: '/images/blog/peace.jpg',
+    image: '/images/finding_peace_in_uncertainty.png',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '4 min read',
     category: 'Simplicity',
     tags: ['slow living', 'mindfulness', 'rest'],
-    image: '/images/blog/slow.jpg',
+    image: '/images/the_art_of_slowing_down.png',
   },
   {
     id: 3,
@@ -34,6 +34,6 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '6 min read',
     category: 'Encouragement',
     tags: ['grace', 'rest', 'weariness'],
-    image: '/images/blog/grace.jpg',
+    image: '/images/grace_for_the_weary.png',
   },
 ];

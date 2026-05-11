@@ -4,6 +4,7 @@ export interface ArticleMeta {
   title: string;
   category: string;
   excerpt: string;
+  image?: string;
 }
 
 export interface Article extends ArticleMeta {

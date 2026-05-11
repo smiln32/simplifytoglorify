@@ -6,6 +6,7 @@ const article: Article = {
   title: '5-Minute Journaling Prompts for Busy Christian Moms',
   category: 'Journaling',
   excerpt: "These prompts meet you right in the laundry-fold, carpool-run, dinner-prep moments — creating space for God's voice without guilt or grand expectations.",
+  image: '/images/writing_in_a_journal.png',
   content: `
 <p>Busy Christian moms don't need another time-intensive spiritual discipline. These 5-minute prompts meet you right in the laundry-fold, carpool-run, dinner-prep moments. They create space for God's voice without guilt or grand expectations. Journaling this way builds a habit of noticing His faithfulness in ordinary days.</p>
 

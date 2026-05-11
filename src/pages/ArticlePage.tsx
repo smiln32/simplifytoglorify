@@ -53,6 +53,10 @@ export default function ArticlePage() {
       </div>
 
       <div style={{ maxWidth: '700px', margin: '0 auto', padding: '60px 20px' }}>
+        {article.image && (
+          <img src={article.image} alt={article.title} style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
+            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+        )}
         <div style={{ fontSize: '1.2rem', lineHeight: 1.9, color: '#2d3748' }} dangerouslySetInnerHTML={{ __html: article.content }} />
         <div style={{ marginTop: '80px', paddingTop: '40px', borderTop: '1px solid #d9d7d4' }}>
           <Link

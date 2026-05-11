@@ -33,8 +33,11 @@ export default function Breadcrumbs() {
     }
 
     if (pathSegments[0] === 'blog') {
-      items.push({ label: 'Journal', path: '/blog', isLast: pathSegments.length === 1 });
-      if (pathSegments.length === 2) {
+      if (pathSegments.length === 1) {
+        items[0] = { label: 'Home', path: '/', isLast: false };
+        items.push({ label: 'Blog', path: '/blog', isLast: true });
+      } else if (pathSegments.length === 2) {
+        items.push({ label: 'Blog', path: '/blog', isLast: false });
         const postTitle = getPostTitle(pathSegments[1]);
         items.push({ label: postTitle, path: location.pathname, isLast: true });
       }

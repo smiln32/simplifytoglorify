@@ -9,7 +9,7 @@ const post: BlogPost = {
   readTime: '4 min read',
   category: 'Simplicity',
   tags: ['slow living', 'mindfulness', 'rest'],
-  image: '/images/blog/slow.jpg',
+  image: '/images/the_art_of_slowing_down.png',
   content: `
     <p style="margin-bottom: 1.5em;">We live in an age of acceleration. Everything moves faster—our news, our communication, our expectations. And yet, our souls remain stubbornly resistant to speed. They require time to process, to feel, to heal.</p>
 

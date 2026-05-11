@@ -6,6 +6,7 @@ const article: Article = {
   title: 'How Do Depression Journals Improve Mental Well-Being?',
   category: 'Depression',
   excerpt: "Depression journals don't erase pain, but they offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons.",
+  image: '/images/topic_depression.png',
   content: `
 <p>Depression journals support mental well-being in quiet, meaningful ways that create emotional relief and spiritual connection.</p>
 <p>They don't erase pain or replace professional help, but depression journals offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons. Through consistent journaling, women discover emotional clarity, self-compassion, and subtle shifts toward hope.</p>

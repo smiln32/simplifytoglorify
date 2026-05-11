@@ -6,6 +6,7 @@ const article: Article = {
   title: 'Journal Prompts for Depression',
   category: 'Depression',
   excerpt: "These prompts meet you right where you are — with short, specific questions that help name what feels blurry and create space for small breaths of clarity.",
+  image: '/images/reflective-journaling.png',
   content: `
 <p>Depression can make words feel heavy, thoughts feel tangled, and even the idea of writing feel impossible. These prompts meet you right where you are — with short, specific questions that help name what feels blurry and create space for small breaths of clarity.</p>
 <p>Journaling isn't a cure, but consistent, structured writing can reduce depression symptoms over time, especially when practiced regularly. This framework prioritizes emotional safety, low-pressure entry points, and faith anchors for when you need to remember you're not processing alone.</p>

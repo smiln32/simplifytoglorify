@@ -59,12 +59,22 @@ export default function ArticlesSection({ sectionRef }: ArticlesSectionProps) {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((article) => (
-            <Link key={article.id} to={`/articles/${article.slug}`} className="group block bg-ivory p-6 rounded-[28px] card-shadow hover:shadow-xl transition-shadow">
-              <span className="text-label text-slate-blue">{article.category}</span>
-              <h4 className="font-display text-xl text-charcoal mt-3 mb-2 group-hover:text-slate-blue transition-colors">
-                {article.title}
-              </h4>
-              <p className="text-sm text-muted-slate line-clamp-2">{article.excerpt}</p>
+            <Link key={article.id} to={`/articles/${article.slug}`} className="group block bg-ivory rounded-[28px] card-shadow hover:shadow-xl transition-shadow overflow-hidden">
+              {article.image && (
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
+              )}
+              <div className="p-6">
+                <span className="text-label text-slate-blue">{article.category}</span>
+                <h4 className="font-display text-xl text-charcoal mt-3 mb-2 group-hover:text-slate-blue transition-colors">
+                  {article.title}
+                </h4>
+                <p className="text-sm text-muted-slate line-clamp-2">{article.excerpt}</p>
+              </div>
             </Link>
           ))}
         </div>

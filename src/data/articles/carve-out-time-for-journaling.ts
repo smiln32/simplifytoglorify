@@ -6,6 +6,7 @@ const article: Article = {
   title: 'How to Carve Out Time for Journaling',
   category: 'Journaling',
   excerpt: "What if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?",
+  image: '/images/time_for_journaling.png',
   content: `
 <p>Life as a busy mom doesn't leave much margin for quiet reflection. Between diaper changes, meal prep, school runs, and endless laundry, carving out time for journaling can feel impossible. But what if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?</p>
 

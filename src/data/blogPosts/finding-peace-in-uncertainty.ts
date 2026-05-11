@@ -9,7 +9,7 @@ const post: BlogPost = {
   readTime: '5 min read',
   category: 'Reflection',
   tags: ['peace', 'trust', 'stillness'],
-  image: '/images/blog/peace.jpg',
+  image: '/images/finding_peace_in_uncertainty.png',
   content: `
     <p style="margin-bottom: 1.5em;">There is a particular kind of exhaustion that comes from trying to see around corners, from attempting to map out a future that refuses to be mapped. In seasons of uncertainty, we often exhaust ourselves not by the work of living, but by the work of predicting.</p>
 
