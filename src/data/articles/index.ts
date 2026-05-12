@@ -51,4 +51,20 @@ export const articleMeta: ArticleMeta[] = [
     excerpt: "Journaling can become something much deeper than recording events — a quiet place where the mind slows down, the heart softens, and faith has room to breathe.",
     image: '/images/journaling_helps_the_mind.png',
   },
+  {
+    id: 7,
+    slug: 'when-gratitude-becomes-a-place-to-rest',
+    title: 'When Gratitude Becomes a Place to Rest',
+    category: 'Gratitude',
+    excerpt: 'True gratitude goes deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.',
+    image: '/images/rest_for_the_mind.png',
+  },
+  {
+    id: 8,
+    slug: 'how-journaling-heals-the-soul',
+    title: 'How Journaling Heals the Mind and Soul',
+    category: 'Journaling',
+    excerpt: 'A pen, a page, a few honest words — journaling can become the quiet place where the mind settles, the heart exhales, and God helps us see what we could not see before.',
+    image: '/images/think_pray_heal.png',
+  },
 ];
