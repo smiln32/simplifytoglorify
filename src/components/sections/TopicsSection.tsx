@@ -16,7 +16,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
             Find what you need<br />today.
           </h2>
           <p className="text-charcoal text-lg max-w-md">
-            Each topic includes a journal, scripture cards, prayer cards, breath prayers, and devotionals—designed to work together.
+            Each topic includes a journal, scripture cards, prayer cards, breath prayers, and devotionals — designed to work together.
           </p>
         </div>
 
@@ -31,12 +31,13 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
                 <img
                   src={topic.image}
                   alt={topic.name}
-                  className={`w-full h-36 lg:h-44 object-cover transition-transform duration-500 group-hover:scale-105${topic.imageClass ? ` ${topic.imageClass}` : ''}`}
+                  className={`w-full h-40 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-105${topic.imageClass ? ` ${topic.imageClass}` : ''}`}
                 />
               </div>
               <p className="font-display text-base text-charcoal text-center mt-3 group-hover:text-slate-blue transition-colors">
                 {topic.name}
               </p>
+              <p className="text-sm text-muted-slate text-center mt-1">{topic.description}</p>
             </Link>
           ))}
         </div>

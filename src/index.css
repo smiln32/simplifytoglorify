@@ -106,6 +106,10 @@
   .bg-sage {
     background-color: var(--sage);
   }
+
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
   
   .text-lavender {
     color: var(--lavender);

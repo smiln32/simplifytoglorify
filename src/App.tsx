@@ -7,6 +7,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import TopicsSection from '@/components/sections/TopicsSection';
 import ArticlesSection from '@/components/sections/ArticlesSection';
+import ScriptureBanner from '@/components/sections/ScriptureBanner';
 import FreeResourceSection from '@/components/sections/FreeResourceSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/sections/Footer';
@@ -50,6 +51,7 @@ function App() {
       const sections = [
         '.about-section',
         '.topics-section',
+        '.scripture-banner',
         '.articles-section',
         '.free-resource-section',
         '.contact-section',
@@ -85,6 +87,7 @@ function App() {
       <HeroSection sectionRef={heroRef} aboutRef={aboutRef} scrollToSection={scrollToSection} />
       <AboutSection sectionRef={aboutRef} />
       <TopicsSection sectionRef={topicsRef} />
+      <ScriptureBanner />
       <ArticlesSection sectionRef={articlesRef} />
 <FreeResourceSection sectionRef={freeResourceRef} />
       <ContactSection sectionRef={contactRef} />

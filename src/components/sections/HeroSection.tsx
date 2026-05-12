@@ -13,23 +13,29 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
     <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center bg-blush">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 lg:py-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
           <div className="order-2 lg:order-1">
             <div className="hero-text space-y-6">
               <p className="font-script italic text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
                 Simplify to Glorify
               </p>
-              <div className="py-4 border-l-2 border-slate-blue pl-6 my-8">
-                <p className="font-display text-xl lg:text-2xl text-slate-blue">
-                  Practical Peace for Overwhelmed Hearts
+              <p className="font-display text-2xl lg:text-3xl text-slate-blue">
+                Practical Peace for Overwhelmed Hearts
+              </p>
+              <p className="text-muted-slate text-lg max-w-md leading-relaxed">
+                Grace-filled journals, scripture cards, prayer cards, devotionals, and mini-guides for women in challenging seasons.
+              </p>
+
+              <div className="rounded-[20px] p-6 lg:p-8 bg-charcoal">
+                <p className="font-display text-lg lg:text-xl italic leading-relaxed" style={{ color: 'var(--ivory)' }}>
+                  "Come to Me, all who are weary and burdened, and I will give you rest."
                 </p>
-                <p className="font-body text-lg lg:text-xl text-charcoal italic leading-relaxed mt-6">
-                  "Come to Me, all who are weary and burdened, and I will give you rest." — Matthew 11:28
+                <p className="mt-3 text-sm tracking-widest uppercase font-body text-slate-blue">
+                  Matthew 11:28
                 </p>
               </div>
-              <p className="text-muted-slate text-lg max-w-md leading-relaxed">
-                Grace-filled journals, scripture cards, prayer cards, devotionals, mini-guides and more for women experiencing challenging seasons.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
                   onClick={() => scrollToSection(aboutRef)}
                   className="bg-slate-blue hover:bg-slate-blue/90 text-white px-8 py-6 text-base rounded-full"
@@ -40,15 +46,27 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
               </div>
             </div>
           </div>
+
           <div className="order-1 lg:order-2">
             <div className="hero-image relative">
-              <img
-                src="/images/journaling-at-home.jpg"
-                alt="Journaling space with Bible, journal and coffee"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-[28px] card-shadow"
-              />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="/images/journaling-at-home.jpg"
+                className="w-full h-[420px] lg:h-[580px] object-cover rounded-[28px] card-shadow"
+              >
+                <source src="/images/hero-video.mp4" type="video/mp4" />
+                <img
+                  src="/images/journaling-at-home.jpg"
+                  alt="Journaling space with Bible, journal and coffee"
+                  className="w-full h-[420px] lg:h-[580px] object-cover rounded-[28px]"
+                />
+              </video>
             </div>
           </div>
+
         </div>
       </div>
     </section>
