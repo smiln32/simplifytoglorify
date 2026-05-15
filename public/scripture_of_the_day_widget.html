@@ -42,16 +42,6 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
-    .leaf-decoration {
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-      width: 90px;
-      height: 140px;
-      opacity: 0.25;
-      pointer-events: none;
-    }
-
     .content-wrapper {
       position: relative;
       z-index: 1;
@@ -68,7 +58,7 @@
       text-transform: uppercase;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 2.7rem;
+      margin-bottom: 2.0rem;
       margin-top: 1rem;
     }
 
@@ -76,7 +66,7 @@
       width: 200px;
       height: 1px;
       background: rgba(255, 255, 255, 0.5);
-      margin: 0 auto 2.7rem;
+      margin: 0 auto 2.0rem;
       position: relative;
       display: flex;
       align-items: center;
@@ -233,68 +223,57 @@
 
   <script>
     const scriptures = [
-      { reference: "Psalm 145:10", text: "All Your works will give thanks to You, LORD, and Your godly ones will bless You." },
-      { reference: "Romans 8:28", text: "And we know that God causes all things to work together for good to those who love God, to those who are called according to His purpose." },
-      { reference: "Psalm 103:2", text: "Bless the LORD, my soul, and do not forget any of His benefits." },
-      { reference: "Ephesians 1:3", text: "Blessed be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly places in Christ." },
-      { reference: "James 1:5", text: "But if any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him." },
-     
-      { reference: "Jude 1:20-21", text: "But you, beloved, building yourselves up on your most holy faith, praying in the Holy Spirit, keep yourselves in the love of God, looking forward to the mercy of our Lord Jesus Christ to eternal life." },
-      { reference: "Jeremiah 33:3", text: "Call to Me and I will answer you, and I will tell you great and mighty things, which you do not know." },
-      { reference: "Psalm 50:15", text: "Call upon Me on the day of trouble; I will rescue you, and you will honor Me." },
-      { reference: "Psalm 55:22", text: "Cast your burden upon the LORD and He will sustain you; He will never allow the righteous to be shaken." },
-      { reference: "Psalm 118:1", text: "Give thanks to the LORD, for He is good; for His mercy is everlasting." },
-      { reference: "Colossians 4:2", text: "Devote yourselves to prayer, keeping alert in it with an attitude of thanksgiving." },
-      { reference: "Luke 12:32", text: "Do not be afraid, little flock, because your Father has chosen to give you the kingdom." },
-      { reference: "Matthew 6:6", text: "But when you pray, go into your inner room, close your door and pray to your Father who is in secret; and your Father who sees what is done in secret will reward you." },
-      { reference: "Isaiah 41:10", text: "Do not fear, for I am with you; Do not be afraid, for I am your God. I will strengthen you, I will also help you, I will also uphold you with My righteous right hand." },
-      { reference: "Psalm 100:4", text: "Enter His gates with thanksgiving, and His courtyards with praise. Give thanks to Him, bless His name." },
-      { reference: "Psalm 23:4", text: "Even though I walk through the valley of the shadow of death, I fear no evil, for You are with me; Your rod and Your staff, they comfort me." },
-      { reference: "2 Corinthians 4:15", text: "For all things are for your sakes, so that grace, having spread to more and more people, will cause thanksgiving to overflow to the glory of God." },
-      { reference: "1 Timothy 4:4", text: "For everything created by God is good, and nothing is to be rejected if it is received with gratitude;" },
-      { reference: "Psalm 136:26", text: "Give thanks to the God of heaven, for His faithfulness is everlasting." },
-      { reference: "Psalm 5:3", text: "In the morning, Lord, You will hear my voice; in the morning I will present my prayer to You and be on the watch." },
-      { reference: "Proverbs 3:5-6", text: "Trust in the LORD with all your heart And do not lean on your own understanding. In all your ways acknowledge Him, And He will make your paths straight." },
-      { reference: "1 Chronicles 16:34", text: "Give thanks to the LORD, for He is good, for His faithfulness is everlasting." },
-      { reference: "Psalm 136:4", text: "To Him who alone does great wonders, for His faithfulness is everlasting." },
-      { reference: "Colossians 1:12", text: "giving thanks to the Father, who has qualified us to share in the inheritance of the saints in light." },
-      { reference: "Psalm 63:1", text: "God, You are my God; I shall be watching for You; my soul thirsts for You, my flesh yearns for You, in a dry and exhausted land where there is no water." },
-      { reference: "Joshua 1:9", text: "Have I not commanded you? Be strong and courageous! Do not be terrified nor dismayed, for the LORD your God is with you wherever you go." },
-      { reference: "1 Peter 5:7", text: "having cast all your anxiety on Him, because He cares about you." },
-      { reference: "2 Corinthians 9:11", text: "You will be enriched in everything for all generosity, which through us is producing thanksgiving to God." },
-      { reference: "Psalm 17:6", text: "I have called upon You, for You will answer me, God; incline Your ear to me, hear my speech." },
-      { reference: "Psalm 34:4", text: "I sought the LORD and He answered me, And rescued me from all my fears." },
-      { reference: "Psalm 62:8", text: "Trust in Him at all times, you people; pour out your hearts before Him; God is a refuge for us." },
-      { reference: "Psalm 9:1", text: "I will give thanks to the LORD with all my heart; I will tell of all Your wonders." },
-      { reference: "Psalm 121:1-2", text: "I will raise my eyes to the mountains; From where will my help come? My help comes from the LORD, Who made heaven and earth." },
-      { reference: "1 Thessalonians 5:18", text: "In everything give thanks; for this is the will of God for you in Christ Jesus." },
-      { reference: "Psalm 18:6", text: "In my distress I called upon the Lord, and cried to my God for help; He heard my voice from His temple, and my cry for help before Him came into His ears." },
-      { reference: "Psalm 92:1", text: "It is good to give thanks to the LORD and to sing praises to Your name, Most High;" },
-      { reference: "Matthew 26:41", text: "Keep watching and praying, so that you do not come into temptation; the spirit is willing, but the flesh is weak." },
-      { reference: "Colossians 3:15", text: "Let the peace of Christ, to which you were indeed called in one body, rule in your hearts; and be thankful." },
-      { reference: "Psalm 95:2-3", text: "Let us come before His presence with thanksgiving; let us shout joyfully to Him with songs." },
-      { reference: "Psalm 86:6-7", text: "Listen, Lord, to my prayer; and give Your attention to the sound of my pleading! On the day of my trouble I will call upon You, for You will answer me." },
-      { reference: "Psalm 141:2", text: "May my prayer be counted as incense before You; the raising of my hands as the evening offering." },
-      { reference: "Romans 15:13", text: "Now may the God of hope fill you with all joy and peace in believing, so that you will abound in hope by the power of the Holy Spirit." },
-      { reference: "Luke 17:15", text: "Now one of them, when he saw that he had been healed, turned back, glorifying God with a loud voice," },
-      { reference: "John 14:27", text: "Peace I leave you, My peace I give you; not as the world gives, do I give to you. Do not let your hearts be troubled, nor fearful." },
-      { reference: "1 Thessalonians 5:16-18", text: "Rejoice always, pray without ceasing, in everything give thanks; for this is the will of God for you in Christ Jesus." },
-      { reference: "Romans 12:12", text: "Rejoicing in hope, persevering in tribulation, devoted to prayer." },
-      { reference: "Psalm 37:7", text: "Rest in the Lord and wait patiently for Him; do not get upset because of one who is successful in his way." },
-      { reference: "Revelation 7:12", text: "saying, Amen, blessing, glory, wisdom, thanksgiving, honor, power, and might belong to our God forever and ever. Amen." },
-      { reference: "Psalm 30:12", text: "That my soul may sing praise to You and not be silent. LORD my God, I will give thanks to You forever." },
-      { reference: "Hebrews 4:16", text: "Therefore let's approach the throne of grace with confidence, so that we may receive mercy and find grace for help at the time of our need." },
-      { reference: "Psalm 94:19", text: "When my anxious thoughts multiply within me, Your comfort delights my soul." },
-      { reference: "Psalm 28:7", text: "The LORD is my strength and my shield; my heart trusts in Him, and I am helped; therefore my heart exults, and with my song I shall thank Him." },
-      { reference: "Ephesians 6:18", text: "With every prayer and request, pray at all times in the Spirit, and with this in view, be alert with all perseverance and every request for all the saints." },
-      { reference: "Isaiah 26:3", text: "The steadfast of mind You will keep in perfect peace, Because he trusts in You." },
-      { reference: "1 John 4:18", text: "There is no fear in love, but perfect love drives out fear, because fear involves punishment, and the one who fears is not perfected in love." },
-      { reference: "Psalm 145:18", text: "The Lord is near to all who call on Him, to all who call on Him in truth." },
-      { reference: "Hebrews 12:28", text: "Therefore, since we receive a kingdom which cannot be shaken, let us show gratitude, by which we may offer to God an acceptable service with reverence and awe." },
-      { reference: "Psalm 118:24", text: "This is the day which the LORD has made; let us rejoice and be glad in it." },
-      { reference: "Hebrews 13:15", text: "Through Him then, let us continually offer up a sacrifice of praise to God, that is, the fruit of lips praising His name." },
-      { reference: "Colossians 3:17", text: "Whatever you do in word or deed, do everything in the name of the Lord Jesus, giving thanks through Him to God the Father." },
-      { reference: "Psalm 56:3-4", text: "When I am afraid, I will put my trust in You. In God, whose word I praise, In God I have put my trust; I shall not be afraid. What can mere mortals do to me?" }
+  { reference: "Psalm 145:10", text: "All Your works will give thanks to You, LORD, And Your godly ones will bless You." },
+  { reference: "Romans 8:28", text: "And we know that God causes all things to work together for good to those who love God, to those who are called according to His purpose." },
+  { reference: "Psalm 103:2", text: "Bless the LORD, my soul, And do not forget any of His benefits;" },
+  { reference: "Ephesians 1:3", text: "Blessed be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly places in Christ." },
+  { reference: "James 1:5", text: "But if any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him." },
+  { reference: "Psalm 50:15", text: "Call upon Me on the day of trouble; I will rescue you, and you will honor Me." },
+  { reference: "Psalm 55:22", text: "Cast your burden upon the LORD and He will sustain you; He will never allow the righteous to be shaken." },
+  { reference: "Psalm 118:1", text: "Give thanks to the LORD, for He is good; For His mercy is everlasting." },
+  { reference: "Colossians 4:2", text: "Devote yourselves to prayer, keeping alert in it with an attitude of thanksgiving;" },
+  { reference: "Luke 12:32", text: "Do not be afraid, little flock, because your Father has chosen to give you the kingdom." },
+  { reference: "Psalm 100:4", text: "Enter His gates with thanksgiving, And His courtyards with praise. Give thanks to Him, bless His name." },
+  { reference: "Psalm 23:4", text: "Even though I walk through the valley of the shadow of death, I fear no evil, for You are with me; Your rod and Your staff, they comfort me." },
+  { reference: "2 Corinthians 4:15", text: "For all things are for your sakes, so that grace, having spread to more and more people, will cause thanksgiving to overflow to the glory of God." },
+  { reference: "Psalm 136:26", text: "Give thanks to the God of heaven, For His faithfulness is everlasting." },
+  { reference: "Psalm 5:3", text: "In the morning, LORD, You will hear my voice; In the morning I will present my prayer to You and be on the watch." },
+  { reference: "1 Chronicles 16:34", text: "Give thanks to the LORD, for He is good; For His faithfulness is everlasting." },
+  { reference: "Psalm 136:4", text: "To Him who alone does great wonders, For His faithfulness is everlasting;" },
+  { reference: "Colossians 1:12", text: "giving thanks to the Father, who has qualified us to share in the inheritance of the saints in light." },
+  { reference: "Psalm 63:1", text: "God, You are my God; I shall be watching for You; My soul thirsts for You, my flesh yearns for You, In a dry and exhausted land where there is no water." },
+  { reference: "Joshua 1:9", text: "Have I not commanded you? Be strong and courageous! Do not be terrified nor dismayed, for the LORD your God is with you wherever you go." },
+  { reference: "1 Peter 5:7", text: "having cast all your anxiety on Him, because He cares about you." },
+  { reference: "2 Corinthians 9:11", text: "You will be enriched in everything for all generosity, which through us is producing thanksgiving to God." },
+  { reference: "Psalm 17:6", text: "I have called upon You, for You will answer me, God; Incline Your ear to me, hear my speech." },
+  { reference: "Psalm 34:4", text: "I sought the LORD and He answered me, And rescued me from all my fears." },
+  { reference: "Psalm 62:8", text: "Trust in Him at all times, you people; Pour out your hearts before Him; God is a refuge for us." },
+  { reference: "Psalm 9:1", text: "I will give thanks to the LORD with all my heart; I will tell of all Your wonders." },
+  { reference: "Psalm 121:1-2", text: "I will raise my eyes to the mountains; From where will my help come? My help comes from the LORD, Who made heaven and earth." },
+  { reference: "1 Thessalonians 5:18", text: "in everything give thanks; for this is the will of God for you in Christ Jesus." },
+  { reference: "Psalm 92:1", text: "It is good to give thanks to the LORD And to sing praises to Your name, Most High;" },
+  { reference: "Matthew 26:41", text: "Keep watching and praying, so that you do not come into temptation; the spirit is willing, but the flesh is weak." },
+  { reference: "Colossians 3:15", text: "Let the peace of Christ, to which you were indeed called in one body, rule in your hearts; and be thankful." },
+  { reference: "Psalm 141:2", text: "May my prayer be counted as incense before You; The raising of my hands as the evening offering." },
+  { reference: "Romans 15:13", text: "Now may the God of hope fill you with all joy and peace in believing, so that you will abound in hope by the power of the Holy Spirit." },
+  { reference: "John 14:27", text: "Peace I leave you, My peace I give you; not as the world gives, do I give to you. Do not let your hearts be troubled, nor fearful." },
+  { reference: "1 Thessalonians 5:16-18", text: "Rejoice always, pray without ceasing, in everything give thanks; for this is the will of God for you in Christ Jesus." },
+  { reference: "Romans 12:12", text: "rejoicing in hope, persevering in tribulation, devoted to prayer," },
+  { reference: "Revelation 7:12", text: "saying, Amen, blessing, glory, wisdom, thanksgiving, honor, power, and might belong to our God forever and ever. Amen." },
+  { reference: "Psalm 30:12", text: "That my soul may sing praise to You and not be silent. LORD my God, I will give thanks to You forever." },
+  { reference: "Hebrews 4:16", text: "Therefore let’s approach the throne of grace with confidence, so that we may receive mercy and find grace for help at the time of our need." },
+  { reference: "Psalm 94:19", text: "When my anxious thoughts multiply within me, Your comfort delights my soul." },
+  { reference: "Psalm 28:7", text: "The LORD is my strength and my shield; My heart trusts in Him, and I am helped; Therefore my heart triumphs, And with my song I shall thank Him." },
+  { reference: "Isaiah 26:3", text: "The steadfast of mind You will keep in perfect peace, Because he trusts in You." },
+  { reference: "1 John 4:18", text: "There is no fear in love, but perfect love drives out fear, because fear involves punishment, and the one who fears is not perfected in love." },
+  { reference: "Psalm 145:18", text: "The LORD is near to all who call on Him, To all who call on Him in truth." },
+  { reference: "Psalm 118:24", text: "This is the day which the LORD has made; Let’s rejoice and be glad in it." },
+  { reference: "Hebrews 13:15", text: "Through Him then, let’s continually offer up a sacrifice of praise to God, that is, the fruit of lips praising His name." },
+  { reference: "Colossians 3:17", text: "Whatever you do in word or deed, do everything in the name of the Lord Jesus, giving thanks through Him to God the Father." },
+  { reference: "Matthew 6:33", text: "But seek first His kingdom and His righteousness, and all these things will be provided to you." },
+  { reference: "Psalm 46:1", text: "God is our refuge and strength, A very ready help in trouble." },
+  { reference: "2 Timothy 1:7", text: "For God has not given us a spirit of timidity, but of power and love and discipline." },
+  { reference: "Galatians 6:9", text: "Let’s not become discouraged in doing good, for in due time we will reap, if we do not become weary." },
     ];
 
     let currentIndex = 0;
