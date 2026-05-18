@@ -145,6 +145,14 @@
   }
 }
 
+  .article-content p { margin-bottom: 1.5rem; }
+  .article-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .article-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+  .article-content ul,
+  .article-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+  .article-content li { margin-bottom: 0.5rem; }
+  .article-content blockquote { margin: 2rem 0; padding-left: 1.25rem; border-left: 3px solid var(--sage); }
+
 @layer utilities {
   .animation-delay-100 {
     animation-delay: 100ms;

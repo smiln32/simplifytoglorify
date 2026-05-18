@@ -51,7 +51,7 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
             />
           </div>
           <div>
-            <p className="text-label text-slate-blue mb-4">Free Resource</p>
+            <p className="text-base text-slate-blue mb-4">Free Resource</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6">
               Free prayer cards<br />for anxious hearts.
             </h2>
