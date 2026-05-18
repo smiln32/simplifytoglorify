@@ -27,10 +27,10 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
               </p>
 
               <div className="rounded-[20px] p-6 lg:p-8 bg-charcoal">
-                <p className="font-display text-lg lg:text-xl italic leading-relaxed" style={{ color: 'var(--ivory)' }}>
+                <p className="font-display text-lg lg:text-xl italic leading-relaxed text-white">
                   "Come to Me, all who are weary and burdened, and I will give you rest."
                 </p>
-                <p className="mt-3 text-sm tracking-widest uppercase font-body text-slate-blue">
+                <p className="mt-2 text-sm tracking-widest uppercase font-body text-white">
                   Matthew 11:28
                 </p>
               </div>

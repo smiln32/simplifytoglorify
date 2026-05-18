@@ -13,7 +13,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
         <div className="mb-8">
           <p className="text-label text-slate-blue mb-4">Explore by Topic</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
-            Find what you need<br />today.
+            Find what you need.
           </h2>
           <p className="text-charcoal text-lg max-w-md">
             Each topic includes a journal, scripture cards, prayer cards, breath prayers, and devotionals — designed to work together.

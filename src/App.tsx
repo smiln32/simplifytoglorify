@@ -87,7 +87,6 @@ function App() {
       <HeroSection sectionRef={heroRef} aboutRef={aboutRef} scrollToSection={scrollToSection} />
       <AboutSection sectionRef={aboutRef} />
       <TopicsSection sectionRef={topicsRef} />
-      <div className="h-12 lg:h-16 bg-sage" />
       <ScriptureBanner />
       <ArticlesSection sectionRef={articlesRef} />
 <FreeResourceSection sectionRef={freeResourceRef} />
