@@ -17,7 +17,7 @@ const topics = [
   { name: 'Gratitude',   slug: 'gratitude' },
 ];
 
-const productTypes = ['Journal', 'Scripture Cards', 'Prayer Cards', 'Breath Prayers', 'Devotional'];
+const productTypes = ['Journal', 'Scripture Cards', 'Prayer Cards', 'Devotional'];
 
 export default function Products() {
   const { hash } = useLocation();
