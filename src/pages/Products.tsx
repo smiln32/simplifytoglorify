@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import PageNav from '@/components/PageNav';
 
 const topics = [
   { name: 'Caregiving',  slug: 'caregiving' },
@@ -35,21 +36,7 @@ export default function Products() {
     <div className="min-h-screen bg-ivory">
       <div className="grain-overlay" />
 
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-ivory border-b border-charcoal/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            <Link
-              to="/"
-              className="font-script text-2xl lg:text-3xl text-charcoal hover:text-slate-blue transition-colors"
-            >
-              Simplify to Glorify
-            </Link>
-            <Link to="/" className="text-sm text-charcoal hover:text-slate-blue transition-colors">
-              ← Home
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <PageNav />
 
       <main className="pt-32 lg:pt-36 pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

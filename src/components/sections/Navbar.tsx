@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Menu, ExternalLink, QrCode, Link as LinkIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
@@ -16,10 +16,16 @@ interface NavbarProps {
 
 export default function Navbar({ refs, scrollToSection }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [adminOpen, setAdminOpen] = useState(false);
   const [qrUrl, setQrUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
   const [shortUrlTarget, setShortUrlTarget] = useState('');
   const [shortUrls, setShortUrls] = useState<{ short: string; target: string }[]>([]);
+
+  const openAdmin = () => {
+    const pin = window.prompt('Enter PIN:');
+    if (pin === '2229') setAdminOpen(true);
+  };
 
   const nav = (ref: Parameters<ScrollFn>[0]) => {
     scrollToSection(ref);
@@ -60,12 +66,10 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
             <button onClick={() => nav(refs.contactRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Contact</button>
 
             {/* Admin Tools */}
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-muted-slate">
-                  <ExternalLink className="w-4 h-4" />
-                </Button>
-              </DialogTrigger>
+            <Dialog open={adminOpen} onOpenChange={setAdminOpen}>
+              <Button variant="ghost" size="sm" className="text-muted-slate" onClick={openAdmin}>
+                <ExternalLink className="w-4 h-4" />
+              </Button>
               <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-ivory">
                 <DialogHeader>
                   <DialogTitle className="font-script text-3xl text-charcoal">Admin Tools</DialogTitle>

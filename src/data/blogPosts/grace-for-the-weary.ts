@@ -5,7 +5,7 @@ const post: BlogPost = {
   slug: 'grace-for-the-weary',
   title: 'Grace for the Weary',
   excerpt: 'There is no shame in being tired. There is only grace, waiting to meet you there.',
-  date: 'April 5, 2026',
+  date: 'May 5, 2026',
   readTime: '6 min read',
   category: 'Encouragement',
   tags: ['grace', 'rest', 'weariness'],
@@ -13,7 +13,7 @@ const post: BlogPost = {
   content: `
     <p style="margin-bottom: 1.5em;">I want to speak to the weary ones today. The ones who feel they should have it all together by now. The ones who are tired in a way that sleep doesn't fix.</p>
 
-    <p style="margin-bottom: 1.5em;">Weariness is not weakness. It is the natural result of carrying heavy things for a long time. And you have been carrying heavy things.</p>
+    <p style="margin-bottom: 1.5em;">Weariness is not weakness. It is the natural result of carrying heavy things for a long time. And if you are here, you have been pprobably been carrying heavy things.</p>
 
     <h3 style="font-size: 1.5rem; color: #4a5568; margin: 2em 0 1em; font-weight: 500;">The Invitation</h3>
 

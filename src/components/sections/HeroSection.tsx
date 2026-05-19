@@ -26,23 +26,13 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 Grace-filled journals, scripture cards, prayer cards, devotionals, and mini-guides for women in challenging seasons.
               </p>
 
-              <div className="rounded-[20px] p-6 lg:p-8 bg-sage">
+              <div className="rounded-[20px] p-6 lg:p-8 bg-slate-blue ">
                 <p className="font-display text-lg lg:text-xl italic leading-relaxed text-white">
                   "Come to Me, all who are weary and burdened,<br />and I will give you rest."
                 </p>
                 <p className="mt-2 text-sm tracking-widest uppercase font-body text-white">
                   Matthew 11:28
                 </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Button
-                  onClick={() => scrollToSection(aboutRef)}
-                  className="bg-slate-blue hover:bg-slate-blue/90 text-white px-8 py-6 text-base rounded-full"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
               </div>
             </div>
           </div>

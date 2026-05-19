@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { blogPostMeta as blogPosts } from '@/data/blogPosts/index';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import PageNav from '@/components/PageNav';
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,16 +20,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-ivory">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-ivory/95 backdrop-blur border-b border-charcoal/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="font-script text-2xl lg:text-3xl text-charcoal hover:text-slate-blue transition-colors">
-            Simplify to Glorify
-          </Link>
-          <Link to="/" className="text-sm text-charcoal hover:text-slate-blue transition-colors">
-            ← Home
-          </Link>
-        </div>
-      </nav>
+      <PageNav />
 
       <main className="pt-24 lg:pt-28 pb-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
