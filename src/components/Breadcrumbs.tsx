@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { blogPostMeta as blogPosts } from '../data/blogPosts/index';
 import { articleMeta as articles } from '../data/articles/index';
+import { getCategoryBySlug } from '../data/products';
 import { Home, ChevronRight } from 'lucide-react';
 
 interface BreadcrumbItem {
@@ -42,7 +43,13 @@ export default function Breadcrumbs() {
         items.push({ label: postTitle, path: location.pathname, isLast: true });
       }
     } else if (pathSegments[0] === 'products') {
-      items.push({ label: 'Shop', path: '/products', isLast: true });
+      if (pathSegments.length === 1) {
+        items.push({ label: 'Shop', path: '/products', isLast: true });
+      } else if (pathSegments.length === 2) {
+        items.push({ label: 'Shop', path: '/products', isLast: false });
+        const cat = getCategoryBySlug(pathSegments[1]);
+        items.push({ label: cat ? cat.name : pathSegments[1], path: location.pathname, isLast: true });
+      }
     } else if (pathSegments[0] === 'articles') {
       items.push({ label: 'Articles', path: '/#articles', isLast: pathSegments.length === 1 });
       if (pathSegments.length === 2) {
