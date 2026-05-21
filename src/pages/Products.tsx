@@ -1,22 +1,10 @@
-import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PageNav from '@/components/PageNav';
 import { categories } from '@/data/products';
 
 export default function Products() {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const id = hash.replace('#', '');
-      const el = document.getElementById(id);
-      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [hash]);
 
   return (
     <div className="min-h-screen bg-ivory">

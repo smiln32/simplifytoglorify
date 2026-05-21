@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -8,10 +7,6 @@ import { getCategoryBySlug, PRODUCT_TYPES } from '@/data/products';
 export default function ProductCategory() {
   const { category: slug } = useParams<{ category: string }>();
   const category = slug ? getCategoryBySlug(slug) : undefined;
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
 
   if (!category) {
     return (
@@ -38,38 +33,39 @@ export default function ProductCategory() {
       <PageNav />
 
       <main className="pt-32 lg:pt-36 pb-16 lg:pb-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-6"><Breadcrumbs /></div>
+        {/* Lavender header band */}
+        <div className="bg-lavender/20 border-b border-lavender/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-4 pb-10">
+            <div className="mb-5"><Breadcrumbs /></div>
 
-          {/* Back link */}
-          <Link
-            to="/products"
-            className="inline-flex items-center gap-1.5 text-sm text-muted-slate hover:text-slate-blue transition-colors duration-200 mb-10"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            All categories
-          </Link>
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-slate hover:text-slate-blue transition-colors duration-200 mb-8"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              All categories
+            </Link>
 
-          {/* Page header */}
-          <div className="max-w-2xl mb-14">
-            <p className="text-label text-slate-blue mb-3">Shop — {category.name}</p>
+            <p className="text-label text-slate-blue mb-3">Products for {category.name}</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               {category.name}
             </h1>
-            <p className="text-lg text-muted-slate italic leading-relaxed">
+            <p className="text-lg text-muted-slate italic leading-relaxed max-w-2xl">
               {category.description}
             </p>
           </div>
+        </div>
 
-          {/* Sub-topic cards */}
+        {/* Sub-topic cards */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {category.subtopics.map((subtopic) => (
               <div
                 key={subtopic.slug}
                 className="bg-white rounded-[20px] overflow-hidden card-shadow"
               >
-                {/* Top band */}
-                <div className="h-1.5 bg-slate-blue/40" />
+                {/* Top accent band */}
+                <div className="h-1.5 bg-lavender" />
 
                 <div className="p-7">
                   <p className="text-label text-slate-blue mb-2">{category.name}</p>
@@ -102,7 +98,7 @@ export default function ProductCategory() {
             ))}
           </div>
 
-          {/* More titles coming indicator (only for single-subtopic categories) */}
+          {/* More titles coming (single-subtopic categories only) */}
           {hasMoreComing && (
             <div className="mt-10 rounded-[20px] border border-charcoal/10 p-8 text-center max-w-lg mx-auto">
               <p className="text-label text-slate-blue mb-2">More coming</p>

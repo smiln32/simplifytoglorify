@@ -66,12 +66,7 @@ export default function Breadcrumbs() {
   return (
     <nav
       aria-label="Breadcrumb"
-      style={{
-        padding: '0 20px',
-        maxWidth: '900px',
-        margin: '0 auto',
-        width: '100%',
-      }}
+      style={{ width: '100%' }}
     >
       <ol
         style={{
