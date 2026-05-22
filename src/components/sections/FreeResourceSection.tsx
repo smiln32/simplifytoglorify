@@ -18,17 +18,26 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
     if (!email) return;
     setSubmitting(true);
     try {
-      await fetch('/', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ 'form-name': 'email-signup', email }).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: 'New freebie signup — Simplify to Glorify',
+          email,
+        }),
       });
-      const link = document.createElement('a');
-      link.href = '/prayer-cards-freebie.pdf';
-      link.download = 'prayer-cards-freebie.pdf';
-      link.click();
-      toast.success('Your free prayer cards are downloading now!');
-      setEmail('');
+      const data = await res.json();
+      if (data.success) {
+        const link = document.createElement('a');
+        link.href = '/prayer-cards-freebie.pdf';
+        link.download = 'prayer-cards-freebie.pdf';
+        link.click();
+        toast.success('Your free prayer cards are downloading now!');
+        setEmail('');
+      } else {
+        toast.error('Something went wrong. Please try again.');
+      }
     } catch {
       toast.error('Something went wrong. Please try again.');
     } finally {

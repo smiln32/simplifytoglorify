@@ -20,13 +20,22 @@ export default function ContactSection({ sectionRef }: ContactSectionProps) {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await fetch('/', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ 'form-name': 'contact', ...fields }).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: 'New contact message — Simplify to Glorify',
+          ...fields,
+        }),
       });
-      toast.success("Message sent! I'll be in touch soon.");
-      setFields({ name: '', email: '', message: '' });
+      const data = await res.json();
+      if (data.success) {
+        toast.success("Message sent! I'll be in touch soon.");
+        setFields({ name: '', email: '', message: '' });
+      } else {
+        toast.error('Something went wrong. Please try again.');
+      }
     } catch {
       toast.error('Something went wrong. Please try again.');
     } finally {

@@ -9,6 +9,8 @@ import Products from './pages/Products.tsx'
 import ProductCategory from './pages/ProductCategory.tsx'
 import ArticlePage from './pages/ArticlePage.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
+import Download from './pages/Download.tsx'
+import AdminDownloads from './pages/AdminDownloads.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +23,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/products" element={<Products />} />
         <Route path="/products/:category" element={<ProductCategory />} />
         <Route path="/articles/:slug" element={<ArticlePage />} />
+        <Route path="/download" element={<Download />} />
+        <Route path="/admin/downloads" element={<AdminDownloads />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
