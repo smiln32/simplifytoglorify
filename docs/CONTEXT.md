@@ -40,7 +40,7 @@ Quick navigation for simplifytoglorify docs. Each section is self-contained and 
 **Look something up:**
 - [Environment variables](./reference/environment-variables.md)
 - [All routes/pages](./reference/routes.md)
-- [Complete file inventory](./reference/file-inventory.md)
+- [File structure & inventory](./reference/file-structure.md)
 
 ## Navigation Tips
 

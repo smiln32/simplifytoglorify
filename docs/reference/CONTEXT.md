@@ -7,8 +7,7 @@ This section contains reference material: environment variables, routes, command
 1. **[environment-variables.md](./environment-variables.md)** — All env vars, where used, values
 2. **[routes.md](./routes.md)** — All page routes and what's on them
 3. **[commands.md](./commands.md)** — All npm and Netlify CLI commands
-4. **[file-structure.md](./file-structure.md)** — Project folder layout (detailed)
-5. **[file-inventory.md](./file-inventory.md)** — Complete list of all 102 files
+4. **[file-structure.md](./file-structure.md)** — Project folder layout and file inventory
 
 ## Quick Lookups
 
@@ -22,10 +21,7 @@ This section contains reference material: environment variables, routes, command
 → [commands.md](./commands.md)
 
 ### "Where is the Contact form component?"
-→ [file-structure.md](./file-structure.md) or [file-inventory.md](./file-inventory.md)
-
-### "How many TypeScript files are in the project?"
-→ [file-inventory.md](./file-inventory.md) — Shows 49 TS files
+→ [file-structure.md](./file-structure.md)
 
 ## Navigation
 

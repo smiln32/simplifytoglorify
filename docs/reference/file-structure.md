@@ -89,5 +89,3 @@ docs/                        # (this folder)
 ---
 
 → For detailed breakdown, see [../tech/folder-structure.md](../tech/folder-structure.md)
-
-→ For complete file list, see [file-inventory.md](./file-inventory.md)
