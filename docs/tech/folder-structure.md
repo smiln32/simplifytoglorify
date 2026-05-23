@@ -227,4 +227,4 @@ docs/
 
 → See [development.md](./development.md) for local setup and commands
 
-→ See [../reference/file-inventory.md](../reference/file-inventory.md) for complete file listing
+→ See [../reference/file-structure.md](../reference/file-structure.md) for complete file listing
