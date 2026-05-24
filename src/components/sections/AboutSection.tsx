@@ -32,7 +32,7 @@ export default function AboutSection({ sectionRef }: AboutSectionProps) {
               </p>
               <div className="pl-6 py-2 border-l-4 my-6" style={{ borderColor: 'var(--sage)' }}>
                 <p className="font-display text-xl italic text-charcoal leading-snug">
-                  God is not waiting for you to get it right. He meets you right where you are.
+                  God is not waiting for you to get it right. He meets you.
                 </p>
               </div>
               <p>

@@ -41,12 +41,7 @@ export default function Products() {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between mt-6 pt-4 border-t border-charcoal/8">
-                  <span className="text-label text-slate-blue">
-                    {category.subtopics.length === 1
-                      ? '1 devotional set'
-                      : `${category.subtopics.length} devotional sets`}
-                  </span>
+                <div className="flex items-center justify-end mt-6 pt-4 border-t border-charcoal/8">
                   <ChevronRight className="w-4 h-4 text-slate-blue opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </div>
               </Link>

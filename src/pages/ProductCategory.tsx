@@ -89,7 +89,7 @@ export default function ProductCategory() {
             The {category.name} collection
           </h2>
           <p className="text-muted-slate italic mb-8">
-            Slow, screen-free companions for your time with God.
+            Slow companions for your time with God.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -105,7 +105,7 @@ export default function ProductCategory() {
                     {productName(category.name, type)}
                   </h3>
                   <p className="text-sm text-muted-slate italic leading-relaxed flex-1">
-                    {PRODUCT_DESCRIPTIONS[type]}
+                    {category.productDescriptions?.[type] ?? PRODUCT_DESCRIPTIONS[type]}
                   </p>
                   <div className="flex items-center justify-between pt-4 border-t border-charcoal/10 mt-2">
                     <span className="font-display text-2xl text-charcoal">
@@ -132,7 +132,7 @@ export default function ProductCategory() {
                   The {category.name} Collection
                 </h3>
                 <p className="text-sm text-muted-slate italic leading-relaxed flex-1">
-                  All five products together — the complete set for this season.
+                  {category.productDescriptions?.['Bundle'] ?? 'All five products together — the complete set for this season.'}
                 </p>
                 <div className="flex items-center justify-between pt-4 border-t border-charcoal/10 mt-2">
                   <span className="font-display text-2xl text-charcoal">

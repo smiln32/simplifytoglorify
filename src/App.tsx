@@ -88,7 +88,7 @@ function App() {
       <AboutSection sectionRef={aboutRef} />
       <TopicsSection sectionRef={topicsRef} />
       <ScriptureBanner />
-      <ArticlesSection sectionRef={articlesRef} />
+      <ArticlesSection sectionRef={articlesRef} limit={3} />
 <FreeResourceSection sectionRef={freeResourceRef} />
       <ContactSection sectionRef={contactRef} />
       <Footer />
