@@ -71,7 +71,7 @@ export default function ProductCategory() {
         <div className="bg-lavender/20 border-b border-lavender/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-2 pb-10">
             <div className="mb-5"><Breadcrumbs /></div>
-            <p className="font-display text-xl text-slate-blue mb-3">Products for {category.name}</p>
+            <p className="font-display text-xl text-slate-blue mb-6">Products for {category.name}</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               {category.name}
             </h1>

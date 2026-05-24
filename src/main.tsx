@@ -10,6 +10,7 @@ import ProductCategory from './pages/ProductCategory.tsx'
 import ArticlePage from './pages/ArticlePage.tsx'
 import Articles from './pages/Articles.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
+import FreebiePopup from './components/FreebiePopup.tsx'
 import Download from './pages/Download.tsx'
 import AdminDownloads from './pages/AdminDownloads.tsx'
 import CheckoutSuccess from './pages/CheckoutSuccess.tsx'
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <ScrollToTop />
+      <FreebiePopup />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/blog" element={<Blog />} />

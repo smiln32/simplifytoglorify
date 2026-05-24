@@ -93,10 +93,10 @@ export default function Breadcrumbs() {
             {item.isLast ? (
               <span
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Lora', Georgia, serif",
                   fontSize: '0.85rem',
                   color: '#4a5568',
-                  fontWeight: 500,
+                  fontWeight: 400,
                 }}
               >
                 {index === 0 && (
@@ -108,13 +108,14 @@ export default function Breadcrumbs() {
               <Link
                 to={item.path}
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Lora', Georgia, serif",
                   fontSize: '0.85rem',
                   color: '#718096',
                   textDecoration: 'none',
                   transition: 'color 0.3s ease',
                   display: 'inline-flex',
                   alignItems: 'center',
+                  fontWeight: 400,
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.color = '#b2c6b1';
