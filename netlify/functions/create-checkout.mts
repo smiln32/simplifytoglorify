@@ -7,6 +7,7 @@ const PRICES: Record<string, number> = {
   'Prayer Cards': 500,
   '7-Day Reset': 700,
   'Devotional': 1500,
+  'Bundle': 4500,
 }
 
 const DESCRIPTIONS: Record<string, string> = {
@@ -15,11 +16,13 @@ const DESCRIPTIONS: Record<string, string> = {
   'Prayer Cards': 'Written prayers for the mornings the words will not come.',
   '7-Day Reset': 'A printable week of short readings to begin again.',
   'Devotional': 'A thirty-day reading for tired mornings and slow evenings.',
+  'Bundle': 'The complete collection — all five products for this category.',
 }
 
 function buildProductName(categoryName: string, productType: string): string {
   if (productType === 'Journal') return `The ${categoryName} Journal`
   if (productType === 'Devotional') return `The ${categoryName} Devotional`
+  if (productType === 'Bundle') return `The ${categoryName} Collection`
   return productType
 }
 

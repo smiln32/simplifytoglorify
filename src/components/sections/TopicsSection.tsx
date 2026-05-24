@@ -24,7 +24,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
           {topicBundles.map((topic) => (
             <Link
               key={topic.name}
-              to={`/products/${topic.name.toLowerCase()}`}
+              to={`/products/${topic.name.toLowerCase().replace(/\s+/g, '-')}`}
               className="group block"
             >
               <div className="rounded-[20px] overflow-hidden card-shadow hover:shadow-xl transition-shadow">

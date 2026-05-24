@@ -94,6 +94,14 @@ export const categories: Category[] = [
     ],
   },
   {
+    name: 'Patience',
+    slug: 'patience',
+    description: 'Finding God\'s faithfulness in the slow, unseen seasons of waiting.',
+    subtopics: [
+      { name: 'General', slug: 'general' },
+    ],
+  },
+  {
     name: 'Prayer',
     slug: 'prayer',
     description: 'Deepening your conversation with God through honest, Scripture-rooted prayer.',
@@ -104,11 +112,19 @@ export const categories: Category[] = [
     ],
   },
   {
-    name: 'Teachers',
-    slug: 'teachers',
-    description: 'Grace and encouragement for those who give so much of themselves.',
+    name: 'Regret',
+    slug: 'regret',
+    description: 'Releasing what is past and resting in the grace that covers it.',
     subtopics: [
-      { name: 'Underappreciated', slug: 'underappreciated' },
+      { name: 'General', slug: 'general' },
+    ],
+  },
+  {
+    name: 'Struggling with Faith',
+    slug: 'struggling-with-faith',
+    description: 'For seasons of doubt, distance, and the long road back to trust.',
+    subtopics: [
+      { name: 'General', slug: 'general' },
     ],
   },
   {
