@@ -11,6 +11,8 @@ import ArticlePage from './pages/ArticlePage.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import Download from './pages/Download.tsx'
 import AdminDownloads from './pages/AdminDownloads.tsx'
+import CheckoutSuccess from './pages/CheckoutSuccess.tsx'
+import CheckoutCancel from './pages/CheckoutCancel.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,6 +27,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/articles/:slug" element={<ArticlePage />} />
         <Route path="/download" element={<Download />} />
         <Route path="/admin/downloads" element={<AdminDownloads />} />
+        <Route path="/checkout/success" element={<CheckoutSuccess />} />
+        <Route path="/checkout/cancel" element={<CheckoutCancel />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

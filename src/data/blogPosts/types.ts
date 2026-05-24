@@ -3,6 +3,8 @@ export interface BlogPostMeta {
   slug: string;
   title: string;
   excerpt: string;
+  metaDescription?: string;
+  keywords?: string[];
   date: string;
   readTime: string;
   category: string;

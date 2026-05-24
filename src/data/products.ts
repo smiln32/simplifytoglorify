@@ -94,30 +94,6 @@ export const categories: Category[] = [
     ],
   },
   {
-    name: 'Loneliness',
-    slug: 'loneliness',
-    description: 'Remembering you are seen and held when you feel most alone.',
-    subtopics: [
-      { name: 'Loneliness', slug: 'loneliness' },
-    ],
-  },
-  {
-    name: 'Patience',
-    slug: 'patience',
-    description: 'Trusting God\'s timing when waiting feels unbearable.',
-    subtopics: [
-      { name: 'Patience', slug: 'patience' },
-    ],
-  },
-  {
-    name: 'Peace',
-    slug: 'peace',
-    description: 'Learning to receive the peace that surpasses understanding.',
-    subtopics: [
-      { name: 'Knowing Peace', slug: 'knowing-peace' },
-    ],
-  },
-  {
     name: 'Prayer',
     slug: 'prayer',
     description: 'Deepening your conversation with God through honest, Scripture-rooted prayer.',
@@ -125,24 +101,6 @@ export const categories: Category[] = [
       { name: 'Confidence in Prayer', slug: 'confidence' },
       { name: 'General', slug: 'general' },
       { name: 'Unanswered Prayer', slug: 'unanswered' },
-    ],
-  },
-  {
-    name: 'Regret',
-    slug: 'regret',
-    description: 'Finding forgiveness and freedom when the past weighs heavy.',
-    subtopics: [
-      { name: 'Regret', slug: 'general' },
-      { name: 'Missed Opportunities', slug: 'missed-opportunities' },
-      { name: 'Poor Life Choices', slug: 'poor-life-choices' },
-    ],
-  },
-  {
-    name: 'Struggling with Faith',
-    slug: 'struggling-with-faith',
-    description: 'Honest tools for the seasons when belief feels hard.',
-    subtopics: [
-      { name: 'Struggling with Faith', slug: 'struggling-with-faith' },
     ],
   },
   {
@@ -162,6 +120,22 @@ export const categories: Category[] = [
     ],
   },
 ];
+
+export const PRODUCT_PRICES: Record<ProductType, number> = {
+  'Journal': 25,
+  'Scripture Cards': 5,
+  'Prayer Cards': 5,
+  '7-Day Reset': 7,
+  'Devotional': 15,
+};
+
+export const PRODUCT_DESCRIPTIONS: Record<ProductType, string> = {
+  'Journal': 'Guided prompts, scripture, and room to write through this season.',
+  'Scripture Cards': 'Palm-sized verses for the table, the dashboard, the bedside.',
+  'Prayer Cards': 'Written prayers for the mornings the words will not come.',
+  '7-Day Reset': 'A printable week of short readings to begin again.',
+  'Devotional': 'A thirty-day reading for tired mornings and slow evenings.',
+};
 
 export function getCategoryBySlug(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);

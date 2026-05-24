@@ -10,7 +10,6 @@ export const topicBundles: TopicBundle[] = [
   { name: 'Grief', image: '/images/topic-grief.jpg', description: 'For those who mourn' },
   { name: 'Anxiety', image: '/images/topic_anxiety.png', description: 'For anxious hearts' },
   { name: 'Depression', image: '/images/topic_depression.png', description: 'For heavy days' },
-  { name: 'Peace', image: '/images/topic_peace.png', description: 'For restless souls' },
   { name: 'Prayer', image: '/images/topic-prayer.jpg', description: 'For learning to pray' },
   { name: 'Uncertainty', image: '/images/topic_uncertainty.png', description: 'For unclear seasons', imageClass: 'saturate-[55%] brightness-[1.05]' },
   { name: 'Gratitude', image: '/images/topic_gratitude.png', description: 'For thankful hearts' },

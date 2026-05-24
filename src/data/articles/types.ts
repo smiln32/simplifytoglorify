@@ -4,6 +4,8 @@ export interface ArticleMeta {
   title: string;
   category: string;
   excerpt: string;
+  metaDescription?: string;
+  keywords?: string[];
   image?: string;
 }
 
