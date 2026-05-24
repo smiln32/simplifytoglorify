@@ -16,7 +16,7 @@ export default function ContactSection({ sectionRef }: ContactSectionProps) {
   const set = (field: keyof typeof fields) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setFields((prev) => ({ ...prev, [field]: e.target.value }));
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
     try {
@@ -48,7 +48,7 @@ export default function ContactSection({ sectionRef }: ContactSectionProps) {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <p className="text-label text-slate-blue mb-4">Contact</p>
+            <p className="font-display text-xl text-slate-blue mb-4">Contact</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6">
               Let's stay connected.
             </h2>

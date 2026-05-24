@@ -96,7 +96,7 @@ export const categories: Category[] = [
   {
     name: 'Patience',
     slug: 'patience',
-    description: 'Finding God\'s faithfulness in the slow, unseen seasons of waiting.',
+    description: 'Finding God\'s faithfulness in the slow seasons of waiting.',
     subtopics: [
       { name: 'General', slug: 'general' },
     ],

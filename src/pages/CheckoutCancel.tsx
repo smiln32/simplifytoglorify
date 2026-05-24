@@ -17,7 +17,7 @@ export default function CheckoutCancel() {
             </div>
           </div>
 
-          <p className="text-label text-muted-slate mb-3">Checkout cancelled</p>
+          <p className="font-display text-xl text-muted-slate mb-3">Checkout cancelled</p>
           <h1 className="font-display text-3xl sm:text-4xl text-charcoal mb-5 leading-snug">
             No charge was made.
           </h1>

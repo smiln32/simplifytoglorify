@@ -15,7 +15,7 @@ export default function BlogSection({ sectionRef }: BlogSectionProps) {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-label text-slate-blue mb-4">From the Blog</p>
+          <p className="font-display text-xl text-slate-blue mb-4">From the Blog</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
             Words from the journey.
           </h2>

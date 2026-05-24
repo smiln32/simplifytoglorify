@@ -17,7 +17,7 @@ export default function CheckoutSuccess() {
             </div>
           </div>
 
-          <p className="text-label text-slate-blue mb-3">Order complete</p>
+          <p className="font-display text-xl text-slate-blue mb-3">Order complete</p>
           <h1 className="font-display text-3xl sm:text-4xl text-charcoal mb-5 leading-snug">
             Thank you for your purchase.
           </h1>

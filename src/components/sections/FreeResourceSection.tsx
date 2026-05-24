@@ -60,12 +60,12 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
             />
           </div>
           <div>
-            <p className="text-base text-slate-blue mb-4">Free Resource</p>
+            <p className="font-display text-xl text-slate-blue mb-4">Free Resource</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6">
-              Free prayer cards<br />for anxious hearts.
+              Free prayer cards<br />for women of faith.
             </h2>
             <p className="text-charcoal text-lg leading-relaxed mb-8">
-              A free set of printable prayer cards — beautiful, simple, and ready to download as a PDF.
+              A free set of printable prayer cards —<br />beautiful, simple, and ready to download as a PDF.
             </p>
             <form name="email-signup" data-netlify="true" onSubmit={handleSubmit} className="space-y-4">
               <input type="hidden" name="form-name" value="email-signup" />

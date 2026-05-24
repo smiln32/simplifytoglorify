@@ -1,16 +1,41 @@
 import { useState } from 'react'
-import { Download as DownloadIcon } from 'lucide-react'
+import { Download as DownloadIcon, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import PageNav from '@/components/PageNav'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
+interface BundleFile {
+  filename: string
+  label: string
+  downloaded: boolean
+}
+
+interface BundleData {
+  productName: string
+  files: BundleFile[]
+  code: string
+}
+
+async function triggerDownload(blob: Blob, name: string) {
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = name
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  URL.revokeObjectURL(url)
+}
+
 export default function Download() {
   const [code, setCode] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+  const [bundle, setBundle] = useState<BundleData | null>(null)
+  const [downloadingFile, setDownloadingFile] = useState<string | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!code.trim()) return
     setStatus('loading')
@@ -23,6 +48,8 @@ export default function Download() {
         body: JSON.stringify({ code: code.trim() }),
       })
 
+      const contentType = res.headers.get('content-type') || ''
+
       if (!res.ok) {
         const data = await res.json()
         setErrorMsg(data.error || 'Something went wrong. Please try again.')
@@ -30,39 +57,137 @@ export default function Download() {
         return
       }
 
-      const blob = await res.blob()
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'journal.pdf'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
-      setStatus('idle')
-      setCode('')
+      if (contentType.includes('application/json')) {
+        // Bundle — show the file list
+        const data = await res.json()
+        setBundle({ productName: data.productName, files: data.files, code: code.trim() })
+        setStatus('idle')
+      } else {
+        // Single file — download immediately
+        const blob = await res.blob()
+        await triggerDownload(blob, 'journal.pdf')
+        setStatus('idle')
+        setCode('')
+      }
     } catch {
       setErrorMsg('Something went wrong. Please try again.')
       setStatus('error')
     }
   }
 
+  const handleFileDownload = async (file: BundleFile) => {
+    if (!bundle || downloadingFile) return
+    setDownloadingFile(file.filename)
+
+    try {
+      const res = await fetch('/.netlify/functions/redeem-token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: bundle.code, filename: file.filename }),
+      })
+
+      if (!res.ok) {
+        const data = await res.json()
+        alert(data.error || 'Something went wrong. Please try again.')
+        return
+      }
+
+      const blob = await res.blob()
+      await triggerDownload(blob, `${file.label}.pdf`)
+
+      // Update local downloaded state
+      setBundle((prev) =>
+        prev
+          ? {
+              ...prev,
+              files: prev.files.map((f) =>
+                f.filename === file.filename ? { ...f, downloaded: true } : f
+              ),
+            }
+          : prev
+      )
+    } catch {
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setDownloadingFile(null)
+    }
+  }
+
+  // ── Bundle view ────────────────────────────────────────────────────────────
+  if (bundle) {
+    return (
+      <div className="min-h-screen bg-ivory">
+        <div className="grain-overlay" />
+        <PageNav />
+
+        <main className="pt-20 lg:pt-24 pb-16 lg:pb-24">
+          <div className="max-w-lg mx-auto px-6">
+            <div className="mb-6"><Breadcrumbs /></div>
+
+            <div className="text-center mb-10">
+              <p className="font-display text-xl text-slate-blue mb-4">Your Collection</p>
+              <h1 className="font-display text-3xl sm:text-4xl text-charcoal mb-4">
+                {bundle.productName}
+              </h1>
+              <p className="text-muted-slate leading-relaxed">
+                Download each product separately, whenever you are ready.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[20px] p-8 card-shadow space-y-3">
+              {bundle.files.map((file) => (
+                <div
+                  key={file.filename}
+                  className="flex items-center justify-between gap-4 py-3 border-b border-charcoal/8 last:border-0"
+                >
+                  <div className="flex items-center gap-3">
+                    {file.downloaded ? (
+                      <CheckCircle className="w-4 h-4 text-slate-blue flex-none" />
+                    ) : (
+                      <div className="w-4 h-4 rounded-full border border-charcoal/20 flex-none" />
+                    )}
+                    <span className="font-display text-charcoal">{file.label}</span>
+                  </div>
+                  <button
+                    onClick={() => handleFileDownload(file)}
+                    disabled={downloadingFile === file.filename}
+                    className="text-xs font-semibold tracking-wider uppercase text-slate-blue hover:text-charcoal transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 flex-none"
+                  >
+                    <DownloadIcon className="w-3.5 h-3.5" />
+                    {downloadingFile === file.filename ? 'Downloading…' : 'Download'}
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-sm text-muted-slate text-center mt-6 leading-relaxed">
+              Keep your code <span className="font-mono text-charcoal">{bundle.code}</span> — you can return here anytime to download products you have not gotten yet.
+              Questions?{' '}
+              <a href="/#contact" className="text-slate-blue hover:underline">Contact us</a>.
+            </p>
+          </div>
+        </main>
+      </div>
+    )
+  }
+
+  // ── Code entry view ────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-ivory">
       <div className="grain-overlay" />
       <PageNav />
 
-      <main className="pt-32 lg:pt-36 pb-16 lg:pb-24">
+      <main className="pt-20 lg:pt-24 pb-16 lg:pb-24">
         <div className="max-w-lg mx-auto px-6">
           <div className="mb-6"><Breadcrumbs /></div>
 
           <div className="text-center mb-10">
-            <p className="text-label text-slate-blue mb-4">Your Purchase</p>
+            <p className="font-display text-xl text-slate-blue mb-4">Your Purchase</p>
             <h1 className="font-display text-3xl sm:text-4xl text-charcoal mb-4">
               Download your journal
             </h1>
             <p className="text-muted-slate leading-relaxed">
-              Enter the download code from your instructions sheet.
+              Enter the download code from your email.
             </p>
           </div>
 

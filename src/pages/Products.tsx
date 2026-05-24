@@ -11,12 +11,12 @@ export default function Products() {
       <div className="grain-overlay" />
       <PageNav />
 
-      <main className="pt-32 lg:pt-36 pb-16 lg:pb-24">
+      <main className="pt-20 lg:pt-24 pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-6"><Breadcrumbs /></div>
 
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-label text-slate-blue mb-4">Shop</p>
+            <p className="font-display text-xl text-slate-blue mb-4">Shop</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               Scripture-centered tools for life's hard seasons.
             </h1>

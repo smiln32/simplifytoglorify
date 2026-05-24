@@ -11,7 +11,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
     <section ref={sectionRef} className="topics-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-8">
-          <p className="text-label text-slate-blue mb-4">Explore by Topic</p>
+          <p className="font-display text-xl text-slate-blue mb-4">Explore by Topic</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
             Find what you need.
           </h2>

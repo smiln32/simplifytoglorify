@@ -13,7 +13,7 @@ export default function FeaturedSection({ sectionRef }: FeaturedSectionProps) {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <p className="text-label text-slate-blue mb-4">Featured Journal</p>
+            <p className="font-display text-xl text-slate-blue mb-4">Featured Journal</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6">
               A 30-day companion<br />for caregivers.
             </h2>

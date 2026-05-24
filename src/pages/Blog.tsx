@@ -22,11 +22,11 @@ export default function Blog() {
     <div className="min-h-screen bg-ivory">
       <PageNav />
 
-      <main className="pt-24 lg:pt-28 pb-16">
+      <main className="pt-20 lg:pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-6"><Breadcrumbs /></div>
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <p className="text-label text-slate-blue mb-4">From the Blog</p>
+            <p className="font-display text-xl text-slate-blue mb-4">From the Blog</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               Words from the journey.
             </h1>

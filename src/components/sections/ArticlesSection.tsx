@@ -27,12 +27,16 @@ export default function ArticlesSection({ sectionRef }: ArticlesSectionProps) {
     <section ref={sectionRef} className="articles-section py-10 lg:py-16 bg-blush scroll-mt-16 lg:scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-label text-slate-blue mb-4">Articles</p>
+          <p className="font-display text-xl text-slate-blue mb-4">Articles</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
             Wisdom for the journey.
           </h2>
           <p className="text-charcoal text-lg">
-            Articles to help you with journaling, processing emotions, and finding God in hard seasons.
+            Articles to help you with journaling, processing emotions,<br />
+            and finding God in hard seasons.
+          </p>
+          <p className="text-slate-blue text-sm font-semibold tracking-widest uppercase mt-5">
+            Latest Articles
           </p>
         </div>
 

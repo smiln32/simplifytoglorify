@@ -19,7 +19,7 @@ export default function AboutSection({ sectionRef }: AboutSectionProps) {
           </div>
 
           <div>
-            <p className="text-label text-slate-blue mb-4">My Story</p>
+            <p className="font-display text-xl text-slate-blue mb-4">My Story</p>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-charcoal mb-6">
               I understand hard seasons.
             </h2>
