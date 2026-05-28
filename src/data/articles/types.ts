@@ -10,5 +10,13 @@ export interface ArticleMeta {
 }
 
 export interface Article extends ArticleMeta {
-  content: string;
+  content?: string;
+  body?: string;
+  date?: string;
+  author?: string;
+  moreResources?: {
+    heading: string;
+    intro: string;
+    references: Array<{ reference: string; description: string }>;
+  };
 }

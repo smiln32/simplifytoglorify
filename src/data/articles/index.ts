@@ -51,4 +51,32 @@ export const articleMeta: ArticleMeta[] = [
     excerpt: 'A pen, a page, a few honest words — journaling can become the quiet place where the mind settles, the heart exhales, and God helps us see what we could not see before.',
     image: '/images/think_pray_heal.png',
   },
+  {
+    id: 9,
+    slug: 'when-youre-too-tired-to-pray',
+    title: "When You're Too Tired to Pray",
+    category: 'Prayer',
+    excerpt: "That silence is not the failure you are afraid it is. A gentle word for the worn-out woman who loves God but has run out of words.",
+  },
+  {
+    id: 10,
+    slug: 'how-to-grieve-without-a-timeline',
+    title: 'How to Grieve Without a Timeline',
+    category: 'Grief',
+    excerpt: "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
+  },
+  {
+    id: 11,
+    slug: 'self-reflection-personal-growth',
+    title: 'How Self-Reflection Leads to Personal Growth',
+    category: 'Journaling',
+    excerpt: "You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.",
+  },
+  {
+    id: 12,
+    slug: 'gratitude-changes-everything',
+    title: 'Gratitude: When Thanksgiving Changes the Way You See Everything',
+    category: 'Gratitude',
+    excerpt: "Gratitude is not pretending the hard thing is fine. It is the quiet practice of noticing that God has not left the room, even in a hard season.",
+  },
 ];

@@ -6,6 +6,19 @@ import PageNav from '../components/PageNav';
 
 const articleModules = import.meta.glob<Article>('../data/articles/*-*.ts', { import: 'default' });
 
+function markdownToHtml(md: string): string {
+  return md
+    .split(/\n\n+/)
+    .map((block) => {
+      const t = block.trim();
+      if (t.startsWith('### ')) return `<h3>${t.slice(4)}</h3>`;
+      if (t.startsWith('## ')) return `<h2>${t.slice(3)}</h2>`;
+      if (t.startsWith('> ')) return `<blockquote>${t.slice(2)}</blockquote>`;
+      return `<p>${t.replace(/\n/g, ' ')}</p>`;
+    })
+    .join('');
+}
+
 export default function ArticlePage() {
   const { slug } = useParams();
   const [article, setArticle] = useState<Article | null | undefined>(undefined);
@@ -36,6 +49,8 @@ export default function ArticlePage() {
     );
   }
 
+  const htmlContent = article.content ?? (article.body ? markdownToHtml(article.body) : '');
+
   return (
     <>
       <PageNav />
@@ -60,7 +75,27 @@ export default function ArticlePage() {
             <img src={article.image} alt={article.title} style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           )}
-          <div className="article-content" style={{ fontSize: '1.2rem', lineHeight: 1.9, color: '#2d3748' }} dangerouslySetInnerHTML={{ __html: article.content }} />
+          <div className="article-content" style={{ fontSize: '1.2rem', lineHeight: 1.9, color: '#2d3748' }} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+
+          {article.moreResources && (
+            <div style={{ marginTop: '64px', padding: '40px', backgroundColor: '#ffffff', borderRadius: '20px', boxShadow: '0 18px 50px rgba(0,0,0,0.08)' }}>
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', color: '#4a5568', fontWeight: 400, marginBottom: '12px' }}>
+                {article.moreResources.heading}
+              </h2>
+              <p style={{ color: '#718096', fontStyle: 'italic', marginBottom: '24px', lineHeight: 1.7 }}>
+                {article.moreResources.intro}
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {article.moreResources.references.map((ref) => (
+                  <li key={ref.reference} style={{ paddingLeft: '16px', borderLeft: '3px solid #b2c6b1' }}>
+                    <span style={{ fontFamily: "'Playfair Display', serif", color: '#4a5568', fontWeight: 500 }}>{ref.reference}</span>
+                    <span style={{ color: '#718096' }}> — {ref.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div style={{ marginTop: '80px', paddingTop: '40px', borderTop: '1px solid #d9d7d4' }}>
             <Link
               to="/"
