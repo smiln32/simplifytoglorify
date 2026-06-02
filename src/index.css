@@ -147,11 +147,39 @@
 
   .article-content p { margin-bottom: 1.5rem; }
   .article-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
-  .article-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+  .article-content h3 { font-size: 1.5rem; color: #4a5568; margin: 2rem 0 1rem; font-weight: 500; }
   .article-content ul,
   .article-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
   .article-content li { margin-bottom: 0.5rem; }
-  .article-content blockquote { margin: 2rem 0; padding-left: 1.25rem; border-left: 3px solid var(--sage); }
+  .article-content blockquote { margin: 2rem 0; padding: 1rem 2rem; background: #fff; border-left: 3px solid var(--sage); border-radius: 0 8px 8px 0; font-style: italic; color: #4a5568; }
+  .article-content em { color: #4a5568; font-weight: 500; }
+
+.nav-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9999;
+  background: linear-gradient(to right, transparent, var(--sage), transparent);
+  background-size: 200% 100%;
+  animation: nav-shimmer 1s ease-in-out infinite;
+}
+
+@keyframes nav-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes popup-backdrop {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes popup-card {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);   }
+}
 
 @layer utilities {
   .animation-delay-100 {

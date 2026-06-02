@@ -47,7 +47,7 @@ function buildPrompt(slug, frontmatter, body) {
         ? frontmatter.tags
         : frontmatter.tags.split(',').map(t => t.trim()))
     : [];
-  const image    = frontmatter.image    || `/images/${slug.replace(/-/g, '_')}.png`;
+  const image    = frontmatter.image    || `/images/${slug.replace(/-/g, '_')}.webp`;
 
   return `You are converting a blog post markdown file into a TypeScript BlogPost object for a React website called Simplify to Glorify.
 

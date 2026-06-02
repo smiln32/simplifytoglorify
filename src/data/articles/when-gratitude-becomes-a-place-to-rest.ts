@@ -6,7 +6,9 @@ const article: Article = {
   title: 'When Gratitude Becomes a Place to Rest',
   category: 'Gratitude',
   excerpt: 'True gratitude goes deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.',
-  image: '/images/rest_for_the_mind.png',
+  metaDescription: "True gratitude is not pretending hard things are fine. Discover how noticing God's goodness, even in difficult seasons, can become a place of genuine rest.",
+  keywords: ['Christian gratitude', 'gratitude journal', 'gratitude and rest', 'thankfulness Scripture', 'faith and gratitude', 'gratitude devotional for women'],
+  image: '/images/rest_for_the_mind.webp',
   content: `
 <p>Gratitude is often treated like a polite habit, something we say because we were taught to be thankful. But true gratitude goes much deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.</p>
 

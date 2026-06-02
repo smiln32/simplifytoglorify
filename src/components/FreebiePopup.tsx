@@ -8,6 +8,7 @@ const STORAGE_KEY = 'freebie-popup-dismissed';
 
 export default function FreebiePopup() {
   const [visible, setVisible] = useState(false);
+  const [closing, setClosing] = useState(false);
   const [email, setEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -18,8 +19,12 @@ export default function FreebiePopup() {
   }, []);
 
   function dismiss() {
-    localStorage.setItem(STORAGE_KEY, '1');
-    setVisible(false);
+    setClosing(true);
+    setTimeout(() => {
+      localStorage.setItem(STORAGE_KEY, '1');
+      setVisible(false);
+      setClosing(false);
+    }, 200);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -59,11 +64,14 @@ export default function FreebiePopup() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ backgroundColor: 'rgba(45, 55, 72, 0.5)' }}
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-200 ${closing ? 'opacity-0' : 'opacity-100'}`}
+      style={{ backgroundColor: 'rgba(45, 55, 72, 0.5)', animation: closing ? 'none' : 'popup-backdrop 0.25s ease-out' }}
       onClick={(e) => { if (e.target === e.currentTarget) dismiss(); }}
     >
-      <div className="relative bg-ivory rounded-[28px] card-shadow max-w-md w-full p-8 sm:p-10">
+      <div
+        className={`relative bg-ivory rounded-[28px] card-shadow max-w-md w-full p-8 sm:p-10 transition-all duration-200 ${closing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+        style={{ animation: closing ? 'none' : 'popup-card 0.3s ease-out' }}
+      >
         <button
           onClick={dismiss}
           className="absolute top-4 right-4 text-muted-slate hover:text-charcoal transition-colors cursor-pointer"

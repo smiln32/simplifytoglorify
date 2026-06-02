@@ -6,7 +6,9 @@ const article: Article = {
   title: 'How Journaling Heals the Mind and Soul',
   category: 'Journaling',
   excerpt: 'A pen, a page, a few honest words — journaling can become the quiet place where the mind settles, the heart exhales, and God helps us see what we could not see before.',
-  image: '/images/think_pray_heal.png',
+  metaDescription: "Journaling can become the quiet place where the mind settles, the heart exhales, and God helps you see what you couldn't see while everything felt tangled.",
+  keywords: ['journaling heals the soul', 'journaling for healing', 'Christian journaling', 'soul care faith', 'faith and journaling', 'prayer journal for healing'],
+  image: '/images/think_pray_heal.webp',
   content: `
 <p>Journaling can look like such a simple thing. A pen. A page. A few honest words at the end of a long day. But it can become something much deeper than a record of what happened. It can become a quiet place where the mind settles, the heart exhales, and God gently helps us see what we could not see while everything was still tangled inside.</p>
 

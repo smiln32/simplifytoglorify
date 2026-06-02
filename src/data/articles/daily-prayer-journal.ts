@@ -6,7 +6,9 @@ const article: Article = {
   title: 'Daily Prayer Journal',
   category: 'Prayer',
   excerpt: "Your prayer life doesn't have to be complicated to be meaningful. A few honest minutes on paper can become a sacred rhythm that strengthens your faith.",
-  image: '/images/leaning_into_prayer.png',
+  metaDescription: "A daily prayer journal doesn't have to be complicated. A few honest minutes on paper can become a sacred rhythm that deepens your faith and quiets anxiety.",
+  keywords: ['daily prayer journal', 'prayer journal', 'prayer journaling', 'Christian prayer journal', 'faith journal for women', 'devotional journaling'],
+  image: '/images/leaning_into_prayer.webp',
   content: `
 <p>Some days you have a full hour for quiet time. Other days, you barely have five minutes before the next demand pulls at your attention. This daily prayer journal was created for the real rhythm of real life — the kind of life where faith still matters deeply, even when the schedule feels full.</p>
 

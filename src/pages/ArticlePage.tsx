@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import type { Article } from '../data/articles/types';
 import Breadcrumbs from '../components/Breadcrumbs';
 import PageNav from '../components/PageNav';
@@ -51,8 +52,29 @@ export default function ArticlePage() {
 
   const htmlContent = article.content ?? (article.body ? markdownToHtml(article.body) : '');
 
+  const description = article.metaDescription || article.excerpt;
+  const image = article.image
+    ? `https://simplifytoglorify.netlify.app${article.image}`
+    : 'https://simplifytoglorify.netlify.app/images/faith-based-living.webp';
+
   return (
     <>
+      <Helmet>
+        <title>{article.title} | Simplify to Glorify</title>
+        <meta name="description" content={description} />
+        {article.keywords && article.keywords.length > 0 && (
+          <meta name="keywords" content={article.keywords.join(', ')} />
+        )}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:site_name" content="Simplify to Glorify" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+      </Helmet>
       <PageNav />
       <article style={{ minHeight: '100vh', backgroundColor: '#f3f1ec', fontFamily: "'Lora', Georgia, serif" }}>
         <div style={{ backgroundColor: '#ffffff', padding: '80px 20px 60px', borderBottom: '1px solid #d9d7d4' }}>
@@ -72,7 +94,7 @@ export default function ArticlePage() {
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 20px 60px' }}>
           <div style={{ marginBottom: '32px' }}><Breadcrumbs /></div>
           {article.image && (
-            <img src={article.image} alt={article.title} style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
+            <img src={article.image} alt={article.title} className="h-[220px] sm:h-[290px] lg:h-[360px]" style={{ width: '100%', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           )}
           <div className="article-content" style={{ fontSize: '1.2rem', lineHeight: 1.9, color: '#2d3748' }} dangerouslySetInnerHTML={{ __html: htmlContent }} />

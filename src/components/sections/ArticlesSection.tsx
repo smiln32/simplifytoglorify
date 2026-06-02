@@ -14,13 +14,13 @@ const allCategories = ['All', ...Array.from(new Set(articles.map((a) => a.catego
 
 const sortedArticles = [...articles].sort((a, b) => b.id - a.id);
 
-function ArticleCard({ article }: { article: (typeof articles)[0] }) {
+function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; showImage?: boolean }) {
   return (
     <Link
       to={`/articles/${article.slug}`}
       className="group block bg-ivory rounded-[28px] card-shadow hover:shadow-xl transition-shadow overflow-hidden"
     >
-      {article.image && (
+      {showImage && article.image && (
         <img
           src={article.image}
           alt={article.title}
@@ -63,7 +63,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recent.map((article) => <ArticleCard key={article.id} article={article} />)}
+            {recent.map((article) => <ArticleCard key={article.id} article={article} showImage />)}
           </div>
 
           <div className="text-center mt-10">

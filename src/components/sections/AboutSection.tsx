@@ -12,7 +12,7 @@ export default function AboutSection({ sectionRef }: AboutSectionProps) {
 
           <div>
             <img
-              src="/images/about-story.png"
+              src="/images/about-story.webp"
               alt="Our Story"
               className="w-full h-[480px] lg:h-[620px] object-cover rounded-[28px] card-shadow"
             />
