@@ -1,6 +1,6 @@
 import { StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, useNavigation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import ScrollToTop from './components/ScrollToTop.tsx'
@@ -18,17 +18,11 @@ const AdminDownloads = lazy(() => import('./pages/AdminDownloads.tsx'))
 const CheckoutSuccess = lazy(() => import('./pages/CheckoutSuccess.tsx'))
 const CheckoutCancel = lazy(() => import('./pages/CheckoutCancel.tsx'))
 
-function NavProgress() {
-  const { state } = useNavigation()
-  return state !== 'idle' ? <div className="nav-progress" /> : null
-}
-
 function RouterContent() {
   return (
     <>
       <ScrollToTop />
       <FreebiePopup />
-      <NavProgress />
       <Suspense fallback={<div className="min-h-screen bg-ivory" />}>
         <Routes>
           <Route path="/" element={<App />} />
