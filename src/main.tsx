@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import FreebiePopup from './components/FreebiePopup.tsx'
+import ErrorBoundary from './components/ErrorBoundary.tsx'
 
 const App = lazy(() => import('./App.tsx'))
 const Blog = lazy(() => import('./pages/Blog.tsx'))
@@ -17,6 +18,7 @@ const Download = lazy(() => import('./pages/Download.tsx'))
 const AdminDownloads = lazy(() => import('./pages/AdminDownloads.tsx'))
 const CheckoutSuccess = lazy(() => import('./pages/CheckoutSuccess.tsx'))
 const CheckoutCancel = lazy(() => import('./pages/CheckoutCancel.tsx'))
+const NotFound = lazy(() => import('./pages/NotFound.tsx'))
 
 function RouterContent() {
   return (
@@ -36,6 +38,7 @@ function RouterContent() {
           <Route path="/admin/downloads" element={<AdminDownloads />} />
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/checkout/cancel" element={<CheckoutCancel />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>
@@ -44,10 +47,12 @@ function RouterContent() {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <RouterContent />
-      </BrowserRouter>
-    </HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <RouterContent />
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   </StrictMode>,
 )
