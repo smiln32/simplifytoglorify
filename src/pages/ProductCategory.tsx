@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import PageNav from '@/components/PageNav';
 import Footer from '@/components/sections/Footer';
+import { getCategoryColor } from '@/data/categoryColors';
 import {
   getCategoryBySlug,
   PRODUCT_TYPES,
@@ -62,16 +63,15 @@ export default function ProductCategory() {
   }
 
   return (
-    <div className="min-h-screen bg-ivory">
-      <div className="grain-overlay" />
+    <div className="min-h-screen bg-white">
       <PageNav />
 
-      <main className="pt-20 lg:pt-24 pb-16 lg:pb-24">
+      <main className="pb-16 lg:pb-24" style={{ marginTop: '72px' }}>
 
         {/* Header band */}
-        <div className="bg-lavender/20 border-b border-lavender/30">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-2 pb-10">
-            <p className="font-display text-xl text-slate-blue mb-6">Products for {category.name}</p>
+        <div className="border-b border-charcoal/8" style={{ backgroundColor: `${getCategoryColor(category.name)}20` }}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+            <p className="font-display text-xl mb-6" style={{ color: getCategoryColor(category.name) }}>Products for {category.name}</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               {category.name}
             </h1>
@@ -98,7 +98,7 @@ export default function ProductCategory() {
                 key={type}
                 className="bg-white rounded-[20px] overflow-hidden card-shadow flex flex-col"
               >
-                <div className="h-1.5 bg-lavender" />
+                <div className="h-1.5" style={{ backgroundColor: getCategoryColor(category.name) }} />
                 <div className="p-7 flex flex-col flex-1 gap-3">
                   <p className="text-label text-slate-blue">{type}</p>
                   <h3 className="font-display text-xl text-charcoal leading-snug">
@@ -125,7 +125,7 @@ export default function ProductCategory() {
 
             {/* Bundle card */}
             <article className="bg-white rounded-[20px] overflow-hidden card-shadow flex flex-col sm:col-span-2 lg:col-span-1">
-              <div className="h-1.5 bg-slate-blue" />
+              <div className="h-1.5" style={{ backgroundColor: getCategoryColor(category.name) }} />
               <div className="p-7 flex flex-col flex-1 gap-3">
                 <p className="text-label text-slate-blue">Bundle</p>
                 <h3 className="font-display text-xl text-charcoal leading-snug">

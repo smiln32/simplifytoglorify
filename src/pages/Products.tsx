@@ -3,6 +3,7 @@ import { ChevronRight } from 'lucide-react';
 import PageNav from '@/components/PageNav';
 import Footer from '@/components/sections/Footer';
 import { categories } from '@/data/products';
+import { getCategoryColor } from '@/data/categoryColors';
 
 export default function Products() {
   return (
@@ -27,18 +28,21 @@ export default function Products() {
               <Link
                 key={category.slug}
                 to={`/products/${category.slug}`}
-                className="group bg-ivory rounded-[20px] p-7 card-shadow hover:-translate-y-1 hover:shadow-xl transition-all duration-200 flex flex-col"
+                className="group bg-ivory rounded-[20px] overflow-hidden card-shadow hover:-translate-y-1 hover:shadow-xl transition-all duration-200 flex"
               >
-                <div className="flex-1">
-                  <h2 className="font-display text-xl lg:text-2xl text-charcoal mb-2 group-hover:text-slate-blue transition-colors duration-200">
-                    {category.name}
-                  </h2>
-                  <p className="text-sm text-muted-slate leading-relaxed">
-                    {category.description}
-                  </p>
-                </div>
-                <div className="flex items-center justify-end mt-6 pt-4 border-t border-charcoal/10">
-                  <ChevronRight className="w-4 h-4 text-slate-blue opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <div className="w-2 flex-shrink-0" style={{ backgroundColor: getCategoryColor(category.name) }} />
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="flex-1">
+                    <h2 className="font-display text-xl lg:text-2xl text-charcoal mb-2 transition-colors duration-200" style={{ color: undefined }}>
+                      <span className="group-hover:text-slate-blue transition-colors duration-200">{category.name}</span>
+                    </h2>
+                    <p className="text-sm text-muted-slate leading-relaxed">
+                      {category.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-end mt-6 pt-4 border-t border-charcoal/10">
+                    <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" style={{ color: getCategoryColor(category.name) }} />
+                  </div>
                 </div>
               </Link>
             ))}

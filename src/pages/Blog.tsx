@@ -3,8 +3,11 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { blogPostMeta as blogPosts } from '@/data/blogPosts/index';
+import { getCategoryColor } from '@/data/categoryColors';
 import PageNav from '@/components/PageNav';
 import Footer from '@/components/sections/Footer';
+
+const defaultColor = '#a4b9c4';
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -54,6 +57,7 @@ export default function Blog() {
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((cat) => {
+                const color = cat === 'All' ? defaultColor : getCategoryColor(cat);
                 const isActive = selectedCategory === cat;
                 return (
                   <button
@@ -61,11 +65,9 @@ export default function Blog() {
                     onClick={() => setSelectedCategory(cat)}
                     className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 border"
                     style={isActive
-                      ? { backgroundColor: 'var(--slate-blue)', color: '#fff', borderColor: 'var(--slate-blue)' }
-                      : { backgroundColor: '#fff', color: 'var(--muted-slate)', borderColor: '#e2e8f0' }
+                      ? { backgroundColor: color, color: '#fff', borderColor: color }
+                      : { backgroundColor: `${color}18`, color: color, borderColor: color }
                     }
-                    onMouseEnter={(e) => { if (!isActive) { e.currentTarget.style.borderColor = 'var(--slate-blue)'; e.currentTarget.style.color = 'var(--slate-blue)'; } }}
-                    onMouseLeave={(e) => { if (!isActive) { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.color = 'var(--muted-slate)'; } }}
                   >
                     {cat}
                   </button>
@@ -75,40 +77,46 @@ export default function Blog() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((post) => (
-              <Link
-                key={post.id}
-                to={`/blog/${post.slug}`}
-                className="group block bg-ivory rounded-[20px] overflow-hidden card-shadow hover:shadow-xl transition-all"
-              >
-                <div className="h-48 bg-gradient-to-br from-sage to-slate-blue/60 overflow-hidden">
-                  {post.image ? (
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                    />
-                  ) : null}
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-label text-slate-blue">{post.category}</span>
-                    <span className="text-muted-slate text-xs">•</span>
-                    <span className="text-xs text-muted-slate">{post.readTime}</span>
+            {filtered.map((post) => {
+              const color = getCategoryColor(post.category);
+              return (
+                <Link
+                  key={post.id}
+                  to={`/blog/${post.slug}`}
+                  className="group block bg-ivory rounded-[20px] overflow-hidden card-shadow hover:shadow-xl transition-all"
+                >
+                  <div className="h-48 overflow-hidden" style={{ backgroundColor: `${color}40` }}>
+                    {post.image ? (
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                      />
+                    ) : null}
                   </div>
-                  <h2 className="font-display text-xl text-charcoal mb-2 group-hover:text-slate-blue transition-colors leading-snug">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm text-muted-slate leading-relaxed line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <span className="inline-block mt-4 text-sm text-slate-blue group-hover:translate-x-1 transition-transform">
-                    Read more →
-                  </span>
-                </div>
-              </Link>
-            ))}
+                  <div className="flex">
+                    <div className="w-2 flex-shrink-0 rounded-bl-[20px]" style={{ backgroundColor: color }} />
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="text-xs font-semibold tracking-widest uppercase" style={{ color }}>{post.category}</span>
+                        <span className="text-muted-slate text-xs">•</span>
+                        <span className="text-xs text-muted-slate">{post.readTime}</span>
+                      </div>
+                      <h2 className="font-display text-xl text-charcoal mb-2 group-hover:text-slate-blue transition-colors leading-snug">
+                        {post.title}
+                      </h2>
+                      <p className="text-sm text-muted-slate leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <span className="inline-block mt-4 text-sm group-hover:translate-x-1 transition-transform" style={{ color }}>
+                        Read more →
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
           {filtered.length === 0 && (

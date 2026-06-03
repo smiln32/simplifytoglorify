@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs ls -la)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(awk '{printf \"%.0fKB  %s\\\\n\", $1/1024, $2}')"
+    ]
+  }
+}

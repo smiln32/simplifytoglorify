@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { articleMeta as articles } from '@/data/articles/index';
+import { getCategoryColor } from '@/data/categoryColors';
 import type { SectionRef } from '@/types';
 
 interface ArticlesSectionProps {
@@ -10,20 +11,7 @@ interface ArticlesSectionProps {
   limit?: number;
 }
 
-const categoryColors: Record<string, string> = {
-  'Journaling':        '#b2c6b1',
-  'Prayer':            '#c6b5c8',
-  'Depression':        '#a4b9c4',
-  'Gratitude':         '#d4b483',
-  'Grief':             '#c4a5a0',
-  'Scripture Writing': '#89b5af',
-};
-
 const defaultColor = '#a4b9c4';
-
-function getCategoryColor(category: string) {
-  return categoryColors[category] ?? defaultColor;
-}
 
 const allCategories = ['All', ...Array.from(new Set(articles.map((a) => a.category)))];
 
