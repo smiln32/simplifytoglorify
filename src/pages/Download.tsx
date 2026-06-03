@@ -179,8 +179,6 @@ export default function Download() {
 
       <main className="pt-20 lg:pt-24 pb-16 lg:pb-24">
         <div className="max-w-lg mx-auto px-6">
-          <div className="mb-6"><Breadcrumbs /></div>
-
           <div className="text-center mb-10">
             <p className="font-display text-xl text-slate-blue mb-4">Your Purchase</p>
             <h1 className="font-display text-3xl sm:text-4xl text-charcoal mb-4">
