@@ -41,7 +41,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How to Carve Out Time for Journaling',
     category: 'Journaling',
     excerpt: "What if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?",
-    image: '/images/slowing-down.jpg',
+    image: '/images/slowing_down.webp',
   },
   {
     id: 5,
@@ -89,7 +89,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How to Grieve Without a Timeline',
     category: 'Grief',
     excerpt: "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
-    image: '/images/what-grief-needs.jpg',
+    image: '/images/what-grief-needs.webp',
   },
   {
     id: 11,

@@ -67,7 +67,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Grief',
     tags: ['grief', 'loss', 'healing'],
-    image: '/images/what-grief-needs.jpg',
+    image: '/images/what-grief-needs.webp',
   },
   {
     id: 4,
