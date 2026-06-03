@@ -8,7 +8,7 @@ const post: BlogPost = {
   metaDescription: "When worry won't let you rest and the future feels uncertain, there is a place to bring all of it - a faith-rooted look at finding peace when you can't see the path ahead.",
   date: 'April 15, 2026',
   readTime: '5 min read',
-  category: 'Reflection',
+  category: 'Peace',
   tags: ['peace', 'trust', 'stillness'],
   keywords: [
     'finding peace',

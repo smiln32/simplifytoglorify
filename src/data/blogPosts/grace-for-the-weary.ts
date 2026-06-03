@@ -8,7 +8,7 @@ const post: BlogPost = {
   metaDescription: "If you're emotionally exhausted or emotionally drained and not sure why, this is for you - grace-rooted encouragement for women in hard seasons, straight from Scripture.",
   date: 'May 5, 2026',
   readTime: '6 min read',
-  category: 'Encouragement',
+  category: 'Depression',
   tags: ['grace', 'rest', 'weariness'],
   keywords: [
     'emotionally exhausted',

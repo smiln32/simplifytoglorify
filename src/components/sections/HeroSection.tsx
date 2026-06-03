@@ -15,18 +15,18 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           <div className="order-2 lg:order-1">
-            <div className="hero-text space-y-6 text-center lg:text-left">
+            <div className="hero-text space-y-6 text-center">
               <p className="font-script italic text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
                 Simplify to Glorify
               </p>
               <p className="font-display text-2xl lg:text-3xl text-slate-blue">
                 Practical Peace for Overwhelmed Hearts
               </p>
-              <p className="text-muted-slate text-lg max-w-md leading-relaxed mx-auto lg:mx-0">
-                Grace-filled journals, scripture cards, prayer cards, devotionals, and mini-guides for women in challenging seasons.
+              <p className="text-muted-slate text-lg max-w-md leading-relaxed mx-auto">
+                Grace-filled journals, scripture cards, prayer cards, devotionals, and (first steps) mini-guides for women in challenging seasons.
               </p>
 
-              <div className="rounded-[20px] p-6 lg:p-8 bg-slate-blue text-center lg:text-left">
+              <div className="rounded-[20px] p-6 lg:p-8 bg-slate-blue text-center">
                 <p className="font-display text-lg lg:text-xl italic leading-relaxed text-white">
                   "Come to Me, all who are weary and burdened,<br />and I will give you rest."
                 </p>

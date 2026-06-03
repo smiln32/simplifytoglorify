@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import type { Article } from '../data/articles/types';
+import { getCategoryColor } from '../data/categoryColors';
 import PageNav from '../components/PageNav';
 import Footer from '../components/sections/Footer';
 
@@ -33,27 +34,27 @@ export default function ArticlePage() {
 
   if (article === undefined) {
     return (
-      <div style={{ minHeight: '100vh', backgroundColor: '#f3f1ec', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: '#718096', fontFamily: "'Lora', serif" }}>Loading...</p>
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <p className="text-muted-slate font-body">Loading...</p>
       </div>
     );
   }
 
   if (!article) {
     return (
-      <div style={{ minHeight: '100vh', backgroundColor: '#f3f1ec', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Playfair Display', serif" }}>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Article not found</h1>
-          <Link to="/" style={{ color: '#b2c6b1' }}>Return Home</Link>
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="font-display text-3xl text-charcoal mb-4">Article not found</h1>
+          <Link to="/articles" className="text-slate-blue hover:underline">Back to Articles</Link>
         </div>
       </div>
     );
   }
 
   const htmlContent = article.content ?? (article.body ? markdownToHtml(article.body) : '');
-
+  const color = getCategoryColor(article.category);
   const description = article.metaDescription || article.excerpt;
-  const image = article.image
+  const ogImage = article.image
     ? `https://simplifytoglorify.netlify.app${article.image}`
     : 'https://simplifytoglorify.netlify.app/images/faith-based-living.webp';
 
@@ -68,67 +69,74 @@ export default function ArticlePage() {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:site_name" content="Simplify to Glorify" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
+
       <PageNav />
-      <article style={{ minHeight: '100vh', backgroundColor: '#ffffff', fontFamily: "'Lora', Georgia, serif" }}>
-        <div style={{ backgroundColor: '#ffffff', padding: '80px 20px 60px', borderBottom: '1px solid #d9d7d4' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', marginBottom: '24px', fontSize: '0.9rem', color: '#718096', fontFamily: "'Lora', serif" }}>
-              <span>{article.category}</span>
-            </div>
-            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#4a5568', fontWeight: 400, lineHeight: 1.2, marginBottom: '24px' }}>
+
+      <div className="min-h-screen bg-white" style={{ marginTop: '72px' }}>
+
+        {/* Header */}
+        <div className="border-b border-charcoal/8 py-12 lg:py-16" style={{ backgroundColor: `${color}18` }}>
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color }}>
+              {article.category}
+            </p>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6 leading-snug">
               {article.title}
             </h1>
-            <p style={{ fontSize: '1.3rem', color: '#666', fontStyle: 'italic', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
+            <p className="text-lg text-muted-slate italic leading-relaxed max-w-xl mx-auto">
               {article.excerpt}
             </p>
           </div>
         </div>
 
-        <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 20px 60px' }}>
+        {/* Content */}
+        <div className="max-w-2xl mx-auto px-6 py-12 lg:py-16">
           {article.image && (
-            <img src={article.image} alt={article.title} className="h-[220px] sm:h-[290px] lg:h-[360px]" style={{ width: '100%', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full h-[220px] sm:h-[300px] lg:h-[380px] object-cover rounded-[20px] mb-12 card-shadow"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
           )}
-          <div className="article-content" style={{ fontSize: '1.2rem', lineHeight: 1.9, color: '#2d3748' }} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+
+          <div className="article-content" style={{ fontSize: '1.15rem', lineHeight: 1.9, color: '#2d3748' }}
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
 
           {article.moreResources && (
-            <div style={{ marginTop: '64px', padding: '40px', backgroundColor: '#ffffff', borderRadius: '20px', boxShadow: '0 18px 50px rgba(0,0,0,0.08)' }}>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', color: '#4a5568', fontWeight: 400, marginBottom: '12px' }}>
-                {article.moreResources.heading}
-              </h2>
-              <p style={{ color: '#718096', fontStyle: 'italic', marginBottom: '24px', lineHeight: 1.7 }}>
-                {article.moreResources.intro}
-              </p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div className="mt-16 p-8 bg-ivory rounded-[20px] card-shadow">
+              <h2 className="font-display text-2xl text-charcoal mb-3">{article.moreResources.heading}</h2>
+              <p className="text-muted-slate italic mb-6 leading-relaxed">{article.moreResources.intro}</p>
+              <ul className="space-y-4">
                 {article.moreResources.references.map((ref) => (
-                  <li key={ref.reference} style={{ paddingLeft: '16px', borderLeft: '3px solid #b2c6b1' }}>
-                    <span style={{ fontFamily: "'Playfair Display', serif", color: '#4a5568', fontWeight: 500 }}>{ref.reference}</span>
-                    <span style={{ color: '#718096' }}> — {ref.description}</span>
+                  <li key={ref.reference} className="pl-4 border-l-2" style={{ borderColor: color }}>
+                    <span className="font-display text-charcoal font-medium">{ref.reference}</span>
+                    <span className="text-muted-slate"> — {ref.description}</span>
                   </li>
                 ))}
               </ul>
             </div>
           )}
 
-          <div style={{ marginTop: '80px', paddingTop: '40px', borderTop: '1px solid #d9d7d4' }}>
+          <div className="mt-16 pt-8 border-t border-charcoal/10">
             <Link
-              to="/"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#4a5568', textDecoration: 'none', fontSize: '1rem', fontFamily: "'Lora', serif", transition: 'color 0.3s ease' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#b2c6b1'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#4a5568'}
+              to="/articles"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
             >
-              <span>←</span> Back to Home
+              ← Back to Articles
             </Link>
           </div>
         </div>
-      </article>
+
+      </div>
       <Footer />
     </>
   );

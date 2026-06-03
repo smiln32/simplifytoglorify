@@ -80,7 +80,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-ivory">
+    <div className="min-h-screen bg-slate-blue">
       <Toaster position="top-center" />
       <div className="grain-overlay" />
       <Navbar refs={refs} scrollToSection={scrollToSection} />
@@ -89,7 +89,7 @@ function App() {
       <TopicsSection sectionRef={topicsRef} />
       <ScriptureBanner />
       <ArticlesSection sectionRef={articlesRef} limit={3} />
-<FreeResourceSection sectionRef={freeResourceRef} />
+      <FreeResourceSection sectionRef={freeResourceRef} />
       <ContactSection sectionRef={contactRef} />
       <Footer />
     </div>

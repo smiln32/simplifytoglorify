@@ -8,7 +8,7 @@ const post: BlogPost = {
   metaDescription: 'Feeling overwhelmed by your own emotions? You are not too much. A faith-rooted look at why God made room for the full range of what you feel.',
   date: 'April 22, 2026',
   readTime: '5 min read',
-  category: 'Encouragement',
+  category: 'Anxiety',
   tags: ['emotions', 'overwhelm', 'faith'],
   image: '/images/emotions-feel-like-too-much.jpg',
   keywords: [

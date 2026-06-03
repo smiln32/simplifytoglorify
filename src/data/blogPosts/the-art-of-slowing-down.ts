@@ -8,7 +8,7 @@ const post: BlogPost = {
   metaDescription: "If you've been running too fast for too long, this is for you - a faith-rooted look at why we resist rest and what God actually says about it.",
   date: 'April 10, 2026',
   readTime: '4 min read',
-  category: 'Simplicity',
+  category: 'Peace',
   tags: ['slow living', 'mindfulness', 'rest'],
   keywords: [
     'finding peace',

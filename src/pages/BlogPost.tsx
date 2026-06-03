@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import type { BlogPost } from '../data/blogPosts/types';
+import { getCategoryColor } from '../data/categoryColors';
 import PageNav from '../components/PageNav';
 import Footer from '../components/sections/Footer';
 
@@ -20,25 +21,26 @@ export default function BlogPost() {
 
   if (post === undefined) {
     return (
-      <div style={{ minHeight: '100vh', backgroundColor: '#f3f1ec', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: '#718096', fontFamily: "'Lora', serif" }}>Loading...</p>
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <p className="text-muted-slate font-body">Loading...</p>
       </div>
     );
   }
 
   if (!post) {
     return (
-      <div style={{ minHeight: '100vh', backgroundColor: '#f3f1ec', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Playfair Display', serif" }}>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Post not found</h1>
-          <Link to="/blog" style={{ color: '#b2c6b1' }}>Return to Journal</Link>
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="font-display text-3xl text-charcoal mb-4">Post not found</h1>
+          <Link to="/blog" className="text-slate-blue hover:underline">Back to Journal</Link>
         </div>
       </div>
     );
   }
 
+  const color = getCategoryColor(post.category);
   const description = post.metaDescription || post.excerpt;
-  const image = post.image
+  const ogImage = post.image
     ? `https://simplifytoglorify.netlify.app${post.image}`
     : 'https://simplifytoglorify.netlify.app/images/faith-based-living.webp';
 
@@ -53,50 +55,63 @@ export default function BlogPost() {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:site_name" content="Simplify to Glorify" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
+
       <PageNav />
-      <article style={{ minHeight: '100vh', backgroundColor: '#ffffff', fontFamily: "'Lora', Georgia, serif" }}>
-        <div style={{ backgroundColor: '#ffffff', padding: '80px 20px 60px', borderBottom: '1px solid #d9d7d4' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', marginBottom: '24px', fontSize: '0.9rem', color: '#718096', fontFamily: "'Lora', serif" }}>
+
+      <div className="min-h-screen bg-white" style={{ marginTop: '72px' }}>
+
+        {/* Header */}
+        <div className="border-b border-charcoal/8 py-12 lg:py-16" style={{ backgroundColor: `${color}18` }}>
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <div className="flex items-center justify-center gap-4 mb-4 text-xs text-muted-slate">
+              <span className="font-semibold tracking-widest uppercase" style={{ color }}>{post.category}</span>
+              <span>•</span>
               <span>{post.date}</span>
-              <span style={{ color: '#c6b5c8' }}>•</span>
-              <span>{post.category}</span>
-              <span style={{ color: '#c6b5c8' }}>•</span>
+              <span>•</span>
               <span>{post.readTime}</span>
             </div>
-            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#4a5568', fontWeight: 400, lineHeight: 1.2, marginBottom: '24px' }}>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6 leading-snug">
               {post.title}
             </h1>
-            <p style={{ fontSize: '1.3rem', color: '#666', fontStyle: 'italic', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
+            <p className="text-lg text-muted-slate italic leading-relaxed max-w-xl mx-auto">
               {post.excerpt}
             </p>
           </div>
         </div>
 
-        <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 20px 60px' }}>
+        {/* Content */}
+        <div className="max-w-2xl mx-auto px-6 py-12 lg:py-16">
           {post.image && (
-            <img src={post.image} alt={post.title} className="h-[240px] sm:h-[320px] lg:h-[400px]" style={{ width: '100%', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-[240px] sm:h-[320px] lg:h-[400px] object-cover rounded-[20px] mb-12 card-shadow"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
           )}
-          <div className="article-content" style={{ fontSize: '1.2rem', lineHeight: 1.9, color: '#2d3748' }} dangerouslySetInnerHTML={{ __html: post.content }} />
-          <div style={{ marginTop: '80px', paddingTop: '40px', borderTop: '1px solid #d9d7d4' }}>
-            <Link to="/blog"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#4a5568', textDecoration: 'none', fontSize: '1rem', fontFamily: "'Lora', serif", transition: 'color 0.3s ease' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#b2c6b1'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#4a5568'}
+
+          <div className="article-content" style={{ fontSize: '1.15rem', lineHeight: 1.9, color: '#2d3748' }}
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+
+          <div className="mt-16 pt-8 border-t border-charcoal/10">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
             >
-              <span>←</span> Back to Journal
+              ← Back to Journal
             </Link>
           </div>
         </div>
-      </article>
+
+      </div>
       <Footer />
     </>
   );

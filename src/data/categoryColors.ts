@@ -1,30 +1,30 @@
 export const categoryColors: Record<string, string> = {
-  // Articles
-  'Journaling':           '#b2c6b1',
-  'Prayer':               '#c6b5c8',
-  'Depression':           '#a4b9c4',
-  'Gratitude':            '#d4b483',
-  'Grief':                '#c4a5a0',
-  'Scripture Writing':    '#89b5af',
+  'Anxiety':              '#c0d1bd',
+  'ADHD':                 '#b3c1d4',
+  'Caregiving':           '#d7aba8',
+  'Chronic Pain':         '#bca7c3',
+  'Depression':           '#e6d38e',
+  'Faith':                '#a6bfb4',
+  'Struggling with Faith':'#a6bfb4',
+  'Gratitude':            '#e7d7d4',
+  'Grief':                '#f3f1b4',
+  'Prayer':               '#9ca6c2',
+  'Peace':                '#c0d1bd',
+  'Patience':             '#cea1b4',
+  'Regret':               '#b3d0d0',
+  'Trusting God':         '#d7ab7a',
+  'Uncertainty':          '#c5b5c8',
 
-  // Blog
-  'Encouragement':        '#c8b4d4',
-  'ADHD':                 '#a8c5d6',
-  'Anxiety':              '#b5c4d8',
-  'Caregiving':           '#d4b8a0',
-  'Reflection':           '#b4c8b8',
-  'Simplicity':           '#c4d4b8',
-  'Emotions':             '#d4b4b8',
-
-  // Shop topics
-  'Chronic Pain':         '#b8b8c8',
-  'Patience':             '#c8d4b8',
-  'Regret':               '#c4b8a8',
-  'Struggling with Faith':'#b8c4d4',
-  'Uncertainty':          '#d4c8b4',
+  // Inherit from primary categories
+  'Journaling':           '#e6d38e',  // Depression
+  'Scripture Writing':    '#b3c1d4',  // ADHD
+  'Encouragement':        '#bca7c3',  // Chronic Pain
+  'Emotions':             '#f3f1b4',  // Grief
+  'Reflection':           '#d7ab7a',  // Trusting God
+  'Simplicity':           '#e7d7d4',  // Gratitude
 };
 
-const defaultColor = '#a4b9c4';
+const defaultColor = '#9ca6c2';
 
 export function getCategoryColor(category: string): string {
   return categoryColors[category] ?? defaultColor;

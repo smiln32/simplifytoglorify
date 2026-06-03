@@ -25,19 +25,16 @@ export default function AboutSection({ sectionRef }: AboutSectionProps) {
             </h2>
             <div className="space-y-5 text-charcoal text-lg leading-relaxed">
               <p>
-                Simplify to Glorify began in the quiet, ordinary moments of hard seasons — when faith took effort, words seemed distant, and life felt overwhelming.
+                Simplify to Glorify began in the quiet, difficult moments of life's most challenging seasons. I understand the hard days when faith seems distant and each breath seems like a challenge.
               </p>
               <p>
-                Not every day allows for long devotionals or perfect routines. Sometimes you just need something simple. Something honest. Something that meets you where you are. These journals and cards were created for those moments.
+                Not every day allows for long devotionals or perfect routines. Sometimes you just need something simple and honest. Something that meets you where you are. Each journal, devotional, set of cards, and guides were created for those moments.
               </p>
               <div className="pl-6 py-2 border-l-4 my-6" style={{ borderColor: 'var(--sage)' }}>
                 <p className="font-display text-xl italic text-charcoal leading-snug">
-                  God is not waiting for you to get it right. He meets you.
+                  God is ready to meet you in the mess.
                 </p>
               </div>
-              <p>
-                I create gentle, Scripture-centered tools for grief, anxiety, caregiving, depression, peace, and everyday overwhelm — so you can breathe, reflect, and reconnect.
-              </p>
             </div>
           </div>
 

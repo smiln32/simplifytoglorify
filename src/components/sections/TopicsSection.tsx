@@ -13,7 +13,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
         <div className="mb-8">
           <p className="font-display text-xl text-slate-blue mb-6">Explore by Topic</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
-            Find what you need.
+            Find the products you need<br />for the space you're in.
           </h2>
           <p className="text-charcoal text-lg max-w-md mb-10">
             Each topic includes a journal, scripture cards, prayer cards, breath prayers, and devotionals — designed to work together.
@@ -40,6 +40,15 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
               <p className="text-sm text-muted-slate text-center mt-1">{topic.description}</p>
             </Link>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/products"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
+          >
+            View all products →
+          </Link>
         </div>
       </div>
     </section>
