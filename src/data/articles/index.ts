@@ -4,6 +4,30 @@ export type { ArticleMeta, Article } from './types';
 
 export const articleMeta: ArticleMeta[] = [
   {
+    id: 16,
+    slug: 'trusting-god-with-hard-days',
+    title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
+    category: 'Trusting God',
+    excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
+    image: '/images/what-God-says.webp',
+  },
+  {
+    id: 15,
+    slug: 'deeper-faith-ordinary-days',
+    title: 'How to Grow a Deeper Faith in Ordinary Days',
+    category: 'Faith',
+    excerpt: 'Deeper faith often grows quietly through Scripture, honest prayer, remembrance, obedience, and returning to God in ordinary life.',
+    image: '/images/faith-based-living.webp',
+  },
+  {
+    id: 14,
+    slug: 'caregiving-avoid-burnout',
+    title: 'Simple Tips to Help Avoid Caregiver Burnout',
+    category: 'Caregiving',
+    excerpt: 'Caregiving is meaningful, but it can also become exhausting. Here are simple, gentle ways to notice burnout sooner, simplify what you can, and receive help without guilt.',
+    image: '/images/weight-of-caregiving.webp',
+  },
+  {
     id: 1,
     slug: 'depression-journals-mental-wellbeing',
     title: 'How Do Depression Journals Improve Mental Well-Being?',
@@ -57,7 +81,7 @@ export const articleMeta: ArticleMeta[] = [
     title: "When You're Too Tired to Pray",
     category: 'Prayer',
     excerpt: "That silence is not the failure you are afraid it is. A gentle word for the worn-out woman who loves God but has run out of words.",
-    image: '/images/grace-for-the-weary.jpg',
+    image: '/images/grace_for_the_weary.webp',
   },
   {
     id: 10,

@@ -71,6 +71,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.simplifytoglorify.com/articles/trusting-god-with-hard-days</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/deeper-faith-ordinary-days</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/caregiving-avoid-burnout</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.simplifytoglorify.com/articles/depression-journals-mental-wellbeing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -112,6 +127,11 @@
   </url>
   <url>
     <loc>https://www.simplifytoglorify.com/articles/self-reflection-personal-growth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/writing-out-scripture-for-mental-health</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
