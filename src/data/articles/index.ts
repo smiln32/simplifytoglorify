@@ -76,6 +76,14 @@ export const articleMeta: ArticleMeta[] = [
     image: '/images/women-in-hard-seasons.jpg',
   },
   {
+    id: 13,
+    slug: 'writing-out-scripture-for-mental-health',
+    title: 'Writing Out Scripture by Hand: Why It Helps Mental Health, Memory, and Peace',
+    category: 'Scripture Writing',
+    excerpt: 'On the days when prayer feels thin and your Bible sits open to the same page, one verse and a pen can be the gentlest way back to God.',
+    image: '/images/leaning_into_prayer.webp',
+  },
+  {
     id: 12,
     slug: 'gratitude-changes-everything',
     title: 'Gratitude: When Thanksgiving Changes the Way You See Everything',
