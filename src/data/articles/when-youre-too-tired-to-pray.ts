@@ -26,6 +26,7 @@ export const post = {
   ],
   date: "2026-05-28",
   author: "Carla",
+  image: '/images/grace-for-the-weary.jpg',
   body: `There is a particular kind of tired that prayer cannot seem to reach. You know the one. You sit down to talk to God, the way you have a thousand times before, and nothing comes. Not because you do not love Him. Not because you have stopped believing. You are simply emptied out, and the words that used to rise so easily are gone.
 
 I want to say something to you before anything else. That silence is not the failure you are afraid it is.

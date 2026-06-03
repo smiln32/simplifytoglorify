@@ -8,7 +8,7 @@ const article: Article = {
   excerpt: "What if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?",
   metaDescription: "You don't need 30 quiet minutes to start a meaningful prayer journal. Discover how just 5 honest minutes a day can help you breathe, pray, and reconnect with God.",
   keywords: ['how to carve out time for journaling', 'prayer journal beginners', 'Christian journaling tips', 'daily journaling', 'faith journaling women', 'journaling for busy moms'],
-  image: '/images/journaling_for_the_mind.webp',
+  image: '/images/slowing-down.jpg',
   content: `
 <p>Life as a busy mom doesn't leave much margin for quiet reflection. Between diaper changes, meal prep, school runs, and endless laundry, carving out time for journaling can feel impossible. But what if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?</p>
 

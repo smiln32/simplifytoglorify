@@ -8,7 +8,7 @@ interface BlogSectionProps {
 
 export default function BlogSection({ sectionRef }: BlogSectionProps) {
   return (
-    <section ref={sectionRef} className="blog-section py-20 lg:py-32 bg-blush/50">
+    <section ref={sectionRef} className="blog-section py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="font-display text-xl text-slate-blue mb-4">From the Blog</p>

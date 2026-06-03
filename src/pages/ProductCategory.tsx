@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { toast } from 'sonner';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import PageNav from '@/components/PageNav';
+import Footer from '@/components/sections/Footer';
 import {
   getCategoryBySlug,
   PRODUCT_TYPES,
@@ -45,7 +45,7 @@ export default function ProductCategory() {
 
   if (!category) {
     return (
-      <div className="min-h-screen bg-ivory">
+      <div className="min-h-screen bg-white">
         <div className="grain-overlay" />
         <PageNav />
         <main className="pt-32 pb-16">
@@ -56,6 +56,7 @@ export default function ProductCategory() {
             </Link>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
@@ -70,7 +71,6 @@ export default function ProductCategory() {
         {/* Header band */}
         <div className="bg-lavender/20 border-b border-lavender/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-2 pb-10">
-            <div className="mb-5"><Breadcrumbs /></div>
             <p className="font-display text-xl text-slate-blue mb-6">Products for {category.name}</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               {category.name}
@@ -152,6 +152,7 @@ export default function ProductCategory() {
         </div>
 
       </main>
+      <Footer />
     </div>
   );
 }

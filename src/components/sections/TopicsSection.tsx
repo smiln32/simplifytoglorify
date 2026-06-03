@@ -8,7 +8,7 @@ interface TopicsSectionProps {
 
 export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
   return (
-    <section ref={sectionRef} className="topics-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20">
+    <section id="topics" ref={sectionRef} className="topics-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-8">
           <p className="font-display text-xl text-slate-blue mb-6">Explore by Topic</p>

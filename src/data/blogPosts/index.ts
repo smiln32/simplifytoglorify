@@ -12,6 +12,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Encouragement',
     tags: ['hard seasons', 'identity', 'grace'],
+    image: '/images/what-women-forget.webp',
   },
   {
     id: 9,
@@ -22,6 +23,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'ADHD',
     tags: ['ADHD', 'faith', 'identity'],
+    image: '/images/adhd-and-faith.jpg',
   },
   {
     id: 8,
@@ -32,6 +34,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '6 min read',
     category: 'Depression',
     tags: ['depression', 'faith', 'hope'],
+    image: '/images/depression-and-faith.jpg',
   },
   {
     id: 7,
@@ -42,6 +45,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Anxiety',
     tags: ['anxiety', 'peace', 'trust'],
+    image: '/images/when-anxiety-wont.webp',
   },
   {
     id: 6,
@@ -52,6 +56,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '6 min read',
     category: 'Caregiving',
     tags: ['caregiving', 'burnout', 'faith'],
+    image: '/images/weight-of-caregiving.webp',
   },
   {
     id: 5,
@@ -62,6 +67,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Grief',
     tags: ['grief', 'loss', 'healing'],
+    image: '/images/what-grief-needs.jpg',
   },
   {
     id: 4,
@@ -72,6 +78,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Encouragement',
     tags: ['emotions', 'overwhelm', 'faith'],
+    image: '/images/emotions-feel-like-too-much.jpg',
   },
   {
     id: 1,

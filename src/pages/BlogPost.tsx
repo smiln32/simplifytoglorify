@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import type { BlogPost } from '../data/blogPosts/types';
-import Breadcrumbs from '../components/Breadcrumbs';
 import PageNav from '../components/PageNav';
+import Footer from '../components/sections/Footer';
 
 const postModules = import.meta.glob<BlogPost>('../data/blogPosts/*-*.ts', { import: 'default' });
 
@@ -61,7 +61,7 @@ export default function BlogPost() {
         <meta name="twitter:image" content={image} />
       </Helmet>
       <PageNav />
-      <article style={{ minHeight: '100vh', backgroundColor: '#f3f1ec', fontFamily: "'Lora', Georgia, serif" }}>
+      <article style={{ minHeight: '100vh', backgroundColor: '#ffffff', fontFamily: "'Lora', Georgia, serif" }}>
         <div style={{ backgroundColor: '#ffffff', padding: '80px 20px 60px', borderBottom: '1px solid #d9d7d4' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', marginBottom: '24px', fontSize: '0.9rem', color: '#718096', fontFamily: "'Lora', serif" }}>
@@ -81,7 +81,6 @@ export default function BlogPost() {
         </div>
 
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 20px 60px' }}>
-          <div style={{ marginBottom: '32px' }}><Breadcrumbs /></div>
           {post.image && (
             <img src={post.image} alt={post.title} className="h-[240px] sm:h-[320px] lg:h-[400px]" style={{ width: '100%', objectFit: 'cover', borderRadius: '8px', marginBottom: '48px' }}
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
@@ -98,6 +97,7 @@ export default function BlogPost() {
           </div>
         </div>
       </article>
+      <Footer />
     </>
   );
 }

@@ -9,7 +9,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Do Depression Journals Improve Mental Well-Being?',
     category: 'Depression',
     excerpt: "Depression journals don't erase pain, but they offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons.",
-    image: '/images/topic_depression.webp',
+    image: '/images/depression-and-faith.jpg',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How to Carve Out Time for Journaling',
     category: 'Journaling',
     excerpt: "What if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?",
-    image: '/images/journaling_for_the_mind.webp',
+    image: '/images/slowing-down.jpg',
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const articleMeta: ArticleMeta[] = [
     title: "When You're Too Tired to Pray",
     category: 'Prayer',
     excerpt: "That silence is not the failure you are afraid it is. A gentle word for the worn-out woman who loves God but has run out of words.",
-    image: '/images/topic-prayer.jpg',
+    image: '/images/grace-for-the-weary.jpg',
   },
   {
     id: 10,
@@ -65,7 +65,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How to Grieve Without a Timeline',
     category: 'Grief',
     excerpt: "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
-    image: '/images/topic-grief.jpg',
+    image: '/images/what-grief-needs.jpg',
   },
   {
     id: 11,
@@ -73,7 +73,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Self-Reflection Leads to Personal Growth',
     category: 'Journaling',
     excerpt: "You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.",
-    image: '/images/processing_emotions.webp',
+    image: '/images/women-in-hard-seasons.jpg',
   },
   {
     id: 12,
@@ -81,6 +81,6 @@ export const articleMeta: ArticleMeta[] = [
     title: 'Gratitude: When Thanksgiving Changes the Way You See Everything',
     category: 'Gratitude',
     excerpt: "Gratitude is not pretending the hard thing is fine. It is the quiet practice of noticing that God has not left the room, even in a hard season.",
-    image: '/images/topic_gratitude.webp',
+    image: '/images/finding-peace.jpg',
   },
 ];

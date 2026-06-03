@@ -10,6 +10,7 @@ const post: BlogPost = {
   readTime: '5 min read',
   category: 'Anxiety',
   tags: ['anxiety', 'peace', 'trust'],
+  image: '/images/when-anxiety-wont.webp',
   keywords: [
     'anxiety and faith',
     'Christian anxiety',

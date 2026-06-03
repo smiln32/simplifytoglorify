@@ -10,6 +10,7 @@ const post: BlogPost = {
   readTime: '6 min read',
   category: 'Caregiving',
   tags: ['caregiving', 'burnout', 'faith'],
+  image: '/images/weight-of-caregiving.webp',
   keywords: [
     'caregiver burnout',
     'Christian caregiver',

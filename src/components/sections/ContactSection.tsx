@@ -44,7 +44,7 @@ export default function ContactSection({ sectionRef }: ContactSectionProps) {
   };
 
   return (
-    <section ref={sectionRef} className="contact-section py-10 lg:py-16 bg-blush scroll-mt-16 lg:scroll-mt-20">
+    <section ref={sectionRef} id="contact" className="contact-section py-10 lg:py-16 bg-white scroll-mt-16 lg:scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>

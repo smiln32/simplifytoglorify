@@ -10,23 +10,23 @@ interface HeroSectionProps {
 
 export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: HeroSectionProps) {
   return (
-    <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center bg-blush">
+    <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 lg:py-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           <div className="order-2 lg:order-1">
-            <div className="hero-text space-y-6">
+            <div className="hero-text space-y-6 text-center lg:text-left">
               <p className="font-script italic text-5xl sm:text-6xl lg:text-7xl text-charcoal leading-tight">
                 Simplify to Glorify
               </p>
               <p className="font-display text-2xl lg:text-3xl text-slate-blue">
                 Practical Peace for Overwhelmed Hearts
               </p>
-              <p className="text-muted-slate text-lg max-w-md leading-relaxed">
+              <p className="text-muted-slate text-lg max-w-md leading-relaxed mx-auto lg:mx-0">
                 Grace-filled journals, scripture cards, prayer cards, devotionals, and mini-guides for women in challenging seasons.
               </p>
 
-              <div className="rounded-[20px] p-6 lg:p-8 bg-slate-blue ">
+              <div className="rounded-[20px] p-6 lg:p-8 bg-slate-blue text-center lg:text-left">
                 <p className="font-display text-lg lg:text-xl italic leading-relaxed text-white">
                   "Come to Me, all who are weary and burdened,<br />and I will give you rest."
                 </p>

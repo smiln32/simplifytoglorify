@@ -10,6 +10,7 @@ const post: BlogPost = {
   readTime: '5 min read',
   category: 'Encouragement',
   tags: ['hard seasons', 'identity', 'grace'],
+  image: '/images/what-women-forget.webp',
   keywords: [
     'women in hard seasons',
     'faith in hard times',

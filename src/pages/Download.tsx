@@ -3,7 +3,7 @@ import { Download as DownloadIcon, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import PageNav from '@/components/PageNav'
-import Breadcrumbs from '@/components/Breadcrumbs'
+import Footer from '@/components/sections/Footer'
 
 interface BundleFile {
   filename: string
@@ -122,7 +122,6 @@ export default function Download() {
 
         <main className="pt-20 lg:pt-24 pb-16 lg:pb-24">
           <div className="max-w-lg mx-auto px-6">
-            <div className="mb-6"><Breadcrumbs /></div>
 
             <div className="text-center mb-10">
               <p className="font-display text-xl text-slate-blue mb-4">Your Collection</p>
@@ -167,6 +166,7 @@ export default function Download() {
             </p>
           </div>
         </main>
+        <Footer />
       </div>
     )
   }
@@ -225,6 +225,7 @@ export default function Download() {
           </p>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

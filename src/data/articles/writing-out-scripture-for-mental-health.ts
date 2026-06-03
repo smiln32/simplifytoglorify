@@ -15,7 +15,7 @@ const article: Article = {
     'scripture writing journal',
     'faith-based wellness',
   ],
-  image: '/images/leaning_into_prayer.webp',
+  image: '/images/what-God-says.webp',
   author: 'Carla',
   date: '2026-05-28',
   body: `You picked up a pen today because something in you needed a little steadying. Maybe the days have blurred together and prayer feels thin. Your Bible sits open to the same page it did last week. That is a real place to be, and God is not waiting for you to feel better before He meets you there.

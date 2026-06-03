@@ -46,24 +46,24 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-ivory border-b border-charcoal/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-blue">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <button
             onClick={() => nav(refs.heroRef)}
-            className="font-script text-2xl lg:text-3xl text-charcoal hover:text-slate-blue transition-colors"
+            className="font-script text-2xl lg:text-3xl text-white hover:text-white/80 transition-colors"
           >
             Simplify to Glorify
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            <button onClick={() => nav(refs.aboutRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">About</button>
-            <button onClick={() => nav(refs.topicsRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Topics</button>
-            <RouterLink to="/products" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Products</RouterLink>
-            <button onClick={() => nav(refs.articlesRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Articles</button>
-            <RouterLink to="/blog" className="text-sm text-charcoal hover:text-slate-blue transition-colors">Blog</RouterLink>
-            <button onClick={() => nav(refs.contactRef)} className="text-sm text-charcoal hover:text-slate-blue transition-colors">Contact</button>
+            <button onClick={() => nav(refs.aboutRef)} className="text-sm text-white hover:text-white/80 transition-colors">About</button>
+            <button onClick={() => nav(refs.topicsRef)} className="text-sm text-white hover:text-white/80 transition-colors">Topics</button>
+            <RouterLink to="/products" className="text-sm text-white hover:text-white/80 transition-colors">Products</RouterLink>
+            <button onClick={() => nav(refs.articlesRef)} className="text-sm text-white hover:text-white/80 transition-colors">Articles</button>
+            <RouterLink to="/blog" className="text-sm text-white hover:text-white/80 transition-colors">Blog</RouterLink>
+            <button onClick={() => nav(refs.contactRef)} className="text-sm text-white hover:text-white/80 transition-colors">Contact</button>
 
             {/* Admin Tools */}
             <Dialog open={adminOpen} onOpenChange={setAdminOpen}>
@@ -151,19 +151,20 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-ivory w-full sm:w-80">
+            <SheetContent side="right" className="bg-slate-blue w-full sm:w-80">
               <div className="flex flex-col gap-6 mt-8">
-                <button onClick={() => nav(refs.aboutRef)} className="text-lg font-display text-charcoal">About</button>
-                <button onClick={() => nav(refs.topicsRef)} className="text-lg font-display text-charcoal">Topics</button>
-                <RouterLink to="/products" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-charcoal">Products</RouterLink>
-                <button onClick={() => nav(refs.articlesRef)} className="text-lg font-display text-charcoal">Articles</button>
-                <RouterLink to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-charcoal">Blog</RouterLink>
-                <button onClick={() => nav(refs.contactRef)} className="text-lg font-display text-charcoal">Contact</button>
+                <button onClick={() => nav(refs.aboutRef)} className="text-lg font-display text-white text-left">About</button>
+                <button onClick={() => nav(refs.topicsRef)} className="text-lg font-display text-white text-left">Topics</button>
+                <RouterLink to="/products" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-white">Products</RouterLink>
+                <button onClick={() => nav(refs.articlesRef)} className="text-lg font-display text-white text-left">Articles</button>
+                <RouterLink to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-white">Blog</RouterLink>
+                <button onClick={() => nav(refs.contactRef)} className="text-lg font-display text-white text-left">Contact</button>
               </div>
             </SheetContent>
           </Sheet>
         </div>
       </div>
+      <div className="h-2 bg-ivory" />
     </nav>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Compass } from 'lucide-react'
 import PageNav from '@/components/PageNav'
+import Footer from '@/components/sections/Footer'
 
 export default function NotFound() {
   return (
@@ -42,6 +43,7 @@ export default function NotFound() {
 
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

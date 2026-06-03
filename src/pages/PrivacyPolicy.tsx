@@ -1,4 +1,5 @@
 import PageNav from '@/components/PageNav'
+import Footer from '@/components/sections/Footer'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -116,6 +117,7 @@ export default function PrivacyPolicy() {
 
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

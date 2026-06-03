@@ -46,7 +46,7 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
   };
 
   return (
-    <section ref={sectionRef} className="free-resource-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20">
+    <section ref={sectionRef} className="free-resource-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="flex justify-center items-center h-full">

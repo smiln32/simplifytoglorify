@@ -10,6 +10,7 @@ const post: BlogPost = {
   readTime: '5 min read',
   category: 'Grief',
   tags: ['grief', 'loss', 'healing'],
+  image: '/images/what-grief-needs.jpg',
   keywords: [
     'what grief needs',
     'how to grieve',

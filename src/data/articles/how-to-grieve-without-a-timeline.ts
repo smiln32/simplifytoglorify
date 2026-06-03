@@ -26,6 +26,7 @@ export const post = {
   ],
   date: "2026-05-28",
   author: "Carla",
+  image: '/images/what-grief-needs.jpg',
   body: `There is a moment that comes for almost everyone who is grieving, and it is a quiet kind of cruelty. It is the moment you realize the world expects you to be further along than you are.
 
 Maybe someone said it gently. It has been a while now, hasn't it? Maybe no one said anything at all, and that was its own message, the casseroles long stopped, the calls thinned out, the people who once sat with you now moving on as though the season has closed. And you are still here, in it, missing the person you lost as much today as you did at the beginning, sometimes more.

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Mail } from 'lucide-react'
 import PageNav from '@/components/PageNav'
+import Footer from '@/components/sections/Footer'
 
 export default function CheckoutSuccess() {
   return (
@@ -45,6 +46,7 @@ export default function CheckoutSuccess() {
 
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

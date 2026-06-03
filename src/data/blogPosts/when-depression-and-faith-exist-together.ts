@@ -10,6 +10,7 @@ const post: BlogPost = {
   readTime: '6 min read',
   category: 'Depression',
   tags: ['depression', 'faith', 'hope'],
+  image: '/images/depression-and-faith.jpg',
   keywords: [
     'depression and faith',
     'Christian depression',

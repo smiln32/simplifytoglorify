@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ShoppingBag } from 'lucide-react'
 import PageNav from '@/components/PageNav'
+import Footer from '@/components/sections/Footer'
 
 export default function CheckoutCancel() {
   return (
@@ -34,6 +35,7 @@ export default function CheckoutCancel() {
 
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
