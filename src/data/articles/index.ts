@@ -9,7 +9,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
     category: 'Trusting God',
     excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
-    image: '/images/what-God-says.webp',
+    image: '/images/trusting-god-with-hard-days.webp',
   },
   {
     id: 15,

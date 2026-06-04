@@ -47,7 +47,7 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 poster="/images/journaling-at-home.jpg"
                 className="w-full h-[420px] lg:h-[580px] object-cover rounded-card card-shadow"
               >
-                <source src="/images/hero-video.mp4" type="video/mp4" />
+                <source src="/images/simple-cup-of-tea.mp4" type="video/mp4" />
                 <img
                   src="/images/journaling-at-home.jpg"
                   alt="Journaling space with Bible, journal and coffee"
