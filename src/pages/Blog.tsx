@@ -83,7 +83,7 @@ export default function Blog() {
                 <Link
                   key={post.id}
                   to={`/blog/${post.slug}`}
-                  className="group block bg-ivory rounded-[20px] overflow-hidden card-shadow hover:shadow-xl transition-all"
+                  className="group block bg-ivory rounded-card-sm overflow-hidden card-shadow hover:shadow-card-hover transition-all"
                 >
                   <div className="h-48 overflow-hidden" style={{ backgroundColor: `${color}40` }}>
                     {post.image ? (

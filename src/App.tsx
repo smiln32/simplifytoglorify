@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Toaster } from '@/components/ui/sonner';
 import Navbar from '@/components/sections/Navbar';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -81,7 +80,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-blue">
-      <Toaster position="top-center" />
       <div className="grain-overlay" />
       <Navbar refs={refs} scrollToSection={scrollToSection} />
       <HeroSection sectionRef={heroRef} aboutRef={aboutRef} scrollToSection={scrollToSection} />

@@ -92,7 +92,7 @@ export default function BlogPost() {
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-[240px] sm:h-[320px] lg:h-[400px] object-cover rounded-[20px] mb-12 card-shadow"
+              className="w-full h-[240px] sm:h-[320px] lg:h-[400px] object-cover rounded-card-sm mb-12 card-shadow"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           )}

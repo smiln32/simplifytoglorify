@@ -69,7 +69,7 @@ export default function FreebiePopup() {
       onClick={(e) => { if (e.target === e.currentTarget) dismiss(); }}
     >
       <div
-        className={`relative bg-ivory rounded-[28px] card-shadow max-w-md w-full p-8 sm:p-10 transition-all duration-200 ${closing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+        className={`relative bg-ivory rounded-card card-shadow max-w-md w-full p-8 sm:p-10 transition-all duration-200 ${closing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
         style={{ animation: closing ? 'none' : 'popup-card 0.3s ease-out' }}
       >
         <button

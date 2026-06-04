@@ -57,7 +57,7 @@ export default function ContactSection({ sectionRef }: ContactSectionProps) {
             </p>
           </div>
 
-          <div className="bg-white p-8 lg:p-12 rounded-[28px] card-shadow">
+          <div className="bg-white p-8 lg:p-12 rounded-card card-shadow">
             <h3 className="font-display text-2xl text-charcoal mb-6">Send a message</h3>
             <form name="contact" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="form-name" value="contact" />

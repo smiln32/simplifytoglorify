@@ -26,7 +26,7 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 Grace-filled journals, scripture cards, prayer cards, devotionals, and (first steps) mini-guides for women in challenging seasons.
               </p>
 
-              <div className="rounded-[20px] p-6 lg:p-8 bg-slate-blue text-center">
+              <div className="rounded-card-sm p-6 lg:p-8 bg-slate-blue text-center">
                 <p className="font-display text-lg lg:text-xl italic leading-relaxed text-white">
                   "Come to Me, all who are weary and burdened,<br />and I will give you rest."
                 </p>
@@ -45,13 +45,13 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 loop
                 playsInline
                 poster="/images/journaling-at-home.jpg"
-                className="w-full h-[420px] lg:h-[580px] object-cover rounded-[28px] card-shadow"
+                className="w-full h-[420px] lg:h-[580px] object-cover rounded-card card-shadow"
               >
                 <source src="/images/hero-video.mp4" type="video/mp4" />
                 <img
                   src="/images/journaling-at-home.jpg"
                   alt="Journaling space with Bible, journal and coffee"
-                  className="w-full h-[420px] lg:h-[580px] object-cover rounded-[28px]"
+                  className="w-full h-[420px] lg:h-[580px] object-cover rounded-card"
                 />
               </video>
             </div>

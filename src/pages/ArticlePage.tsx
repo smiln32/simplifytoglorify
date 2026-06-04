@@ -102,7 +102,7 @@ export default function ArticlePage() {
             <img
               src={article.image}
               alt={article.title}
-              className="w-full h-[220px] sm:h-[300px] lg:h-[380px] object-cover rounded-[20px] mb-12 card-shadow"
+              className="w-full h-[220px] sm:h-[300px] lg:h-[380px] object-cover rounded-card-sm mb-12 card-shadow"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           )}
@@ -112,7 +112,7 @@ export default function ArticlePage() {
           />
 
           {article.moreResources && (
-            <div className="mt-16 p-8 bg-ivory rounded-[20px] card-shadow">
+            <div className="mt-16 p-8 bg-ivory rounded-card-sm card-shadow">
               <h2 className="font-display text-2xl text-charcoal mb-3">{article.moreResources.heading}</h2>
               <p className="text-muted-slate italic mb-6 leading-relaxed">{article.moreResources.intro}</p>
               <ul className="space-y-4">

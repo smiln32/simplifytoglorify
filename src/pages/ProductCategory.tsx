@@ -96,7 +96,7 @@ export default function ProductCategory() {
             {PRODUCT_TYPES.map((type) => (
               <article
                 key={type}
-                className="bg-white rounded-[20px] overflow-hidden card-shadow flex flex-col"
+                className="bg-white rounded-card-sm overflow-hidden card-shadow flex flex-col"
               >
                 <div className="h-1.5" style={{ backgroundColor: getCategoryColor(category.name) }} />
                 <div className="p-7 flex flex-col flex-1 gap-3">
@@ -124,7 +124,7 @@ export default function ProductCategory() {
             ))}
 
             {/* Bundle card */}
-            <article className="bg-white rounded-[20px] overflow-hidden card-shadow flex flex-col sm:col-span-2 lg:col-span-1">
+            <article className="bg-white rounded-card-sm overflow-hidden card-shadow flex flex-col sm:col-span-2 lg:col-span-1">
               <div className="h-1.5" style={{ backgroundColor: getCategoryColor(category.name) }} />
               <div className="p-7 flex flex-col flex-1 gap-3">
                 <p className="text-label text-slate-blue">Bundle</p>

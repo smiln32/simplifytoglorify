@@ -65,7 +65,7 @@ export default function AdminDownloads() {
     return (
       <div className="min-h-screen bg-ivory flex items-center justify-center">
         <div className="grain-overlay" />
-        <form onSubmit={handleAuth} className="bg-white p-8 rounded-[20px] card-shadow w-80">
+        <form onSubmit={handleAuth} className="bg-white p-8 rounded-card-sm card-shadow w-80">
           <h1 className="font-display text-2xl text-charcoal mb-6 text-center">Admin</h1>
           <Input
             type="password"
@@ -93,7 +93,7 @@ export default function AdminDownloads() {
           <h1 className="font-display text-3xl text-charcoal mb-2">Generate Download Codes</h1>
           <p className="text-muted-slate italic mb-8">Each code is one-time use.</p>
 
-          <div className="bg-white rounded-[20px] p-8 card-shadow mb-8">
+          <div className="bg-white rounded-card-sm p-8 card-shadow mb-8">
             <form onSubmit={handleGenerate} className="space-y-5">
               <div>
                 <label className="text-sm text-muted-slate mb-2 block">
@@ -140,7 +140,7 @@ export default function AdminDownloads() {
           </div>
 
           {codes.length > 0 && (
-            <div className="bg-white rounded-[20px] p-8 card-shadow">
+            <div className="bg-white rounded-card-sm p-8 card-shadow">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-display text-xl text-charcoal">
                   {codes.length === 1 ? '1 Code' : `${codes.length} Codes`}

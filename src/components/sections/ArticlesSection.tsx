@@ -22,7 +22,7 @@ function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; sh
   return (
     <Link
       to={`/articles/${article.slug}`}
-      className="group block bg-ivory rounded-[28px] card-shadow hover:shadow-xl transition-shadow overflow-hidden"
+      className="group block bg-ivory rounded-card card-shadow hover:shadow-card-hover transition-shadow overflow-hidden"
     >
       {showImage && article.image && (
         <img

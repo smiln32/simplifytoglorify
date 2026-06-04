@@ -28,7 +28,7 @@ export default function Products() {
               <Link
                 key={category.slug}
                 to={`/products/${category.slug}`}
-                className="group bg-ivory rounded-[20px] overflow-hidden card-shadow hover:-translate-y-1 hover:shadow-xl transition-all duration-200 flex"
+                className="group bg-ivory rounded-card-sm overflow-hidden card-shadow hover:-translate-y-1 hover:shadow-card-hover transition-all duration-200 flex"
               >
                 <div className="w-2 flex-shrink-0" style={{ backgroundColor: getCategoryColor(category.name) }} />
                 <div className="p-7 flex flex-col flex-1">

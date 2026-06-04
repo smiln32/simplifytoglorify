@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,10 +12,10 @@ export default function Footer() {
             <Link to="/privacy" className="text-white/80 hover:text-white transition-colors">Privacy Policy</Link>
           </div>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-white/80 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-            <a href="#" className="text-white/80 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-            <a href="#" className="text-white/80 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
-            <a href="#" className="text-white/80 hover:text-white transition-colors"><Youtube className="w-5 h-5" /></a>
+            <a href="https://www.facebook.com/carlabosteder.32" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
+            <a href="https://x.com/BostederCarla" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
+            <a href="https://www.instagram.com/simplifytoglorify/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/in/carla-bosteder-m-ed/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>
       </div>

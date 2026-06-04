@@ -60,9 +60,13 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
         xs: "calc(var(--radius) - 6px)",
+        card: "1.75rem",
+        "card-sm": "1.25rem",
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        card: "0 18px 50px rgba(0, 0, 0, 0.08)",
+        "card-hover": "0 24px 60px rgba(0, 0, 0, 0.12)",
       },
       keyframes: {
         "accordion-down": {

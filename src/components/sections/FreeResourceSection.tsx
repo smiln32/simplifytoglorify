@@ -51,10 +51,10 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="flex justify-center items-center h-full">
             <iframe
-              src="scripture_of_the_day_widget.html"
+              src="/scripture_of_the_day_widget.html"
               width={300}
               height={400}
-              className="rounded-[28px] card-shadow"
+              className="rounded-card card-shadow"
               title="Scripture of the Day"
               allowTransparency={true}
             />

@@ -6,6 +6,7 @@ import './index.css'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import FreebiePopup from './components/FreebiePopup.tsx'
 import ErrorBoundary from './components/ErrorBoundary.tsx'
+import { Toaster } from './components/ui/sonner.tsx'
 
 const App = lazy(() => import('./App.tsx'))
 const Blog = lazy(() => import('./pages/Blog.tsx'))
@@ -25,6 +26,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.tsx'))
 function RouterContent() {
   return (
     <>
+      <Toaster position="top-center" />
       <ScrollToTop />
       <FreebiePopup />
       <Suspense fallback={<div className="min-h-screen bg-ivory" />}>

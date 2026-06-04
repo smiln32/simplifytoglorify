@@ -27,7 +27,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
               to={`/products/${topic.name.toLowerCase().replace(/\s+/g, '-')}`}
               className="group block"
             >
-              <div className="rounded-[20px] overflow-hidden card-shadow hover:shadow-xl transition-shadow">
+              <div className="rounded-card-sm overflow-hidden card-shadow hover:shadow-card-hover transition-shadow">
                 <img
                   src={topic.image}
                   alt={topic.name}

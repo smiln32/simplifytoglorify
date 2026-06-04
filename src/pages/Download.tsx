@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Download as DownloadIcon, CheckCircle } from 'lucide-react'
+import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import PageNav from '@/components/PageNav'
@@ -88,7 +89,7 @@ export default function Download() {
 
       if (!res.ok) {
         const data = await res.json()
-        alert(data.error || 'Something went wrong. Please try again.')
+        toast.error(data.error || 'Something went wrong. Please try again.')
         return
       }
 
@@ -133,7 +134,7 @@ export default function Download() {
               </p>
             </div>
 
-            <div className="bg-white rounded-[20px] p-8 card-shadow space-y-3">
+            <div className="bg-white rounded-card-sm p-8 card-shadow space-y-3">
               {bundle.files.map((file) => (
                 <div
                   key={file.filename}
@@ -189,7 +190,7 @@ export default function Download() {
             </p>
           </div>
 
-          <div className="bg-white rounded-[20px] p-8 card-shadow">
+          <div className="bg-white rounded-card-sm p-8 card-shadow">
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input
                 type="text"

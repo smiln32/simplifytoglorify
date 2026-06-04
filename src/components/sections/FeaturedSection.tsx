@@ -37,7 +37,7 @@ export default function FeaturedSection({ sectionRef }: FeaturedSectionProps) {
             <img
               src="/images/featured-journal.jpg"
               alt="Featured Caregiving Journal"
-              className="w-full h-[400px] lg:h-[550px] object-cover rounded-[28px] card-shadow"
+              className="w-full h-[400px] lg:h-[550px] object-cover rounded-card card-shadow"
             />
           </div>
         </div>

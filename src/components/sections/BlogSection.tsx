@@ -24,7 +24,7 @@ export default function BlogSection({ sectionRef }: BlogSectionProps) {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="group bg-white rounded-lg overflow-hidden card-shadow transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              className="group bg-white rounded-lg overflow-hidden card-shadow transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover"
             >
               <Link to={`/blog/${post.slug}`} className="block no-underline text-inherit">
                 {post.image && (
