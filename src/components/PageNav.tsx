@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Products', href: '/products' },
   { label: 'Articles', href: '/articles' },
   { label: 'Blog',     href: '/blog' },
-  { label: 'Contact',  href: '/#contact' },
+  { label: 'Contact',  href: '/contact' },
 ];
 
 export default function PageNav() {

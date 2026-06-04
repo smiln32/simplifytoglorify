@@ -22,6 +22,7 @@ const CheckoutCancel = lazy(() => import('./pages/CheckoutCancel.tsx'))
 const NotFound = lazy(() => import('./pages/NotFound.tsx'))
 const ColorPreview = lazy(() => import('./pages/ColorPreview.tsx'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.tsx'))
+const Contact = lazy(() => import('./pages/Contact.tsx'))
 
 function RouterContent() {
   return (
@@ -42,6 +43,7 @@ function RouterContent() {
           <Route path="/admin/downloads" element={<AdminDownloads />} />
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/checkout/cancel" element={<CheckoutCancel />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/colors" element={<ColorPreview />} />
           <Route path="*" element={<NotFound />} />

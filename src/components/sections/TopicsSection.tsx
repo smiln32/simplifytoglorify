@@ -45,7 +45,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
         <div className="text-center mt-10">
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-base font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
           >
             View all products →
           </Link>
