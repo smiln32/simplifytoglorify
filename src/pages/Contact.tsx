@@ -78,7 +78,7 @@ export default function Contact() {
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               Let's stay connected.
             </h1>
-            <p className="text-lg text-muted-slate italic leading-relaxed max-w-xl">
+            <p className="text-lg text-charcoal italic leading-relaxed max-w-xl">
               Questions, encouragement, or just a hello — I read every message and I am glad you are here.
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-display text-lg text-charcoal mb-1">{title}</p>
-                      <p className="text-muted-slate leading-relaxed">{description}</p>
+                      <p className="text-charcoal leading-relaxed">{description}</p>
                     </div>
                   </div>
                 ))}
@@ -114,7 +114,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="mb-8 pl-4 border-l-4 border-sage">
-                <p className="text-sm text-muted-slate mb-1">You can also email me directly</p>
+                <p className="text-sm text-charcoal mb-1">You can also email me directly</p>
                 <a href="mailto:smiln32@gmail.com" className="font-display text-lg text-slate-blue hover:text-charcoal transition-colors">
                   smiln32@gmail.com
                 </a>
@@ -122,7 +122,7 @@ export default function Contact() {
 
               {/* Social links */}
               <div>
-                <p className="text-sm text-muted-slate mb-4">Find me on social media</p>
+                <p className="text-sm text-charcoal mb-4">You can also find me on social media.</p>
                 <div className="flex items-center gap-4">
                   {social.map(({ label, href, Icon }) => (
                     <a
@@ -131,7 +131,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 rounded-full bg-ivory border border-charcoal/10 flex items-center justify-center text-muted-slate hover:text-slate-blue hover:border-slate-blue/30 transition-colors duration-200"
+                      className="w-10 h-10 rounded-full bg-ivory border border-charcoal/10 flex items-center justify-center text-charcoal hover:text-slate-blue hover:border-slate-blue/30 transition-colors duration-200"
                     >
                       <Icon className="w-4 h-4" />
                     </a>

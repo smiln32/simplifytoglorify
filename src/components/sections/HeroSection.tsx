@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { SectionRef, ScrollFn } from '@/types';
@@ -9,6 +10,20 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: HeroSectionProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const handleTimeUpdate = () => {
+      if (video.duration && video.currentTime >= video.duration - 0.5) {
+        video.currentTime = 0;
+      }
+    };
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
+  }, []);
+
   return (
     <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 lg:py-10">
@@ -40,9 +55,9 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
           <div className="order-1 lg:order-2">
             <div className="hero-image relative rounded-card overflow-hidden card-shadow">
               <video
+                ref={videoRef}
                 autoPlay
                 muted
-                loop
                 playsInline
                 poster="/images/journaling-at-home.jpg"
                 className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08]"
