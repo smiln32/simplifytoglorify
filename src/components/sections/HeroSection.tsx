@@ -38,20 +38,20 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="hero-image relative">
+            <div className="hero-image relative rounded-card overflow-hidden card-shadow">
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
                 poster="/images/journaling-at-home.jpg"
-                className="w-full h-[420px] lg:h-[580px] object-cover rounded-card card-shadow"
+                className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08]"
               >
                 <source src="/images/simple-cup-of-tea.mp4" type="video/mp4" />
                 <img
                   src="/images/journaling-at-home.jpg"
                   alt="Journaling space with Bible, journal and coffee"
-                  className="w-full h-[420px] lg:h-[580px] object-cover rounded-card"
+                  className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08]"
                 />
               </video>
             </div>

@@ -4,7 +4,10 @@
       "Bash(powershell -Command \"Get-ChildItem -Path src -Recurse -Include *.tsx | Select-String 'rounded-\\\\[20px\\\\]' | Select-Object -ExpandProperty Path | Sort-Object -Unique\")",
       "Bash(powershell -Command \"\\(Get-Content src/pages/Blog.tsx\\) -replace 'hover:shadow-xl', 'hover:shadow-card-hover' | Set-Content src/pages/Blog.tsx\")",
       "Bash(powershell -Command \"\\(Get-Content src/components/sections/ArticlesSection.tsx\\) -replace 'hover:shadow-xl', 'hover:shadow-card-hover' | Set-Content src/components/sections/ArticlesSection.tsx\")",
-      "Bash(powershell -Command \"\\(Get-Content src/components/sections/TopicsSection.tsx\\) -replace 'hover:shadow-xl', 'hover:shadow-card-hover' | Set-Content src/components/sections/TopicsSection.tsx\")"
+      "Bash(powershell -Command \"\\(Get-Content src/components/sections/TopicsSection.tsx\\) -replace 'hover:shadow-xl', 'hover:shadow-card-hover' | Set-Content src/components/sections/TopicsSection.tsx\")",
+      "Bash(git restore *)",
+      "Bash(dir \"c:\\\\Users\\\\smiln\\\\OneDrive\\\\Desktop\\\\simplifytoglorify\\\\public\\\\images\" /b)",
+      "Bash(findstr \".mp4\")"
     ]
   }
 }
