@@ -4,12 +4,27 @@ export type { ArticleMeta, Article } from './types';
 
 export const articleMeta: ArticleMeta[] = [
   {
+    id: 18,
+    slug: 'how-meditation-and-faith-fit-together',
+    title: 'How Do Meditation and Faith Fit Together?',
+    category: 'Faith',
+    excerpt: 'Meditation and faith fit together when meditation means giving God your focused attention, not emptying your mind of Him.',
+  },
+  {
+    id: 17,
+    slug: 'conversations-in-prayer',
+    title: 'Conversations in Prayer: Listening to God Without Forcing the Experience',
+    category: 'Prayer',
+    excerpt: 'If you have prayed for years but quietly wondered whether God ever says anything back, this is for you. A gentle, grounded guide to listening in prayer.',
+    image: '/images/conversations-in-prayer.png',
+  },
+  {
     id: 16,
     slug: 'trusting-god-with-hard-days',
     title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
     category: 'Trusting God',
     excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
-    image: '/images/trusting-god-with-hard-days.webp',
+    image: '/images/trusting-God-hard-days.webp',
   },
   {
     id: 15,
@@ -33,7 +48,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Do Depression Journals Improve Mental Well-Being?',
     category: 'Depression',
     excerpt: "Depression journals don't erase pain, but they offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons.",
-    image: '/images/depression-and-faith.jpg',
+    image: '/images/depression-and-faith.webp',
   },
   {
     id: 2,
@@ -97,7 +112,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Self-Reflection Leads to Personal Growth',
     category: 'Faith',
     excerpt: "You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.",
-    image: '/images/women-in-hard-seasons.jpg',
+    image: '/images/self-reflection-personal-growth.webp',
   },
   {
     id: 13,
@@ -105,7 +120,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'Writing Out Scripture by Hand: Why It Helps Mental Health, Memory, and Peace',
     category: 'Scripture Writing',
     excerpt: 'On the days when prayer feels thin and your Bible sits open to the same page, one verse and a pen can be the gentlest way back to God.',
-    image: '/images/leaning_into_prayer.webp',
+    image: '/images/writing-out-scripture.webp',
   },
   {
     id: 12,
@@ -113,6 +128,6 @@ export const articleMeta: ArticleMeta[] = [
     title: 'Gratitude: When Thanksgiving Changes the Way You See Everything',
     category: 'Gratitude',
     excerpt: "Gratitude is not pretending the hard thing is fine. It is the quiet practice of noticing that God has not left the room, even in a hard season.",
-    image: '/images/finding-peace.jpg',
+    image: '/images/gratitude-changes-everything.webp',
   },
 ];

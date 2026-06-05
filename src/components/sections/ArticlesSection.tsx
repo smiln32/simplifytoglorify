@@ -13,7 +13,12 @@ interface ArticlesSectionProps {
 
 const defaultColor = '#a4b9c4';
 
-const allCategories = ['All', ...Array.from(new Set(articles.map((a) => a.category)))];
+const TOPIC_FILTERS = [
+  'All',
+  'ADHD', 'Anxiety', 'Caregiving', 'Chronic Pain', 'Depression',
+  'Gratitude', 'Grief', 'Patience', 'Prayer', 'Regret',
+  'Struggling with Faith', 'Uncertainty', 'General',
+];
 
 const sortedArticles = [...articles].sort((a, b) => b.id - a.id);
 
@@ -126,7 +131,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
             />
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
-            {allCategories.map((cat) => {
+            {TOPIC_FILTERS.map((cat) => {
               const color = cat === 'All' ? defaultColor : getCategoryColor(cat);
               const isActive = selectedCategory === cat;
               return (
