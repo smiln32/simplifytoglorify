@@ -15,13 +15,15 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const handleTimeUpdate = () => {
-      if (video.duration && video.currentTime >= video.duration - 0.5) {
+    let rafId: number;
+    const check = () => {
+      if (video.duration && video.currentTime >= video.duration - 0.15) {
         video.currentTime = 0;
       }
+      rafId = requestAnimationFrame(check);
     };
-    video.addEventListener('timeupdate', handleTimeUpdate);
-    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
+    rafId = requestAnimationFrame(check);
+    return () => cancelAnimationFrame(rafId);
   }, []);
 
   return (
