@@ -26,7 +26,7 @@ export const post = {
   ],
   date: "2026-05-28",
   author: "Carla",
-  image: '/images/finding-peace.jpg',
+  image: '/images/finding-peace.webp',
   body: `You already know how to be thankful. You say it over coffee with a friend, over a child's scraped knee that healed, over the small mercy of a quiet morning before the house wakes up. The instinct lives in you. What you may not have heard is that this ordinary, tender habit is doing something far larger than you realize, in your body, in your relationships, and in your walk with God.
 
 I want to talk about gratitude honestly. Not the kind that asks you to paste a smile over your sorrow. The kind that can sit beside you in a hard season and still find one true thing worth naming.

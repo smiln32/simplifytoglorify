@@ -23,7 +23,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'ADHD',
     tags: ['ADHD', 'faith', 'identity'],
-    image: '/images/adhd-and-faith.jpg',
+    image: '/images/adhd-and-faith.webp',
   },
   {
     id: 8,
@@ -34,7 +34,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '6 min read',
     category: 'Depression',
     tags: ['depression', 'faith', 'hope'],
-    image: '/images/depression-and-faith.jpg',
+    image: '/images/depression-and-faith.webp',
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '5 min read',
     category: 'Anxiety',
     tags: ['emotions', 'overwhelm', 'faith'],
-    image: '/images/emotions-feel-like-too-much.jpg',
+    image: '/images/emotions-fee-like-too-much.webp',
   },
   {
     id: 1,
@@ -96,11 +96,11 @@ export const blogPostMeta: BlogPostMeta[] = [
     slug: 'the-art-of-slowing-down',
     title: 'The Art of Slowing Down',
     excerpt: 'In a world that rushes, choosing a slower pace is a radical act of faith.',
-    date: 'April 10, 2026',
+    date: 'April 3, 2026',
     readTime: '4 min read',
     category: 'Peace',
     tags: ['slow living', 'mindfulness', 'rest'],
-    image: '/images/the_art_of_slowing_down.webp',
+    image: '/images/slowing_down.webp',
   },
   {
     id: 3,

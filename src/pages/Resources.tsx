@@ -43,6 +43,51 @@ const resources = [
     color: '#d4b896',
     subject: 'Free resource: Rituals That Relax — Simplify to Glorify',
   },
+  {
+    id: 'deepen-prayer',
+    title: 'How to Deepen Your Prayer Life',
+    subtitle: 'A reflection on prayer for every season',
+    description: 'Honest, unhurried ways to meet God in everyday conversation. For the woman whose prayer life feels distant or who has stopped praying and wants to begin again.',
+    filename: 'resources/How-to-Deepen-Your-Prayer-Life-Booklet.pdf',
+    color: '#d4c4b8',
+    subject: 'Free resource: How to Deepen Your Prayer Life — Simplify to Glorify',
+  },
+  {
+    id: 'self-reflection',
+    title: 'Self-Reflection for Personal Growth',
+    subtitle: 'How looking back gently can grow you forward',
+    description: 'A guide to honest self-examination that grows you instead of wears you down. For the woman who wants to learn from her experiences without shame.',
+    filename: 'resources/Self-Reflection-For-Growth-Booklet.pdf',
+    color: '#c9c4d4',
+    subject: 'Free resource: Self-Reflection for Personal Growth — Simplify to Glorify',
+  },
+  {
+    id: 'scripture-anxiety',
+    title: '5 Days of Scripture for Anxious Hearts',
+    subtitle: 'A gentle companion for unsettled minds',
+    description: 'Five small verses, five small prayers, five small ways to anchor your heart. For the days your mind won\'t settle and you need reminding that God is near.',
+    filename: 'resources/5-Days-of-Scripture-for-Anxious-Hearts-Guide.pdf',
+    color: '#b8c9d1',
+    subject: 'Free resource: 5 Days of Scripture for Anxious Hearts — Simplify to Glorify',
+  },
+  {
+    id: 'grieve-timeline',
+    title: 'How to Grieve Without a Timeline',
+    subtitle: 'For the one whose sorrow has outlasted everyone else\'s patience',
+    description: 'Permission to grieve at your own pace. For the woman whose grief is deeper than the timeline allows and needs to know there is no "should" in her sorrow.',
+    filename: 'resources/How-to-Grieve-Without-a-Timeline-Guide.pdf',
+    color: '#cfc0c9',
+    subject: 'Free resource: How to Grieve Without a Timeline — Simplify to Glorify',
+  },
+  {
+    id: 'tired-pray',
+    title: 'When You\'re Too Tired to Pray',
+    subtitle: 'For the worn-out heart that loves God but has run out of words',
+    description: 'Prayer when you have nothing left to give. For the woman who is too depleted for eloquence and needs to know that her silence is still being heard.',
+    filename: 'resources/When-Youre-Too-Tired-to-Pray-Booklet.pdf',
+    color: '#d0b8c6',
+    subject: 'Free resource: When You\'re Too Tired to Pray — Simplify to Glorify',
+  },
 ];
 
 export default function Resources() {
@@ -100,16 +145,17 @@ export default function Resources() {
               A little something to carry with you.
             </h1>
             <p className="text-lg text-muted-slate italic leading-relaxed max-w-xl">
-              Free seven-day devotionals and scripture companions for women in hard seasons. Enter your email and it downloads instantly.
+              Gentle guides and devotionals for women in hard and ordinary seasons alike. From prayer and reflection to anxiety and grief — enter your email and it downloads instantly.
             </p>
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 py-16 lg:py-24 space-y-8">
-          {resources.map((resource) => (
-            <div key={resource.id} className="bg-ivory rounded-card card-shadow overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {resources.map((resource) => (
+              <div key={resource.id} className="bg-ivory rounded-card card-shadow overflow-hidden">
               <div className="h-2" style={{ backgroundColor: resource.color }} />
-              <div className="p-8 lg:p-10">
+              <div className="p-6 lg:p-8">
                 <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: resource.color }}>
                   Free Download
                 </p>
@@ -168,9 +214,10 @@ export default function Resources() {
                 )}
               </div>
             </div>
-          ))}
+            ))}
+          </div>
 
-          <p className="text-center text-muted-slate italic pt-4">
+          <p className="text-center text-muted-slate italic pt-8">
             More resources coming soon.
           </p>
         </div>

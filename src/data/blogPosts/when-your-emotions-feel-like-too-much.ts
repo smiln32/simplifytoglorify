@@ -10,7 +10,7 @@ const post: BlogPost = {
   readTime: '5 min read',
   category: 'Anxiety',
   tags: ['emotions', 'overwhelm', 'faith'],
-  image: '/images/emotions-feel-like-too-much.jpg',
+  image: '/images/emotions-fee-like-too-much.webp',
   keywords: [
     'when emotions feel like too much',
     'overwhelmed emotions',

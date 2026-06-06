@@ -3,11 +3,9 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { blogPostMeta as blogPosts } from '@/data/blogPosts/index';
-import { getCategoryColor } from '@/data/categoryColors';
+import { getCategoryColor, defaultColor } from '@/data/categoryColors';
 import PageNav from '@/components/PageNav';
 import Footer from '@/components/sections/Footer';
-
-const defaultColor = '#a4b9c4';
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -90,6 +88,7 @@ export default function Blog() {
                       <img
                         src={post.image}
                         alt={post.title}
+                        loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                       />

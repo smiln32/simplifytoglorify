@@ -14,6 +14,7 @@ export default function AboutSection({ sectionRef }: AboutSectionProps) {
             <img
               src="/images/about-story.webp"
               alt="Our Story"
+              loading="lazy"
               className="w-full h-[480px] lg:h-[620px] object-cover rounded-card card-shadow"
             />
           </div>

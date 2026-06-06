@@ -31,6 +31,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
                 <img
                   src={topic.image}
                   alt={topic.name}
+                  loading="lazy"
                   className={`w-full h-40 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-105${topic.imageClass ? ` ${topic.imageClass}` : ''}`}
                 />
               </div>

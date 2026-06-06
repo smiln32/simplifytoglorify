@@ -26,7 +26,7 @@ export const post = {
   ],
   date: "2026-05-28",
   author: "Carla",
-  image: '/images/women-in-hard-seasons.jpg',
+  image: '/images/women-in-hard-seasons.webp',
   body: `You have a sense, somewhere underneath the busyness, that the last year held more than you have yet taken from it. Lessons you brushed past. Patterns you almost saw. A quieter wisdom waiting for you to slow down long enough to notice it.
 
 That instinct is right, and it is worth trusting. Reflection is how experience becomes wisdom instead of just becoming the past. But it is also a practice that can quietly turn against you, and most of us were never taught the difference. So let me walk you through it gently, the way I would over coffee.

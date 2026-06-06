@@ -102,6 +102,7 @@ export default function ArticlePage() {
             <img
               src={article.image}
               alt={article.title}
+              loading="lazy"
               className="w-full h-[220px] sm:h-[300px] lg:h-[380px] object-cover rounded-card-sm mb-12 card-shadow"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />

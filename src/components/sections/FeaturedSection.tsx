@@ -35,8 +35,9 @@ export default function FeaturedSection({ sectionRef }: FeaturedSectionProps) {
           </div>
           <div className="order-1 lg:order-2">
             <img
-              src="/images/featured-journal.jpg"
+              src="/images/weight-of-caregiving.webp"
               alt="Featured Caregiving Journal"
+              loading="lazy"
               className="w-full h-[400px] lg:h-[550px] object-cover rounded-card card-shadow"
             />
           </div>

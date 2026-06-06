@@ -10,7 +10,7 @@ const post: BlogPost = {
   readTime: '5 min read',
   category: 'ADHD',
   tags: ['ADHD', 'faith', 'identity'],
-  image: '/images/adhd-and-faith.jpg',
+  image: '/images/adhd-and-faith.webp',
   keywords: [
     'ADHD and faith',
     'Christian ADHD',
