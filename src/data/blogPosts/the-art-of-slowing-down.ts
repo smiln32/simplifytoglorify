@@ -24,7 +24,7 @@ const post: BlogPost = {
     'rest without guilt',
     'faith and exhaustion',
   ],
-  image: '/images/slowing_down.webp',
+  image: '/images/slowing-down.webp',
   content: `
     <p>I want to tell you something, and I need you to hear it without your inner critic jumping in to argue.</p>
 

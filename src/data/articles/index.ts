@@ -9,6 +9,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Do Meditation and Faith Fit Together?',
     category: 'Faith',
     excerpt: 'Meditation and faith fit together when meditation means giving God your focused attention, not emptying your mind of Him.',
+    image: '/images/meditation-and-faith.webp',
   },
   {
     id: 17,
@@ -16,7 +17,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'Conversations in Prayer: Listening to God Without Forcing the Experience',
     category: 'Prayer',
     excerpt: 'If you have prayed for years but quietly wondered whether God ever says anything back, this is for you. A gentle, grounded guide to listening in prayer.',
-    image: '/images/conversations-in-prayer.png',
+    image: '/images/conversations-in-prayer.webp',
   },
   {
     id: 16,
@@ -48,7 +49,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Do Depression Journals Improve Mental Well-Being?',
     category: 'Depression',
     excerpt: "Depression journals don't erase pain, but they offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons.",
-    image: '/images/depression-and-faith.webp',
+    image: '/images/depression-and-faith.jpg',
   },
   {
     id: 2,
@@ -56,7 +57,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How to Carve Out Time for Journaling',
     category: 'Journaling',
     excerpt: "What if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?",
-    image: '/images/slowing_down.webp',
+    image: '/images/slowing-down.webp',
   },
   {
     id: 5,

@@ -4,6 +4,7 @@ const post: Article = {
   id: 18,
   slug: 'how-meditation-and-faith-fit-together',
   category: 'Faith',
+  image: '/images/meditation-and-faith.webp',
   title: "How Do Meditation and Faith Fit Together?",
   metaDescription:
     "Wondering if meditation belongs in your faith? Here is a gentle, Scripture-rooted look at biblical meditation and a simple way to begin.",

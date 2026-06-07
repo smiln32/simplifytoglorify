@@ -26,7 +26,7 @@ export const post = {
   ],
   date: '2026-06-04',
   author: 'Carla',
-  image: '/images/conversations-in-prayer.png',
+  image: '/images/conversations-in-prayer.webp',
   body: `## Listening to God Without Forcing the Experience
 
 If you have prayed for years but quietly wondered whether God ever says anything back, this is for you. You may be tired, unsure, or quietly carrying the ache that the conversation only runs one direction. Most of us were taught to talk in prayer. Fewer of us were taught how to slow down, sit with the Word, and listen with humility.

@@ -34,7 +34,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '6 min read',
     category: 'Depression',
     tags: ['depression', 'faith', 'hope'],
-    image: '/images/depression-and-faith.webp',
+    image: '/images/depression-and-faith.jpg',
   },
   {
     id: 7,
@@ -100,7 +100,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '4 min read',
     category: 'Peace',
     tags: ['slow living', 'mindfulness', 'rest'],
-    image: '/images/slowing_down.webp',
+    image: '/images/slowing-down.webp',
   },
   {
     id: 3,
