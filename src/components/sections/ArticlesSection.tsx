@@ -20,7 +20,7 @@ const TOPIC_FILTERS = [
   'Struggling with Faith', 'Uncertainty', 'General',
 ];
 
-const sortedArticles = [...articles].sort((a, b) => b.id - a.id);
+const sortedArticles = [...articles];
 
 function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; showImage?: boolean }) {
   const color = getCategoryColor(article.category);
