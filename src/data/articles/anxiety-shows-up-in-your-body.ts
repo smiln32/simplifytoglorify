@@ -1,7 +1,11 @@
 export const article = {
   title: "What to Do When Anxiety Shows Up in Your Body",
-  slug: "what-to-do-when-anxiety-shows-up-in-your-body",
+  slug: "anxiety-shows-up-in-your-body",
+  category: "Anxiety",
   excerpt: "Anxiety can feel physical before it feels clear in your thoughts. Here are gentle ways to pause, notice, breathe, pray, and take one small next step.",
+  metaDescription: "When anxiety shows up as a tight chest, racing heart, or shallow breathing, here are gentle faith-grounded ways to pause, breathe, pray, and take the next step.",
+  keywords: ["anxiety in the body", "physical anxiety symptoms", "Christian anxiety", "what to do when anxious", "faith and anxiety", "prayer for anxiety", "Christian women anxiety"],
+  image: "/images/anxiety-shows-up-in-your-body.jpg",
   content: `
 # What to Do When Anxiety Shows Up in Your Body
 
@@ -61,3 +65,5 @@ God is near.
     { name: "Mayo Clinic Health System", title: "11 Tips for Coping With an Anxiety Disorder", url: "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder" }
   ]
 } as const;
+
+export default article;
