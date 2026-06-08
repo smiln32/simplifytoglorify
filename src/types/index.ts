@@ -8,7 +8,6 @@ export type SectionRefs = {
   topicsRef: SectionRef;
   articlesRef: SectionRef;
   freeResourceRef: SectionRef;
-  contactRef: SectionRef;
 };
 
 export type ScrollFn = (ref: SectionRef) => void;

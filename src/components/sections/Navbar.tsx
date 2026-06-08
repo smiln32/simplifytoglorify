@@ -63,7 +63,7 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
             <RouterLink to="/products" className="text-sm text-white hover:text-white/80 transition-colors">Products</RouterLink>
             <button onClick={() => nav(refs.articlesRef)} className="text-sm text-white hover:text-white/80 transition-colors">Articles</button>
             <RouterLink to="/blog" className="text-sm text-white hover:text-white/80 transition-colors">Blog</RouterLink>
-            <button onClick={() => nav(refs.contactRef)} className="text-sm text-white hover:text-white/80 transition-colors">Contact</button>
+            <RouterLink to="/contact" className="text-sm text-white hover:text-white/80 transition-colors">Contact</RouterLink>
 
             {/* Admin Tools */}
             <Dialog open={adminOpen} onOpenChange={setAdminOpen}>
@@ -158,7 +158,7 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
                 <RouterLink to="/products" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-white">Products</RouterLink>
                 <button onClick={() => nav(refs.articlesRef)} className="text-lg font-display text-white text-left">Articles</button>
                 <RouterLink to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-white">Blog</RouterLink>
-                <button onClick={() => nav(refs.contactRef)} className="text-lg font-display text-white text-left">Contact</button>
+                <RouterLink to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-lg font-display text-white">Contact</RouterLink>
               </div>
             </SheetContent>
           </Sheet>

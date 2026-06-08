@@ -115,8 +115,8 @@ export default function Contact() {
               {/* Email */}
               <div className="mb-8 pl-4 border-l-4 border-sage">
                 <p className="text-sm text-charcoal mb-1">You can also email me directly</p>
-                <a href="mailto:smiln32@gmail.com" className="font-display text-lg text-slate-blue hover:text-charcoal transition-colors">
-                  smiln32@gmail.com
+                <a href="mailto:hello@simplifytoglorify.com" className="font-display text-lg text-slate-blue hover:text-charcoal transition-colors">
+                  hello@simplifytoglorify.com
                 </a>
               </div>
 

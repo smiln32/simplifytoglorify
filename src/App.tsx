@@ -8,7 +8,6 @@ import TopicsSection from '@/components/sections/TopicsSection';
 import ArticlesSection from '@/components/sections/ArticlesSection';
 import ScriptureBanner from '@/components/sections/ScriptureBanner';
 import FreeResourceSection from '@/components/sections/FreeResourceSection';
-import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/sections/Footer';
 import type { SectionRef, SectionRefs } from '@/types';
 
@@ -20,14 +19,12 @@ function App() {
   const topicsRef = useRef<HTMLDivElement>(null);
   const articlesRef = useRef<HTMLDivElement>(null);
   const freeResourceRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
   const refs: SectionRefs = {
     heroRef,
     aboutRef,
     topicsRef,
     articlesRef,
     freeResourceRef,
-    contactRef,
   };
 
   const scrollToSection = (ref: SectionRef) => {
@@ -53,7 +50,6 @@ function App() {
         '.scripture-banner',
         '.articles-section',
         '.free-resource-section',
-        '.contact-section',
       ];
 
       sections.forEach((section) => {
@@ -88,7 +84,6 @@ function App() {
       <ScriptureBanner />
       <ArticlesSection sectionRef={articlesRef} limit={3} />
       <FreeResourceSection sectionRef={freeResourceRef} />
-      <ContactSection sectionRef={contactRef} />
       <Footer />
     </div>
   );
