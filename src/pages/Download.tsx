@@ -163,7 +163,7 @@ export default function Download() {
             <p className="text-sm text-muted-slate text-center mt-6 leading-relaxed">
               Keep your code <span className="font-mono text-charcoal">{bundle.code}</span> — you can return here anytime to download products you have not gotten yet.
               Questions?{' '}
-              <a href="/#contact" className="text-slate-blue hover:underline">Contact us</a>.
+              <a href="/contact" className="text-slate-blue hover:underline">Contact us</a>.
             </p>
           </div>
         </main>
@@ -217,7 +217,7 @@ export default function Download() {
 
           <p className="text-sm text-muted-slate text-center mt-6 leading-relaxed">
             Each code works once. Questions?{' '}
-            <a href="/#contact" className="text-slate-blue hover:underline">
+            <a href="/contact" className="text-slate-blue hover:underline">
               Contact us
             </a>
             .
