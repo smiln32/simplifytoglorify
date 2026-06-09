@@ -7,9 +7,12 @@ import PageNav from '@/components/PageNav';
 import Footer from '@/components/sections/Footer';
 import PostCard from '@/components/PostCard';
 
+const PAGE_SIZE = 12;
+
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('All');
+  const [shown, setShown] = useState(PAGE_SIZE);
 
   // Group + search filter (replaces the old per-category pill filter),
   // then default sort: newest first by date.
@@ -49,7 +52,7 @@ export default function Blog() {
               <Input
                 placeholder="Search posts..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => { setSearchTerm(e.target.value); setShown(PAGE_SIZE); }}
                 className="pl-10 bg-white border-charcoal/10"
               />
             </div>
@@ -64,7 +67,7 @@ export default function Blog() {
                     key={g}
                     role="tab"
                     aria-selected={active}
-                    onClick={() => setActiveTab(g)}
+                    onClick={() => { setActiveTab(g); setShown(PAGE_SIZE); }}
                     style={{
                       border: 'none',
                       background: 'none',
@@ -85,10 +88,21 @@ export default function Blog() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {visible.map((post) => (
+            {visible.slice(0, shown).map((post) => (
               <PostCard key={post.id} post={post} to={`/blog/${post.slug}`} />
             ))}
           </div>
+
+          {shown < visible.length && (
+            <div className="text-center mt-10">
+              <button
+                onClick={() => setShown(shown + PAGE_SIZE)}
+                className="px-6 py-2.5 rounded-full border border-slate-blue text-slate-blue font-body text-sm hover:bg-slate-blue hover:text-white transition-colors duration-200"
+              >
+                Load more
+              </button>
+            </div>
+          )}
 
           {visible.length === 0 && (
             <p className="text-center text-muted-slate mt-12">No posts match your search.</p>
