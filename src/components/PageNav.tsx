@@ -48,7 +48,7 @@ export default function PageNav() {
           </Sheet>
         </div>
       </div>
-      <div className="h-2 bg-white" />
+      <div className="h-2" style={{ backgroundColor: '#f3f1ec' }} />
     </nav>
   );
 }

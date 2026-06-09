@@ -164,7 +164,7 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
           </Sheet>
         </div>
       </div>
-      <div className="h-2 bg-white" />
+      <div className="h-2" style={{ backgroundColor: '#f3f1ec' }} />
     </nav>
   );
 }
