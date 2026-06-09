@@ -3,6 +3,7 @@ export interface BlogPostMeta {
   slug: string;
   title: string;
   excerpt: string;
+  type?: "article" | "blog"; // optional for now; treat missing as "article"
   metaDescription?: string;
   keywords?: string[];
   date: string;
