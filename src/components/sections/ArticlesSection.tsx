@@ -131,7 +131,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
           <div
             role="tablist"
             className="max-w-2xl mx-auto"
-            style={{ display: 'flex', gap: 4, borderBottom: '1px solid #ececec' }}
+            style={{ display: 'flex', justifyContent: 'center', gap: 4, borderBottom: '1px solid #ececec' }}
           >
             {GROUPS.map((g) => {
               const active = activeTab === g;

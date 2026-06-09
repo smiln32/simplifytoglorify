@@ -7,6 +7,7 @@ import { groupFor, GROUP_COLOR } from '@/lib/categoryGroups';
 export interface PostCardData {
   slug: string;
   title: string;
+  cardTitle?: string;
   category: string;
   excerpt: string;
   image?: string;
@@ -68,6 +69,7 @@ export default function PostCard({ post, to }: { post: PostCardData; to: string 
             {post.readTime ? ` · ${post.readTime}` : ''}
           </div>
           <h3
+            className="line-clamp-2"
             style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: 20,
@@ -75,9 +77,10 @@ export default function PostCard({ post, to }: { post: PostCardData; to: string 
               margin: 0,
             }}
           >
-            {post.title}
+            {post.cardTitle ?? post.title}
           </h3>
           <p
+            className="line-clamp-2"
             style={{
               fontFamily: 'Lora, serif',
               fontSize: 14.5,

@@ -1,7 +1,7 @@
 export const post = {
   id: 20,
   slug: 'the-pain-no-one-can-see',
-  title: 'The Pain No One Can See: Faith, Chronic Pain, and the God Who Sees You',
+  title: 'The Pain No One Can See',
   category: 'Chronic Pain',
   excerpt:
     'Chronic pain is often invisible, and being unseen can be its own kind of ache. A grace-centered look at lament, the God who sees, and faith that does not depend on being healed.',

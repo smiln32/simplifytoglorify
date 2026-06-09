@@ -20,7 +20,7 @@ const reasons = [
   {
     icon: MessageCircle,
     title: 'Just say hello',
-    description: 'You do not need a reason. If you are in a hard season and want someone to know, I am here.',
+    description: 'You do not need a reason. If you are in a hard season and want someone to know or someone to pray for you, I am here.',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Contact() {
               Let's stay connected.
             </h1>
             <p className="text-lg text-charcoal italic leading-relaxed max-w-xl">
-              Questions, encouragement, or just a hello — I read every message and I am glad you are here.
+              Questions, encouragement, or just a hello. I read every message.
             </p>
           </div>
         </div>
