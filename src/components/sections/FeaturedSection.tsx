@@ -21,9 +21,9 @@ export default function FeaturedSection({ sectionRef }: FeaturedSectionProps) {
               Short reflections, honest prayers, and space to breathe. Made for the days when you're running on empty.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <span className="px-4 py-2 bg-ivory rounded-full text-sm text-charcoal border border-charcoal/10">30 Days</span>
-              <span className="px-4 py-2 bg-ivory rounded-full text-sm text-charcoal border border-charcoal/10">Digital PDF</span>
-              <span className="px-4 py-2 bg-ivory rounded-full text-sm text-slate-blue border border-slate-blue/30">$24.99</span>
+              <span className="px-4 py-2 bg-white rounded-full text-sm text-charcoal border border-charcoal/10">30 Days</span>
+              <span className="px-4 py-2 bg-white rounded-full text-sm text-charcoal border border-charcoal/10">Digital PDF</span>
+              <span className="px-4 py-2 bg-white rounded-full text-sm text-slate-blue border border-slate-blue/30">$24.99</span>
             </div>
             <Button
               onClick={() => toast.info('Shop integration coming soon!')}

@@ -5,7 +5,7 @@ import Footer from '@/components/sections/Footer'
 
 export default function CheckoutSuccess() {
   return (
-    <div className="min-h-screen bg-ivory">
+    <div className="min-h-screen bg-white">
       <div className="grain-overlay" />
       <PageNav />
 

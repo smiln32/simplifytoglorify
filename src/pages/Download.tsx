@@ -117,7 +117,7 @@ export default function Download() {
   // ── Bundle view ────────────────────────────────────────────────────────────
   if (bundle) {
     return (
-      <div className="min-h-screen bg-ivory">
+      <div className="min-h-screen bg-white">
         <div className="grain-overlay" />
         <PageNav />
 
@@ -174,7 +174,7 @@ export default function Download() {
 
   // ── Code entry view ────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-ivory">
+    <div className="min-h-screen bg-white">
       <div className="grain-overlay" />
       <PageNav />
 
@@ -197,7 +197,7 @@ export default function Download() {
                 placeholder="XXXX-XXXX"
                 value={code}
                 onChange={(e) => setCode(e.target.value.toUpperCase())}
-                className="w-full px-6 py-6 rounded-xl text-center text-lg tracking-widest font-mono border-charcoal/10 bg-ivory"
+                className="w-full px-6 py-6 rounded-xl text-center text-lg tracking-widest font-mono border-charcoal/10 bg-white"
                 maxLength={9}
                 autoComplete="off"
               />

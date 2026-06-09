@@ -63,7 +63,7 @@ export default function AdminDownloads() {
 
   if (!authed) {
     return (
-      <div className="min-h-screen bg-ivory flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="grain-overlay" />
         <form onSubmit={handleAuth} className="bg-white p-8 rounded-card-sm card-shadow w-80">
           <h1 className="font-display text-2xl text-charcoal mb-6 text-center">Admin</h1>
@@ -84,7 +84,7 @@ export default function AdminDownloads() {
   }
 
   return (
-    <div className="min-h-screen bg-ivory">
+    <div className="min-h-screen bg-white">
       <div className="grain-overlay" />
       <PageNav />
 
@@ -104,7 +104,7 @@ export default function AdminDownloads() {
                   value={productFile}
                   onChange={(e) => setProductFile(e.target.value)}
                   required
-                  className="bg-ivory"
+                  className="bg-white"
                 />
               </div>
               <div>
@@ -114,7 +114,7 @@ export default function AdminDownloads() {
                   value={productName}
                   onChange={(e) => setProductName(e.target.value)}
                   required
-                  className="bg-ivory"
+                  className="bg-white"
                 />
               </div>
               <div>
@@ -125,7 +125,7 @@ export default function AdminDownloads() {
                   max={100}
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value))}
-                  className="bg-ivory"
+                  className="bg-white"
                 />
               </div>
               {error && <p className="text-sm text-red-500">{error}</p>}
@@ -154,7 +154,7 @@ export default function AdminDownloads() {
                 {codes.map((code) => (
                   <div
                     key={code}
-                    className="flex items-center justify-between bg-ivory rounded-xl px-4 py-3"
+                    className="flex items-center justify-between bg-white rounded-xl px-4 py-3"
                   >
                     <span className="font-mono text-charcoal tracking-widest">{code}</span>
                     <button

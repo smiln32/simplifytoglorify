@@ -48,7 +48,7 @@ export default function PageNav() {
           </Sheet>
         </div>
       </div>
-      <div className="h-2 bg-ivory" />
+      <div className="h-2 bg-white" />
     </nav>
   );
 }

@@ -131,7 +131,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 rounded-full bg-ivory border border-charcoal/10 flex items-center justify-center text-charcoal hover:text-slate-blue hover:border-slate-blue/30 transition-colors duration-200"
+                      className="w-10 h-10 rounded-full bg-white border border-charcoal/10 flex items-center justify-center text-charcoal hover:text-slate-blue hover:border-slate-blue/30 transition-colors duration-200"
                     >
                       <Icon className="w-4 h-4" />
                     </a>
@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
 
             {/* Right column — form */}
-            <div className="bg-ivory p-8 lg:p-12 rounded-card card-shadow">
+            <div className="bg-white p-8 lg:p-12 rounded-card card-shadow">
               <h3 className="font-display text-2xl text-charcoal mb-2">Send a message</h3>
               <p className="text-muted-slate italic mb-8">I'll get back to you within a day or two.</p>
               <form name="contact" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">

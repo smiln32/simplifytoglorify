@@ -7,11 +7,11 @@
 @layer base {
   :root {
     /* Simplify to Glorify Brand Colors - NO TAN */
-    --background: 43 18% 94%; /* #f3f1ec ivory */
+    --background: 0 0% 100%; /* #ffffff white */
     --foreground: 0 0% 25%; /* #404040 charcoal */
-    --card: 43 18% 94%;
+    --card: 0 0% 100%;
     --card-foreground: 0 0% 25%;
-    --popover: 43 18% 94%;
+    --popover: 0 0% 100%;
     --popover-foreground: 0 0% 25%;
     --primary: 204 18% 71%; /* #a4b9c4 slate blue */
     --primary-foreground: 0 0% 25%;
@@ -30,7 +30,6 @@
     --radius: 1.75rem;
     
     /* Brand-specific colors */
-    --ivory: #f3f1ec;
     --blush: #ede7e4;
     --slate-blue: #a4b9c4;
     --sage: #b2c6b1;
@@ -81,10 +80,6 @@
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-  }
-  
-  .bg-ivory {
-    background-color: var(--ivory);
   }
   
   .bg-blush {

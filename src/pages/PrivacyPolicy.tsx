@@ -12,7 +12,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-ivory">
+    <div className="min-h-screen bg-white">
       <div className="grain-overlay" />
       <PageNav />
 

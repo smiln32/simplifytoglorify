@@ -132,7 +132,7 @@ export default function ArticlePage() {
           />
 
           {article.moreResources && (
-            <div className="mt-16 p-8 bg-ivory rounded-card-sm card-shadow">
+            <div className="mt-16 p-8 bg-white rounded-card-sm card-shadow">
               <h2 className="font-display text-2xl text-charcoal mb-3">{article.moreResources.heading}</h2>
               <p className="text-muted-slate italic mb-6 leading-relaxed">{article.moreResources.intro}</p>
               <ul className="space-y-4">

@@ -70,7 +70,7 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
               <Button variant="ghost" size="sm" className="text-muted-slate" onClick={openAdmin}>
                 <ExternalLink className="w-4 h-4" />
               </Button>
-              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-ivory">
+              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-white">
                 <DialogHeader>
                   <DialogTitle className="font-script text-3xl text-charcoal">Admin Tools</DialogTitle>
                 </DialogHeader>
@@ -164,7 +164,7 @@ export default function Navbar({ refs, scrollToSection }: NavbarProps) {
           </Sheet>
         </div>
       </div>
-      <div className="h-2 bg-ivory" />
+      <div className="h-2 bg-white" />
     </nav>
   );
 }

@@ -153,7 +153,7 @@ export default function Resources() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {resources.map((resource) => (
-              <div key={resource.id} className="bg-ivory rounded-card card-shadow overflow-hidden">
+              <div key={resource.id} className="bg-white rounded-card card-shadow overflow-hidden">
               <div className="h-2" style={{ backgroundColor: resource.color }} />
               <div className="p-6 lg:p-8">
                 <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: resource.color }}>
@@ -189,7 +189,7 @@ export default function Resources() {
                         value={emails[resource.id] || ''}
                         onChange={(e) => setEmails((prev) => ({ ...prev, [resource.id]: e.target.value }))}
                         required
-                        className="w-full rounded-full border-charcoal/10 bg-ivory"
+                        className="w-full rounded-full border-charcoal/10 bg-white"
                       />
                       <div className="flex gap-3">
                         <Button

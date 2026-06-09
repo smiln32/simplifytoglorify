@@ -58,7 +58,7 @@ export default function ColorPreview() {
         </div>
 
         {changed.length > 0 && (
-          <div className="mb-8 p-4 bg-ivory rounded-[12px] text-sm font-mono text-charcoal space-y-1">
+          <div className="mb-8 p-4 bg-white rounded-[12px] text-sm font-mono text-charcoal space-y-1">
             {changed.map(([name, hex]) => (
               <div key={name} className="flex items-center gap-3">
                 <div className="w-5 h-5 rounded-full border border-charcoal/10 flex-shrink-0" style={{ backgroundColor: hex }} />
