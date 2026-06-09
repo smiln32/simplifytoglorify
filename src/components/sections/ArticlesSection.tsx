@@ -86,17 +86,20 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
     );
   }
 
-  // Group + search filter (replaces the old per-category pill filter).
-  const visible = sortedArticles.filter((article) => {
-    const inGroup = activeTab === 'All' || groupFor(article.category) === activeTab;
-    const q = searchQuery.toLowerCase().trim();
-    const inSearch =
-      q === '' ||
-      article.title.toLowerCase().includes(q) ||
-      article.excerpt.toLowerCase().includes(q) ||
-      article.category.toLowerCase().includes(q);
-    return inGroup && inSearch;
-  });
+  // Group + search filter (replaces the old per-category pill filter),
+  // then default sort: articles grouped alphabetically by category.
+  const visible = sortedArticles
+    .filter((article) => {
+      const inGroup = activeTab === 'All' || groupFor(article.category) === activeTab;
+      const q = searchQuery.toLowerCase().trim();
+      const inSearch =
+        q === '' ||
+        article.title.toLowerCase().includes(q) ||
+        article.excerpt.toLowerCase().includes(q) ||
+        article.category.toLowerCase().includes(q);
+      return inGroup && inSearch;
+    })
+    .sort((a, b) => a.category.localeCompare(b.category));
 
   return (
     <section ref={sectionRef} className="articles-section py-10 lg:py-16 bg-white scroll-mt-16 lg:scroll-mt-20">

@@ -11,17 +11,20 @@ export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('All');
 
-  // Group + search filter (replaces the old per-category pill filter).
-  const visible = blogPosts.filter((post) => {
-    const inGroup = activeTab === 'All' || groupFor(post.category) === activeTab;
-    const q = searchTerm.toLowerCase().trim();
-    const inSearch =
-      q === '' ||
-      post.title.toLowerCase().includes(q) ||
-      post.excerpt.toLowerCase().includes(q) ||
-      post.category.toLowerCase().includes(q);
-    return inGroup && inSearch;
-  });
+  // Group + search filter (replaces the old per-category pill filter),
+  // then default sort: newest first by date.
+  const visible = blogPosts
+    .filter((post) => {
+      const inGroup = activeTab === 'All' || groupFor(post.category) === activeTab;
+      const q = searchTerm.toLowerCase().trim();
+      const inSearch =
+        q === '' ||
+        post.title.toLowerCase().includes(q) ||
+        post.excerpt.toLowerCase().includes(q) ||
+        post.category.toLowerCase().includes(q);
+      return inGroup && inSearch;
+    })
+    .sort((a, b) => +new Date(b.date) - +new Date(a.date));
 
   return (
     <div className="min-h-screen bg-white">
