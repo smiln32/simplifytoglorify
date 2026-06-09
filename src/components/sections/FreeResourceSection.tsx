@@ -50,14 +50,14 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="flex justify-center items-center h-full">
-            <iframe
-              src="/scripture_of_the_day_widget.html"
-              width={300}
-              height={400}
-              className="rounded-card card-shadow"
-              title="Scripture of the Day"
-              allowTransparency={true}
-            />
+            <div className="rounded-card card-shadow bg-white border border-charcoal/10 w-full max-w-[300px] min-h-[400px] flex flex-col items-center justify-center text-center px-8 py-12">
+              <p className="text-xs tracking-[0.18em] uppercase text-slate-blue mb-6">A Prayer</p>
+              <p className="font-body text-charcoal text-lg leading-relaxed">
+                Dear Father, thank You for meeting me here.<br />
+                Quiet my heart and help me trust You today.<br />
+                In Jesus' name, Amen.
+              </p>
+            </div>
           </div>
           <div>
             <p className="font-display text-xl text-slate-blue mb-4">Free Resource</p>
