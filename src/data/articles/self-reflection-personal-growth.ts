@@ -5,7 +5,7 @@ export const post = {
   id: 11,
   slug: "self-reflection-personal-growth",
   title: "How Self-Reflection Leads to Personal Growth",
-  category: "Journaling",
+  category: "General",
   excerpt:
     "You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.",
   metaDescription:

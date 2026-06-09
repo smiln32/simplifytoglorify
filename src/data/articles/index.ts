@@ -4,6 +4,39 @@ export type { ArticleMeta, Article } from './types';
 
 export const articleMeta: ArticleMeta[] = [
   {
+    id: 26,
+    slug: 'growing-in-patience',
+    title: 'When God Grows Your Patience Instead of Giving It',
+    category: 'Patience',
+    excerpt:
+      'If you have prayed for patience and felt nothing change, this is for you. A gentle look at how God grows patience through the very waiting we would never choose.',
+    metaDescription:
+      'Patience is grown, not handed to us. A gentle, Scripture-grounded look at how God develops patience through waiting and hard seasons, with key verses on patience.',
+    image: '/images/growing-in-patience.webp',
+  },
+  {
+    id: 27,
+    slug: 'the-weight-of-regret',
+    title: 'The Weight of Regret: How Forgiveness Frees Us to Keep Doing God\'s Work',
+    category: 'Regret',
+    excerpt:
+      'We all carry regret for things we cannot undo. A grace-centered look at receiving God\'s forgiveness, releasing shame, and refusing to let the past stop His work in you.',
+    metaDescription:
+      'You do not have to keep punishing yourself for the past. A Scripture-grounded look at receiving God\'s forgiveness, releasing guilt and shame, and moving forward in faith.',
+    image: '/images/the-weight-of-regret.webp',
+  },
+  {
+    id: 28,
+    slug: 'the-pain-no-one-can-see',
+    title: 'The Pain No One Can See: Faith, Chronic Pain, and the God Who Sees You',
+    category: 'Chronic Pain',
+    excerpt:
+      'Chronic pain is often invisible, and being unseen can be its own kind of ache. A grace-centered look at lament, the God who sees, and faith that does not depend on being healed.',
+    metaDescription:
+      'A Scripture-grounded encouragement for living with chronic pain and invisible illness, on lament, the God who sees, and grace that holds when prayers for healing go unanswered.',
+    image: '/images/the-pain-no-one-can-see.webp',
+  },
+  {
     id: 17,
     slug: 'conversations-in-prayer',
     title: 'Conversations in Prayer: Listening to God Without Forcing the Experience',
@@ -41,7 +74,7 @@ export const articleMeta: ArticleMeta[] = [
     title: 'How Do Depression Journals Improve Mental Well-Being?',
     category: 'Depression',
     excerpt: "Depression journals don't erase pain, but they offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons.",
-    image: '/images/depression-and-faith.jpg',
+    image: '/images/depression-and-faith.webp',
   },
   {
     id: 21,
@@ -123,7 +156,7 @@ export const articleMeta: ArticleMeta[] = [
     id: 11,
     slug: 'self-reflection-personal-growth',
     title: 'How Self-Reflection Leads to Personal Growth',
-    category: 'Faith',
+    category: 'General',
     excerpt: "You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.",
     image: '/images/self-reflection-personal-growth.webp',
   },
@@ -151,7 +184,7 @@ export const articleMeta: ArticleMeta[] = [
     excerpt: 'Anxiety can feel physical before it feels clear in your thoughts. Here are gentle ways to pause, notice, breathe, pray, and take one small next step.',
     metaDescription: 'When anxiety shows up as a tight chest, racing heart, or shallow breathing, here are gentle faith-grounded ways to pause, breathe, pray, and take the next step.',
     keywords: ['anxiety in the body', 'physical anxiety symptoms', 'Christian anxiety', 'what to do when anxious', 'faith and anxiety', 'prayer for anxiety', 'Christian women anxiety'],
-    image: '/images/anxiety-shows-up-in-your-body.jpg',
+    image: '/images/anxiety-shows-up-in-your-body.webp',
   },
   {
     id: 20,
@@ -187,7 +220,7 @@ export const articleMeta: ArticleMeta[] = [
     id: 24,
     slug: 'what-is-mindfulness',
     title: 'What Is Mindfulness? And What Can It Actually Help?',
-    category: 'Faith',
+    category: 'General',
     excerpt: 'Mindfulness does not have to be strange or complicated. At its simplest, it is learning to pay attention to the present moment with honesty and steadiness.',
     metaDescription: 'Mindfulness for Christians does not mean emptying your mind. It means learning to return to the present moment — and to God — one breath at a time.',
     keywords: ['what is mindfulness', 'Christian mindfulness', 'mindfulness and faith', 'mindfulness for Christians', 'faith-based mindfulness', 'present moment faith'],

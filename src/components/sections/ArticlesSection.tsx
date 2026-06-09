@@ -17,10 +17,13 @@ const TOPIC_FILTERS = [
   'All',
   'ADHD', 'Anxiety', 'Caregiving', 'Chronic Pain', 'Depression',
   'Gratitude', 'Grief', 'Patience', 'Prayer', 'Regret',
-  'Struggling with Faith', 'Uncertainty', 'General',
+  'Faith', 'Trusting God', 'General',
 ];
 
 const sortedArticles = [...articles];
+
+// Categories that don't have their own filter button are surfaced under "General".
+const GENERAL_CATEGORIES = ['General', 'Journaling', 'Scripture Writing'];
 
 function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; showImage?: boolean }) {
   const color = getCategoryColor(article.category);
@@ -102,7 +105,10 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
     const matchesSearch =
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
+    const matchesCategory =
+      selectedCategory === 'All' ||
+      article.category === selectedCategory ||
+      (selectedCategory === 'General' && GENERAL_CATEGORIES.includes(article.category));
     return matchesSearch && matchesCategory;
   });
 
@@ -120,8 +126,8 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
           </p>
         </div>
 
-        <div className="mb-10 max-w-2xl mx-auto">
-          <div className="relative mb-6">
+        <div className="mb-10">
+          <div className="relative mb-6 max-w-2xl mx-auto">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-slate" />
             <Input
               placeholder="Search articles..."
@@ -130,7 +136,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
               className="pl-10 bg-white border-charcoal/10"
             />
           </div>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 max-w-6xl mx-auto">
             {TOPIC_FILTERS.map((cat) => {
               const color = cat === 'All' ? defaultColor : getCategoryColor(cat);
               const isActive = selectedCategory === cat;
@@ -138,7 +144,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 border"
+                  className="w-full px-2 py-2 rounded-full text-sm font-medium transition-all duration-200 border whitespace-nowrap text-center"
                   style={isActive
                     ? { backgroundColor: color, color: '#fff', borderColor: color }
                     : { backgroundColor: `${color}18`, color: color, borderColor: color }

@@ -61,15 +61,10 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 autoPlay
                 muted
                 playsInline
-                poster="/images/journaling-at-home.webp"
-                className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08]"
+                preload="auto"
+                className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08] bg-slate-blue"
               >
                 <source src="/images/simple-cup-of-tea.mp4" type="video/mp4" />
-                <img
-                  src="/images/journaling-at-home.webp"
-                  alt="Journaling space with Bible, journal and coffee"
-                  className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08]"
-                />
               </video>
             </div>
           </div>

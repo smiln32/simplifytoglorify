@@ -34,7 +34,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     readTime: '6 min read',
     category: 'Depression',
     tags: ['depression', 'faith', 'hope'],
-    image: '/images/depression-and-faith.jpg',
+    image: '/images/depression-and-faith.webp',
   },
   {
     id: 7,

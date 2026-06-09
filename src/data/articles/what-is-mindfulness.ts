@@ -1,7 +1,7 @@
 export const article = {
   title: "What Is Mindfulness? And What Can It Actually Help?",
   slug: "what-is-mindfulness",
-  category: "Faith",
+  category: "General",
   excerpt: "Mindfulness does not have to be strange or complicated. At its simplest, it is learning to pay attention to the present moment with honesty and steadiness.",
   metaDescription: "Mindfulness for Christians does not mean emptying your mind. It means learning to return to the present moment — and to God — one breath at a time.",
   keywords: ["what is mindfulness", "Christian mindfulness", "mindfulness and faith", "mindfulness for Christians", "faith-based mindfulness", "present moment faith"],

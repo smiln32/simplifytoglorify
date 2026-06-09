@@ -20,11 +20,11 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-4">
           {topicBundles.map((topic) => (
             <Link
               key={topic.name}
-              to={`/products/${topic.name.toLowerCase().replace(/\s+/g, '-')}`}
+              to={`/products/${topic.slug ?? topic.name.toLowerCase().replace(/\s+/g, '-')}`}
               className="group block"
             >
               <div className="rounded-card-sm overflow-hidden card-shadow hover:shadow-card-hover transition-shadow">
@@ -32,7 +32,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
                   src={topic.image}
                   alt={topic.name}
                   loading="lazy"
-                  className={`w-full h-40 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-105${topic.imageClass ? ` ${topic.imageClass}` : ''}`}
+                  className={`w-full h-28 lg:h-36 object-cover transition-transform duration-500 group-hover:scale-105${topic.imageClass ? ` ${topic.imageClass}` : ''}`}
                 />
               </div>
               <p className="font-display text-base text-charcoal text-center mt-3 group-hover:text-slate-blue transition-colors">

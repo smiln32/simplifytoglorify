@@ -5,7 +5,7 @@ export const article = {
   excerpt: "Anxiety can feel physical before it feels clear in your thoughts. Here are gentle ways to pause, notice, breathe, pray, and take one small next step.",
   metaDescription: "When anxiety shows up as a tight chest, racing heart, or shallow breathing, here are gentle faith-grounded ways to pause, breathe, pray, and take the next step.",
   keywords: ["anxiety in the body", "physical anxiety symptoms", "Christian anxiety", "what to do when anxious", "faith and anxiety", "prayer for anxiety", "Christian women anxiety"],
-  image: "/images/anxiety-shows-up-in-your-body.jpg",
+  image: "/images/anxiety-shows-up-in-your-body.webp",
   content: `
 # What to Do When Anxiety Shows Up in Your Body
 

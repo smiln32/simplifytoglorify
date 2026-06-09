@@ -8,17 +8,35 @@ import Footer from '../components/sections/Footer';
 
 const articleModules = import.meta.glob<Article>('../data/articles/*-*.ts', { import: 'default' });
 
+function inlineMd(s: string): string {
+  return s
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
 function markdownToHtml(md: string): string {
   return md
     .split(/\n\n+/)
     .map((block) => {
       const t = block.trim();
-      if (t.startsWith('### ')) return `<h3>${t.slice(4)}</h3>`;
-      if (t.startsWith('## ')) return `<h2>${t.slice(3)}</h2>`;
-      if (t.startsWith('> ')) return `<blockquote>${t.slice(2)}</blockquote>`;
-      return `<p>${t.replace(/\n/g, ' ')}</p>`;
+      if (!t) return '';
+      if (t.startsWith('### ')) return `<h3>${inlineMd(t.slice(4))}</h3>`;
+      if (t.startsWith('## ')) return `<h2>${inlineMd(t.slice(3))}</h2>`;
+      if (t.startsWith('> ')) return `<blockquote>${inlineMd(t.slice(2))}</blockquote>`;
+      const lines = t.split('\n');
+      if (lines.every((l) => l.trim().startsWith('- '))) {
+        const items = lines.map((l) => `<li>${inlineMd(l.trim().slice(2))}</li>`).join('');
+        return `<ul>${items}</ul>`;
+      }
+      return `<p>${inlineMd(t.replace(/\n/g, ' '))}</p>`;
     })
     .join('');
+}
+
+// `content` was historically assumed to be pre-rendered HTML, but several articles
+// store raw markdown there. Detect which we have and convert markdown when needed.
+function looksLikeHtml(s: string): boolean {
+  return /<(p|h[1-6]|ul|ol|li|blockquote|div|br|strong|em)\b/i.test(s);
 }
 
 export default function ArticlePage() {
@@ -51,7 +69,8 @@ export default function ArticlePage() {
     );
   }
 
-  const htmlContent = article.content ?? (article.body ? markdownToHtml(article.body) : '');
+  const rawContent = article.content ?? article.body ?? '';
+  const htmlContent = looksLikeHtml(rawContent) ? rawContent : markdownToHtml(rawContent);
   const color = getCategoryColor(article.category);
   const description = article.metaDescription || article.excerpt;
   const ogImage = article.image
