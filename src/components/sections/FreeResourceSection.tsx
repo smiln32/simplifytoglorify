@@ -65,7 +65,7 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
               Free prayer cards<br />for women of faith.
             </h2>
             <p className="text-charcoal text-lg leading-relaxed mb-8">
-              A free set of printable prayer cards —<br />beautiful, simple, and ready to download as a PDF.
+              A free set of printable prayer cards.<br />Beautiful, simple, and ready to download as a PDF.
             </p>
             <form name="email-signup" data-netlify="true" onSubmit={handleSubmit} className="space-y-4">
               <input type="hidden" name="form-name" value="email-signup" />
@@ -87,7 +87,7 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
                 {submitting ? 'Sending…' : 'Get the free prayer cards'}
               </Button>
             </form>
-            <p className="text-sm text-muted-slate mt-4">Enter your email and the PDF downloads instantly. No spam, ever.</p>
+            <p className="text-sm mt-4" style={{ color: '#595959' }}>Enter your email and the PDF downloads instantly. No spam, ever.</p>
           </div>
         </div>
       </div>
