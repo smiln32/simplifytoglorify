@@ -1,6 +1,4 @@
-import type { BlogPost } from './types';
-
-const post: BlogPost = {
+const post = {
   id: 9,
   slug: 'why-adhd-and-faith-are-not-opposites',
   title: 'Why ADHD and Faith Are Not Opposites',

@@ -5,6 +5,64 @@
 [functions]
   node_bundler = "esbuild"
 
+# Posts reclassified between Articles and Blog keep their old URLs working (301).
+# These must come before the SPA catch-all below (Netlify uses first match).
+[[redirects]]
+  from = "/articles/the-pain-no-one-can-see"
+  to = "/blog/the-pain-no-one-can-see"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/the-weight-of-regret"
+  to = "/blog/the-weight-of-regret"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/growing-in-patience"
+  to = "/blog/growing-in-patience"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/how-to-grieve-without-a-timeline"
+  to = "/blog/how-to-grieve-without-a-timeline"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/gratitude-changes-everything"
+  to = "/blog/gratitude-changes-everything"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/when-youre-too-tired-to-pray"
+  to = "/blog/when-youre-too-tired-to-pray"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/trusting-god-with-hard-days"
+  to = "/blog/trusting-god-with-hard-days"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/articles/when-gratitude-becomes-a-place-to-rest"
+  to = "/blog/when-gratitude-becomes-a-place-to-rest"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/blog/the-quiet-weight-of-caregiving"
+  to = "/articles/the-quiet-weight-of-caregiving"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/blog/when-depression-and-faith-exist-together"
+  to = "/articles/when-depression-and-faith-exist-together"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/blog/why-adhd-and-faith-are-not-opposites"
+  to = "/articles/why-adhd-and-faith-are-not-opposites"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

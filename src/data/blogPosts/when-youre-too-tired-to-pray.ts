@@ -1,9 +1,14 @@
+import type { BlogPost } from './types';
+
 // When You're Too Tired to Pray
 // Blog post for Simplify to Glorify
 
-export const post = {
+const post: BlogPost = {
   id: 9,
   slug: "when-youre-too-tired-to-pray",
+  date: 'June 2, 2026',
+  readTime: '6 min read',
+  tags: ['prayer', 'weariness', 'grace'],
   title: "When You're Too Tired to Pray",
   category: "Prayer",
   excerpt:
@@ -24,7 +29,6 @@ export const post = {
     "Christian rest",
     "faith when you feel empty",
   ],
-  date: "2026-05-28",
   author: "Carla",
   image: '/images/grace_for_the_weary.webp',
   body: `There is a particular kind of tired that prayer cannot seem to reach. You know the one. You sit down to talk to God, the way you have a thousand times before, and nothing comes. Not because you do not love Him. Not because you have stopped believing. You are simply emptied out, and the words that used to rise so easily are gone.

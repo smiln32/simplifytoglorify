@@ -5,6 +5,7 @@ import type { BlogPost } from '../data/blogPosts/types';
 import { getCategoryColor } from '../data/categoryColors';
 import PageNav from '../components/PageNav';
 import Footer from '../components/sections/Footer';
+import { toHtml } from '../lib/markdown';
 
 const postModules = import.meta.glob<BlogPost>('../data/blogPosts/*-*.ts', { import: 'default' });
 
@@ -39,6 +40,7 @@ export default function BlogPost() {
   }
 
   const color = getCategoryColor(post.category);
+  const htmlContent = toHtml(post.content ?? post.body ?? '');
   const description = post.metaDescription || post.excerpt;
   const ogImage = post.image
     ? `https://simplifytoglorify.netlify.app${post.image}`
@@ -99,8 +101,23 @@ export default function BlogPost() {
           )}
 
           <div className="article-content" style={{ fontSize: '1.15rem', lineHeight: 1.9, color: '#2d3748' }}
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
+
+          {post.moreResources && (
+            <div className="mt-16 p-8 bg-white rounded-card-sm card-shadow">
+              <h2 className="font-display text-2xl text-charcoal mb-3">{post.moreResources.heading}</h2>
+              <p className="text-muted-slate italic mb-6 leading-relaxed">{post.moreResources.intro}</p>
+              <ul className="space-y-4">
+                {post.moreResources.references.map((ref) => (
+                  <li key={ref.reference} className="pl-4 border-l-2" style={{ borderColor: color }}>
+                    <span className="font-display text-charcoal font-medium">{ref.reference}</span>
+                    <span className="text-muted-slate"> - {ref.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="mt-16 pt-8 border-t border-charcoal/10">
             <Link

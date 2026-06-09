@@ -15,5 +15,12 @@ export interface BlogPostMeta {
 }
 
 export interface BlogPost extends BlogPostMeta {
-  content: string;
+  content?: string; // pre-rendered HTML
+  body?: string; // raw markdown (rendered the same way articles are)
+  author?: string;
+  moreResources?: {
+    heading: string;
+    intro: string;
+    references: Array<{ reference: string; description: string }>;
+  };
 }

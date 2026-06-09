@@ -1,9 +1,14 @@
+import type { BlogPost } from './types';
+
 // Gratitude: When Thanksgiving Changes the Way You See Everything
 // Blog post for Simplify to Glorify
 
-export const post = {
+const post: BlogPost = {
   id: 12,
   slug: "gratitude-changes-everything",
+  date: 'June 4, 2026',
+  readTime: '6 min read',
+  tags: ['gratitude', 'thankfulness', 'joy'],
   title: "Gratitude: When Thanksgiving Changes the Way You See Everything",
   category: "Gratitude",
   excerpt:
@@ -24,7 +29,6 @@ export const post = {
     "gratitude practice",
     "thankfulness in suffering",
   ],
-  date: "2026-05-28",
   author: "Carla",
   image: '/images/finding-peace.webp',
   body: `You already know how to be thankful. You say it over coffee with a friend, over a child's scraped knee that healed, over the small mercy of a quiet morning before the house wakes up. The instinct lives in you. What you may not have heard is that this ordinary, tender habit is doing something far larger than you realize, in your body, in your relationships, and in your walk with God.

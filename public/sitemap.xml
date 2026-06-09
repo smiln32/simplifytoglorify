@@ -26,22 +26,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/blog/why-adhd-and-faith-are-not-opposites</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/blog/when-depression-and-faith-exist-together</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.simplifytoglorify.com/blog/what-god-says-when-anxiety-wont-quiet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/blog/the-quiet-weight-of-caregiving</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -71,27 +56,47 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/growing-in-patience</loc>
+    <loc>https://www.simplifytoglorify.com/blog/the-pain-no-one-can-see</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/the-weight-of-regret</loc>
+    <loc>https://www.simplifytoglorify.com/blog/the-weight-of-regret</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/the-pain-no-one-can-see</loc>
+    <loc>https://www.simplifytoglorify.com/blog/growing-in-patience</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/blog/how-to-grieve-without-a-timeline</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/blog/gratitude-changes-everything</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/blog/when-youre-too-tired-to-pray</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/blog/trusting-god-with-hard-days</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/blog/when-gratitude-becomes-a-place-to-rest</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.simplifytoglorify.com/articles/conversations-in-prayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/articles/trusting-god-with-hard-days</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -136,22 +141,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/when-gratitude-becomes-a-place-to-rest</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.simplifytoglorify.com/articles/how-journaling-heals-the-soul</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/articles/when-youre-too-tired-to-pray</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/articles/how-to-grieve-without-a-timeline</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -162,11 +152,6 @@
   </url>
   <url>
     <loc>https://www.simplifytoglorify.com/articles/writing-out-scripture-for-mental-health</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/articles/gratitude-changes-everything</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -197,6 +182,21 @@
   </url>
   <url>
     <loc>https://www.simplifytoglorify.com/articles/how-meditation-and-faith-fit-together</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/the-quiet-weight-of-caregiving</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/when-depression-and-faith-exist-together</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/why-adhd-and-faith-are-not-opposites</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

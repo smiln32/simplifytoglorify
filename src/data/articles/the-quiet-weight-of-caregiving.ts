@@ -1,6 +1,4 @@
-import type { BlogPost } from './types';
-
-const post: BlogPost = {
+const post = {
   id: 6,
   slug: 'the-quiet-weight-of-caregiving',
   title: 'The Quiet Weight of Caregiving',

@@ -1,8 +1,11 @@
-import type { Article } from './types';
+import type { BlogPost } from './types';
 
-const article: Article = {
+const post: BlogPost = {
   id: 16,
   slug: 'trusting-god-with-hard-days',
+  date: 'June 1, 2026',
+  readTime: '4 min read',
+  tags: ['trust', 'hard seasons', 'faith'],
   title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
   category: 'Trusting God',
   excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
@@ -64,4 +67,4 @@ Trusting God on a hard day does not mean pretending the day is easy. It means be
 `,
 };
 
-export default article;
+export default post;

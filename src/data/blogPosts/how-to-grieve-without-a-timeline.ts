@@ -1,9 +1,14 @@
+import type { BlogPost } from './types';
+
 // How to Grieve Without a Timeline
 // Blog post for Simplify to Glorify
 
-export const post = {
+const post: BlogPost = {
   id: 10,
   slug: "how-to-grieve-without-a-timeline",
+  date: 'June 5, 2026',
+  readTime: '5 min read',
+  tags: ['grief', 'loss', 'healing'],
   title: "How to Grieve Without a Timeline",
   category: "Grief",
   excerpt:
@@ -24,7 +29,6 @@ export const post = {
     "grieving a loved one",
     "permission to grieve",
   ],
-  date: "2026-05-28",
   author: "Carla",
   image: '/images/what-grief-needs.webp',
   body: `There is a moment that comes for almost everyone who is grieving, and it is a quiet kind of cruelty. It is the moment you realize the world expects you to be further along than you are.

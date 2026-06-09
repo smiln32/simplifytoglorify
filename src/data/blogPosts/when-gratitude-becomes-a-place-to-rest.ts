@@ -1,8 +1,11 @@
-import type { Article } from './types';
+import type { BlogPost } from './types';
 
-const article: Article = {
+const post: BlogPost = {
   id: 7,
   slug: 'when-gratitude-becomes-a-place-to-rest',
+  date: 'May 30, 2026',
+  readTime: '2 min read',
+  tags: ['gratitude', 'rest', 'peace'],
   title: 'When Gratitude Becomes a Place to Rest',
   category: 'Gratitude',
   excerpt: 'True gratitude goes deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.',
@@ -28,4 +31,4 @@ const article: Article = {
 `,
 };
 
-export default article;
+export default post;

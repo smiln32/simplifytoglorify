@@ -1,6 +1,11 @@
-export const post = {
+import type { BlogPost } from './types';
+
+const post: BlogPost = {
   id: 20,
   slug: 'the-pain-no-one-can-see',
+  date: 'June 8, 2026',
+  readTime: '7 min read',
+  tags: ['chronic pain', 'lament', 'faith'],
   title: 'The Pain No One Can See',
   category: 'Chronic Pain',
   excerpt:
@@ -24,7 +29,6 @@ export const post = {
     'chronic pain isolation',
     'when prayers for healing go unanswered',
   ],
-  date: '2026-06-08',
   author: 'Carla',
   image: '/images/the-pain-no-one-can-see.webp',
   body: `## Faith, Chronic Pain, and the God Who Sees You

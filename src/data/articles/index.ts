@@ -4,40 +4,6 @@ export type { ArticleMeta, Article } from './types';
 
 export const articleMeta: ArticleMeta[] = [
   {
-    id: 26,
-    slug: 'growing-in-patience',
-    title: 'When God Grows Your Patience Instead of Giving It',
-    category: 'Patience',
-    excerpt:
-      'If you have prayed for patience and felt nothing change, this is for you. A gentle look at how God grows patience through the very waiting we would never choose.',
-    metaDescription:
-      'Patience is grown, not handed to us. A gentle, Scripture-grounded look at how God develops patience through waiting and hard seasons, with key verses on patience.',
-    image: '/images/growing-in-patience.webp',
-  },
-  {
-    id: 27,
-    slug: 'the-weight-of-regret',
-    title: 'The Weight of Regret: How Forgiveness Frees Us to Keep Doing God\'s Work',
-    cardTitle: 'The Weight of Regret',
-    category: 'Regret',
-    excerpt:
-      'We all carry regret for things we cannot undo. A grace-centered look at receiving God\'s forgiveness, releasing shame, and refusing to let the past stop His work in you.',
-    metaDescription:
-      'You do not have to keep punishing yourself for the past. A Scripture-grounded look at receiving God\'s forgiveness, releasing guilt and shame, and moving forward in faith.',
-    image: '/images/the-weight-of-regret.webp',
-  },
-  {
-    id: 28,
-    slug: 'the-pain-no-one-can-see',
-    title: 'The Pain No One Can See',
-    category: 'Chronic Pain',
-    excerpt:
-      'Chronic pain is often invisible, and being unseen can be its own kind of ache. A grace-centered look at lament, the God who sees, and faith that does not depend on being healed.',
-    metaDescription:
-      'A Scripture-grounded encouragement for living with chronic pain and invisible illness, on lament, the God who sees, and grace that holds when prayers for healing go unanswered.',
-    image: '/images/the-pain-no-one-can-see.webp',
-  },
-  {
     id: 17,
     slug: 'conversations-in-prayer',
     title: 'Conversations in Prayer: Listening to God Without Forcing the Experience',
@@ -45,15 +11,6 @@ export const articleMeta: ArticleMeta[] = [
     category: 'Prayer',
     excerpt: 'If you have prayed for years but quietly wondered whether God ever says anything back, this is for you. A gentle, grounded guide to listening in prayer.',
     image: '/images/conversations-in-prayer.webp',
-  },
-  {
-    id: 16,
-    slug: 'trusting-god-with-hard-days',
-    title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
-    cardTitle: 'Trusting God With Hard Days',
-    category: 'Trusting God',
-    excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
-    image: '/images/trusting-God-hard-days.webp',
   },
   {
     id: 15,
@@ -126,36 +83,12 @@ export const articleMeta: ArticleMeta[] = [
     image: '/images/journaling_helps_the_mind.webp',
   },
   {
-    id: 7,
-    slug: 'when-gratitude-becomes-a-place-to-rest',
-    title: 'When Gratitude Becomes a Place to Rest',
-    category: 'Gratitude',
-    excerpt: 'True gratitude goes deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.',
-    image: '/images/rest_for_the_mind.webp',
-  },
-  {
     id: 8,
     slug: 'how-journaling-heals-the-soul',
     title: 'How Journaling Heals the Mind and Soul',
     category: 'Journaling',
     excerpt: 'A pen, a page, a few honest words. Journaling can become the quiet place where the mind settles, the heart exhales, and God helps us see what we could not see before.',
     image: '/images/think_pray_heal.webp',
-  },
-  {
-    id: 9,
-    slug: 'when-youre-too-tired-to-pray',
-    title: "When You're Too Tired to Pray",
-    category: 'Prayer',
-    excerpt: "That silence is not the failure you are afraid it is. A gentle word for the worn-out woman who loves God but has run out of words.",
-    image: '/images/grace_for_the_weary.webp',
-  },
-  {
-    id: 10,
-    slug: 'how-to-grieve-without-a-timeline',
-    title: 'How to Grieve Without a Timeline',
-    category: 'Grief',
-    excerpt: "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
-    image: '/images/what-grief-needs.webp',
   },
   {
     id: 11,
@@ -173,15 +106,6 @@ export const articleMeta: ArticleMeta[] = [
     category: 'Scripture Writing',
     excerpt: 'On the days when prayer feels thin and your Bible sits open to the same page, one verse and a pen can be the gentlest way back to God.',
     image: '/images/writing-out-scripture.webp',
-  },
-  {
-    id: 12,
-    slug: 'gratitude-changes-everything',
-    title: 'Gratitude: When Thanksgiving Changes the Way You See Everything',
-    cardTitle: 'When Gratitude Changes How You See Everything',
-    category: 'Gratitude',
-    excerpt: "Gratitude is not pretending the hard thing is fine. It is the quiet practice of noticing that God has not left the room, even in a hard season.",
-    image: '/images/gratitude-changes-everything.webp',
   },
   {
     id: 19,
@@ -242,5 +166,29 @@ export const articleMeta: ArticleMeta[] = [
     category: 'Faith',
     excerpt: 'Meditation and faith fit together when meditation means giving God your focused attention, not emptying your mind of Him.',
     image: '/images/meditation-and-faith.webp',
+  },
+  {
+    id: 29,
+    slug: 'the-quiet-weight-of-caregiving',
+    title: 'The Quiet Weight of Caregiving',
+    excerpt: 'Nobody tells you about the invisible grief that comes with caring for someone you love. But God sees what the job requires.',
+    category: 'Caregiving',
+    image: '/images/weight-of-caregiving.webp',
+  },
+  {
+    id: 30,
+    slug: 'when-depression-and-faith-exist-together',
+    title: 'When Depression and Faith Exist Together',
+    excerpt: 'Depression is not a sign that God has left. Sometimes it is the place where He shows up most quietly, and most faithfully.',
+    category: 'Depression',
+    image: '/images/depression-and-faith.webp',
+  },
+  {
+    id: 31,
+    slug: 'why-adhd-and-faith-are-not-opposites',
+    title: 'Why ADHD and Faith Are Not Opposites',
+    excerpt: 'God did not form your mind by accident. The scattered moments, the racing thoughts, the way your brain moves, none of it surprised Him.',
+    category: 'ADHD',
+    image: '/images/adhd-and-faith.webp',
   },
 ];

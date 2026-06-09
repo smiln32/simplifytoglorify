@@ -1,6 +1,11 @@
-export const post = {
+import type { BlogPost } from './types';
+
+const post: BlogPost = {
   id: 19,
   slug: 'the-weight-of-regret',
+  date: 'June 7, 2026',
+  readTime: '7 min read',
+  tags: ['regret', 'forgiveness', 'grace'],
   title: 'The Weight of Regret: How Forgiveness Frees Us to Keep Doing God\'s Work',
   category: 'Regret',
   excerpt:
@@ -24,7 +29,6 @@ export const post = {
     'regret and faith',
     'letting go of past mistakes',
   ],
-  date: '2026-06-08',
   author: 'Carla',
   image: '/images/the-weight-of-regret.webp',
   body: `## How Forgiveness Frees Us to Keep Doing God's Work

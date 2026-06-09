@@ -1,6 +1,11 @@
-export const post = {
+import type { BlogPost } from './types';
+
+const post: BlogPost = {
   id: 18,
   slug: 'growing-in-patience',
+  date: 'June 6, 2026',
+  readTime: '3 min read',
+  tags: ['patience', 'waiting', 'faith'],
   title: 'When God Grows Your Patience Instead of Giving It',
   category: 'Patience',
   excerpt:
@@ -24,7 +29,6 @@ export const post = {
     'Christian patience',
     'developing patience through trials',
   ],
-  date: '2026-06-08',
   author: 'Carla',
   image: '/images/growing-in-patience.webp',
   body: `## When You Pray for Patience and Nothing Changes
