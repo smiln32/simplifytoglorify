@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { articleMeta as articles } from '@/data/articles/index';
 import { getCategoryColor } from '@/data/categoryColors';
+import { GROUPS, groupFor } from '@/lib/categoryGroups';
+import PostCard from '@/components/PostCard';
 import type { SectionRef } from '@/types';
 
 interface ArticlesSectionProps {
@@ -11,19 +13,7 @@ interface ArticlesSectionProps {
   limit?: number;
 }
 
-const defaultColor = '#a4b9c4';
-
-const TOPIC_FILTERS = [
-  'All',
-  'ADHD', 'Anxiety', 'Caregiving', 'Chronic Pain', 'Depression',
-  'Gratitude', 'Grief', 'Patience', 'Prayer', 'Regret',
-  'Faith', 'Trusting God', 'General',
-];
-
 const sortedArticles = [...articles];
-
-// Categories that don't have their own filter button are surfaced under "General".
-const GENERAL_CATEGORIES = ['General', 'Journaling', 'Scripture Writing'];
 
 function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; showImage?: boolean }) {
   const color = getCategoryColor(article.category);
@@ -58,12 +48,7 @@ function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; sh
 
 export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchParams, setSearchParams] = useSearchParams();
-  const selectedCategory = limit !== undefined ? 'All' : (searchParams.get('category') || 'All');
-
-  function setSelectedCategory(cat: string) {
-    setSearchParams(cat === 'All' ? {} : { category: cat }, { replace: false });
-  }
+  const [activeTab, setActiveTab] = useState('All');
 
   if (limit !== undefined) {
     const recent = sortedArticles.slice(0, limit);
@@ -101,15 +86,16 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
     );
   }
 
-  const filtered = sortedArticles.filter((article) => {
-    const matchesSearch =
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'All' ||
-      article.category === selectedCategory ||
-      (selectedCategory === 'General' && GENERAL_CATEGORIES.includes(article.category));
-    return matchesSearch && matchesCategory;
+  // Group + search filter (replaces the old per-category pill filter).
+  const visible = sortedArticles.filter((article) => {
+    const inGroup = activeTab === 'All' || groupFor(article.category) === activeTab;
+    const q = searchQuery.toLowerCase().trim();
+    const inSearch =
+      q === '' ||
+      article.title.toLowerCase().includes(q) ||
+      article.excerpt.toLowerCase().includes(q) ||
+      article.category.toLowerCase().includes(q);
+    return inGroup && inSearch;
   });
 
   return (
@@ -127,7 +113,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
         </div>
 
         <div className="mb-10">
-          <div className="relative mb-6 max-w-2xl mx-auto">
+          <div className="relative mb-4 max-w-2xl mx-auto">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-slate" />
             <Input
               placeholder="Search articles..."
@@ -136,21 +122,32 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
               className="pl-10 bg-white border-charcoal/10"
             />
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 max-w-6xl mx-auto">
-            {TOPIC_FILTERS.map((cat) => {
-              const color = cat === 'All' ? defaultColor : getCategoryColor(cat);
-              const isActive = selectedCategory === cat;
+          <div
+            role="tablist"
+            className="max-w-2xl mx-auto"
+            style={{ display: 'flex', gap: 4, borderBottom: '1px solid #ececec' }}
+          >
+            {GROUPS.map((g) => {
+              const active = activeTab === g;
               return (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className="w-full px-2 py-2 rounded-full text-sm font-medium transition-all duration-200 border whitespace-nowrap text-center"
-                  style={isActive
-                    ? { backgroundColor: color, color: '#fff', borderColor: color }
-                    : { backgroundColor: `${color}18`, color: color, borderColor: color }
-                  }
+                  key={g}
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => setActiveTab(g)}
+                  style={{
+                    border: 'none',
+                    background: 'none',
+                    borderRadius: 0,
+                    padding: '10px 14px',
+                    fontFamily: 'Lora, serif',
+                    fontSize: 15,
+                    cursor: 'pointer',
+                    color: active ? '#404040' : '#8a8a8a',
+                    borderBottom: active ? '2px solid #7b9fb3' : '2px solid transparent',
+                  }}
                 >
-                  {cat}
+                  {g}
                 </button>
               );
             })}
@@ -158,8 +155,14 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((article) => <ArticleCard key={article.id} article={article} />)}
+          {visible.map((article) => (
+            <PostCard key={article.id} post={article} to={`/articles/${article.slug}`} />
+          ))}
         </div>
+
+        {visible.length === 0 && (
+          <p className="text-center text-muted-slate mt-12">No articles match your search.</p>
+        )}
       </div>
     </section>
   );
