@@ -6,7 +6,7 @@ export const post = {
   excerpt:
     'If you have prayed for years but quietly wondered whether God ever says anything back, this is for you. A gentle, grounded guide to listening in prayer.',
   metaDescription:
-    'Learn what it really means to listen in prayer — how to slow down, sit with Scripture, and become attentive before God without chasing feelings or forcing an experience.',
+    'Learn what it really means to listen in prayer, how to slow down, sit with Scripture, and become attentive before God without chasing feelings or forcing an experience.',
   keywords: [
     'listening in prayer',
     'how to hear God',
@@ -146,7 +146,7 @@ That is enough to begin.`,
       {
         reference: 'Psalm 46:10',
         description:
-          '"Stop striving and know that I am God" — an invitation to lay down striving and simply remember who He is.',
+          '"Stop striving and know that I am God", an invitation to lay down striving and simply remember who He is.',
       },
       {
         reference: 'Jeremiah 33:3',
@@ -156,7 +156,7 @@ That is enough to begin.`,
       {
         reference: '1 Kings 19:11-13',
         description:
-          'Elijah\'s encounter — God was not in the wind, earthquake, or fire, but in a gentle, quiet whisper.',
+          'Elijah\'s encounter, God was not in the wind, earthquake, or fire, but in a gentle, quiet whisper.',
       },
       {
         reference: 'John 10:27',
@@ -166,7 +166,7 @@ That is enough to begin.`,
       {
         reference: 'Hebrews 4:12',
         description:
-          'The Word of God is living and active — Scripture is the primary and reliable place God speaks to us.',
+          'The Word of God is living and active. Scripture is the primary and reliable place God speaks to us.',
       },
       {
         reference: 'Matthew 11:28-30',

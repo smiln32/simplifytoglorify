@@ -5,7 +5,7 @@ const post: BlogPost = {
   slug: 'the-one-thing-women-in-hard-seasons-often-forget',
   title: 'The One Thing Women in Hard Seasons Often Forget',
   excerpt: 'In hard seasons, we remember to pray for others, to hold things together, to keep going. We often forget that we are allowed to receive.',
-  metaDescription: "Women in hard seasons are often so busy holding things together that they forget they're allowed to receive. A faith-rooted reminder of what God offers — and how to let it in.",
+  metaDescription: "Women in hard seasons are often so busy holding things together that they forget they're allowed to receive. A faith-rooted reminder of what God offers, and how to let it in.",
   date: 'June 3, 2026',
   readTime: '5 min read',
   category: 'Encouragement',
@@ -22,9 +22,9 @@ const post: BlogPost = {
   content: `
     <p>There's something that happens to many women in hard seasons. We get very good at holding things together. Very good at showing up, pushing through, caring for others, managing what needs managing. We know how to pour out. We've had a lot of practice.</p>
 
-    <p>What we often forget — what hard seasons have a way of quietly training out of us — is how to receive.</p>
+    <p>What we often forget, what hard seasons have a way of quietly training out of us, is how to receive.</p>
 
-    <p>Receive help. Receive comfort. Receive care. Receive the honest acknowledgment that we are also someone who needs tending, not just someone who tends. That we are not just a function in other people's lives. That our own wellbeing matters to God — not as a means to making us more effective, but because He loves us and we are worth caring for.</p>
+    <p>Receive help. Receive comfort. Receive care. Receive the honest acknowledgment that we are also someone who needs tending, not just someone who tends. That we are not just a function in other people's lives. That our own wellbeing matters to God, not as a means to making us more effective, but because He loves us and we are worth caring for.</p>
 
     <p>I think this is the thing we most often forget. And I think it does real damage when we forget it long enough.</p>
 
@@ -38,7 +38,7 @@ const post: BlogPost = {
 
     <h3>What God Actually Thinks About Your Need</h3>
 
-    <p>Here is something I keep coming back to: Jesus was moved with compassion. Over and over throughout the Gospels, that phrase appears. He saw someone in need and was moved — not inconvenienced, not burdened, not mildly sympathetic. Moved. Genuinely, visibly affected by the need in front of Him.</p>
+    <p>Here is something I keep coming back to: Jesus was moved with compassion. Over and over throughout the Gospels, that phrase appears. He saw someone in need and was moved, not inconvenienced, not burdened, not mildly sympathetic. Moved. Genuinely, visibly affected by the need in front of Him.</p>
 
     <p>That is the God you are bringing your need to. Not a God who is busy with more important things and would rather you handled this yourself. A God who looks at what you're carrying and is moved.</p>
 
@@ -52,7 +52,7 @@ const post: BlogPost = {
 
     <p>Receiving is actually a skill, and for many of us it needs to be practiced. It doesn't come naturally when we've spent years building walls around our own needs. Here are some places to start.</p>
 
-    <p><strong>Say yes when help is offered.</strong> Not always — there are offers that don't actually fit or that come with complications. But the reflex to decline help before you've even considered it is worth examining. What would it mean to accept? Usually it means letting someone else see that you need something. Which is terrifying and also human.</p>
+    <p><strong>Say yes when help is offered.</strong> Not always, there are offers that don't actually fit or that come with complications. But the reflex to decline help before you've even considered it is worth examining. What would it mean to accept? Usually it means letting someone else see that you need something. Which is terrifying and also human.</p>
 
     <p><strong>Pray about yourself, not just for others.</strong> Many women who pray faithfully for everyone around them barely mention themselves. Bring yourself to God. The specific things that are hard, the fears, the loneliness, the questions you don't say out loud. He already knows. He wants you to bring them anyway.</p>
 

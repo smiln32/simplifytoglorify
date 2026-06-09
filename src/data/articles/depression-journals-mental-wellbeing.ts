@@ -22,7 +22,7 @@ const article: Article = {
 </ul>
 
 <h2>Naming What You Feel</h2>
-<p>Depression often blurs emotions — you know you feel bad, but can't identify why or what you're feeling exactly.</p>
+<p>Depression often blurs emotions: you know you feel bad, but can't identify why or what you're feeling exactly.</p>
 <ul>
   <li>Journaling helps name specific feelings like sadness, anger, shame, fear, numbness</li>
   <li>Labeling emotions reduces their intensity and confusion</li>

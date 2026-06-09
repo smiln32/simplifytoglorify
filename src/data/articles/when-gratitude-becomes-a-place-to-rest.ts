@@ -16,7 +16,7 @@ const article: Article = {
 
 <p>There is a quiet strength in naming one good thing. It may be a warm cup of coffee, a kind word, a few minutes of rest, a prayer whispered through tears, or the simple fact that God helped us make it through another day. When we pause to notice these small mercies, our thoughts begin to settle. The body can loosen its grip. The heart can breathe again.</p>
 
-<p>Gratitude also helps us see beyond ourselves. It reminds us that we are not living by our own strength alone. Every good and perfect gift comes from above. The meal on the table, the person who checked in, the moment of peace we did not expect, the strength we had when we thought we had none — these are not small things. They are reminders of God's care.</p>
+<p>Gratitude also helps us see beyond ourselves. It reminds us that we are not living by our own strength alone. Every good and perfect gift comes from above. The meal on the table, the person who checked in, the moment of peace we did not expect, the strength we had when we thought we had none. These are not small things. They are reminders of God's care.</p>
 
 <p>This does not mean gratitude should be forced. A grieving heart does not need someone telling it to just be thankful. A weary caregiver does not need pressure to look on the bright side. True gratitude is gentler than that. It makes room for sorrow and still asks, <em>Is there one good thing I can notice here?</em></p>
 

@@ -20,7 +20,7 @@ const post: BlogPost = {
     'faith over anxiety',
   ],
   content: `
-    <p>Can I be honest about something that took me a long time to understand? For most of my life, I thought the goal of faith was to stop being anxious. That if I prayed enough, trusted enough, read enough Scripture — the worry would eventually quiet down and stay down. And when it didn't, when anxiety came back despite my best spiritual efforts, I quietly assumed there was something wrong with my faith.</p>
+    <p>Can I be honest about something that took me a long time to understand? For most of my life, I thought the goal of faith was to stop being anxious. That if I prayed enough, trusted enough, read enough Scripture, the worry would eventually quiet down and stay down. And when it didn't, when anxiety came back despite my best spiritual efforts, I quietly assumed there was something wrong with my faith.</p>
 
     <p>I've since come to think that's exactly backwards.</p>
 
@@ -36,7 +36,7 @@ const post: BlogPost = {
 
     <p>Philippians 4:6-7 is probably the most quoted verse when people talk about anxiety: <em>"Do not be anxious about anything, but in everything by prayer and pleading with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all comprehension, will guard your hearts and minds in Christ Jesus."</em></p>
 
-    <p>I've heard this verse used in ways that feel like a gentle scolding — as if Paul is saying "stop being anxious, it's a choice." But I don't think that's what it is. I think Paul is saying: when the anxiety shows up, bring it somewhere. Don't just spin in it alone. Bring it to God — specifically, with thanksgiving, which I think is the practice of reminding yourself what's also true while the hard thing is true. And then receive what He gives in return — not necessarily the resolution of the anxious situation, but a peace that doesn't depend on the situation resolving.</p>
+    <p>I've heard this verse used in ways that feel like a gentle scolding, as if Paul is saying "stop being anxious, it's a choice." But I don't think that's what it is. I think Paul is saying: when the anxiety shows up, bring it somewhere. Don't just spin in it alone. Bring it to God, specifically, with thanksgiving, which I think is the practice of reminding yourself what's also true while the hard thing is true. And then receive what He gives in return, not necessarily the resolution of the anxious situation, but a peace that doesn't depend on the situation resolving.</p>
 
     <p>That peace guards your heart and mind. Stands watch over it. Anxiety doesn't disappear, but something holds steady underneath it.</p>
 
@@ -48,11 +48,11 @@ const post: BlogPost = {
     <p>"I'm scared about my finances and the prayer I'm supposed to have doesn't feel like it's landing."</p>
     <p>"My mind keeps going to the worst-case scenario and I can't seem to stop it and I'm exhausted."</p>
 
-    <p>That kind of prayer doesn't feel spiritual. It feels more like talking to yourself or venting into space. But 1 Peter 5:7 says, <em>"casting all your anxiety on Him, because He cares about you."</em> Cast. Which is an active word — not a gentle placing, but a throwing. You can throw your anxiety at God. He can handle it. He cares about you specifically, not generically — about the particular thing that's keeping you up tonight.</p>
+    <p>That kind of prayer doesn't feel spiritual. It feels more like talking to yourself or venting into space. But 1 Peter 5:7 says, <em>"casting all your anxiety on Him, because He cares about you."</em> Cast. Which is an active word, not a gentle placing, but a throwing. You can throw your anxiety at God. He can handle it. He cares about you specifically, not generically, about the particular thing that's keeping you up tonight.</p>
 
     <h3>When Anxiety Is Bigger Than Prayer Can Fix Alone</h3>
 
-    <p>I want to say something carefully here, because I think it matters. If your anxiety is significantly disrupting your daily life — if it's affecting your sleep, your relationships, your ability to function, your physical health — please consider talking to a doctor or a therapist. Anxiety disorders are real, they are treatable, and getting help for them is not a lack of faith. It's stewardship of the body and mind God gave you.</p>
+    <p>I want to say something carefully here, because I think it matters. If your anxiety is significantly disrupting your daily life, if it's affecting your sleep, your relationships, your ability to function, your physical health, please consider talking to a doctor or a therapist. Anxiety disorders are real, they are treatable, and getting help for them is not a lack of faith. It's stewardship of the body and mind God gave you.</p>
 
     <p>Faith and professional support are not opposites. They're often the most faithful combination available.</p>
 
@@ -62,9 +62,9 @@ const post: BlogPost = {
 
     <p>Notice what He doesn't say. He doesn't say "your circumstances will change." He doesn't say "the thing you're afraid of won't happen." He says I am with you. I am your God. I will strengthen, I will help, I will uphold.</p>
 
-    <p>The promise is presence and sustaining, not removal of the threat. Which sounds like a lesser comfort until you actually need it — and then you realize it's the only comfort that actually holds.</p>
+    <p>The promise is presence and sustaining, not removal of the threat. Which sounds like a lesser comfort until you actually need it, and then you realize it's the only comfort that actually holds.</p>
 
-    <p>You don't have to white-knuckle your way to peace. You don't have to perform calm you don't feel. You can bring the anxiety, the racing thoughts, the fear about tomorrow — all of it — and find a God who is not rattled by any of it. He is steady where you are not. And He is holding you in it.</p>
+    <p>You don't have to white-knuckle your way to peace. You don't have to perform calm you don't feel. You can bring the anxiety, the racing thoughts, the fear about tomorrow, all of it, and find a God who is not rattled by any of it. He is steady where you are not. And He is holding you in it.</p>
   `,
 };
 

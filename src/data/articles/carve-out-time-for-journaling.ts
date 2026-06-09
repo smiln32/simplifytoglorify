@@ -22,24 +22,24 @@ const article: Article = {
 </ul>
 
 <h2>Your 5-Minute Journaling Framework</h2>
-<p>This simple structure works anywhere — kitchen counter, car console, bedside. No fancy supplies needed. Just your phone notes app, a small notebook, or a printable planner page.</p>
+<p>This simple structure works anywhere: kitchen counter, car console, bedside. No fancy supplies needed. Just your phone notes app, a small notebook, or a printable planner page.</p>
 
 <h3>The 3-Part Prayer Pause</h3>
 <ol>
-  <li><strong>1 Minute: Breathe + Name It</strong> — "Lord, here's where I am today..." Name one feeling (overwhelmed, grateful, tired).</li>
-  <li><strong>2 Minutes: Scripture or Gratitude</strong> — One Bible verse or one thank you. Keep a short list handy.</li>
-  <li><strong>2 Minutes: Surrender + Hope</strong> — One thing to release to God. One small hope for today.</li>
+  <li><strong>1 Minute: Breathe + Name It</strong>. "Lord, here's where I am today..." Name one feeling (overwhelmed, grateful, tired).</li>
+  <li><strong>2 Minutes: Scripture or Gratitude</strong>. One Bible verse or one thank you. Keep a short list handy.</li>
+  <li><strong>2 Minutes: Surrender + Hope</strong>. One thing to release to God. One small hope for today.</li>
 </ol>
 
 <h2>7 Real-Life Places to Journal (No Extra Time Required)</h2>
 <ul>
-  <li><strong>Morning Coffee (or Tea)</strong> — First sip. Phone notes app. Done before the day explodes.</li>
-  <li><strong>Feeding the Baby</strong> — One hand free? Scribble one gratitude. Voice-to-text works too.</li>
-  <li><strong>Car Line / Waiting Anywhere</strong> — Keep a tiny journal in the glovebox or use your phone.</li>
-  <li><strong>Nap Time First 5 Minutes</strong> — Write before cleaning. Protect this sacred pause.</li>
-  <li><strong>Bedtime Wind-Down</strong> — After kids are down, before lights out. Clears racing thoughts.</li>
-  <li><strong>Microwave Timer Moments</strong> — 90 seconds? Name one blessing. Consistency compounds.</li>
-  <li><strong>Sunday Reset</strong> — 5 minutes planning your week with one anchoring verse.</li>
+  <li><strong>Morning Coffee (or Tea)</strong>. First sip. Phone notes app. Done before the day explodes.</li>
+  <li><strong>Feeding the Baby</strong>. One hand free? Scribble one gratitude. Voice-to-text works too.</li>
+  <li><strong>Car Line / Waiting Anywhere</strong>. Keep a tiny journal in the glovebox or use your phone.</li>
+  <li><strong>Nap Time First 5 Minutes</strong>. Write before cleaning. Protect this sacred pause.</li>
+  <li><strong>Bedtime Wind-Down</strong>. After kids are down, before lights out. Clears racing thoughts.</li>
+  <li><strong>Microwave Timer Moments</strong>. 90 seconds? Name one blessing. Consistency compounds.</li>
+  <li><strong>Sunday Reset</strong>. 5 minutes planning your week with one anchoring verse.</li>
 </ul>
 
 <h2>Quick-Start Prompts for Overwhelmed Days</h2>
@@ -65,14 +65,14 @@ const article: Article = {
 <h2>Why 5 Minutes Beats Skipping Altogether</h2>
 <ul>
   <li>Consistency creates pathways for emotional processing</li>
-  <li>Short sessions reduce decision fatigue — no blank page panic</li>
+  <li>Short sessions reduce decision fatigue, no blank page panic</li>
   <li>Small wins build trust: "I can do this even on hard days"</li>
-  <li>God honors the widow's mite — your 5 minutes is enough</li>
+  <li>God honors the widow's mite, your 5 minutes is enough</li>
   <li>Over time, patterns emerge: triggers, graces, growth</li>
 </ul>
 
 <h2>A Gentle Reminder for Hard Seasons</h2>
-<p>Journaling supports your heart but never replaces professional help, counseling, medical care, or crisis support when needed. If depression feels heavy, reach out — you are not alone.</p>
+<p>Journaling supports your heart but never replaces professional help, counseling, medical care, or crisis support when needed. If depression feels heavy, reach out. You are not alone.</p>
 `,
 };
 

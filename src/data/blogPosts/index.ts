@@ -18,7 +18,7 @@ export const blogPostMeta: BlogPostMeta[] = [
     id: 9,
     slug: 'why-adhd-and-faith-are-not-opposites',
     title: 'Why ADHD and Faith Are Not Opposites',
-    excerpt: 'God did not form your mind by accident. The scattered moments, the racing thoughts, the way your brain moves — none of it surprised Him.',
+    excerpt: 'God did not form your mind by accident. The scattered moments, the racing thoughts, the way your brain moves, none of it surprised Him.',
     date: 'May 27, 2026',
     readTime: '5 min read',
     category: 'ADHD',

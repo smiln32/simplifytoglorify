@@ -10,7 +10,7 @@ const article: Article = {
   keywords: ['daily prayer journal', 'prayer journal', 'prayer journaling', 'Christian prayer journal', 'faith journal for women', 'devotional journaling'],
   image: '/images/leaning_into_prayer.webp',
   content: `
-<p>Some days you have a full hour for quiet time. Other days, you barely have five minutes before the next demand pulls at your attention. This daily prayer journal was created for the real rhythm of real life — the kind of life where faith still matters deeply, even when the schedule feels full.</p>
+<p>Some days you have a full hour for quiet time. Other days, you barely have five minutes before the next demand pulls at your attention. This daily prayer journal was created for the real rhythm of real life, the kind of life where faith still matters deeply, even when the schedule feels full.</p>
 
 <h2>Why a Daily Prayer Journal Helps</h2>
 <p>Prayer journaling gives your thoughts a place to land. It helps you reflect, notice patterns, record answered prayer, and stay intentional about what God is teaching you. Guided formats are often most helpful because they give structure without making the practice feel heavy or complicated.</p>

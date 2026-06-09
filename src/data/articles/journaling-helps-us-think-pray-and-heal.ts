@@ -5,7 +5,7 @@ const article: Article = {
   slug: 'journaling-helps-us-think-pray-and-heal',
   title: 'Journaling Helps Us Think, Pray and Heal',
   category: 'Journaling',
-  excerpt: "Journaling can become something much deeper than recording events — a quiet place where the mind slows down, the heart softens, and faith has room to breathe.",
+  excerpt: "Journaling can become something much deeper than recording events, a quiet place where the mind slows down, the heart softens, and faith has room to breathe.",
   metaDescription: "Journaling is more than recording events. Discover how writing helps Christian women slow down, think more clearly, pray more honestly, and begin to heal.",
   keywords: ['journaling and healing', 'Christian journaling', 'journaling for mental health', 'faith and journaling', 'prayer journal', 'journaling for women'],
   image: '/images/journaling_helps_the_mind.webp',
