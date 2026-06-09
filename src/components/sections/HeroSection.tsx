@@ -1,6 +1,4 @@
-import { useRef, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useRef, useEffect, useState } from 'react';
 import type { SectionRef, ScrollFn } from '@/types';
 
 interface HeroSectionProps {
@@ -9,12 +7,30 @@ interface HeroSectionProps {
   scrollToSection: ScrollFn;
 }
 
-export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: HeroSectionProps) {
+export default function HeroSection({ sectionRef }: HeroSectionProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  // Defer the ~900KB hero video until the browser is idle so it doesn't
+  // compete with above-the-fold content during first paint.
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    if (w.requestIdleCallback) {
+      const id = w.requestIdleCallback(() => setShowVideo(true));
+      return () => w.cancelIdleCallback?.(id);
+    }
+    const id = window.setTimeout(() => setShowVideo(true), 200);
+    return () => window.clearTimeout(id);
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video || !showVideo) return;
+    // Pick up the <source> that was just added and start autoplay.
+    video.load();
     let rafId: number;
     const check = () => {
       if (video.duration && video.currentTime >= video.duration - 0.15) {
@@ -24,7 +40,7 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
     };
     rafId = requestAnimationFrame(check);
     return () => cancelAnimationFrame(rafId);
-  }, []);
+  }, [showVideo]);
 
   return (
     <section ref={sectionRef} className="min-h-screen pt-20 lg:pt-24 flex items-center bg-white">
@@ -61,10 +77,11 @@ export default function HeroSection({ sectionRef, aboutRef, scrollToSection }: H
                 autoPlay
                 muted
                 playsInline
-                preload="auto"
+                preload="none"
+                poster="/images/hero-poster.webp"
                 className="w-full h-[378px] lg:h-[522px] object-cover scale-[1.08] bg-slate-blue"
               >
-                <source src="/images/simple-cup-of-tea.mp4" type="video/mp4" />
+                {showVideo && <source src="/images/simple-cup-of-tea.mp4" type="video/mp4" />}
               </video>
             </div>
           </div>

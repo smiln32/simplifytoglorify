@@ -6,7 +6,11 @@ interface TopicsSectionProps {
   sectionRef: SectionRef;
 }
 
+// Shown on the Products page but kept off the home page to reduce clutter.
+const HOME_HIDDEN_TOPICS = new Set(['Gratitude', 'Faith', 'Patience', 'Prayer']);
+
 export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
+  const homeTopics = topicBundles.filter((topic) => !HOME_HIDDEN_TOPICS.has(topic.name));
   return (
     <section id="topics" ref={sectionRef} className="topics-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -21,7 +25,7 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-4">
-          {topicBundles.map((topic) => (
+          {homeTopics.map((topic) => (
             <Link
               key={topic.name}
               to={`/products/${topic.slug ?? topic.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -46,9 +50,9 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
         <div className="text-center mt-10">
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 text-base font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-xl font-semibold text-slate-blue hover:text-charcoal transition-colors duration-200"
           >
-            View all products →
+            More products →
           </Link>
         </div>
       </div>

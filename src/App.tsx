@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/sections/Navbar';
@@ -31,7 +31,11 @@ function App() {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Respect reduced-motion: skip animations so content is shown instantly
+    // (no opacity:0 starting states) for users who prefer less movement.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '.hero-image',

@@ -71,7 +71,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/how-meditation-and-faith-fit-together</loc>
+    <loc>https://www.simplifytoglorify.com/articles/growing-in-patience</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/the-weight-of-regret</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/the-pain-no-one-can-see</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -101,7 +111,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.simplifytoglorify.com/articles/why-social-anxiety-is-on-the-rise</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.simplifytoglorify.com/articles/carve-out-time-for-journaling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/articles/what-is-palliative-care</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -161,11 +181,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/why-social-anxiety-is-on-the-rise</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.simplifytoglorify.com/articles/practical-strategies-for-adhd</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -181,32 +196,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/articles/what-is-palliative-care</loc>
+    <loc>https://www.simplifytoglorify.com/articles/how-meditation-and-faith-fit-together</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.simplifytoglorify.com/products/adhd</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.simplifytoglorify.com/products/anxiety</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/products/depression</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/products/grief</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/products/prayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.simplifytoglorify.com/products/gratitude</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -216,12 +216,47 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.simplifytoglorify.com/products/chronic-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/products/depression</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.simplifytoglorify.com/products/faith</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.simplifytoglorify.com/products/uncertainty</loc>
+    <loc>https://www.simplifytoglorify.com/products/gratitude</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/products/grief</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/products/patience</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/products/prayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/products/regret</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.simplifytoglorify.com/products/trusting-god</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
