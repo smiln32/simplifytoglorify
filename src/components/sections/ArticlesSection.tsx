@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { articleMeta as articles } from '@/data/articles/index';
 import { getCategoryColor } from '@/data/categoryColors';
 import { GROUPS, groupFor } from '@/lib/categoryGroups';
+import { searchScore } from '@/lib/search';
 import PostCard from '@/components/PostCard';
 import type { SectionRef } from '@/types';
 
@@ -86,20 +87,22 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
     );
   }
 
-  // Group + search filter (replaces the old per-category pill filter),
-  // then default sort: articles grouped alphabetically by category.
+  // Group + search filter. When searching, rank by relevance (subject over
+  // passing mention); otherwise group alphabetically by category.
+  const q = searchQuery.trim();
   const visible = sortedArticles
     .filter((article) => {
       const inGroup = activeTab === 'All' || groupFor(article.category) === activeTab;
-      const q = searchQuery.toLowerCase().trim();
-      const inSearch =
-        q === '' ||
-        article.title.toLowerCase().includes(q) ||
-        article.excerpt.toLowerCase().includes(q) ||
-        article.category.toLowerCase().includes(q);
+      const inSearch = q === '' || searchScore(article, q) > 0;
       return inGroup && inSearch;
     })
-    .sort((a, b) => a.category.localeCompare(b.category));
+    .sort((a, b) => {
+      if (q !== '') {
+        const byScore = searchScore(b, q) - searchScore(a, q);
+        if (byScore !== 0) return byScore;
+      }
+      return a.category.localeCompare(b.category);
+    });
 
   return (
     <section ref={sectionRef} className="articles-section py-10 lg:py-16 bg-white scroll-mt-16 lg:scroll-mt-20">
@@ -137,7 +140,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
                   key={g}
                   role="tab"
                   aria-selected={active}
-                  onClick={() => setActiveTab(g)}
+                  onClick={() => { setActiveTab(g); setSearchQuery(''); }}
                   style={{
                     border: 'none',
                     background: 'none',
@@ -157,7 +160,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {visible.map((article) => (
             <PostCard key={article.id} post={article} to={`/articles/${article.slug}`} />
           ))}

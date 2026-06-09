@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { blogPostMeta as blogPosts } from '@/data/blogPosts/index';
 import { GROUPS, groupFor } from '@/lib/categoryGroups';
+import { searchScore } from '@/lib/search';
 import PageNav from '@/components/PageNav';
 import Footer from '@/components/sections/Footer';
 import PostCard from '@/components/PostCard';
@@ -14,20 +15,22 @@ export default function Blog() {
   const [activeTab, setActiveTab] = useState('All');
   const [shown, setShown] = useState(PAGE_SIZE);
 
-  // Group + search filter (replaces the old per-category pill filter),
-  // then default sort: newest first by date.
+  // Group + search filter. When searching, rank by relevance (subject over
+  // passing mention); otherwise newest first by date.
+  const q = searchTerm.trim();
   const visible = blogPosts
     .filter((post) => {
       const inGroup = activeTab === 'All' || groupFor(post.category) === activeTab;
-      const q = searchTerm.toLowerCase().trim();
-      const inSearch =
-        q === '' ||
-        post.title.toLowerCase().includes(q) ||
-        post.excerpt.toLowerCase().includes(q) ||
-        post.category.toLowerCase().includes(q);
+      const inSearch = q === '' || searchScore(post, q) > 0;
       return inGroup && inSearch;
     })
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date));
+    .sort((a, b) => {
+      if (q !== '') {
+        const byScore = searchScore(b, q) - searchScore(a, q);
+        if (byScore !== 0) return byScore;
+      }
+      return +new Date(b.date) - +new Date(a.date);
+    });
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +70,7 @@ export default function Blog() {
                     key={g}
                     role="tab"
                     aria-selected={active}
-                    onClick={() => { setActiveTab(g); setShown(PAGE_SIZE); }}
+                    onClick={() => { setActiveTab(g); setSearchTerm(''); setShown(PAGE_SIZE); }}
                     style={{
                       border: 'none',
                       background: 'none',
