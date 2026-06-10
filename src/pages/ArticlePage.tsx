@@ -72,7 +72,7 @@ export default function ArticlePage() {
         {/* Header */}
         <div className="border-b border-charcoal/8 py-12 lg:py-16" style={{ backgroundColor: `${color}18` }}>
           <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-charcoal">
               {article.category}
             </p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-6 leading-snug">

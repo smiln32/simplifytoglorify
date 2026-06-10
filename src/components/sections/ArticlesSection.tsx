@@ -34,7 +34,7 @@ function ArticleCard({ article, showImage }: { article: (typeof articles)[0]; sh
       <div className="flex">
         <div className="w-2 rounded-l-[28px] flex-shrink-0" style={{ backgroundColor: color }} />
         <div className="p-6">
-          <span className="text-xs font-semibold tracking-widest uppercase" style={{ color }}>
+          <span className="text-xs font-semibold tracking-widest uppercase text-charcoal">
             {article.category}
           </span>
           <h4 className="font-display text-xl text-charcoal mt-3 mb-2 group-hover:text-slate-blue transition-colors">

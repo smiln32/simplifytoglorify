@@ -71,7 +71,7 @@ export default function ProductCategory() {
         {/* Header band */}
         <div className="border-b border-charcoal/8" style={{ backgroundColor: `${getCategoryColor(category.name)}20` }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
-            <p className="font-display text-xl mb-6" style={{ color: getCategoryColor(category.name) }}>Products for {category.name}</p>
+            <p className="font-display text-xl mb-6 text-charcoal">Products for {category.name}</p>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
               {category.name}
             </h1>

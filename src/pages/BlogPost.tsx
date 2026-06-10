@@ -73,7 +73,7 @@ export default function BlogPost() {
         <div className="border-b border-charcoal/8 py-12 lg:py-16" style={{ backgroundColor: `${color}18` }}>
           <div className="max-w-3xl mx-auto px-6 text-center">
             <div className="flex items-center justify-center gap-4 mb-4 text-xs text-muted-slate">
-              <span className="font-semibold tracking-widest uppercase" style={{ color }}>{post.category}</span>
+              <span className="font-semibold tracking-widest uppercase text-charcoal">{post.category}</span>
               <span>•</span>
               <span>{post.date}</span>
               <span>•</span>
