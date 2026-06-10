@@ -43,8 +43,8 @@ export default function ArticlePage() {
   const color = getCategoryColor(article.category);
   const description = article.metaDescription || article.excerpt;
   const ogImage = article.image
-    ? `https://simplifytoglorify.netlify.app${article.image}`
-    : 'https://simplifytoglorify.netlify.app/images/faith-based-living.webp';
+    ? `https://www.simplifytoglorify.com${article.image}`
+    : 'https://www.simplifytoglorify.com/images/faith-based-living.webp';
 
   return (
     <>

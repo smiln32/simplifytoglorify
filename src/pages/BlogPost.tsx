@@ -43,8 +43,8 @@ export default function BlogPost() {
   const htmlContent = toHtml(post.content ?? post.body ?? '');
   const description = post.metaDescription || post.excerpt;
   const ogImage = post.image
-    ? `https://simplifytoglorify.netlify.app${post.image}`
-    : 'https://simplifytoglorify.netlify.app/images/faith-based-living.webp';
+    ? `https://www.simplifytoglorify.com${post.image}`
+    : 'https://www.simplifytoglorify.com/images/faith-based-living.webp';
 
   return (
     <>
