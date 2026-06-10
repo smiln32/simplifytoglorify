@@ -64,7 +64,7 @@ export default function PostCard({ post, to }: { post: PostCardData; to: string 
       >
         <CardImage post={post} accent={accent} />
         <div style={{ padding: '16px 18px' }}>
-          <div style={{ fontSize: 11, letterSpacing: '.1em', color: accent, marginBottom: 8 }}>
+          <div style={{ fontSize: 11, letterSpacing: '.1em', color: '#404040', marginBottom: 8 }}>
             {post.category.toUpperCase()}
             {post.readTime ? ` · ${post.readTime}` : ''}
           </div>
