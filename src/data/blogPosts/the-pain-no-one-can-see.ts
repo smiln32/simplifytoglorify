@@ -1,17 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 20,
   slug: 'the-pain-no-one-can-see',
-  date: 'June 8, 2026',
-  readTime: '7 min read',
-  tags: ['chronic pain', 'lament', 'faith'],
   title: 'The Pain No One Can See',
   category: 'Chronic Pain',
-  excerpt:
-    'Chronic pain is often invisible, and being unseen can be its own kind of ache. A grace-centered look at lament, the God who sees, and faith that does not depend on being healed.',
-  metaDescription:
-    'A Scripture-grounded encouragement for living with chronic pain and invisible illness, on lament, the God who sees, and grace that holds when prayers for healing go unanswered.',
+  excerpt: 'Chronic pain is often invisible, and being unseen can be its own kind of ache. A grace-centered look at lament, the God who sees, and faith that does not depend on being healed.',
+  metaDescription: 'A Scripture-grounded encouragement for living with chronic pain and invisible illness, on lament, the God who sees, and grace that holds when prayers for healing go unanswered.',
   keywords: [
     'chronic pain and faith',
     'invisible illness',
@@ -29,7 +23,9 @@ const post: BlogPost = {
     'chronic pain isolation',
     'when prayers for healing go unanswered',
   ],
-  author: 'Carla',
+  date: 'June 8, 2026',
+  readTime: '7 min read',
+  tags: ['chronic pain', 'lament', 'faith'],
   image: '/images/the-pain-no-one-can-see.webp',
   body: `## Faith, Chronic Pain, and the God Who Sees You
 
@@ -94,39 +90,14 @@ Scripture is honest that we live in bodies that groan, in a world that is not ye
 Until then, you are allowed to hurt honestly, to rest without guilt, and to trust that the God who sees you has not set you aside. He is near to the brokenhearted. He always has been.`,
   moreResources: {
     heading: 'More Resources',
-    intro:
-      'These passages are good companions for the days when pain is heavy and you feel unseen. Return to them slowly, one at a time, and let them remind you that God is near.',
+    intro: 'These passages are good companions for the days when pain is heavy and you feel unseen. Return to them slowly, one at a time, and let them remind you that God is near.',
     references: [
-      {
-        reference: '2 Corinthians 12:9',
-        description:
-          '"My grace is sufficient for you, for power is perfected in weakness." The thorn was not removed, but grace was given that was enough to carry it.',
-      },
-      {
-        reference: 'Psalm 34:18',
-        description:
-          '"The Lord is near to the brokenhearted and saves those who are crushed in spirit." Nearness, not distance, is how God responds to a hurting heart.',
-      },
-      {
-        reference: 'Genesis 16:13',
-        description:
-          '"You are a God who sees." Hagar, overlooked by nearly everyone, discovered she was never invisible to God.',
-      },
-      {
-        reference: 'Hebrews 4:15-16',
-        description:
-          '"We do not have a high priest who cannot sympathize with our weaknesses." Jesus understands suffering from the inside and welcomes the hurting to the throne of grace.',
-      },
-      {
-        reference: 'Romans 8:18',
-        description:
-          '"The sufferings of this present time are not worthy to be compared with the glory that is to be revealed to us." Present pain is real, and it does not get the last word.',
-      },
-      {
-        reference: 'Isaiah 41:10',
-        description:
-          '"Do not fear, for I am with you; do not be afraid, for I am your God." A steadying word for the days when pain makes you feel alone.',
-      },
+      { reference: '2 Corinthians 12:9', description: '"My grace is sufficient for you, for power is perfected in weakness." The thorn was not removed, but grace was given that was enough to carry it.' },
+      { reference: 'Psalm 34:18', description: '"The Lord is near to the brokenhearted and saves those who are crushed in spirit." Nearness, not distance, is how God responds to a hurting heart.' },
+      { reference: 'Genesis 16:13', description: '"You are a God who sees." Hagar, overlooked by nearly everyone, discovered she was never invisible to God.' },
+      { reference: 'Hebrews 4:15-16', description: '"We do not have a high priest who cannot sympathize with our weaknesses." Jesus understands suffering from the inside and welcomes the hurting to the throne of grace.' },
+      { reference: 'Romans 8:18', description: '"The sufferings of this present time are not worthy to be compared with the glory that is to be revealed to us." Present pain is real, and it does not get the last word.' },
+      { reference: 'Isaiah 41:10', description: '"Do not fear, for I am with you; do not be afraid, for I am your God." A steadying word for the days when pain makes you feel alone.' },
     ],
   },
 };

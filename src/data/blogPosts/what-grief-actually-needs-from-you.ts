@@ -1,16 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 5,
   slug: 'what-grief-actually-needs-from-you',
   title: 'What Grief Actually Needs From You',
-  excerpt: 'Grief doesn\'t need you to move through it faster. It needs you to stop pretending it isn\'t there.',
-  metaDescription: "Grief doesn't follow a schedule and it doesn't need you to rush it. A gentle, faith-rooted look at what grief actually asks of us, and what God offers in return.",
-  date: 'April 29, 2026',
-  readTime: '5 min read',
   category: 'Grief',
-  tags: ['grief', 'loss', 'healing'],
-  image: '/images/what-grief-needs.webp',
+  excerpt: "Grief doesn't need you to move through it faster. It needs you to stop pretending it isn't there.",
+  metaDescription: "Grief doesn't follow a schedule and it doesn't need you to rush it. A gentle, faith-rooted look at what grief actually asks of us, and what God offers in return.",
   keywords: [
     'what grief needs',
     'how to grieve',
@@ -19,7 +14,11 @@ const post: BlogPost = {
     'processing grief',
     'grief support Christian women',
   ],
-  content: `
+  date: 'April 29, 2026',
+  readTime: '5 min read',
+  tags: ['grief', 'loss', 'healing'],
+  image: '/images/what-grief-needs.webp',
+  body: `
     <p>I've been thinking about what we ask of grieving people. We ask them to be brave. We ask them to find meaning. We ask them to remember the good times, to hold onto hope, to trust that something beautiful is ahead. We ask, often without realizing it, for them to move through grief in a way that's comfortable for us to watch.</p>
 
     <p>What we rarely ask, what grief actually needs from the person living it, is much simpler and much harder than any of that.</p>

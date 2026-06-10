@@ -1,12 +1,22 @@
-export const article = {
-  title: "What to Do When Anxiety Shows Up in Your Body",
-  slug: "anxiety-shows-up-in-your-body",
-  category: "Anxiety",
-  excerpt: "Anxiety can feel physical before it feels clear in your thoughts. Here are gentle ways to pause, notice, breathe, pray, and take one small next step.",
-  metaDescription: "When anxiety shows up as a tight chest, racing heart, or shallow breathing, here are gentle faith-grounded ways to pause, breathe, pray, and take the next step.",
-  keywords: ["anxiety in the body", "physical anxiety symptoms", "Christian anxiety", "what to do when anxious", "faith and anxiety", "prayer for anxiety", "Christian women anxiety"],
-  image: "/images/anxiety-shows-up-in-your-body.webp",
-  content: `
+import type { Article } from './types';
+
+const post: Article = {
+  slug: 'anxiety-shows-up-in-your-body',
+  title: 'What to Do When Anxiety Shows Up in Your Body',
+  category: 'Anxiety',
+  excerpt: 'Anxiety can feel physical before it feels clear in your thoughts. Here are gentle ways to pause, notice, breathe, pray, and take one small next step.',
+  metaDescription: 'When anxiety shows up as a tight chest, racing heart, or shallow breathing, here are gentle faith-grounded ways to pause, breathe, pray, and take the next step.',
+  keywords: [
+    'anxiety in the body',
+    'physical anxiety symptoms',
+    'Christian anxiety',
+    'what to do when anxious',
+    'faith and anxiety',
+    'prayer for anxiety',
+    'Christian women anxiety',
+  ],
+  image: '/images/anxiety-shows-up-in-your-body.webp',
+  body: `
 # What to Do When Anxiety Shows Up in Your Body
 
 Anxiety does not always arrive as a clear thought. Sometimes it shows up in the body first.
@@ -59,11 +69,6 @@ God is near.
 - National Institute of Mental Health: Generalized Anxiety Disorder: What You Need to Know
 - Mayo Clinic Health System: 11 Tips for Coping With an Anxiety Disorder
 `,
-  sources: [
-    { name: "National Institute of Mental Health", title: "Anxiety Disorders", url: "https://www.nimh.nih.gov/health/topics/anxiety-disorders" },
-    { name: "National Institute of Mental Health", title: "Generalized Anxiety Disorder: What You Need to Know", url: "https://www.nimh.nih.gov/health/publications/generalized-anxiety-disorder-gad" },
-    { name: "Mayo Clinic Health System", title: "11 Tips for Coping With an Anxiety Disorder", url: "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder" }
-  ]
-} as const;
+};
 
-export default article;
+export default post;

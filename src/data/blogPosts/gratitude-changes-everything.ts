@@ -1,35 +1,29 @@
 import type { BlogPost } from './types';
 
-// Gratitude: When Thanksgiving Changes the Way You See Everything
-// Blog post for Simplify to Glorify
-
 const post: BlogPost = {
-  id: 12,
-  slug: "gratitude-changes-everything",
+  slug: 'gratitude-changes-everything',
+  title: 'Gratitude: When Thanksgiving Changes the Way You See Everything',
+  cardTitle: 'When Gratitude Changes How You See Everything',
+  category: 'Gratitude',
+  excerpt: 'Gratitude is not pretending the hard thing is fine. It is the quiet practice of noticing that God has not left the room, even in a hard season.',
+  metaDescription: 'Gratitude is more than a nice feeling. Discover what genuine thankfulness really is, how it steadies a weary body, and how to practice it even on the hard days.',
+  keywords: [
+    'gratitude',
+    'attitude of thanksgiving',
+    'Christian gratitude',
+    'gratitude in hard times',
+    'thankfulness and faith',
+    'gratitude vs toxic positivity',
+    'how to practice gratitude',
+    'gratitude journal',
+    '1 Thessalonians 5:18',
+    'give thanks in everything',
+    'gratitude practice',
+    'thankfulness in suffering',
+  ],
   date: 'June 4, 2026',
   readTime: '6 min read',
   tags: ['gratitude', 'thankfulness', 'joy'],
-  title: "Gratitude: When Thanksgiving Changes the Way You See Everything",
-  category: "Gratitude",
-  excerpt:
-    "Gratitude is not pretending the hard thing is fine. It is the quiet practice of noticing that God has not left the room, even in a hard season.",
-  metaDescription:
-    "Gratitude is more than a nice feeling. Discover what genuine thankfulness really is, how it steadies a weary body, and how to practice it even on the hard days.",
-  keywords: [
-    "gratitude",
-    "attitude of thanksgiving",
-    "Christian gratitude",
-    "gratitude in hard times",
-    "thankfulness and faith",
-    "gratitude vs toxic positivity",
-    "how to practice gratitude",
-    "gratitude journal",
-    "1 Thessalonians 5:18",
-    "give thanks in everything",
-    "gratitude practice",
-    "thankfulness in suffering",
-  ],
-  author: "Carla",
   image: '/images/finding-peace.webp',
   body: `You already know how to be thankful. You say it over coffee with a friend, over a child's scraped knee that healed, over the small mercy of a quiet morning before the house wakes up. The instinct lives in you. What you may not have heard is that this ordinary, tender habit is doing something far larger than you realize, in your body, in your relationships, and in your walk with God.
 
@@ -95,40 +89,15 @@ You do not have to overhaul your life today. Gratitude is not a performance to m
 
 So choose one practice from this page and begin tonight. Three good things before you sleep, or a single slip of paper in a jar. Let it be small. Let it be honest. Let it be the beginning of seeing your life, even this season of it, through eyes that are learning to give thanks.`,
   moreResources: {
-    heading: "More Resources",
-    intro:
-      "If gratitude feels hard to reach right now, these verses are gentle anchors. Return to them on the days when thankfulness is more offering than overflow.",
+    heading: 'More Resources',
+    intro: 'If gratitude feels hard to reach right now, these verses are gentle anchors. Return to them on the days when thankfulness is more offering than overflow.',
     references: [
-      {
-        reference: "1 Thessalonians 5:18",
-        description:
-          "Thankfulness is offered in everything, even the seasons you would never have chosen.",
-      },
-      {
-        reference: "Philippians 4:6",
-        description:
-          "Honest pleading and thanksgiving belong in the same prayer; you can bring God both at once.",
-      },
-      {
-        reference: "Hebrews 13:15",
-        description:
-          "A sacrifice of praise is still praise, even on the days it costs you something to give it.",
-      },
-      {
-        reference: "Colossians 3:15",
-        description:
-          "Let the peace of Christ rule in your heart, and let thankfulness grow from that settled place.",
-      },
-      {
-        reference: "Psalm 100:4",
-        description:
-          "We come into God's presence with thanksgiving, giving thanks to Him and blessing His name.",
-      },
-      {
-        reference: "Psalm 103:2",
-        description:
-          "Bless the Lord and do not forget His benefits; gratitude is simply remembering what He has done.",
-      },
+      { reference: '1 Thessalonians 5:18', description: 'Thankfulness is offered in everything, even the seasons you would never have chosen.' },
+      { reference: 'Philippians 4:6', description: 'Honest pleading and thanksgiving belong in the same prayer; you can bring God both at once.' },
+      { reference: 'Hebrews 13:15', description: 'A sacrifice of praise is still praise, even on the days it costs you something to give it.' },
+      { reference: 'Colossians 3:15', description: 'Let the peace of Christ rule in your heart, and let thankfulness grow from that settled place.' },
+      { reference: 'Psalm 100:4', description: "We come into God's presence with thanksgiving, giving thanks to Him and blessing His name." },
+      { reference: 'Psalm 103:2', description: 'Bless the Lord and do not forget His benefits; gratitude is simply remembering what He has done.' },
     ],
   },
 };

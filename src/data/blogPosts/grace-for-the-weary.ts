@@ -1,15 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 3,
   slug: 'grace-for-the-weary',
   title: 'Grace for the Weary',
+  category: 'Depression',
   excerpt: 'There is no shame in being tired. There is only grace, waiting to meet you there.',
   metaDescription: "If you're emotionally exhausted or emotionally drained and not sure why, this is for you - grace-rooted encouragement for women in hard seasons, straight from Scripture.",
-  date: 'May 5, 2026',
-  readTime: '6 min read',
-  category: 'Depression',
-  tags: ['grace', 'rest', 'weariness'],
   keywords: [
     'emotionally exhausted',
     'emotionally drained',
@@ -22,8 +18,11 @@ const post: BlogPost = {
     'Christian encouragement for women',
     'grace for hard days',
   ],
+  date: 'May 5, 2026',
+  readTime: '6 min read',
+  tags: ['grace', 'rest', 'weariness'],
   image: '/images/grace_for_the_weary.webp',
-  content: `
+  body: `
     <p>I want to talk to the tired ones today. And I don't mean the kind of tired where you need a good night's sleep and a Saturday morning with nowhere to be. I mean the kind of tired that lives underneath everything else. The kind that's still there when you wake up, even after eight hours. The kind that makes you look at your day before it even starts and think, "I don't know if I have enough for this."</p>
 
     <p>If that's you, I need you to know something before we go any further. That tiredness is not a failure. It's not a sign that you're doing something wrong or that you should be handling things better by now. It's the natural result of carrying heavy things for a long time. And if you're here, reading this, I'm guessing you've been carrying heavy things.</p>

@@ -1,7 +1,6 @@
 import type { Article } from './types';
 
-const article: Article = {
-  id: 14,
+const post: Article = {
   slug: 'caregiving-avoid-burnout',
   title: 'Simple Tips to Help Avoid Caregiver Burnout',
   category: 'Caregiving',
@@ -52,4 +51,4 @@ You are not failing because you need rest. You are human. And God knows how to s
 `,
 };
 
-export default article;
+export default post;

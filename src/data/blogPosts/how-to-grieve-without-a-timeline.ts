@@ -1,35 +1,28 @@
 import type { BlogPost } from './types';
 
-// How to Grieve Without a Timeline
-// Blog post for Simplify to Glorify
-
 const post: BlogPost = {
-  id: 10,
-  slug: "how-to-grieve-without-a-timeline",
+  slug: 'how-to-grieve-without-a-timeline',
+  title: 'How to Grieve Without a Timeline',
+  category: 'Grief',
+  excerpt: "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
+  metaDescription: 'Grieving longer than people expect? There is no timeline for grief. Discover why your sorrow is not a failure, how Scripture makes room for lament, and why God stays near.',
+  keywords: [
+    'grief without a timeline',
+    'grieving too long',
+    'no timeline for grief',
+    'how long does grief last',
+    'Christian grief',
+    'faith and grief',
+    'lament in the Bible',
+    'grief and the Psalms',
+    'God near the brokenhearted',
+    'Psalm 34:18',
+    'grieving a loved one',
+    'permission to grieve',
+  ],
   date: 'June 5, 2026',
   readTime: '5 min read',
   tags: ['grief', 'loss', 'healing'],
-  title: "How to Grieve Without a Timeline",
-  category: "Grief",
-  excerpt:
-    "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
-  metaDescription:
-    "Grieving longer than people expect? There is no timeline for grief. Discover why your sorrow is not a failure, how Scripture makes room for lament, and why God stays near.",
-  keywords: [
-    "grief without a timeline",
-    "grieving too long",
-    "no timeline for grief",
-    "how long does grief last",
-    "Christian grief",
-    "faith and grief",
-    "lament in the Bible",
-    "grief and the Psalms",
-    "God near the brokenhearted",
-    "Psalm 34:18",
-    "grieving a loved one",
-    "permission to grieve",
-  ],
-  author: "Carla",
   image: '/images/what-grief-needs.webp',
   body: `There is a moment that comes for almost everyone who is grieving, and it is a quiet kind of cruelty. It is the moment you realize the world expects you to be further along than you are.
 
@@ -79,40 +72,15 @@ Until that day, you are allowed to grieve as long as you need to. The God who is
 
 You do not have to be finished. You only have to let Him stay near while you are not.`,
   moreResources: {
-    heading: "More Resources",
-    intro:
-      "When grief outlasts everyone's patience but your own, these passages make room for the long sorrow. Return to them slowly, on the days you need permission to still be grieving.",
+    heading: 'More Resources',
+    intro: "When grief outlasts everyone's patience but your own, these passages make room for the long sorrow. Return to them slowly, on the days you need permission to still be grieving.",
     references: [
-      {
-        reference: "Psalm 34:18",
-        description:
-          "The Lord draws near to the brokenhearted, with no expectation that you hurry out of your sorrow.",
-      },
-      {
-        reference: "John 11:35",
-        description:
-          "Jesus wept at the grave of His friend, showing that hope and tears can live in the same heart.",
-      },
-      {
-        reference: "Lamentations 3:31-33",
-        description:
-          "God does not reject forever, and He does not afflict from His heart; His compassion outlasts the grief.",
-      },
-      {
-        reference: "Revelation 21:4",
-        description:
-          "A day is coming when God Himself will wipe away every tear, and death and mourning will be no more.",
-      },
-      {
-        reference: "Psalm 56:8",
-        description:
-          "God takes account of your wanderings and keeps every tear, even the ones no one else has seen.",
-      },
-      {
-        reference: "Matthew 5:4",
-        description:
-          "Jesus calls the mourning blessed and promises that those who grieve will be comforted.",
-      },
+      { reference: 'Psalm 34:18', description: 'The Lord draws near to the brokenhearted, with no expectation that you hurry out of your sorrow.' },
+      { reference: 'John 11:35', description: 'Jesus wept at the grave of His friend, showing that hope and tears can live in the same heart.' },
+      { reference: 'Lamentations 3:31-33', description: 'God does not reject forever, and He does not afflict from His heart; His compassion outlasts the grief.' },
+      { reference: 'Revelation 21:4', description: 'A day is coming when God Himself will wipe away every tear, and death and mourning will be no more.' },
+      { reference: 'Psalm 56:8', description: 'God takes account of your wanderings and keeps every tear, even the ones no one else has seen.' },
+      { reference: 'Matthew 5:4', description: 'Jesus calls the mourning blessed and promises that those who grieve will be comforted.' },
     ],
   },
 };

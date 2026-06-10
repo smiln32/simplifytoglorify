@@ -1,14 +1,11 @@
-const post = {
-  id: 8,
+import type { Article } from './types';
+
+const post: Article = {
   slug: 'when-depression-and-faith-exist-together',
   title: 'When Depression and Faith Exist Together',
-  excerpt: 'Depression is not a sign that God has left. Sometimes it is the place where He shows up most quietly, and most faithfully.',
-  metaDescription: "Depression and faith can exist in the same woman at the same time. A gentle, honest look at what Scripture says to those who love God and still struggle to feel Him.",
-  date: 'May 20, 2026',
-  readTime: '6 min read',
   category: 'Depression',
-  tags: ['depression', 'faith', 'hope'],
-  image: '/images/depression-and-faith.webp',
+  excerpt: 'Depression is not a sign that God has left. Sometimes it is the place where He shows up most quietly, and most faithfully.',
+  metaDescription: 'Depression and faith can exist in the same woman at the same time. A gentle, honest look at what Scripture says to those who love God and still struggle to feel Him.',
   keywords: [
     'depression and faith',
     'Christian depression',
@@ -17,7 +14,8 @@ const post = {
     'God and depression',
     'Christian mental health women',
   ],
-  content: `
+  image: '/images/depression-and-faith.webp',
+  body: `
     <p>Here is something I wish someone had said to me sooner: it is possible to love God with everything you have and still struggle to feel anything at all. Depression and faith can exist in the same woman at the same time. They are not opposites. They are not mutually exclusive. And the presence of one does not negate the other.</p>
 
     <p>I say that because I know how many women are quietly carrying both, the faith they hold onto in their better moments, and the flatness, the heaviness, the inability to feel things that used to feel meaningful, and they are wondering if their depression means something has gone spiritually wrong. Like maybe they've drifted, or they're not praying right, or God is disappointed and has pulled back.</p>

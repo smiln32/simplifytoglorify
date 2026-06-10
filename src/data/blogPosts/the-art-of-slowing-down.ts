@@ -1,15 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 2,
   slug: 'the-art-of-slowing-down',
   title: 'The Art of Slowing Down',
+  category: 'Peace',
   excerpt: 'In a world that rushes, choosing a slower pace is a radical act of faith.',
   metaDescription: "If you've been running too fast for too long, this is for you - a faith-rooted look at why we resist rest and what God actually says about it.",
-  date: 'April 10, 2026',
-  readTime: '4 min read',
-  category: 'Peace',
-  tags: ['slow living', 'mindfulness', 'rest'],
   keywords: [
     'finding peace',
     'finding peace of mind',
@@ -24,8 +20,11 @@ const post: BlogPost = {
     'rest without guilt',
     'faith and exhaustion',
   ],
+  date: 'April 10, 2026',
+  readTime: '4 min read',
+  tags: ['slow living', 'mindfulness', 'rest'],
   image: '/images/slowing-down.webp',
-  content: `
+  body: `
     <p>I want to tell you something, and I need you to hear it without your inner critic jumping in to argue.</p>
 
     <p>You are moving too fast.</p>

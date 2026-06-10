@@ -1,35 +1,28 @@
 import type { BlogPost } from './types';
 
-// When You're Too Tired to Pray
-// Blog post for Simplify to Glorify
-
 const post: BlogPost = {
-  id: 9,
-  slug: "when-youre-too-tired-to-pray",
+  slug: 'when-youre-too-tired-to-pray',
+  title: "When You're Too Tired to Pray",
+  category: 'Prayer',
+  excerpt: 'That silence is not the failure you are afraid it is. A gentle word for the worn-out woman who loves God but has run out of words.',
+  metaDescription: 'Too tired to pray? You are not failing at faith. Discover how God meets the weary and exhausted, why wordless prayer still counts, and how to come to Him empty.',
+  keywords: [
+    'too tired to pray',
+    'when you cant pray',
+    'wordless prayer',
+    'prayer when exhausted',
+    'spiritual exhaustion',
+    'caregiver prayer',
+    'prayer in hard seasons',
+    'Romans 8:26',
+    'weary and burdened',
+    'grace when you are empty',
+    'Christian rest',
+    'faith when you feel empty',
+  ],
   date: 'June 2, 2026',
   readTime: '6 min read',
   tags: ['prayer', 'weariness', 'grace'],
-  title: "When You're Too Tired to Pray",
-  category: "Prayer",
-  excerpt:
-    "That silence is not the failure you are afraid it is. A gentle word for the worn-out woman who loves God but has run out of words.",
-  metaDescription:
-    "Too tired to pray? You are not failing at faith. Discover how God meets the weary and exhausted, why wordless prayer still counts, and how to come to Him empty.",
-  keywords: [
-    "too tired to pray",
-    "when you cant pray",
-    "wordless prayer",
-    "prayer when exhausted",
-    "spiritual exhaustion",
-    "caregiver prayer",
-    "prayer in hard seasons",
-    "Romans 8:26",
-    "weary and burdened",
-    "grace when you are empty",
-    "Christian rest",
-    "faith when you feel empty",
-  ],
-  author: "Carla",
   image: '/images/grace_for_the_weary.webp',
   body: `There is a particular kind of tired that prayer cannot seem to reach. You know the one. You sit down to talk to God, the way you have a thousand times before, and nothing comes. Not because you do not love Him. Not because you have stopped believing. You are simply emptied out, and the words that used to rise so easily are gone.
 
@@ -81,40 +74,15 @@ Sit down. Breathe. Say His name, or say nothing at all. Let the Spirit pray the 
 
 You do not have to find the words. You only have to come, and even the coming, on a night like this, He will count as prayer.`,
   moreResources: {
-    heading: "More Resources",
-    intro:
-      "If your prayer life feels worn thin, these verses are gentle places to return when you have little to bring. Let them sit with you on the tired days, no performance required.",
+    heading: 'More Resources',
+    intro: 'If your prayer life feels worn thin, these verses are gentle places to return when you have little to bring. Let them sit with you on the tired days, no performance required.',
     references: [
-      {
-        reference: "Romans 8:26",
-        description:
-          "When you have no words, the Spirit Himself prays for you in groanings too deep for words.",
-      },
-      {
-        reference: "Psalm 62:8",
-        description:
-          "You are invited to pour out your heart before God exactly as it is, because He is your refuge.",
-      },
-      {
-        reference: "Matthew 11:28-29",
-        description:
-          "Jesus calls the weary and burdened to come to Him, and promises rest for the soul.",
-      },
-      {
-        reference: "1 Thessalonians 5:18",
-        description:
-          "Thankfulness is not about feeling full; it is offered in everything, even the empty seasons.",
-      },
-      {
-        reference: "Philippians 4:6",
-        description:
-          "You can bring every anxious thing to God in prayer, with no need to carry it alone.",
-      },
-      {
-        reference: "Psalm 56:8",
-        description:
-          "God sees and keeps every tear, even the ones you cannot put into words.",
-      },
+      { reference: 'Romans 8:26', description: 'When you have no words, the Spirit Himself prays for you in groanings too deep for words.' },
+      { reference: 'Psalm 62:8', description: 'You are invited to pour out your heart before God exactly as it is, because He is your refuge.' },
+      { reference: 'Matthew 11:28-29', description: 'Jesus calls the weary and burdened to come to Him, and promises rest for the soul.' },
+      { reference: '1 Thessalonians 5:18', description: 'Thankfulness is not about feeling full; it is offered in everything, even the empty seasons.' },
+      { reference: 'Philippians 4:6', description: 'You can bring every anxious thing to God in prayer, with no need to carry it alone.' },
+      { reference: 'Psalm 56:8', description: 'God sees and keeps every tear, even the ones you cannot put into words.' },
     ],
   },
 };

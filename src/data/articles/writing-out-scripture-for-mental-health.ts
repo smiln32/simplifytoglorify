@@ -1,9 +1,9 @@
 import type { Article } from './types';
 
-const article: Article = {
-  id: 13,
+const post: Article = {
   slug: 'writing-out-scripture-for-mental-health',
   title: 'Writing Out Scripture by Hand: Why It Helps Mental Health, Memory, and Peace',
+  cardTitle: 'Writing Out Scripture by Hand',
   category: 'Scripture Writing',
   excerpt: 'On the days when prayer feels thin and your Bible sits open to the same page, one verse and a pen can be the gentlest way back to God.',
   metaDescription: 'Writing out Scripture by hand is a gentle practice for weary seasons. See how copying Bible verses can steady an anxious mind and draw you close to God.',
@@ -16,8 +16,6 @@ const article: Article = {
     'faith-based wellness',
   ],
   image: '/images/writing-out-scripture.webp',
-  author: 'Carla',
-  date: '2026-05-28',
   body: `You picked up a pen today because something in you needed a little steadying. Maybe the days have blurred together and prayer feels thin. Your Bible sits open to the same page it did last week. That is a real place to be, and God is not waiting for you to feel better before He meets you there.
 
 Writing out Scripture by hand is one of the gentlest ways back to Him. It asks almost nothing of you. A single verse and a few quiet minutes are enough to begin.
@@ -59,4 +57,4 @@ You can do this for two minutes or twenty. The point was never the page. The poi
 You came to the page carrying more than anyone around you may realize. Lay one verse down in your own handwriting, and let that be enough for today. The God who is near to the brokenhearted is near to you, and He is in no hurry to leave.`,
 };
 
-export default article;
+export default post;

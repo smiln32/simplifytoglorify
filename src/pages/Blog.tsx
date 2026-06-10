@@ -92,7 +92,7 @@ export default function Blog() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {visible.slice(0, shown).map((post) => (
-              <PostCard key={post.id} post={post} to={`/blog/${post.slug}`} />
+              <PostCard key={post.slug} post={post} to={`/blog/${post.slug}`} />
             ))}
           </div>
 

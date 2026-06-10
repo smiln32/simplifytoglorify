@@ -71,7 +71,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recent.map((article) => <ArticleCard key={article.id} article={article} showImage />)}
+            {recent.map((article) => <ArticleCard key={article.slug} article={article} showImage />)}
           </div>
 
           <div className="text-center mt-10">
@@ -162,7 +162,7 @@ export default function ArticlesSection({ sectionRef, limit }: ArticlesSectionPr
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {visible.map((article) => (
-            <PostCard key={article.id} post={article} to={`/articles/${article.slug}`} />
+            <PostCard key={article.slug} post={article} to={`/articles/${article.slug}`} />
           ))}
         </div>
 

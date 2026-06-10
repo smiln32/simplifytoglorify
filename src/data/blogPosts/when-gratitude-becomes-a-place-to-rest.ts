@@ -1,18 +1,24 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 7,
   slug: 'when-gratitude-becomes-a-place-to-rest',
-  date: 'May 30, 2026',
-  readTime: '2 min read',
-  tags: ['gratitude', 'rest', 'peace'],
   title: 'When Gratitude Becomes a Place to Rest',
   category: 'Gratitude',
   excerpt: 'True gratitude goes deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.',
   metaDescription: "True gratitude is not pretending hard things are fine. Discover how noticing God's goodness, even in difficult seasons, can become a place of genuine rest.",
-  keywords: ['Christian gratitude', 'gratitude journal', 'gratitude and rest', 'thankfulness Scripture', 'faith and gratitude', 'gratitude devotional for women'],
+  keywords: [
+    'Christian gratitude',
+    'gratitude journal',
+    'gratitude and rest',
+    'thankfulness Scripture',
+    'faith and gratitude',
+    'gratitude devotional for women',
+  ],
+  date: 'May 30, 2026',
+  readTime: '2 min read',
+  tags: ['gratitude', 'rest', 'peace'],
   image: '/images/rest_for_the_mind.webp',
-  content: `
+  body: `
 <p>Gratitude is often treated like a polite habit, something we say because we were taught to be thankful. But true gratitude goes much deeper than manners. It helps us slow down long enough to notice what is still good, still steady, and still a gift from God.</p>
 
 <p>When life feels heavy, the mind can become trained to search for what is wrong. We notice the problem, the pressure, the delay, the disappointment. Sometimes that happens because we are tired. Sometimes it happens because we have been carrying too much for too long. Gratitude does not pretend those burdens are not real. It simply helps us remember that they are not the whole story.</p>

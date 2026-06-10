@@ -1,27 +1,23 @@
 import type { Article } from './types';
 
 const post: Article = {
-  id: 18,
   slug: 'how-meditation-and-faith-fit-together',
+  title: 'How Do Meditation and Faith Fit Together?',
   category: 'Faith',
-  image: '/images/meditation-and-faith.webp',
-  title: "How Do Meditation and Faith Fit Together?",
-  metaDescription:
-    "Wondering if meditation belongs in your faith? Here is a gentle, Scripture-rooted look at biblical meditation and a simple way to begin.",
+  excerpt: 'Meditation and faith fit together when meditation means giving God your focused attention, not emptying your mind of Him.',
+  metaDescription: 'Wondering if meditation belongs in your faith? Here is a gentle, Scripture-rooted look at biblical meditation and a simple way to begin.',
   keywords: [
-    "christian meditation",
-    "biblical meditation",
-    "meditation and faith",
-    "scripture meditation",
-    "how to meditate as a christian",
+    'christian meditation',
+    'biblical meditation',
+    'meditation and faith',
+    'scripture meditation',
+    'how to meditate as a christian',
     "meditating on God's word",
-    "faith and stillness",
-    "prayer and meditation",
+    'faith and stillness',
+    'prayer and meditation',
   ],
-  date: "2026-06-04",
-  excerpt:
-    "Meditation and faith fit together when meditation means giving God your focused attention, not emptying your mind of Him.",
-  content: `
+  image: '/images/meditation-and-faith.webp',
+  body: `
 <p>You may have heard the word meditation and felt a small flicker of hesitation. Maybe it sounded too eastern, too vague, or like something that does not quite belong inside your faith. That hesitation is honest, and it deserves a real answer instead of a tidy slogan.</p>
 
 <p>Here is the short version. Meditation and faith fit together when meditation means giving God your focused attention, not emptying your mind of Him. The Bible does not treat meditation as a foreign idea sneaking in the back door. It treats it as one of the oldest ways God's people have stayed close to Him.</p>

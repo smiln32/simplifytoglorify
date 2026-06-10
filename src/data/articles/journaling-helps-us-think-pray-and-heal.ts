@@ -1,15 +1,21 @@
 import type { Article } from './types';
 
-const article: Article = {
-  id: 6,
+const post: Article = {
   slug: 'journaling-helps-us-think-pray-and-heal',
   title: 'Journaling Helps Us Think, Pray and Heal',
   category: 'Journaling',
-  excerpt: "Journaling can become something much deeper than recording events, a quiet place where the mind slows down, the heart softens, and faith has room to breathe.",
-  metaDescription: "Journaling is more than recording events. Discover how writing helps Christian women slow down, think more clearly, pray more honestly, and begin to heal.",
-  keywords: ['journaling and healing', 'Christian journaling', 'journaling for mental health', 'faith and journaling', 'prayer journal', 'journaling for women'],
+  excerpt: 'Journaling can become something much deeper than recording events, a quiet place where the mind slows down, the heart softens, and faith has room to breathe.',
+  metaDescription: 'Journaling is more than recording events. Discover how writing helps Christian women slow down, think more clearly, pray more honestly, and begin to heal.',
+  keywords: [
+    'journaling and healing',
+    'Christian journaling',
+    'journaling for mental health',
+    'faith and journaling',
+    'prayer journal',
+    'journaling for women',
+  ],
   image: '/images/journaling_helps_the_mind.webp',
-  content: `
+  body: `
 <p>Journaling is often seen as a simple way to remember the events of a day, but it can become something much deeper. It can be a quiet place where the mind slows down, the heart softens, and faith has room to breathe.</p>
 
 <p>Most of us carry more than we realize. Thoughts pile up. Worries repeat themselves. Emotions sit beneath the surface, unnamed but still heavy. When we take a pen and begin to write, we give those thoughts somewhere to go. The page becomes a gentle place to lay down what has been circling in our minds.</p>
@@ -30,4 +36,4 @@ const article: Article = {
 `,
 };
 
-export default article;
+export default post;

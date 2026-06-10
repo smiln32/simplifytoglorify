@@ -1,17 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 18,
   slug: 'growing-in-patience',
-  date: 'June 6, 2026',
-  readTime: '3 min read',
-  tags: ['patience', 'waiting', 'faith'],
   title: 'When God Grows Your Patience Instead of Giving It',
   category: 'Patience',
-  excerpt:
-    'If you have prayed for patience and felt nothing change, this is for you. A gentle look at how God grows patience through the very waiting we would never choose.',
-  metaDescription:
-    'Patience is grown, not handed to us. A gentle, Scripture-grounded look at how God develops patience through waiting and hard seasons, with key verses on patience.',
+  excerpt: 'If you have prayed for patience and felt nothing change, this is for you. A gentle look at how God grows patience through the very waiting we would never choose.',
+  metaDescription: 'Patience is grown, not handed to us. A gentle, Scripture-grounded look at how God develops patience through waiting and hard seasons, with key verses on patience.',
   keywords: [
     'growing in patience',
     'how to be patient',
@@ -29,7 +23,9 @@ const post: BlogPost = {
     'Christian patience',
     'developing patience through trials',
   ],
-  author: 'Carla',
+  date: 'June 6, 2026',
+  readTime: '3 min read',
+  tags: ['patience', 'waiting', 'faith'],
   image: '/images/growing-in-patience.webp',
   body: `## When You Pray for Patience and Nothing Changes
 
@@ -54,39 +50,14 @@ If you are in a long wait right now, this may not feel like comfort. Waiting is 
 So you do not have to manufacture patience by sheer effort. You only have to stay near the One who grows it. The waiting itself, uncomfortable as it is, may be the quiet answer to the very prayer you thought went unheard.`,
   moreResources: {
     heading: 'More Resources',
-    intro:
-      'These passages are good companions as you grow in patience. Return to them slowly, one at a time, and let them shape how you wait on God.',
+    intro: 'These passages are good companions as you grow in patience. Return to them slowly, one at a time, and let them shape how you wait on God.',
     references: [
-      {
-        reference: 'Galatians 5:22',
-        description:
-          '"But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness." Patience is named as fruit the Spirit grows in us, not a trait we manufacture by willpower.',
-      },
-      {
-        reference: 'James 1:3-4',
-        description:
-          '"Knowing that the testing of your faith produces endurance." Trials are not punishment. They are the soil where patience takes root.',
-      },
-      {
-        reference: 'Romans 5:3-4',
-        description:
-          '"Tribulation brings about perseverance; and perseverance, proven character; and proven character, hope." Patience grows out of hardship, not around it.',
-      },
-      {
-        reference: 'Romans 8:25',
-        description:
-          '"But if we hope for what we do not see, with perseverance we wait eagerly for it." Hope and patience belong together in the waiting.',
-      },
-      {
-        reference: 'Colossians 1:11',
-        description:
-          '"Strengthened with all power, according to His glorious might, for the attaining of all perseverance and patience." God supplies the strength a long wait requires.',
-      },
-      {
-        reference: 'Hebrews 6:15',
-        description:
-          '"And so, having patiently waited, he obtained the promise." Abraham\'s patience was grown across a lifetime of waiting on God.',
-      },
+      { reference: 'Galatians 5:22', description: '"But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness." Patience is named as fruit the Spirit grows in us, not a trait we manufacture by willpower.' },
+      { reference: 'James 1:3-4', description: '"Knowing that the testing of your faith produces endurance." Trials are not punishment. They are the soil where patience takes root.' },
+      { reference: 'Romans 5:3-4', description: '"Tribulation brings about perseverance; and perseverance, proven character; and proven character, hope." Patience grows out of hardship, not around it.' },
+      { reference: 'Romans 8:25', description: '"But if we hope for what we do not see, with perseverance we wait eagerly for it." Hope and patience belong together in the waiting.' },
+      { reference: 'Colossians 1:11', description: '"Strengthened with all power, according to His glorious might, for the attaining of all perseverance and patience." God supplies the strength a long wait requires.' },
+      { reference: 'Hebrews 6:15', description: "\"And so, having patiently waited, he obtained the promise.\" Abraham's patience was grown across a lifetime of waiting on God." },
     ],
   },
 };

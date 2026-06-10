@@ -1,16 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 4,
   slug: 'when-your-emotions-feel-like-too-much',
   title: 'When Your Emotions Feel Like Too Much',
+  category: 'Anxiety',
   excerpt: 'You are not too emotional. You are human, carrying real things. And God is not surprised by any of it.',
   metaDescription: 'Feeling overwhelmed by your own emotions? You are not too much. A faith-rooted look at why God made room for the full range of what you feel.',
-  date: 'April 22, 2026',
-  readTime: '5 min read',
-  category: 'Anxiety',
-  tags: ['emotions', 'overwhelm', 'faith'],
-  image: '/images/emotions-fee-like-too-much.webp',
   keywords: [
     'when emotions feel like too much',
     'overwhelmed emotions',
@@ -19,7 +14,11 @@ const post: BlogPost = {
     'emotional overwhelm faith',
     'God and big feelings',
   ],
-  content: `
+  date: 'April 22, 2026',
+  readTime: '5 min read',
+  tags: ['emotions', 'overwhelm', 'faith'],
+  image: '/images/emotions-fee-like-too-much.webp',
+  body: `
     <p>Have you ever felt embarrassed by how much you feel? Like your emotions arrive louder than everyone else's, stay longer than they should, and show up at the worst possible moments? Like the gap between what you feel on the inside and what looks manageable on the outside has become exhausting to maintain?</p>
 
     <p>If that's you, I want to say something clearly before anything else. You are not too much. You are not broken. You are not spiritually deficient because your emotions are big. You are human, carrying real things, and God is not standing across the room waiting for you to get yourself under control before He draws near.</p>

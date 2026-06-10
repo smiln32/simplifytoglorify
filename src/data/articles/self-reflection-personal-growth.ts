@@ -1,31 +1,25 @@
-// How Self-Reflection Leads to Personal Growth
-// Blog post for Simplify to Glorify
+import type { Article } from './types';
 
-export const post = {
-  id: 11,
-  slug: "self-reflection-personal-growth",
-  title: "How Self-Reflection Leads to Personal Growth",
-  category: "General",
-  excerpt:
-    "You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.",
-  metaDescription:
-    "Self-reflection can grow you or quietly wear you down. Learn the difference between reflection and rumination, a simple gentle rhythm, and how faith makes the searching kinder.",
+const post: Article = {
+  slug: 'self-reflection-personal-growth',
+  title: 'How Self-Reflection Leads to Personal Growth',
+  category: 'General',
+  excerpt: 'You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.',
+  metaDescription: 'Self-reflection can grow you or quietly wear you down. Learn the difference between reflection and rumination, a simple gentle rhythm, and how faith makes the searching kinder.',
   keywords: [
-    "self-reflection",
-    "personal growth",
-    "reflection vs rumination",
-    "Christian self-examination",
-    "how to reflect",
-    "spiritual growth",
-    "the Examen",
-    "renewing of your mind",
-    "Romans 12:2",
-    "Psalm 139 search me",
-    "gentle self-reflection",
-    "growth without self-criticism",
+    'self-reflection',
+    'personal growth',
+    'reflection vs rumination',
+    'Christian self-examination',
+    'how to reflect',
+    'spiritual growth',
+    'the Examen',
+    'renewing of your mind',
+    'Romans 12:2',
+    'Psalm 139 search me',
+    'gentle self-reflection',
+    'growth without self-criticism',
   ],
-  date: "2026-05-28",
-  author: "Carla",
   image: '/images/women-in-hard-seasons.webp',
   body: `You have a sense, somewhere underneath the busyness, that the last year held more than you have yet taken from it. Lessons you brushed past. Patterns you almost saw. A quieter wisdom waiting for you to slow down long enough to notice it.
 
@@ -97,40 +91,15 @@ The kind of reflection that actually grows people is structured, kind, action-or
 
 That is enough. And small, faithful things have a way of compounding, over months and years, into the very person you have been hoping to become.`,
   moreResources: {
-    heading: "More Resources",
-    intro:
-      "If you want to reflect in a way that grows you rather than wears you down, these verses invite God into the searching. Return to them when self-examination starts to feel harsh.",
+    heading: 'More Resources',
+    intro: 'If you want to reflect in a way that grows you rather than wears you down, these verses invite God into the searching. Return to them when self-examination starts to feel harsh.',
     references: [
-      {
-        reference: "Psalm 139:23-24",
-        description:
-          "David invites God to search his heart, so the examining is done with mercy already in the room.",
-      },
-      {
-        reference: "Romans 12:2",
-        description:
-          "Growth is the slow renewing of the mind, not a performance you have to perfect on your own.",
-      },
-      {
-        reference: "Lamentations 3:40",
-        description:
-          "We are invited to examine our ways and turn back to the Lord, gently and without self-condemnation.",
-      },
-      {
-        reference: "2 Corinthians 13:5",
-        description:
-          "Paul calls us to examine ourselves in the faith, looking honestly for the evidence of Christ in us.",
-      },
-      {
-        reference: "Psalm 19:14",
-        description:
-          "A prayer that the words of our mouth and the meditation of our heart would be pleasing to God.",
-      },
-      {
-        reference: "Philippians 1:6",
-        description:
-          "The good work God began in you, He will carry on to completion; growth is His project, not only yours.",
-      },
+      { reference: 'Psalm 139:23-24', description: 'David invites God to search his heart, so the examining is done with mercy already in the room.' },
+      { reference: 'Romans 12:2', description: 'Growth is the slow renewing of the mind, not a performance you have to perfect on your own.' },
+      { reference: 'Lamentations 3:40', description: 'We are invited to examine our ways and turn back to the Lord, gently and without self-condemnation.' },
+      { reference: '2 Corinthians 13:5', description: 'Paul calls us to examine ourselves in the faith, looking honestly for the evidence of Christ in us.' },
+      { reference: 'Psalm 19:14', description: 'A prayer that the words of our mouth and the meditation of our heart would be pleasing to God.' },
+      { reference: 'Philippians 1:6', description: 'The good work God began in you, He will carry on to completion; growth is His project, not only yours.' },
     ],
   },
 };

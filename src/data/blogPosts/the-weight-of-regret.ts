@@ -1,22 +1,17 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 19,
   slug: 'the-weight-of-regret',
-  date: 'June 7, 2026',
-  readTime: '7 min read',
-  tags: ['regret', 'forgiveness', 'grace'],
-  title: 'The Weight of Regret: How Forgiveness Frees Us to Keep Doing God\'s Work',
+  title: "The Weight of Regret: How Forgiveness Frees Us to Keep Doing God's Work",
+  cardTitle: 'The Weight of Regret',
   category: 'Regret',
-  excerpt:
-    'We all carry regret for things we cannot undo. A grace-centered look at receiving God\'s forgiveness, releasing shame, and refusing to let the past stop His work in you.',
-  metaDescription:
-    'You do not have to keep punishing yourself for the past. A Scripture-grounded look at receiving God\'s forgiveness, releasing guilt and shame, and moving forward in faith.',
+  excerpt: "We all carry regret for things we cannot undo. A grace-centered look at receiving God's forgiveness, releasing shame, and refusing to let the past stop His work in you.",
+  metaDescription: "You do not have to keep punishing yourself for the past. A Scripture-grounded look at receiving God's forgiveness, releasing guilt and shame, and moving forward in faith.",
   keywords: [
     'overcoming regret',
     'how to let go of regret',
     'forgiving yourself',
-    'God\'s forgiveness',
+    "God's forgiveness",
     'guilt and shame',
     'repentance and forgiveness',
     'no condemnation in Christ',
@@ -29,7 +24,9 @@ const post: BlogPost = {
     'regret and faith',
     'letting go of past mistakes',
   ],
-  author: 'Carla',
+  date: 'June 7, 2026',
+  readTime: '7 min read',
+  tags: ['regret', 'forgiveness', 'grace'],
   image: '/images/the-weight-of-regret.webp',
   body: `## How Forgiveness Frees Us to Keep Doing God's Work
 
@@ -108,39 +105,14 @@ When you have truly repented, the account is settled. The shame that lingers aft
 There is still good work ahead of you, and a God who has already cleared you to do it.`,
   moreResources: {
     heading: 'More Resources',
-    intro:
-      'These passages are good companions when regret is heavy. Return to them slowly, one at a time, and let them remind you of what God has already done with your repented sin.',
+    intro: 'These passages are good companions when regret is heavy. Return to them slowly, one at a time, and let them remind you of what God has already done with your repented sin.',
     references: [
-      {
-        reference: '2 Corinthians 7:10',
-        description:
-          '"For the sorrow that is according to the will of God produces a repentance without regret, leading to salvation." Godly sorrow moves us toward God. Worldly sorrow leaves us alone with ourselves.',
-      },
-      {
-        reference: '1 John 1:9',
-        description:
-          '"If we confess our sins, He is faithful and righteous, so that He will forgive us our sins and cleanse us from all unrighteousness." Repentance meets complete forgiveness, not partial.',
-      },
-      {
-        reference: 'Psalm 103:12',
-        description:
-          '"As far as the east is from the west, so far has He removed our wrongdoings from us." A picture of how completely God carries away what we confess.',
-      },
-      {
-        reference: 'Romans 8:1',
-        description:
-          '"Therefore there is now no condemnation for those who are in Christ Jesus." No condemnation, and no someday about it. Now.',
-      },
-      {
-        reference: 'Revelation 12:10',
-        description:
-          '"The accuser of our brothers and sisters... accuses them before our God day and night." A reminder that not every accusing voice within us is the voice of God.',
-      },
-      {
-        reference: 'Philippians 3:13-14',
-        description:
-          '"Forgetting what lies behind and reaching forward to what lies ahead, I press on toward the goal." Not pretending the past did not happen, but refusing to let it set the direction.',
-      },
+      { reference: '2 Corinthians 7:10', description: '"For the sorrow that is according to the will of God produces a repentance without regret, leading to salvation." Godly sorrow moves us toward God. Worldly sorrow leaves us alone with ourselves.' },
+      { reference: '1 John 1:9', description: '"If we confess our sins, He is faithful and righteous, so that He will forgive us our sins and cleanse us from all unrighteousness." Repentance meets complete forgiveness, not partial.' },
+      { reference: 'Psalm 103:12', description: '"As far as the east is from the west, so far has He removed our wrongdoings from us." A picture of how completely God carries away what we confess.' },
+      { reference: 'Romans 8:1', description: '"Therefore there is now no condemnation for those who are in Christ Jesus." No condemnation, and no someday about it. Now.' },
+      { reference: 'Revelation 12:10', description: '"The accuser of our brothers and sisters... accuses them before our God day and night." A reminder that not every accusing voice within us is the voice of God.' },
+      { reference: 'Philippians 3:13-14', description: '"Forgetting what lies behind and reaching forward to what lies ahead, I press on toward the goal." Not pretending the past did not happen, but refusing to let it set the direction.' },
     ],
   },
 };

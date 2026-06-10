@@ -1,15 +1,21 @@
 import type { Article } from './types';
 
-const article: Article = {
-  id: 8,
+const post: Article = {
   slug: 'how-journaling-heals-the-soul',
   title: 'How Journaling Heals the Mind and Soul',
   category: 'Journaling',
   excerpt: 'A pen, a page, a few honest words. Journaling can become the quiet place where the mind settles, the heart exhales, and God helps us see what we could not see before.',
   metaDescription: "Journaling can become the quiet place where the mind settles, the heart exhales, and God helps you see what you couldn't see while everything felt tangled.",
-  keywords: ['journaling heals the soul', 'journaling for healing', 'Christian journaling', 'soul care faith', 'faith and journaling', 'prayer journal for healing'],
+  keywords: [
+    'journaling heals the soul',
+    'journaling for healing',
+    'Christian journaling',
+    'soul care faith',
+    'faith and journaling',
+    'prayer journal for healing',
+  ],
   image: '/images/think_pray_heal.webp',
-  content: `
+  body: `
 <p>Journaling can look like such a simple thing. A pen. A page. A few honest words at the end of a long day. But it can become something much deeper than a record of what happened. It can become a quiet place where the mind settles, the heart exhales, and God gently helps us see what we could not see while everything was still tangled inside.</p>
 
 <p>When we write, we are not just putting words on paper. We are giving shape to what has been unnamed. The scattered thoughts, the worries, the questions, the feelings we have been carrying quietly, they begin to come into the light. And sometimes, by the grace of God, what felt chaotic inside us becomes a little clearer on the page.</p>
@@ -44,4 +50,4 @@ const article: Article = {
 `,
 };
 
-export default article;
+export default post;

@@ -1,7 +1,6 @@
 import type { Article } from './types';
 
-const article: Article = {
-  id: 15,
+const post: Article = {
   slug: 'deeper-faith-ordinary-days',
   title: 'How to Grow a Deeper Faith in Ordinary Days',
   category: 'Faith',
@@ -64,4 +63,4 @@ Not flashy. Not forced. Rooted.
 `,
 };
 
-export default article;
+export default post;

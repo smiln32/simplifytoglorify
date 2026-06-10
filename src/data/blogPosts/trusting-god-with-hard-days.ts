@@ -1,14 +1,14 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 16,
   slug: 'trusting-god-with-hard-days',
+  title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
+  cardTitle: 'Trusting God With Hard Days',
+  category: 'Trusting God',
+  excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
   date: 'June 1, 2026',
   readTime: '4 min read',
   tags: ['trust', 'hard seasons', 'faith'],
-  title: 'Trusting God When the Day Is Hard and Nothing Feels Easy',
-  category: 'Trusting God',
-  excerpt: 'Trusting God on a hard day does not mean pretending everything is fine. It means bringing the real day to Him and taking the next faithful step.',
   image: '/images/trusting-God-hard-days.webp',
   body: `
 Some days are just hard.

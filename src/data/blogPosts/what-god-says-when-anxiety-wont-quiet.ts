@@ -1,16 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 7,
   slug: 'what-god-says-when-anxiety-wont-quiet',
   title: "What God Says When Anxiety Won't Quiet",
+  category: 'Anxiety',
   excerpt: 'The goal was never to stop feeling anxious. The goal was to know who holds you when the anxiety is loud.',
   metaDescription: "When anxiety won't quiet no matter what you try, Scripture offers something better than a fix. A faith-rooted look at what God actually says to anxious hearts.",
-  date: 'May 13, 2026',
-  readTime: '5 min read',
-  category: 'Anxiety',
-  tags: ['anxiety', 'peace', 'trust'],
-  image: '/images/when-anxiety-wont.webp',
   keywords: [
     'anxiety and faith',
     'Christian anxiety',
@@ -19,7 +14,11 @@ const post: BlogPost = {
     'Scripture for anxiety',
     'faith over anxiety',
   ],
-  content: `
+  date: 'May 13, 2026',
+  readTime: '5 min read',
+  tags: ['anxiety', 'peace', 'trust'],
+  image: '/images/when-anxiety-wont.webp',
+  body: `
     <p>Can I be honest about something that took me a long time to understand? For most of my life, I thought the goal of faith was to stop being anxious. That if I prayed enough, trusted enough, read enough Scripture, the worry would eventually quiet down and stay down. And when it didn't, when anxiety came back despite my best spiritual efforts, I quietly assumed there was something wrong with my faith.</p>
 
     <p>I've since come to think that's exactly backwards.</p>

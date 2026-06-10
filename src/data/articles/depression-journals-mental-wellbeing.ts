@@ -1,15 +1,22 @@
 import type { Article } from './types';
 
-const article: Article = {
-  id: 1,
+const post: Article = {
   slug: 'depression-journals-mental-wellbeing',
   title: 'How Do Depression Journals Improve Mental Well-Being?',
+  cardTitle: 'How Depression Journals Help',
   category: 'Depression',
   excerpt: "Depression journals don't erase pain, but they offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons.",
   metaDescription: "Depression journals don't erase pain, but they offer a faith-grounded space for processing heavy thoughts and finding God's presence in hard seasons.",
-  keywords: ['depression journal', 'Christian depression', 'journaling for depression', 'faith and depression', 'mental wellbeing Scripture', 'Christian women depression'],
+  keywords: [
+    'depression journal',
+    'Christian depression',
+    'journaling for depression',
+    'faith and depression',
+    'mental wellbeing Scripture',
+    'Christian women depression',
+  ],
   image: '/images/depression-and-faith.webp',
-  content: `
+  body: `
 <p>Depression journals support mental well-being in quiet, meaningful ways that create emotional relief and spiritual connection.</p>
 <p>They don't erase pain or replace professional help, but depression journals offer a gentle space for processing heavy thoughts and finding God's presence in hard seasons. Through consistent journaling, women discover emotional clarity, self-compassion, and subtle shifts toward hope.</p>
 
@@ -88,4 +95,4 @@ const article: Article = {
 `,
 };
 
-export default article;
+export default post;

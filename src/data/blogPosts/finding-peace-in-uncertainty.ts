@@ -1,15 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 1,
   slug: 'finding-peace-in-uncertainty',
   title: 'Finding Peace in Uncertainty',
+  category: 'Peace',
   excerpt: 'When the path ahead feels unclear, there is grace in learning to be still.',
   metaDescription: "When worry won't let you rest and the future feels uncertain, there is a place to bring all of it - a faith-rooted look at finding peace when you can't see the path ahead.",
-  date: 'April 15, 2026',
-  readTime: '5 min read',
-  category: 'Peace',
-  tags: ['peace', 'trust', 'stillness'],
   keywords: [
     'finding peace',
     'finding peace of mind',
@@ -27,8 +23,11 @@ const post: BlogPost = {
     'matthew 6 34 meaning',
     'philippians 4 8 meaning',
   ],
+  date: 'April 15, 2026',
+  readTime: '5 min read',
+  tags: ['peace', 'trust', 'stillness'],
   image: '/images/finding_peace_in_uncertainty.webp',
-  content: `
+  body: `
     <p>If you've been searching for peace of mind or some sense of inner peace, you're not alone in that search. There is a particular kind of exhaustion that comes from trying to see around corners - from attempting to map out a future that refuses to be mapped. If you know that feeling, I want you to hear something right now. That exhaustion is not a sign that your faith is weak. It's a sign that you're human, and you're carrying something heavy.</p>
 
     <p>I've been in that place where I wasn't even tired from doing things. I was tired from thinking about things. Running scenarios at 2 a.m., rehearsing conversations that hadn't happened yet, trying to control outcomes by worrying about them hard enough - as if worry were a form of preparation. It isn't. But it feels like it is, and that's part of what makes it so hard to stop.</p>

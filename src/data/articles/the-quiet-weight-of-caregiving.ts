@@ -1,14 +1,11 @@
-const post = {
-  id: 6,
+import type { Article } from './types';
+
+const post: Article = {
   slug: 'the-quiet-weight-of-caregiving',
   title: 'The Quiet Weight of Caregiving',
-  excerpt: 'Nobody tells you about the invisible grief that comes with caring for someone you love. But God sees what the job requires.',
-  metaDescription: "Caregiving is one of the most demanding things a woman can do, and one of the loneliest. A faith-based look at the quiet weight caregivers carry and where God meets them.",
-  date: 'May 6, 2026',
-  readTime: '6 min read',
   category: 'Caregiving',
-  tags: ['caregiving', 'burnout', 'faith'],
-  image: '/images/weight-of-caregiving.webp',
+  excerpt: 'Nobody tells you about the invisible grief that comes with caring for someone you love. But God sees what the job requires.',
+  metaDescription: 'Caregiving is one of the most demanding things a woman can do, and one of the loneliest. A faith-based look at the quiet weight caregivers carry and where God meets them.',
   keywords: [
     'caregiver burnout',
     'Christian caregiver',
@@ -17,7 +14,8 @@ const post = {
     'caregiver exhaustion',
     'faith for caregivers',
   ],
-  content: `
+  image: '/images/weight-of-caregiving.webp',
+  body: `
     <p>There's a particular kind of loneliness that comes with caregiving. It's not the loneliness of being alone, caregiving often means you're never alone, that someone always needs something, that your attention is always spoken for. It's the loneliness of being the one who holds everything together while quietly wondering if anyone notices what it costs.</p>
 
     <p>If you are caring for a parent, a spouse, a child with special needs, or anyone whose daily life depends on your consistent presence and effort, I want to say something to you that you may not hear enough: what you are doing is extraordinary. Not because it's dramatic or visible, caregiving is usually neither. But because it requires a kind of sustained, unglamorous faithfulness that most people don't fully understand until they've lived it.</p>

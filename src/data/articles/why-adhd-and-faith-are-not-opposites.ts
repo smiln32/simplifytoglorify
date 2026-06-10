@@ -1,14 +1,11 @@
-const post = {
-  id: 9,
+import type { Article } from './types';
+
+const post: Article = {
   slug: 'why-adhd-and-faith-are-not-opposites',
   title: 'Why ADHD and Faith Are Not Opposites',
-  excerpt: 'God did not form your mind by accident. The scattered moments, the racing thoughts, the way your brain moves, none of it surprised Him.',
-  metaDescription: "ADHD and faith can feel like they pull against each other. But God formed your mind on purpose. A gentle, honest look at what faith looks like with an ADHD brain.",
-  date: 'May 27, 2026',
-  readTime: '5 min read',
   category: 'ADHD',
-  tags: ['ADHD', 'faith', 'identity'],
-  image: '/images/adhd-and-faith.webp',
+  excerpt: 'God did not form your mind by accident. The scattered moments, the racing thoughts, the way your brain moves, none of it surprised Him.',
+  metaDescription: 'ADHD and faith can feel like they pull against each other. But God formed your mind on purpose. A gentle, honest look at what faith looks like with an ADHD brain.',
   keywords: [
     'ADHD and faith',
     'Christian ADHD',
@@ -17,7 +14,8 @@ const post = {
     'faith with ADHD',
     'ADHD God made me',
   ],
-  content: `
+  image: '/images/adhd-and-faith.webp',
+  body: `
     <p>If you have ADHD and you're a woman of faith, there's a good chance you've sat in church, in a quiet time, in a prayer meeting, and thought: something is wrong with me. Everyone else seems to be able to focus. Everyone else can sit still, follow along, pray without their mind taking eleven detours in five minutes. You wonder if your scattered, busy, hard-to-settle brain is a spiritual problem, a discipline issue, a faith issue, evidence that you just haven't tried hard enough.</p>
 
     <p>I want to offer a different picture.</p>

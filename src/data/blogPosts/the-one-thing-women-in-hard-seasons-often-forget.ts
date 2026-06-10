@@ -1,16 +1,11 @@
 import type { BlogPost } from './types';
 
 const post: BlogPost = {
-  id: 10,
   slug: 'the-one-thing-women-in-hard-seasons-often-forget',
   title: 'The One Thing Women in Hard Seasons Often Forget',
+  category: 'Encouragement',
   excerpt: 'In hard seasons, we remember to pray for others, to hold things together, to keep going. We often forget that we are allowed to receive.',
   metaDescription: "Women in hard seasons are often so busy holding things together that they forget they're allowed to receive. A faith-rooted reminder of what God offers, and how to let it in.",
-  date: 'June 3, 2026',
-  readTime: '5 min read',
-  category: 'Encouragement',
-  tags: ['hard seasons', 'identity', 'grace'],
-  image: '/images/what-women-forget.webp',
   keywords: [
     'women in hard seasons',
     'faith in hard times',
@@ -19,7 +14,11 @@ const post: BlogPost = {
     'receiving grace',
     'God cares for women',
   ],
-  content: `
+  date: 'June 3, 2026',
+  readTime: '5 min read',
+  tags: ['hard seasons', 'identity', 'grace'],
+  image: '/images/what-women-forget.webp',
+  body: `
     <p>There's something that happens to many women in hard seasons. We get very good at holding things together. Very good at showing up, pushing through, caring for others, managing what needs managing. We know how to pour out. We've had a lot of practice.</p>
 
     <p>What we often forget, what hard seasons have a way of quietly training out of us, is how to receive.</p>
