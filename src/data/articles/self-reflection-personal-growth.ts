@@ -5,7 +5,7 @@ const post: Article = {
   title: 'How Self-Reflection Leads to Personal Growth',
   category: 'General',
   excerpt: 'You have a sense that the last year held more than you have yet taken from it. A gentle, grace-grounded look at reflection that grows you instead of wearing you down.',
-  metaDescription: 'Self-reflection can grow you or quietly wear you down. Learn the difference between reflection and rumination, a simple gentle rhythm, and how faith makes the searching kinder.',
+  metaDescription: 'Self-reflection can grow you or quietly wear you down. Learn the difference between reflection and rumination, and how faith makes the searching kinder.',
   keywords: [
     'self-reflection',
     'personal growth',

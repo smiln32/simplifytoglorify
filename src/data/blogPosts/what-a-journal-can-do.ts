@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'What a Journal Can Do',
   category: 'Journaling',
   excerpt: 'You don\'t have to be a writer. You just have to be willing to show up on the page.',
-  metaDescription: 'You don\'t have to be a writer to journal. A gentle look at how a Scripture-rooted journal slows you down, helps you process hard emotions, and creates space to meet God honestly.',
+  metaDescription: 'You don\'t have to be a writer to journal. How a Scripture-rooted journal slows you down, helps you process hard emotions, and meets God honestly.',
   keywords: [
     'how to start a prayer journal',
     'Christian journaling',

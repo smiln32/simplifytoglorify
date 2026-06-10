@@ -5,7 +5,7 @@ const post: Article = {
   title: 'How to Carve Out Time for Journaling',
   category: 'Journaling',
   excerpt: "What if your prayer journal didn't require 30 minutes of uninterrupted quiet? What if 5 minutes was enough to breathe, pray, and reconnect with God?",
-  metaDescription: "You don't need 30 quiet minutes to start a meaningful prayer journal. Discover how just 5 honest minutes a day can help you breathe, pray, and reconnect with God.",
+  metaDescription: "You don't need 30 quiet minutes for a meaningful prayer journal. How just 5 honest minutes a day can help you breathe, pray, and reconnect with God.",
   keywords: [
     'how to carve out time for journaling',
     'prayer journal beginners',

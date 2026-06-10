@@ -49,7 +49,7 @@ export default function ArticlePage() {
   return (
     <>
       <Helmet>
-        <title>{article.title} | Simplify to Glorify</title>
+        <title>{(article.cardTitle ?? article.title)} | Simplify to Glorify</title>
         <meta name="description" content={description} />
         {article.keywords && article.keywords.length > 0 && (
           <meta name="keywords" content={article.keywords.join(', ')} />

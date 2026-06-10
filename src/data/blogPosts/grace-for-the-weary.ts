@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'Grace for the Weary',
   category: 'Depression',
   excerpt: 'There is no shame in being tired. There is only grace, waiting to meet you there.',
-  metaDescription: "If you're emotionally exhausted or emotionally drained and not sure why, this is for you - grace-rooted encouragement for women in hard seasons, straight from Scripture.",
+  metaDescription: "If you're worn out and not even sure why, this is for you - grace-rooted encouragement from Scripture for women in hard, weary seasons.",
   keywords: [
     'emotionally exhausted',
     'emotionally drained',

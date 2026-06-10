@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'What Grief Actually Needs From You',
   category: 'Grief',
   excerpt: "Grief doesn't need you to move through it faster. It needs you to stop pretending it isn't there.",
-  metaDescription: "Grief doesn't follow a schedule and it doesn't need you to rush it. A gentle, faith-rooted look at what grief actually asks of us, and what God offers in return.",
+  metaDescription: "Grief doesn't follow a schedule and doesn't need you to rush it. A faith-rooted look at what grief actually asks of us, and what God offers in return.",
   keywords: [
     'what grief needs',
     'how to grieve',

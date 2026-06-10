@@ -5,7 +5,7 @@ const post: Article = {
   title: 'Why Social Anxiety Seems to Be on the Rise',
   category: 'Anxiety',
   excerpt: 'Many people feel more awkward, drained, or self-conscious in social settings than they used to. There are real reasons for that, and shame does not need to be one of them.',
-  metaDescription: 'Social anxiety has increased for many people. There are real reasons for that shift, and shame is not one of them. A gentle look at why and how to start rebuilding.',
+  metaDescription: 'Social anxiety is rising, and there are real reasons for it - shame is not one of them. A gentle look at why, and how to start rebuilding.',
   keywords: [
     'social anxiety',
     'why am I socially anxious',

@@ -49,7 +49,7 @@ export default function BlogPost() {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Simplify to Glorify</title>
+        <title>{(post.cardTitle ?? post.title)} | Simplify to Glorify</title>
         <meta name="description" content={description} />
         {post.keywords && post.keywords.length > 0 && (
           <meta name="keywords" content={post.keywords.join(', ')} />

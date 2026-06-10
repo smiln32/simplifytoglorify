@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'When the Dark Stays',
   category: 'Depression',
   excerpt: 'Depression is not the absence of faith. It is a heavy fog, and God is not afraid of fog.',
-  metaDescription: 'You can love God deeply and still be depressed. A grace-centered look at what depression actually is, why it is not a faith failure, and how Scripture meets you in the dark.',
+  metaDescription: 'You can love God deeply and still be depressed. A grace-centered look at why depression is not a faith failure, and how Scripture meets you in the dark.',
   keywords: [
     'depression and faith',
     'Christian depression',

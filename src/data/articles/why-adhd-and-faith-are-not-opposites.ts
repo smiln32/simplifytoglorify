@@ -5,7 +5,7 @@ const post: Article = {
   title: 'Why ADHD and Faith Are Not Opposites',
   category: 'ADHD',
   excerpt: 'God did not form your mind by accident. The scattered moments, the racing thoughts, the way your brain moves, none of it surprised Him.',
-  metaDescription: 'ADHD and faith can feel like they pull against each other. But God formed your mind on purpose. A gentle, honest look at what faith looks like with an ADHD brain.',
+  metaDescription: 'ADHD and faith can feel like they pull against each other. But God formed your mind on purpose - what faith looks like with an ADHD brain.',
   keywords: [
     'ADHD and faith',
     'Christian ADHD',

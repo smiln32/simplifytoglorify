@@ -5,7 +5,7 @@ const post: Article = {
   title: 'The Quiet Weight of Caregiving',
   category: 'Caregiving',
   excerpt: 'Nobody tells you about the invisible grief that comes with caring for someone you love. But God sees what the job requires.',
-  metaDescription: 'Caregiving is one of the most demanding things a woman can do, and one of the loneliest. A faith-based look at the quiet weight caregivers carry and where God meets them.',
+  metaDescription: 'Caregiving is one of the most demanding, loneliest kinds of love. A faith-based look at the quiet weight caregivers carry, and where God meets them.',
   keywords: [
     'caregiver burnout',
     'Christian caregiver',

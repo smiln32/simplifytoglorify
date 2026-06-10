@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: "What You Didn't Do",
   category: 'Regret',
   excerpt: "Regret can feel like a wound that reopens every time you're still. But God does not measure your life by what you missed.",
-  metaDescription: 'The regret of what you did not do can follow you for years. A grace-centered look at the difference between conviction and regret, and how God restores the people who feel they failed.',
+  metaDescription: 'The regret of what you didn\'t do can haunt you for years. A grace-centered look at conviction versus regret, and how God restores those who failed.',
   keywords: [
     'regret over the past',
     'letting go of regret',

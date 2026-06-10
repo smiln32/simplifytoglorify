@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'Finding Peace in Uncertainty',
   category: 'Peace',
   excerpt: 'When the path ahead feels unclear, there is grace in learning to be still.',
-  metaDescription: "When worry won't let you rest and the future feels uncertain, there is a place to bring all of it - a faith-rooted look at finding peace when you can't see the path ahead.",
+  metaDescription: "When worry won't rest and the future feels uncertain, there is a place to bring it all - finding peace, by faith, when you can't see the path ahead.",
   keywords: [
     'finding peace',
     'finding peace of mind',

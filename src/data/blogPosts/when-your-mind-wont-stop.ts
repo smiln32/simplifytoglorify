@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: "When Your Mind Won't Stop",
   category: 'Anxiety',
   excerpt: 'Anxiety is not a lack of faith. It is a storm in your body, and God is not standing outside of it.',
-  metaDescription: 'When your mind races at night and the worry will not quiet, it is not a faith failure. A gentle, grounded look at what anxiety does to the body and how God meets you in it.',
+  metaDescription: 'When your mind races at night and worry won\'t quiet, it is not a faith failure. A look at what anxiety does to the body, and how God meets you in it.',
   keywords: [
     'racing thoughts at night',
     'Christian anxiety',

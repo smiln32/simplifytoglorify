@@ -5,6 +5,17 @@ const post: Article = {
   title: 'Simple Tips to Help Avoid Caregiver Burnout',
   category: 'Caregiving',
   excerpt: 'Caregiving is meaningful, but it can also become exhausting. Here are simple, gentle ways to notice burnout sooner, simplify what you can, and receive help without guilt.',
+  metaDescription: 'Caregiver burnout creeps in slowly. Learn to notice the early warning signs, simplify what you can, and accept real help without guilt or shame.',
+  keywords: [
+    'caregiver burnout',
+    'signs of caregiver burnout',
+    'avoiding caregiver burnout',
+    'caregiver exhaustion',
+    'caregiver self-care',
+    'caregiver support',
+    'Christian caregiver',
+    'caregiving and faith',
+  ],
   image: '/images/weight-of-caregiving.webp',
   body: `
 Caregiving is one of the most meaningful kinds of love, but it can also become one of the most exhausting. When someone depends on you, it is easy to keep going long after your own body, mind, and spirit have started asking for rest.

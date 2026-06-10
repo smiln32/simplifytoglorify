@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'The Pain No One Can See',
   category: 'Chronic Pain',
   excerpt: 'Chronic pain is often invisible, and being unseen can be its own kind of ache. A grace-centered look at lament, the God who sees, and faith that does not depend on being healed.',
-  metaDescription: 'A Scripture-grounded encouragement for living with chronic pain and invisible illness, on lament, the God who sees, and grace that holds when prayers for healing go unanswered.',
+  metaDescription: 'Scripture-grounded encouragement for living with chronic pain and invisible illness - on lament, the God who sees, and grace when healing does not come.',
   keywords: [
     'chronic pain and faith',
     'invisible illness',

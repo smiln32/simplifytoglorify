@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'When the Loss Is Too Big',
   category: 'Grief',
   excerpt: "Some grief doesn't have a bottom. God does not ask you to find one.",
-  metaDescription: 'When grief is too big to move through - the loss of a child, a loss that changed you forever - God does not rush you. A tender, honest word for the deepest grief, and the God who weeps with you.',
+  metaDescription: 'When grief is too big to move through - like losing a child - God does not rush you. A tender word for the deepest grief, and the God who weeps with you.',
   keywords: [
     'overwhelming grief',
     'loss of a child',

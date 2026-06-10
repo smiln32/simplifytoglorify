@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'When God Grows Your Patience Instead of Giving It',
   category: 'Patience',
   excerpt: 'If you have prayed for patience and felt nothing change, this is for you. A gentle look at how God grows patience through the very waiting we would never choose.',
-  metaDescription: 'Patience is grown, not handed to us. A gentle, Scripture-grounded look at how God develops patience through waiting and hard seasons, with key verses on patience.',
+  metaDescription: 'Patience is grown, not handed to us. A Scripture-grounded look at how God develops patience through the waiting and hard seasons we never choose.',
   keywords: [
     'growing in patience',
     'how to be patient',

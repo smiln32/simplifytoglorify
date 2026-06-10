@@ -6,7 +6,7 @@ const post: BlogPost = {
   cardTitle: 'The Weight of Regret',
   category: 'Regret',
   excerpt: "We all carry regret for things we cannot undo. A grace-centered look at receiving God's forgiveness, releasing shame, and refusing to let the past stop His work in you.",
-  metaDescription: "You do not have to keep punishing yourself for the past. A Scripture-grounded look at receiving God's forgiveness, releasing guilt and shame, and moving forward in faith.",
+  metaDescription: "You don't have to keep punishing yourself for the past. A Scripture-grounded look at receiving God's forgiveness and releasing guilt and shame.",
   keywords: [
     'overcoming regret',
     'how to let go of regret',

@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'The One Thing Women in Hard Seasons Often Forget',
   category: 'Encouragement',
   excerpt: 'In hard seasons, we remember to pray for others, to hold things together, to keep going. We often forget that we are allowed to receive.',
-  metaDescription: "Women in hard seasons are often so busy holding things together that they forget they're allowed to receive. A faith-rooted reminder of what God offers, and how to let it in.",
+  metaDescription: "In hard seasons we get so busy holding things together that we forget we're allowed to receive - a faith-rooted reminder of what God offers.",
   keywords: [
     'women in hard seasons',
     'faith in hard times',

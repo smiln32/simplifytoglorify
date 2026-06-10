@@ -6,7 +6,7 @@ const post: Article = {
   cardTitle: 'Conversations in Prayer',
   category: 'Prayer',
   excerpt: 'If you have prayed for years but quietly wondered whether God ever says anything back, this is for you. A gentle, grounded guide to listening in prayer.',
-  metaDescription: 'Learn what it really means to listen in prayer, how to slow down, sit with Scripture, and become attentive before God without chasing feelings or forcing an experience.',
+  metaDescription: 'Learn what it means to truly listen in prayer - how to slow down, sit with Scripture, and become attentive to God without forcing an experience.',
   keywords: [
     'listening in prayer',
     'how to hear God',

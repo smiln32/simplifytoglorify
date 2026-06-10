@@ -5,6 +5,17 @@ const post: Article = {
   title: 'How to Grow a Deeper Faith in Ordinary Days',
   category: 'Faith',
   excerpt: 'Deeper faith often grows quietly through Scripture, honest prayer, remembrance, obedience, and returning to God in ordinary life.',
+  metaDescription: 'Deeper faith usually grows quietly in ordinary days, through Scripture, honest prayer, and returning to God again and again. Here is how to nurture it.',
+  keywords: [
+    'how to grow deeper faith',
+    'growing in faith',
+    'faith in everyday life',
+    'deepening your faith',
+    'faith and Scripture',
+    'honest prayer',
+    'spiritual growth',
+    'walking with God daily',
+  ],
   image: '/images/faith-based-living.webp',
   body: `
 A deeper faith does not always grow in dramatic moments. Sometimes it grows quietly, almost hidden, in the ordinary rhythm of daily obedience.

@@ -5,7 +5,7 @@ const post: Article = {
   title: 'When Depression and Faith Exist Together',
   category: 'Depression',
   excerpt: 'Depression is not a sign that God has left. Sometimes it is the place where He shows up most quietly, and most faithfully.',
-  metaDescription: 'Depression and faith can exist in the same woman at the same time. A gentle, honest look at what Scripture says to those who love God and still struggle to feel Him.',
+  metaDescription: 'Depression and faith can live in the same heart. A gentle, honest look at what Scripture says to those who love God and still struggle to feel Him.',
   keywords: [
     'depression and faith',
     'Christian depression',

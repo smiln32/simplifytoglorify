@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'How to Grieve Without a Timeline',
   category: 'Grief',
   excerpt: "You are not behind. There is no schedule you are failing to keep. A gentle word for the woman whose grief has outlasted everyone else's patience.",
-  metaDescription: 'Grieving longer than people expect? There is no timeline for grief. Discover why your sorrow is not a failure, how Scripture makes room for lament, and why God stays near.',
+  metaDescription: 'Grieving longer than people expect? There is no timeline for grief. Why your sorrow is not a failure, and how Scripture makes room for lament.',
   keywords: [
     'grief without a timeline',
     'grieving too long',

@@ -5,7 +5,7 @@ const post: BlogPost = {
   title: 'Loving Someone Who Is Forgetting',
   category: 'Caregiving',
   excerpt: "Caregiving for someone with memory loss is one of the hardest things you'll ever do. It can also be more tender than you expect.",
-  metaDescription: 'Caring for a loved one with Alzheimer\'s or memory loss is exhausting and largely invisible. A tender, honest guide to connection, laughter, asking for help, and the holy work God sees.',
+  metaDescription: 'Caring for a loved one with Alzheimer\'s or memory loss is exhausting and unseen. A tender guide to connection, asking for help, and the holy work God sees.',
   keywords: [
     'caring for someone with Alzheimers',
     'memory loss caregiving',
