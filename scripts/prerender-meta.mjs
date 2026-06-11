@@ -27,7 +27,12 @@ const BRAND = 'Simplify to Glorify';
 const AUTHOR = 'Carla Bosteder, M.Ed.';
 const FALLBACK_IMG = '/images/faith-based-living.webp';
 
-const template = readFileSync(path.join(dist, 'index.html'), 'utf8');
+const templatePath = path.join(dist, 'index.html');
+if (!existsSync(templatePath)) {
+  console.error('prerender-meta: dist/index.html not found - run `npm run build` first (this is a post-build step, not a standalone command).');
+  process.exit(1);
+}
+const template = readFileSync(templatePath, 'utf8');
 
 // --- helpers ---------------------------------------------------------------
 function evalPost(file) {
