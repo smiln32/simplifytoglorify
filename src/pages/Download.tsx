@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Download as DownloadIcon, CheckCircle } from 'lucide-react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
@@ -163,7 +164,7 @@ export default function Download() {
             <p className="text-sm text-muted-slate text-center mt-6 leading-relaxed">
               Keep your code <span className="font-mono text-charcoal">{bundle.code}</span> — you can return here anytime to download products you have not gotten yet.
               Questions?{' '}
-              <a href="/contact" className="text-slate-blue hover:underline">Contact us</a>.
+              <Link to="/contact" className="text-slate-blue hover:underline">Contact us</Link>.
             </p>
           </div>
         </main>
@@ -217,9 +218,9 @@ export default function Download() {
 
           <p className="text-sm text-muted-slate text-center mt-6 leading-relaxed">
             Each code works once. Questions?{' '}
-            <a href="/contact" className="text-slate-blue hover:underline">
+            <Link to="/contact" className="text-slate-blue hover:underline">
               Contact us
-            </a>
+            </Link>
             .
           </p>
         </div>
