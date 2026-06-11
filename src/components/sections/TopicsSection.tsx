@@ -10,7 +10,9 @@ interface TopicsSectionProps {
 const HOME_HIDDEN_TOPICS = new Set(['Gratitude', 'Faith', 'Patience', 'Prayer']);
 
 export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
-  const homeTopics = topicBundles.filter((topic) => !HOME_HIDDEN_TOPICS.has(topic.name));
+  const homeTopics = topicBundles
+    .filter((topic) => !HOME_HIDDEN_TOPICS.has(topic.name))
+    .sort((a, b) => a.name.localeCompare(b.name));
   return (
     <section id="topics" ref={sectionRef} className="topics-section py-10 lg:py-16 scroll-mt-16 lg:scroll-mt-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -19,12 +21,12 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
             Find the products you need<br />for the space you're in.
           </h2>
-          <p className="text-charcoal text-lg max-w-md mb-10">
-            Each topic includes a journal, scripture cards, prayer cards, breath prayers, and devotionals — designed to work together.
+          <p className="text-charcoal text-lg max-w-xl mb-10">
+            Each topic includes a journal, devotionals, scripture cards, prayer cards, and a 7-day &ldquo;First Steps&rdquo; reset when you need an extra-gentle start. They are all designed to work separately or together.
           </p>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
           {homeTopics.map((topic) => (
             <Link
               key={topic.name}
