@@ -201,8 +201,8 @@ export const categories: Category[] = [
     ],
   },
   {
-    name: 'Struggling with Faith',
-    slug: 'struggling-with-faith',
+    name: 'Faith',
+    slug: 'faith',
     description: 'Companions for your quiet time with God.',
     productDescriptions: {
       'Journal': 'A quiet space for honest questions and careful hope.',
@@ -210,15 +210,15 @@ export const categories: Category[] = [
       'Prayer Cards': 'Simple prayers for doubt, longing, and return.',
       '7-Day Reset': 'A gentle reset for drawing near again.',
       'Devotional': 'Quiet encouragement for holding on with God.',
-      'Bundle': 'The full struggling with faith collection.',
+      'Bundle': 'The full faith collection.',
     },
     subtopics: [
       { name: 'General', slug: 'general' },
     ],
   },
   {
-    name: 'Uncertainty',
-    slug: 'uncertainty',
+    name: 'Trusting God',
+    slug: 'trusting-god',
     description: 'Faith-filled encouragement when the way ahead is unclear.',
     productDescriptions: {
       'Journal': 'A quiet place to name what feels unknown and rest in what is true.',
@@ -229,7 +229,7 @@ export const categories: Category[] = [
       'Bundle': 'The full collection.',
     },
     subtopics: [
-      { name: 'Trusting God in Uncertainty', slug: 'trusting-god' },
+      { name: 'Trusting God in Uncertainty', slug: 'in-uncertainty' },
     ],
   },
 ];

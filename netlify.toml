@@ -63,6 +63,18 @@
   status = 301
   force = true
 
+# Product categories renamed: Struggling with Faith -> Faith, Uncertainty -> Trusting God.
+[[redirects]]
+  from = "/products/struggling-with-faith"
+  to = "/products/faith"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/products/uncertainty"
+  to = "/products/trusting-god"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
