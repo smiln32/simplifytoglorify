@@ -5,6 +5,7 @@ import type { BlogPost } from '../data/blogPosts/types';
 import { getCategoryColor } from '../data/categoryColors';
 import PageNav from '../components/PageNav';
 import Footer from '../components/sections/Footer';
+import RelatedLinks from '../components/RelatedLinks';
 import { toHtml } from '../lib/markdown';
 
 const postModules = import.meta.glob<BlogPost>('../data/blogPosts/*-*.ts', { import: 'default' });
@@ -85,6 +86,9 @@ export default function BlogPost() {
             <p className="text-lg text-muted-slate italic leading-relaxed max-w-xl mx-auto">
               {post.excerpt}
             </p>
+            <p className="mt-6 text-sm text-muted-slate">
+              By <span className="text-charcoal font-medium">Carla Bosteder, M.Ed.</span>
+            </p>
           </div>
         </div>
 
@@ -118,6 +122,8 @@ export default function BlogPost() {
               </ul>
             </div>
           )}
+
+          <RelatedLinks category={post.category} to={`/blog/${post.slug}`} />
 
           <div className="mt-16 pt-8 border-t border-charcoal/10">
             <Link

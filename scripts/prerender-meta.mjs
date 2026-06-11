@@ -24,6 +24,7 @@ const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const SITE = 'https://www.simplifytoglorify.com';
 const BRAND = 'Simplify to Glorify';
+const AUTHOR = 'Carla Bosteder, M.Ed.';
 const FALLBACK_IMG = '/images/faith-based-living.webp';
 
 const template = readFileSync(path.join(dist, 'index.html'), 'utf8');
@@ -66,7 +67,7 @@ function articleSchema({ type, headline, description, image, url, datePublished 
     description,
     image: [absImg(image)],
     ...(datePublished ? { datePublished, dateModified: datePublished } : {}),
-    author: { '@type': 'Organization', name: BRAND, url: SITE + '/' },
+    author: { '@type': 'Person', name: AUTHOR, url: SITE + '/' },
     publisher: PUBLISHER,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   };
