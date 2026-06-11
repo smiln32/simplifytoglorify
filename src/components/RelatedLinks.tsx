@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { articleMeta } from '@/data/articles/index';
 import { blogPostMeta } from '@/data/blogPosts/index';
-import { groupFor } from '@/lib/categoryGroups';
 import { getCategoryBySlug } from '@/data/products';
 
 // Maps a post category to the product-collection slug it should cross-sell.
@@ -38,12 +37,25 @@ const ALL: Item[] = [
   ...blogPostMeta.map((p): Item => ({ slug: p.slug, title: p.title, cardTitle: p.cardTitle, category: p.category, to: `/blog/${p.slug}` })),
 ];
 
-// Pick up to `limit` related posts: same category first, then same topic group.
+// A post's "topic" is the product collection it maps to (CATEGORY_TO_PRODUCT).
+// Posts sharing a topic are related — this also unifies synonyms (Peace→Faith,
+// Uncertainty→Trusting God). A category with no mapping (Journaling, General,
+// Scripture Writing, Encouragement, etc.) is treated as general/cross-cutting.
+const topicOf = (category: string): string | undefined => CATEGORY_TO_PRODUCT[category];
+
+// Pick up to `limit` posts: same topic first, then general posts. Posts on a
+// *different* specific topic are excluded entirely (no depression after grief),
+// so the section shows fewer items rather than padding with unrelated topics.
 function relatedTo(category: string, to: string, limit = 3): Item[] {
-  const group = groupFor(category);
+  const topic = topicOf(category);
   return ALL
     .filter((p) => p.to !== to)
-    .map((p) => ({ p, score: p.category === category ? 2 : groupFor(p.category) === group ? 1 : 0 }))
+    .map((p) => {
+      const t = topicOf(p.category);
+      const score = topic && t === topic ? 2 : !t ? 1 : 0;
+      return { p, score };
+    })
+    .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
     .map((x) => x.p);
