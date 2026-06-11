@@ -20,12 +20,6 @@ export const CATEGORY_GROUPS: Record<string, string> = {
 
 export const GROUPS = ["All", "Hard Seasons", "Prayer & Trust", "Heart & Habits"];
 
-export const GROUP_COLOR: Record<string, string> = {
-  "Hard Seasons": "#c6b5c8",
-  "Prayer & Trust": "#7b9fb3",
-  "Heart & Habits": "#b2c6b1",
-};
-
 export function groupFor(category: string): string {
   const group = CATEGORY_GROUPS[category];
   if (group === undefined) {

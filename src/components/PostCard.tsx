@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { groupFor, GROUP_COLOR } from '@/lib/categoryGroups';
+import { getCategoryColor } from '@/data/categoryColors';
 
 // Minimal shape shared by ArticleMeta and BlogPostMeta. Both data systems
 // satisfy this, so one card renders either. readTime is blog-only; treat
@@ -47,7 +47,7 @@ function CardImage({ post, accent }: { post: PostCardData; accent: string }) {
 }
 
 export default function PostCard({ post, to }: { post: PostCardData; to: string }) {
-  const accent = GROUP_COLOR[groupFor(post.category)];
+  const accent = getCategoryColor(post.category);
   return (
     <Link
       to={to}
@@ -60,36 +60,41 @@ export default function PostCard({ post, to }: { post: PostCardData; to: string 
           border: '1px solid #ececec',
           borderRadius: 10,
           overflow: 'hidden',
+          display: 'flex',
         }}
       >
-        <CardImage post={post} accent={accent} />
-        <div style={{ padding: '16px 18px' }}>
-          <div style={{ fontSize: 11, letterSpacing: '.1em', color: '#404040', marginBottom: 8 }}>
-            {post.category.toUpperCase()}
-            {post.readTime ? ` · ${post.readTime}` : ''}
+        {/* Topic-color strip, same 8px width used across articles/products. */}
+        <div style={{ width: 8, background: accent, flexShrink: 0 }} />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <CardImage post={post} accent={accent} />
+          <div style={{ padding: '16px 18px' }}>
+            <div style={{ fontSize: 11, letterSpacing: '.1em', color: '#404040', marginBottom: 8 }}>
+              {post.category.toUpperCase()}
+              {post.readTime ? ` · ${post.readTime}` : ''}
+            </div>
+            <h3
+              className="line-clamp-2"
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: 20,
+                lineHeight: 1.3,
+                margin: 0,
+              }}
+            >
+              {post.cardTitle ?? post.title}
+            </h3>
+            <p
+              className="line-clamp-2"
+              style={{
+                fontFamily: 'Lora, serif',
+                fontSize: 14.5,
+                color: '#6b6b6b',
+                marginTop: 10,
+              }}
+            >
+              {post.excerpt}
+            </p>
           </div>
-          <h3
-            className="line-clamp-2"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: 20,
-              lineHeight: 1.3,
-              margin: 0,
-            }}
-          >
-            {post.cardTitle ?? post.title}
-          </h3>
-          <p
-            className="line-clamp-2"
-            style={{
-              fontFamily: 'Lora, serif',
-              fontSize: 14.5,
-              color: '#6b6b6b',
-              marginTop: 10,
-            }}
-          >
-            {post.excerpt}
-          </p>
         </div>
       </article>
     </Link>

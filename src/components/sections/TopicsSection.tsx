@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { topicBundles } from '@/data/topicBundles';
+import { getCategoryColor } from '@/data/categoryColors';
 import type { SectionRef } from '@/types';
 
 interface TopicsSectionProps {
@@ -34,6 +35,8 @@ export default function TopicsSection({ sectionRef }: TopicsSectionProps) {
               className="group block"
             >
               <div className="rounded-card-sm overflow-hidden card-shadow hover:shadow-card-hover transition-shadow">
+                {/* Topic-color strip, same 8px thickness used across the site. */}
+                <div className="h-2 w-full" style={{ backgroundColor: getCategoryColor(topic.name) }} />
                 <img
                   src={topic.image}
                   alt={topic.name}

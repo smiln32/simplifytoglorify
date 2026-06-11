@@ -3,6 +3,7 @@ import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import { getCategoryColor } from '@/data/categoryColors';
 import type { SectionRef } from '@/types';
 
 interface FreeResourceSectionProps {
@@ -50,13 +51,17 @@ export default function FreeResourceSection({ sectionRef }: FreeResourceSectionP
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="flex justify-center items-center h-full">
-            <div className="rounded-card card-shadow bg-white border border-charcoal/10 w-full max-w-[300px] min-h-[400px] flex flex-col items-center justify-center text-center px-8 py-12">
-              <p className="text-xs tracking-[0.18em] uppercase text-slate-blue mb-6">A Prayer</p>
-              <p className="font-body text-charcoal text-lg leading-relaxed">
-                Dear Father, thank You for meeting me here.<br />
-                Quiet my heart and help me trust You today.<br />
-                In Jesus' name, Amen.
-              </p>
+            <div className="rounded-card card-shadow bg-white border border-charcoal/10 w-full max-w-[300px] min-h-[400px] overflow-hidden flex flex-col">
+              {/* Topic-color strip — Prayer, matching the prayer-cards freebie. */}
+              <div className="h-2 w-full" style={{ backgroundColor: getCategoryColor('Prayer') }} />
+              <div className="flex-1 flex flex-col items-center justify-center text-center px-8 py-12">
+                <p className="text-xs tracking-[0.18em] uppercase text-slate-blue mb-6">A Prayer</p>
+                <p className="font-body text-charcoal text-lg leading-relaxed">
+                  Dear Father, thank You for meeting me here.<br />
+                  Quiet my heart and help me trust You today.<br />
+                  In Jesus' name, Amen.
+                </p>
+              </div>
             </div>
           </div>
           <div>
