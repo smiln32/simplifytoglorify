@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
           <h1 className="font-display text-3xl sm:text-4xl text-charcoal mb-4 leading-snug">
             Privacy Policy
           </h1>
-          <p className="text-muted-slate italic mb-12">Last updated: June 2, 2026</p>
+          <p className="text-muted-slate italic mb-12">Last updated: June 11, 2026</p>
 
           <Section title="Who we are">
             <p>
@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
             <p>We collect the following types of information:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li><span className="text-charcoal font-medium">Email address</span> — when you sign up for a free resource, submit the contact form, or make a purchase.</li>
-              <li><span className="text-charcoal font-medium">Payment information</span> — when you make a purchase. We do not store your card details; all payment processing is handled by Stripe.</li>
+              <li><span className="text-charcoal font-medium">Payment information</span> — when you make a purchase. We do not store your card details. Direct purchases on this site are processed by Stripe, and purchases through our Etsy shop are processed by Etsy.</li>
               <li><span className="text-charcoal font-medium">Usage and behavior data</span> — pages visited, clicks, scrolls, and session recordings collected automatically through Microsoft Clarity.</li>
               <li><span className="text-charcoal font-medium">Device and browser information</span> — collected automatically by Clarity as part of session analytics.</li>
             </ul>
@@ -60,6 +60,9 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-5 space-y-2">
               <li>
                 <span className="text-charcoal font-medium">Stripe</span> — payment processing. Stripe collects and stores your payment information under their own privacy policy. We never see or store your full card number.
+              </li>
+              <li>
+                <span className="text-charcoal font-medium">Etsy</span> — when you purchase through our Etsy shop rather than directly on this site, your payment and order information is collected and processed by Etsy under their own privacy policy. We may receive limited order details — such as your name, the item purchased, and delivery information — to fulfill your order and provide support. We never see or store your full payment card details.
               </li>
               <li>
                 <span className="text-charcoal font-medium">Resend</span> — transactional email delivery (download links and order confirmations). Your email address is passed to Resend solely to send these messages.

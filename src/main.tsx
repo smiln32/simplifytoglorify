@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import FreebiePopup from './components/FreebiePopup.tsx'
+import CookieConsent from './components/CookieConsent.tsx'
 import ErrorBoundary from './components/ErrorBoundary.tsx'
 import { Toaster } from './components/ui/sonner.tsx'
 
@@ -22,6 +23,8 @@ const CheckoutCancel = lazy(() => import('./pages/CheckoutCancel.tsx'))
 const NotFound = lazy(() => import('./pages/NotFound.tsx'))
 const ColorPreview = lazy(() => import('./pages/ColorPreview.tsx'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.tsx'))
+const Terms = lazy(() => import('./pages/Terms.tsx'))
+const Refunds = lazy(() => import('./pages/Refunds.tsx'))
 const Contact = lazy(() => import('./pages/Contact.tsx'))
 const Resources = lazy(() => import('./pages/Resources.tsx'))
 
@@ -31,6 +34,7 @@ function RouterContent() {
       <Toaster position="top-center" />
       <ScrollToTop />
       <FreebiePopup />
+      <CookieConsent />
       <Suspense fallback={<div className="min-h-screen bg-ivory" />}>
         <Routes>
           <Route path="/" element={<App />} />
@@ -47,6 +51,8 @@ function RouterContent() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/refunds" element={<Refunds />} />
           <Route path="/colors" element={<ColorPreview />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
