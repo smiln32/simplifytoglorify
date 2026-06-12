@@ -1,15 +1,17 @@
 import Stripe from 'stripe'
 import { getStore } from '@netlify/blobs'
 import { Resend } from 'resend'
+import { randomInt } from 'node:crypto'
 
 const CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 const BUNDLE_PRODUCT_TYPES = ['Journal', 'Scripture Cards', 'Prayer Cards', '7-Day Reset', 'Devotional']
 
+// Codes grant access to paid downloads, so use a CSPRNG, not Math.random().
 function generateCode(): string {
   let code = ''
   for (let i = 0; i < 8; i++) {
     if (i === 4) code += '-'
-    code += CHARS[Math.floor(Math.random() * CHARS.length)]
+    code += CHARS[randomInt(CHARS.length)]
   }
   return code
 }
