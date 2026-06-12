@@ -231,7 +231,7 @@ netlify deploy --prod
 
 ```
 VITE_WEB3FORMS_KEY=abc123xyz
-ADMIN_PIN=1234
+ADMIN_PIN=a-long-random-string-here
 ```
 
 ### Production (Netlify Dashboard)

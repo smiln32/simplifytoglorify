@@ -168,7 +168,7 @@ Developer → Push to main → GitHub
 **Local dev (.env.local):**
 ```
 VITE_WEB3FORMS_KEY=your_key
-ADMIN_PIN=your_test_pin
+ADMIN_PIN=a-long-random-string-here
 ```
 
 ## Security Considerations

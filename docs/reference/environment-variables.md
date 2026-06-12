@@ -7,7 +7,7 @@ Complete list of all environment variables, their purpose, and where they're use
 ### VITE_WEB3FORMS_KEY
 
 | Property | Value |
-|----------|-------|
+| -------- | ------- |
 | **Purpose** | Web3Forms API key for email delivery |
 | **Type** | String (API key) |
 | **Public/Private** | Public (prefixed with VITE_) |
@@ -21,13 +21,13 @@ Complete list of all environment variables, their purpose, and where they're use
 ### ADMIN_PIN
 
 | Property | Value |
-|----------|-------|
+| -------- | ------- |
 | **Purpose** | PIN to protect admin code generation page |
-| **Type** | String (numeric PIN recommended) |
+| **Type** | String (long random value — see Security Notes) |
 | **Public/Private** | Private (NOT prefixed with VITE_) |
 | **Where Used** | Backend (Netlify Functions) |
 | **Used By** | `netlify/functions/generate-token.mts` |
-| **Local (.env.local)** | Set for local testing (e.g., `ADMIN_PIN=1234`) |
+| **Local (.env.local)** | Set for local testing (use the same long random value as Netlify) |
 | **Netlify** | Settings → Environment variables (private) |
 | **What Happens If Missing** | Admin page loads but PIN check fails; cannot generate codes |
 
@@ -35,9 +35,9 @@ Complete list of all environment variables, their purpose, and where they're use
 
 Create file in project root with:
 
-```
+```ini
 VITE_WEB3FORMS_KEY=your_web3forms_key_here
-ADMIN_PIN=1234
+ADMIN_PIN=a-long-random-string-here
 ```
 
 **Note:** `.env.local` is in `.gitignore` and should NOT be committed.
@@ -46,7 +46,7 @@ ADMIN_PIN=1234
 
 ### Where to Set Variables
 
-1. Go to https://app.netlify.com
+1. Go to <https://app.netlify.com>
 2. Select your site
 3. Settings → Environment variables
 4. Click "Add a variable"
@@ -90,14 +90,14 @@ If you add a new variable:
 ## Security Notes
 
 - **Never commit `.env.local`** — It's in `.gitignore` for a reason
-- **ADMIN_PIN** should be numeric, 4-6 characters (e.g., `1234`)
+- **ADMIN_PIN** must be a long, random string (16+ characters) — it is the only credential protecting the admin code-generation endpoint. Do not use a short numeric PIN. Generate one with: `node -e "console.log(require('crypto').randomBytes(18).toString('base64url'))"`
 - **VITE_WEB3FORMS_KEY** is public (visible in frontend code) but tied to your Web3Forms account
 - **Netlify env variables** are masked in UI but visible in deployed code (marked with VITE_)
 
 ## Troubleshooting
 
 | Problem | Likely Cause | Fix |
-|---------|--------------|-----|
+| ------- | ------------ | --- |
 | "Form won't send" | Missing/wrong VITE_WEB3FORMS_KEY | Check .env.local and Netlify settings |
 | "Admin PIN rejected" | Missing/wrong ADMIN_PIN | Check .env.local and Netlify settings |
 | "Forms work locally but not on live site" | Live site missing env var | Add to Netlify environment settings |
