@@ -25,6 +25,7 @@ const ColorPreview = lazy(() => import('./pages/ColorPreview.tsx'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.tsx'))
 const Terms = lazy(() => import('./pages/Terms.tsx'))
 const Refunds = lazy(() => import('./pages/Refunds.tsx'))
+const About = lazy(() => import('./pages/About.tsx'))
 const Contact = lazy(() => import('./pages/Contact.tsx'))
 const Resources = lazy(() => import('./pages/Resources.tsx'))
 
@@ -53,6 +54,7 @@ function RouterContent() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/refunds" element={<Refunds />} />
+          <Route path="/about" element={<About />} />
           <Route path="/colors" element={<ColorPreview />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

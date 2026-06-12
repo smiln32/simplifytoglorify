@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { SectionRef } from '@/types';
 
 interface AboutSectionProps {
@@ -37,6 +38,12 @@ export default function AboutSection({ sectionRef }: AboutSectionProps) {
                 </p>
               </div>
             </div>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 mt-2 text-slate-blue font-body text-base font-semibold hover:gap-3 transition-all duration-200"
+            >
+              Read more about Carla →
+            </Link>
           </div>
 
         </div>

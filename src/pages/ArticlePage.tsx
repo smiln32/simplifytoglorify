@@ -6,6 +6,7 @@ import { getCategoryColor } from '../data/categoryColors';
 import PageNav from '../components/PageNav';
 import Footer from '../components/sections/Footer';
 import RelatedLinks from '../components/RelatedLinks';
+import AuthorBio from '../components/AuthorBio';
 import { toHtml } from '../lib/markdown';
 
 const articleModules = import.meta.glob<Article>('../data/articles/*-*.ts', { import: 'default' });
@@ -118,6 +119,8 @@ export default function ArticlePage() {
               </ul>
             </div>
           )}
+
+          <AuthorBio />
 
           <RelatedLinks category={article.category} to={`/articles/${article.slug}`} />
 
